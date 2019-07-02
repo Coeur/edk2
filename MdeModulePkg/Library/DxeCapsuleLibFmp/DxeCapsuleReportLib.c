@@ -98,7 +98,7 @@ GetNewCapsuleResultIndex (
   Write a new capsule status variable.
 
   @param[in] CapsuleResult      The capsule status variable
-  @param[in] CapsuleResultSize  The size of the capsule stauts variable in bytes
+  @param[in] CapsuleResultSize  The size of the capsule status variable in bytes
 
   @retval EFI_SUCCESS          The capsule status variable is recorded.
   @retval EFI_OUT_OF_RESOURCES No resource to record the capsule status variable.
@@ -150,7 +150,7 @@ WriteNewCapsuleResultVariable (
   Record capsule status variable and to local cache.
 
   @param[in] CapsuleHeader  The capsule image header
-  @param[in] CapsuleStatus  The capsule process stauts
+  @param[in] CapsuleStatus  The capsule process status
 
   @retval EFI_SUCCESS          The capsule status variable is recorded.
   @retval EFI_OUT_OF_RESOURCES No resource to record the capsule status variable.
@@ -182,7 +182,7 @@ RecordCapsuleStatusVariable (
   Record FMP capsule status variable and to local cache.
 
   @param[in] CapsuleHeader  The capsule image header
-  @param[in] CapsuleStatus  The capsule process stauts
+  @param[in] CapsuleStatus  The capsule process status
   @param[in] PayloadIndex   FMP payload index
   @param[in] ImageHeader    FMP image header
   @param[in] FmpDevicePath  DevicePath associated with the FMP producer

@@ -1,6 +1,6 @@
 /** @file
 
-  This file contains the definination for host controller memory management routines.
+  This file contains the definition for host controller memory management routines.
 
 Copyright (c) 2007 - 2010, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent

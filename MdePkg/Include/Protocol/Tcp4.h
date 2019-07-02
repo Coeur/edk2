@@ -31,7 +31,7 @@ typedef struct _EFI_TCP4_PROTOCOL EFI_TCP4_PROTOCOL;
 
 ///
 /// EFI_TCP4_SERVICE_POINT is deprecated in the UEFI 2.4B and should not be used any more.
-/// The definition in here is only present to provide backwards compatability.
+/// The definition in here is only present to provide backwards compatibility.
 ///
 typedef struct {
   EFI_HANDLE              InstanceHandle;
@@ -43,7 +43,7 @@ typedef struct {
 
 ///
 /// EFI_TCP4_VARIABLE_DATA is deprecated in the UEFI 2.4B and should not be used any more.
-/// The definition in here is only present to provide backwards compatability.
+/// The definition in here is only present to provide backwards compatibility.
 ///
 typedef struct {
   EFI_HANDLE              DriverHandle;
@@ -98,7 +98,7 @@ typedef struct {
 } EFI_TCP4_CONFIG_DATA;
 
 ///
-/// TCP4 connnection state
+/// TCP4 connection state
 ///
 typedef enum {
   Tcp4StateClosed         = 0,
@@ -342,7 +342,7 @@ EFI_STATUS
                                 - This is NULL.
                                 - ConnectionToken is NULL.
                                 - ConnectionToken->CompletionToken.Event is NULL.
-  @retval EFI_OUT_OF_RESOURCES  The driver can't allocate enough resource to initiate the activ eopen.
+  @retval EFI_OUT_OF_RESOURCES  The driver can't allocate enough resource to initiate the active open.
   @retval EFI_DEVICE_ERROR      An unexpected system or network error occurred.
 
 **/
@@ -370,7 +370,7 @@ EFI_STATUS
   @retval EFI_INVALID_PARAMETER One or more of the following are TRUE:
                                 - This is NULL.
                                 - ListenToken is NULL.
-                                - ListentToken->CompletionToken.Event is NULL.
+                                - ListenToken->CompletionToken.Event is NULL.
   @retval EFI_OUT_OF_RESOURCES  Could not allocate enough resource to finish the operation.
   @retval EFI_DEVICE_ERROR      Any unexpected and not belonged to above category error.
 

@@ -257,7 +257,7 @@ EFI_BOOT_MANAGER_POLICY_PROTOCOL  mBootManagerPolicy = {
   @param ImageHandle    The image handle.
   @param SystemTable    The system table.
 
-  @retval  EFI_SUCEESS  The Boot Manager Policy protocol is successfully installed.
+  @retval  EFI_SUCCESS  The Boot Manager Policy protocol is successfully installed.
   @retval  Other        Return status from gBS->InstallMultipleProtocolInterfaces().
 
 **/

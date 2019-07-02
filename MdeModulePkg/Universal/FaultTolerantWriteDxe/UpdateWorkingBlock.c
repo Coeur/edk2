@@ -54,7 +54,7 @@ InitializeLocalWorkSpaceHeader (
   //
 
   //
-  // Calculate the Crc of woking block header
+  // Calculate the Crc of working block header
   //
   mWorkingBlockHeader.Crc = FtwCalculateCrc32 (&mWorkingBlockHeader,
                               sizeof (EFI_FAULT_TOLERANT_WORKING_BLOCK_HEADER));

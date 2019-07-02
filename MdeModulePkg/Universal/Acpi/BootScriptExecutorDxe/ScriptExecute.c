@@ -21,7 +21,7 @@ BOOLEAN               mPage1GSupport = FALSE;
 UINT64                mAddressEncMask = 0;
 
 /**
-  Entry function of Boot script exector. This function will be executed in
+  Entry function of Boot script executor. This function will be executed in
   S3 boot path.
   This function should not return, because it is invoked by switch stack.
 
@@ -386,7 +386,7 @@ ReadyToLockEventNotify (
 }
 
 /**
-  Entrypoint of Boot script exector driver, this function will be executed in
+  Entrypoint of Boot script executor driver, this function will be executed in
   normal boot phase and invoked by DXE dispatch.
 
   @param[in] ImageHandle    The firmware allocated handle for the EFI image.

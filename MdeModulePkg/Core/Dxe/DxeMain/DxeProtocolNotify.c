@@ -95,7 +95,7 @@ CoreAllEfiServicesAvailable (
 /**
   Notification event handler registered by CoreNotifyOnArchProtocolInstallation ().
   This notify function is registered for every architectural protocol. This handler
-  updates mArchProtocol[] array entry with protocol instance data and sets it's
+  updates mArchProtocol[] array entry with protocol instance data and sets its
   present flag to TRUE. If any constructor is required it is executed. The EFI
   System Table headers are updated.
 
@@ -200,7 +200,7 @@ GenericProtocolNotify (
 }
 
 /**
-  Creates an event for each entry in a table that is fired everytime a Protocol
+  Creates an event for each entry in a table that is fired every time a Protocol
   of a specific type is installed.
 
   @param Entry  Pointer to EFI_CORE_PROTOCOL_NOTIFY_ENTRY.
@@ -227,7 +227,7 @@ CoreNotifyOnProtocolEntryTable (
     ASSERT_EFI_ERROR(Status);
 
     //
-    // Register for protocol notifactions on this event
+    // Register for protocol notifications on this event
     //
     Status = CoreRegisterProtocolNotify (
               Entry->ProtocolGuid,
@@ -240,7 +240,7 @@ CoreNotifyOnProtocolEntryTable (
 
 /**
   Creates an events for the Architectural Protocols and the optional protocols
-  that are fired everytime a Protocol of a specific type is installed.
+  that are fired every time a Protocol of a specific type is installed.
 
 **/
 VOID

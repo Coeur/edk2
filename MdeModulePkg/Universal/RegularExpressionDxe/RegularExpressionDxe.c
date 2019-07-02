@@ -91,7 +91,7 @@ OnigurumaMatch (
   Status = EFI_SUCCESS;
 
   //
-  // Detemine the internal syntax type
+  // Determine the internal syntax type
   //
   OnigSyntax = ONIG_SYNTAX_DEFAULT;
   if (CompareGuid (SyntaxType, &gEfiRegexSyntaxTypePosixExtendedGuid)) {

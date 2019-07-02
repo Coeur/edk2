@@ -419,7 +419,7 @@ IfConfig6PrintIpAddr (
   @param[out]        Buf        The pointer of the address of EFI_IP6_CONFIG_MANUAL_ADDRESS.
   @param[out]        BufSize    The pointer of BufSize that describes the size of Buf in bytes.
 
-  @retval EFI_SUCCESS    The convertion is successful.
+  @retval EFI_SUCCESS    The conversion is successful.
   @retval Others         Does't find the host address, or it is an invalid IPv6 address in string format.
 
 **/
@@ -486,7 +486,7 @@ IfConfig6ParseManualAddressList (
 
     //
     // If prefix length is not set, set it as Zero here. In the IfConfigSetInterfaceInfo()
-    // Zero prefix, length will be transfered to default prefix length.
+    // Zero prefix, length will be transferred to default prefix length.
     //
     if (Prefix == 0xFF) {
       Prefix = 0;
@@ -615,7 +615,7 @@ ON_ERROR:
   @param[in, out]   Arg     The pointer of the address of ARG_LIST that saves Args with the "-s" option.
   @param[out]       IfId    The pointer of EFI_IP6_CONFIG_INTERFACE_ID.
 
-  @retval EFI_SUCCESS              The get status processed successfullly.
+  @retval EFI_SUCCESS              The get status processed successfully.
   @retval EFI_INVALID_PARAMETER    The get status process failed.
 
 **/
@@ -1295,7 +1295,7 @@ IfConfig6SetInterfaceInfo (
     //
     if (StrCmp(VarArg->Arg, L"auto") == 0) {
       //
-      // Set automaic config policy
+      // Set automatic config policy
       //
       Policy = Ip6ConfigPolicyAutomatic;
       Status = IfCb->IfCfg->SetData (

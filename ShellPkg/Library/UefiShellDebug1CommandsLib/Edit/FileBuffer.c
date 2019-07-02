@@ -221,7 +221,7 @@ InternalEditorMiscLineRetreat (
                        >0 : advance
                        <0 : retreat
 
-  @retval NULL An error occured.
+  @retval NULL An error occurred.
   @return The line after advance/retreat.
 **/
 EFI_EDITOR_LINE *
@@ -1364,7 +1364,7 @@ GetNewLine (
   @param[in] Length   The maximum size of AStr.
   @param[out] AStr    ASCII string to pass out.
 
-  @return The actuall length.
+  @return The actual length.
 **/
 UINTN
 UnicodeToAscii (
@@ -1811,7 +1811,7 @@ FileBufferDoBackspace (
 /**
   Add a return into line at current position.
 
-  @retval EFI_SUCCESS           The insetrion of the character was successful.
+  @retval EFI_SUCCESS           The insertion of the character was successful.
   @retval EFI_OUT_OF_RESOURCES  A memory allocation failed.
 **/
 EFI_STATUS
@@ -2075,7 +2075,7 @@ LineStrInsert (
 
   @param[in] Char               The Character to input.
 
-  @retval EFI_SUCCESS           The input was succesful.
+  @retval EFI_SUCCESS           The input was successful.
 **/
 EFI_STATUS
 FileBufferAddChar (
@@ -2609,7 +2609,7 @@ RightCurrentScreen (
                      >0 : advance
                      <0: retreat
 
-  @retval NULL An error occured.
+  @retval NULL An error occurred.
   @return The line after advance/retreat.
 **/
 EFI_EDITOR_LINE *

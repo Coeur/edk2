@@ -54,7 +54,7 @@ ASM_PFX(SecPlatformInit):
 ;               esp
 ;
 ; Description:
-;               Perform any essential early platform initilaisation
+;               Perform any essential early platform initialisation
 ;               Setup a stack
 ;
 ;----------------------------------------------------------------------------

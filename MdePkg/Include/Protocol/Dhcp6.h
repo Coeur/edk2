@@ -204,11 +204,11 @@ typedef struct {
 
 typedef struct {
   ///
-  /// Length of DUID in octects.
+  /// Length of DUID in octets.
   ///
   UINT16                       Length;
   ///
-  /// Array of DUID octects.
+  /// Array of DUID octets.
   ///
   UINT8                        Duid[1];
 } EFI_DHCP6_DUID;
@@ -449,8 +449,8 @@ EFI_STATUS
                                   Rapid Commit option or any IA option is specified in the OptionList.
                                 - IaDescriptor.Type is neither EFI_DHCP6_IA_TYPE_NA nor EFI_DHCP6_IA_TYPE_NA.
                                 - IaDescriptor is not unique.
-                                - Both IaInfoEvent and SolicitRetransimssion are NULL.
-                                - SolicitRetransmission is not NULL, and both SolicitRetransimssion->Mrc and
+                                - Both IaInfoEvent and SolicitRetransmission are NULL.
+                                - SolicitRetransmission is not NULL, and both SolicitRetransmission->Mrc and
                                   SolicitRetransmission->Mrd are zero.
   @retval EFI_ACCESS_DENIED     The EFI DHCPv6 Protocol instance has been already configured
                                 when Dhcp6CfgData is not NULL.
@@ -554,8 +554,8 @@ EFI_STATUS
                                 - OptionCount > 0 and OptionList is NULL.
                                 - OptionList is not NULL, and Client Identify option or
                                   Option Request option is specified in the OptionList.
-                                - Retransimssion is NULL.
-                                - Both Retransimssion->Mrc and Retransmission->Mrd are zero.
+                                - Retransmission is NULL.
+                                - Both Retransmission->Mrc and Retransmission->Mrd are zero.
                                 - ReplyCallback is NULL.
   @retval EFI_DEVICE_ERROR      An unexpected network or system error occurred.
   @retval EFI_NO_RESPONSE       The DHCPv6 information request exchange process failed

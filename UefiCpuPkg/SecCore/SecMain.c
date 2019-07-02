@@ -158,7 +158,7 @@ SecStartup (
   // |-------------------|---->
   // |                   |
   // |                   |
-  // |      Heap         |    PeiTemporayRamSize
+  // |      Heap         |    PeiTemporaryRamSize
   // |                   |
   // |                   |
   // |-------------------|---->  TempRamBase
@@ -358,7 +358,7 @@ SecStartupPhase2(
 
 /**
   TemporaryRamDone() disables the use of Temporary RAM. If present, this service is invoked
-  by the PEI Foundation after the EFI_PEI_PERMANANT_MEMORY_INSTALLED_PPI is installed.
+  by the PEI Foundation after the EFI_PEI_PERMANENT_MEMORY_INSTALLED_PPI is installed.
 
   @retval EFI_SUCCESS           Use of Temporary RAM was disabled.
   @retval EFI_INVALID_PARAMETER Temporary RAM could not be disabled.

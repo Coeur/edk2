@@ -71,7 +71,7 @@ AmlIsName (
 /**
   Return is buffer is AML NameSeg.
 
-  @param[in]    Buffer     AML NameSement.
+  @param[in]    Buffer     AML NameSegment.
 
   @retval       TRUE       It is AML NameSegment.
   @retval       FALSE      It is not AML NameSegment.
@@ -315,7 +315,7 @@ AmlGetAslNameStringSize (
   }
 
   //
-  // Check SegCoount
+  // Check SegCount
   //
   if (*SegCount > 0xFF) {
     return 0;

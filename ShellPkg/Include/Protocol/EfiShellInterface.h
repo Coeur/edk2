@@ -7,7 +7,7 @@
   ConIo provides a file-style interface to the console.
 
   The shell interface's and data (including ConIo) are only valid during
-  the applications Entry Point.  Once the application returns from it's
+  the applications Entry Point.  Once the application returns from its
   entry point the data is freed by the invoking shell.
 
   Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>

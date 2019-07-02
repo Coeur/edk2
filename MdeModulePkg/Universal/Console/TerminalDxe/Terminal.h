@@ -348,7 +348,7 @@ TerminalConInSetState (
 
   @retval EFI_SUCCESS              The notification function was registered
                                    successfully.
-  @retval EFI_OUT_OF_RESOURCES     Unable to allocate resources for necesssary data
+  @retval EFI_OUT_OF_RESOURCES     Unable to allocate resources for necessary data
                                    structures.
   @retval EFI_INVALID_PARAMETER    KeyData or NotifyHandle is NULL.
 
@@ -846,7 +846,7 @@ TerminalRemoveConsoleDevVariable (
   );
 
 /**
-  Build termial device path according to terminal type.
+  Build terminal device path according to terminal type.
 
   @param  TerminalType           The terminal type is PC ANSI, VT100, VT100+ or VT-UTF8.
   @param  ParentDevicePath       Parent device path.
@@ -867,7 +867,7 @@ SetTerminalDevicePath (
 /**
   Get one key out of serial buffer.
 
-  @param  SerialIo           Serial I/O protocl attached to the serial device.
+  @param  SerialIo           Serial I/O protocol attached to the serial device.
   @param  Input              The fetched key.
 
   @retval EFI_NOT_READY      If serial buffer is empty.
@@ -1160,7 +1160,7 @@ AnsiRawDataToUnicode (
 
   The table below shows the keyboard input mappings that this function supports.
   If the ESC sequence listed in one of the columns is presented, then it is translated
-  into the coorespoding EFI Scan Code.  If a matching sequence is not found, then the raw
+  into the corresponding EFI Scan Code.  If a matching sequence is not found, then the raw
   key strokes are converted into EFI Keys.
 
   2 seconds are allowed for an ESC sequence to be completed.  If the ESC sequence is not
@@ -1390,8 +1390,8 @@ TerminalIsValidEfiCntlChar (
 
   @param  DevicePath            Pointer to device's device path.
 
-  @retval TRUE                  The devcie is a hot-plug device
-  @retval FALSE                 The devcie is not a hot-plug device.
+  @retval TRUE                  The device is a hot-plug device
+  @retval FALSE                 The device is not a hot-plug device.
 
 **/
 BOOLEAN

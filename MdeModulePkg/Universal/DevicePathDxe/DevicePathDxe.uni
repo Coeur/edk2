@@ -2,7 +2,7 @@
 // Device path driver that produces three UEFI device path protocols.
 //
 // This driver produces Device Path Utilities protocol and optionally
-// DevicePahtToText and DevicePathFromText protocols based on feature flags
+// DevicePathToText and DevicePathFromText protocols based on feature flags
 // PcdDevicePathSupportDevicePathToText & PcdDevicePathSupportDevicePathFromText
 // respectively.
 //
@@ -15,5 +15,5 @@
 
 #string STR_MODULE_ABSTRACT             #language en-US "Produces three UEFI device path protocols"
 
-#string STR_MODULE_DESCRIPTION          #language en-US "This driver produces Device Path Utilities protocol and optionally DevicePahtToText and DevicePathFromText protocols based on feature flags PcdDevicePathSupportDevicePathToText & PcdDevicePathSupportDevicePathFromText respectively."
+#string STR_MODULE_DESCRIPTION          #language en-US "This driver produces Device Path Utilities protocol and optionally DevicePathToText and DevicePathFromText protocols based on feature flags PcdDevicePathSupportDevicePathToText & PcdDevicePathSupportDevicePathFromText respectively."
 

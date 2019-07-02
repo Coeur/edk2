@@ -356,7 +356,7 @@ DebugPortRead (
   @param  Buffer              Pointer to buffer to read.
 
   @retval EFI_SUCCESS         The data was written.
-  @retval others              Fails when writting datas to debug port device.
+  @retval others              Fails when writing datas to debug port device.
 
 **/
 EFI_STATUS
@@ -378,7 +378,7 @@ DebugPortWrite (
                               the DebugPort interface.
   @retval EFI_NOT_READY       There are no characters ready to read from the
                               DebugPort interface
-  @retval EFI_DEVICE_ERROR    A hardware failure occured... (from SerialIo)
+  @retval EFI_DEVICE_ERROR    A hardware failure occurred... (from SerialIo)
 
 **/
 EFI_STATUS

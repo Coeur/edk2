@@ -80,7 +80,7 @@ typedef enum {
   /// The DNS server list for the EFI IPv6 network stack
   /// running on the communication device this EFI IPv6
   /// Configuration Protocol manages. It is not configurable when the
-  /// policy is Ip6ConfigPolicyAutomatic.The DNS server
+  /// policy is Ip6ConfigPolicyAutomatic. The DNS server
   /// addresses must be unicast IPv6 addresses. The corresponding
   /// Data is a pointer to an array of EFI_IPv6_ADDRESS instances.
   /// When DataSize is 0 and Data is NULL, the existing configuration
@@ -88,7 +88,7 @@ typedef enum {
   ///
   Ip6ConfigDataTypeDnsServer,
   ///
-  /// The number of this enumeration memebers.
+  /// The number of this enumeration members.
   ///
   Ip6ConfigDataTypeMaximum
 } EFI_IP6_CONFIG_DATA_TYPE;

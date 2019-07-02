@@ -189,7 +189,7 @@ PeiStartupAllAPs (
   This function is used to dispatch one enabled AP to the function specified by
   Procedure passing in the argument specified by ProcedureArgument.
   The execution is in blocking mode. The BSP waits until the AP finishes or
-  TimeoutInMicroSecondss expires.
+  TimeoutInMicroSeconds expires.
 
   If the timeout specified by TimeoutInMicroseconds expires before the AP returns
   from Procedure, then execution of Procedure by the AP is terminated. The AP is

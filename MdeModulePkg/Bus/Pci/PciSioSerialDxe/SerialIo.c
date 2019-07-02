@@ -337,7 +337,7 @@ SerialReceiveTransmit (
       Lsr.Data = READ_LSR (SerialDevice);
 
       //
-      // Flush incomming data to prevent a an overrun during a long write
+      // Flush incoming data to prevent a an overrun during a long write
       //
       if ((Lsr.Bits.Dr == 1) && !ReceiveFifoFull) {
         ReceiveFifoFull = SerialFifoFull (&SerialDevice->Receive);
@@ -1043,7 +1043,7 @@ SerialWrite (
 
   //
   // Compute the timeout in microseconds to wait for a single byte to be
-  // transmitted.  The Mode structure contans a Timeout field that is the
+  // transmitted.  The Mode structure contains a Timeout field that is the
   // maximum time to transmit or receive a character.  However, many UARTs
   // have a FIFO for transmits, so the time required to add one new character
   // to the transmit FIFO may be the time required to flush a full FIFO.  If

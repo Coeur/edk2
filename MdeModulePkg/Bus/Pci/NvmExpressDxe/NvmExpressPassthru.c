@@ -194,11 +194,11 @@ NvmeDumpStatus (
 
 /**
   Create PRP lists for data transfer which is larger than 2 memory pages.
-  Note here we calcuate the number of required PRP lists and allocate them at one time.
+  Note here we calculate the number of required PRP lists and allocate them at one time.
 
   @param[in]     PciIo               A pointer to the EFI_PCI_IO_PROTOCOL instance.
   @param[in]     PhysicalAddr        The physical base address of data buffer.
-  @param[in]     Pages               The number of pages to be transfered.
+  @param[in]     Pages               The number of pages to be transferred.
   @param[out]    PrpListHost         The host base address of PRP lists.
   @param[in,out] PrpListNo           The number of PRP List.
   @param[out]    Mapping             The mapping value returned from PciIo.Map().
@@ -791,7 +791,7 @@ NvmExpressPassThru (
       DEBUG_CODE_END();
     }
     //
-    // Copy the Respose Queue entry for this command to the callers response buffer
+    // Copy the Response Queue entry for this command to the callers response buffer
     //
     CopyMem(Packet->NvmeCompletion, Cq, sizeof(EFI_NVM_EXPRESS_COMPLETION));
   } else {

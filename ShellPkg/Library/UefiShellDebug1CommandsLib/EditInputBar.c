@@ -296,7 +296,7 @@ InputBarSetStringSize (
   )
 {
   //
-  // free the old ReturnStirng
+  // free the old ReturnString
   //
   SHELL_FREE_NON_NULL (mReturnString);
 

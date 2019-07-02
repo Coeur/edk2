@@ -346,7 +346,7 @@ NvmeDisableController (
 
   //
   // Cap.To specifies max delay time in 500ms increments for Csts.Rdy to transition from 1 to 0 after
-  // Cc.Enable transition from 1 to 0. Loop produces a 1 millisecond delay per itteration, up to 500 * Cap.To.
+  // Cc.Enable transition from 1 to 0. Loop produces a 1 millisecond delay per iteration, up to 500 * Cap.To.
   //
   if (Private->Cap.To == 0) {
     Timeout = 1;
@@ -420,7 +420,7 @@ NvmeEnableController (
 
   //
   // Cap.To specifies max delay time in 500ms increments for Csts.Rdy to set after
-  // Cc.Enable. Loop produces a 1 millisecond delay per itteration, up to 500 * Cap.To.
+  // Cc.Enable. Loop produces a 1 millisecond delay per iteration, up to 500 * Cap.To.
   //
   if (Private->Cap.To == 0) {
     Timeout = 1;

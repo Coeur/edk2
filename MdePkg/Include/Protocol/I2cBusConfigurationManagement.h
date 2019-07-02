@@ -103,7 +103,7 @@ typedef struct _EFI_I2C_BUS_CONFIGURATION_MANAGEMENT_PROTOCOL EFI_I2C_BUS_CONFIG
   local I2C bus is idle while the I2C bus configuration is being enabled.
 
   If I2C transactions must be performed on other I2C busses, then the
-  EFI_I2C_HOST_PROTOCOL, the EFI_I2C_IO_PROTCOL, or a third party I2C
+  EFI_I2C_HOST_PROTOCOL, the EFI_I2C_IO_PROTOCOL, or a third party I2C
   driver interface for a specific device must be used.  This requirement
   is because the I2C host protocol controls the flow of requests to the
   I2C controller.  Use the EFI_I2C_HOST_PROTOCOL when the I2C device is
@@ -124,7 +124,7 @@ typedef struct _EFI_I2C_BUS_CONFIGURATION_MANAGEMENT_PROTOCOL EFI_I2C_BUS_CONFIG
   @param[in]  Event           Event to signal when the transaction is complete
   @param[out] I2cStatus       Buffer to receive the transaction status.
 
-  @return  When Event is NULL, EnableI2cBusConfiguration operates synchrouously
+  @return  When Event is NULL, EnableI2cBusConfiguration operates synchronously
   and returns the I2C completion status as its return value.  In this case it is
   recommended to use NULL for I2cStatus.  The values returned from
   EnableI2cBusConfiguration are:

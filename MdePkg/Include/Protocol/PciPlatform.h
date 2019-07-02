@@ -1,5 +1,5 @@
 /** @file
-  This file declares PlatfromOpRom protocols that provide the interface between
+  This file declares PlatformOpRom protocols that provide the interface between
   the PCI bus driver/PCI Host Bridge Resource Allocation driver and a platform-specific
   driver to describe the unique features of a platform.
   This protocol is optional.

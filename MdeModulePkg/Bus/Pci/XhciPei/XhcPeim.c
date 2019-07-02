@@ -844,7 +844,7 @@ ON_EXIT:
                                 sending or receiving.
   @param  Data                  Array of pointers to the buffers of data to transmit
                                 from or receive into.
-  @param  DataLength            The lenght of the data buffer.
+  @param  DataLength            The length of the data buffer.
   @param  DataToggle            On input, the initial data toggle for the transfer;
                                 On output, it is updated to to next data toggle to use of
                                 the subsequent bulk transfer.
@@ -852,7 +852,7 @@ ON_EXIT:
                                 transfer is allowed to complete.
                                 If Timeout is 0, then the caller must wait for the function
                                 to be completed until EFI_SUCCESS or EFI_DEVICE_ERROR is returned.
-  @param  Translator            A pointr to the transaction translator data.
+  @param  Translator            A pointer to the transaction translator data.
   @param  TransferResult        A pointer to the detailed result information of the
                                 bulk transfer.
 

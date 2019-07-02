@@ -15,12 +15,12 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
   { 0x2C03C536, 0x4594, 0x4515, { 0x9E, 0x7A, 0xD3, 0xD2, 0x04, 0xFE, 0x13, 0x63 } }
 
 //
-// Forward reference for pure ANSI compatability
+// Forward reference for pure ANSI compatibility
 //
 typedef struct _EFI_FILE_EXPLORER_PROTOCOL  EFI_FILE_EXPLORER_PROTOCOL;
 
 /**
-  Prototype for the next process after user chosed one file.
+  Prototype for the next process after user choosed one file.
 
   @param[in] FilePath     The device path of the find file.
 
@@ -46,9 +46,9 @@ BOOLEAN
   @param  FileType         The file type need to choose.
   @param  ChooseHandler    Function pointer to the extra task need to do
                            after choose one file.
-  @param  File             Return the device path for the last time chosed file.
+  @param  File             Return the device path for the last time choosed file.
 
-  @retval EFI_SUCESS       Choose the file success.
+  @retval EFI_SUCCESS      Choose the file success.
   @retval Other errors     Choose the file failed.
 **/
 typedef

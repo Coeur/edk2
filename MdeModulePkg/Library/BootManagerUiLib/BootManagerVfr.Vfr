@@ -27,7 +27,7 @@ formset
     subtitle text = STRING_TOKEN(STR_LAST_STRING);
 
     //
-    //Add this invisable text in order to indicate enter Boot Manager form.
+    //Add this invisible text in order to indicate enter Boot Manager form.
     //
     suppressif TRUE;
           text

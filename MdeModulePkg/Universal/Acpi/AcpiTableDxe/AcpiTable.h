@@ -226,7 +226,7 @@ SdtAcpiTableAcpiSdtConstructor (
   );
 
 //
-// export PrivateData symbol, because we need that in AcpiSdtProtol implementation
+// export PrivateData symbol, because we need that in AcpiSdtProtocol implementation
 //
 extern EFI_HANDLE                mHandle;
 extern EFI_ACPI_TABLE_INSTANCE   *mPrivateData;

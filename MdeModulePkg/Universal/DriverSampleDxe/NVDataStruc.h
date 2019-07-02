@@ -31,15 +31,15 @@ Revision History:
 
 //
 // !!! For a structure with a series of bit fields and used as a storage in vfr file, and if the bit fields do not add up to the size of the defined type.
-// In the C code use sizeof() to get the size the strucure, the results may vary form the compiler(VS,GCC...).
+// In the C code use sizeof() to get the size the structure, the results may vary form the compiler(VS,GCC...).
 // But the size of the storage calculated by VfrCompiler is fixed (calculate with alignment).
 // To avoid above case, we need to make the total bit width in the structure aligned with the size of the defined type for these bit fields. We can:
-// 1. Add bit field (with/without name) with remianing with for padding.
+// 1. Add bit field (with/without name) with remaining with for padding.
 // 2. Add unnamed bit field with 0 for padding, the amount of padding is determined by the alignment characteristics of the members of the structure.
 //
 typedef struct {
   UINT16   NestByteField;
-  UINT8                    : 1;  // unamed field can be used for padding
+  UINT8                    : 1;  // unnamed field can be used for padding
   UINT8    NestBitCheckbox : 1;
   UINT8    NestBitOneof    : 2;
   UINT8                    : 0;  // Special width 0 can be used to force alignment at the next word boundary

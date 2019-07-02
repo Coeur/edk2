@@ -29,19 +29,19 @@ Xtoi (
 
   MaxVal = (UINTN) -1 >> 4;
   //
-  // skip preceeding white space
+  // skip preceding white space
   //
   while (*Str != '\0' && *Str == ' ') {
     Str += 1;
   }
   //
-  // skip preceeding zeros
+  // skip preceding zeros
   //
   while (*Str != '\0' && *Str == '0') {
     Str += 1;
   }
   //
-  // skip preceeding white space
+  // skip preceding white space
   //
   if (*Str != '\0' && (*Str == 'x' || *Str == 'X')) {
     Str += 1;
@@ -93,19 +93,19 @@ LXtoi (
 
   MaxVal = RShiftU64 ((UINT64) -1, 4);
   //
-  // skip preceeding white space
+  // skip preceding white space
   //
   while (*Str != '\0' && *Str == ' ') {
     Str += 1;
   }
   //
-  // skip preceeding zeros
+  // skip preceding zeros
   //
   while (*Str != '\0' && *Str == '0') {
     Str += 1;
   }
   //
-  // skip preceeding white space
+  // skip preceding white space
   //
   if (*Str != '\0' && (*Str == 'x' || *Str == 'X')) {
     Str += 1;
@@ -160,7 +160,7 @@ Atoi (
   MaxVal = (UINTN) -1 / 10;
   ResteVal = (UINTN) -1 % 10;
   //
-  // skip preceeding white space
+  // skip preceding white space
   //
   while (*Str != '\0' && *Str == ' ') {
     Str += 1;
@@ -208,19 +208,19 @@ AsciiXtoi (
 
   MaxVal = (UINTN) -1 >> 4;
   //
-  // skip preceeding white space
+  // skip preceding white space
   //
   while (*Str != '\0' && *Str == ' ') {
     Str += 1;
   }
   //
-  // skip preceeding zeros
+  // skip preceding zeros
   //
   while (*Str != '\0' && *Str == '0') {
     Str += 1;
   }
   //
-  // skip preceeding white space
+  // skip preceding white space
   //
   if (*Str != '\0' && (*Str == 'x' || *Str == 'X')) {
     Str += 1;
@@ -274,7 +274,7 @@ AsciiAtoi (
   MaxVal = (UINTN) -1 / 10;
   ResteVal = (UINTN) -1 % 10;
   //
-  // skip preceeding white space
+  // skip preceding white space
   //
   while (*Str != '\0' && *Str == ' ') {
     Str += 1;
@@ -309,8 +309,8 @@ AsciiAtoi (
 
   @param String2 - Ascii string to process
 
-  @return Return a positive integer if String is lexicall greater than String2; Zero if
-  the two strings are identical; and a negative interger if String is lexically
+  @return Return a positive integer if String is lexically greater than String2; Zero if
+  the two strings are identical; and a negative integer if String is lexically
   less than String2.
 
 **/
@@ -558,7 +558,7 @@ StrTokenLine (
 
 /**
 
-  Find the next token after one specificed characters.
+  Find the next token after one specified characters.
 
   @param  String    Point to the string where to find the substring.
   @param  CharSet   Point to the string to be found.
@@ -631,7 +631,7 @@ StrGetNextTokenLine (
 
 /**
 
-  Find the next token after one specificed characters.
+  Find the next token after one specified characters.
 
   @param  String    Point to the string where to find the substring.
   @param  CharSet   Point to the string to be found.
@@ -649,7 +649,7 @@ StrGetNewTokenField (
 
 /**
 
-  Find the next token after one specificed characters.
+  Find the next token after one specified characters.
 
   @param  CharSet   Point to the string to be found.
 
@@ -844,7 +844,7 @@ AsciiStrTokenLine (
 
 /**
 
-  Find the next token after one specificed characters.
+  Find the next token after one specified characters.
 
   @param  String    Point to the string where to find the substring.
   @param  CharSet   Point to the string to be found.
@@ -917,7 +917,7 @@ AsciiStrGetNextTokenLine (
 
 /**
 
-  Find the next token after one specificed characters.
+  Find the next token after one specified characters.
 
   @param  String    Point to the string where to find the substring.
   @param  CharSet   Point to the string to be found.
@@ -935,7 +935,7 @@ AsciiStrGetNewTokenField (
 
 /**
 
-  Find the next token after one specificed characters.
+  Find the next token after one specified characters.
 
   @param  CharSet   Point to the string to be found.
 

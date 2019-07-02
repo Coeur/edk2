@@ -1,5 +1,5 @@
 /** @file
-  Report Status Code Router Driver which produces Report Stataus Code Handler Protocol
+  Report Status Code Router Driver which produces Report Status Code Handler Protocol
   and Status Code Runtime Protocol.
 
   Copyright (c) 2009 - 2018, Intel Corporation. All rights reserved.<BR>
@@ -132,7 +132,7 @@ Register (
   CallbackEntry->Tpl                = Tpl;
 
   //
-  // If TPL of registered callback funtion is not TPL_HIGH_LEVEL, then event should be created
+  // If TPL of registered callback function is not TPL_HIGH_LEVEL, then event should be created
   // for it, and related buffer for status code data should be prepared.
   // Here the data buffer must be prepared in advance, because Report Status Code Protocol might
   // be invoked under TPL_HIGH_LEVEL and no memory allocation is allowed then.
@@ -239,7 +239,7 @@ ReportDispatcher (
   VOID                          *NewBuffer;
 
   //
-  // Use atom operation to avoid the reentant of report.
+  // Use atom operation to avoid the reentrant of report.
   // If current status is not zero, then the function is reentrancy.
   //
   if (InterlockedCompareExchange32 (&mStatusCodeNestStatus, 0, 1) == 1) {
@@ -358,7 +358,7 @@ VirtualAddressChangeCallBack (
   Entry point of Generic Status Code Driver.
 
   This function is the entry point of this Generic Status Code Driver.
-  It installs eport Stataus Code Handler Protocol  and Status Code Runtime Protocol,
+  It installs report Status Code Handler Protocol  and Status Code Runtime Protocol,
   and registers event for EVT_SIGNAL_VIRTUAL_ADDRESS_CHANGE.
 
   @param  ImageHandle       The firmware allocated handle for the EFI image.

@@ -1251,7 +1251,7 @@ SdMmcHcInitHost (
 }
 
 /**
-  Set SD Host Controler control 2 registry according to selected speed.
+  Set SD Host Controller control 2 registry according to selected speed.
 
   @param[in] ControllerHandle The handle of the controller.
   @param[in] PciIo            The PCI IO protocol instance.
@@ -2042,7 +2042,7 @@ SdMmcExecTrb (
   BlkCount = 0;
   if (Trb->Mode != SdMmcNoData) {
     //
-    // Calcuate Block Count.
+    // Calculate Block Count.
     //
     BlkCount = (Trb->DataLen / Trb->BlockSize);
   }

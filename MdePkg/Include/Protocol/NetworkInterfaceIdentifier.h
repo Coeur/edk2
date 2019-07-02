@@ -40,7 +40,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 #define EFI_NETWORK_INTERFACE_IDENTIFIER_INTERFACE_REVISION   EFI_NETWORK_INTERFACE_IDENTIFIER_PROTOCOL_REVISION
 
 ///
-/// Forward reference for pure ANSI compatability.
+/// Forward reference for pure ANSI compatibility.
 ///
 typedef struct _EFI_NETWORK_INTERFACE_IDENTIFIER_PROTOCOL  EFI_NETWORK_INTERFACE_IDENTIFIER_PROTOCOL;
 
@@ -84,7 +84,7 @@ typedef enum {
 } EFI_NETWORK_INTERFACE_TYPE;
 
 ///
-/// Forward reference for pure ANSI compatability.
+/// Forward reference for pure ANSI compatibility.
 ///
 typedef struct undiconfig_table  UNDI_CONFIG_TABLE;
 

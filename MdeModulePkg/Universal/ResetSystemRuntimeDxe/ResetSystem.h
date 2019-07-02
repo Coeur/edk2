@@ -30,7 +30,7 @@
 #include <Library/MemoryAllocationLib.h>
 
 //
-// The maximum recurstion depth to ResetSystem() by reset notification handlers
+// The maximum recursion depth to ResetSystem() by reset notification handlers
 //
 #define MAX_RESET_NOTIFY_DEPTH 10
 

@@ -158,8 +158,8 @@ FullyQualifyPath(
 
   @param  Char  The character to check against.
 
-  @retval TRUE  If the Char is a hexadecmial character.
-  @retval FALSE If the Char is not a hexadecmial character.
+  @retval TRUE  If the Char is a hexadecimal character.
+  @retval FALSE If the Char is not a hexadecimal character.
 
 **/
 BOOLEAN
@@ -181,8 +181,8 @@ ShellIsHexaDecimalDigitCharacter (
 
   @param  Char  The character to check against.
 
-  @retval TRUE  If the Char is a hexadecmial character.
-  @retval FALSE If the Char is not a hexadecmial character.
+  @retval TRUE  If the Char is a hexadecimal character.
+  @retval FALSE If the Char is not a hexadecimal character.
 
 **/
 BOOLEAN
@@ -335,7 +335,7 @@ ShellLibConstructorWorker (
 
   if (gEfiShellProtocol == NULL) {
     //
-    // Moved to seperate function due to complexity
+    // Moved to separate function due to complexity
     //
     Status = ShellFindSE2(ImageHandle);
 
@@ -399,8 +399,8 @@ ShellLibConstructorWorker (
   @param ImageHandle    the image handle of the process
   @param SystemTable    the EFI System Table pointer
 
-  @retval EFI_SUCCESS   the initialization was complete sucessfully
-  @return others        an error ocurred during initialization
+  @retval EFI_SUCCESS   the initialization was complete successfully
+  @return others        an error occurred during initialization
 **/
 EFI_STATUS
 EFIAPI
@@ -487,7 +487,7 @@ ShellLibDestructor (
 
 /**
   This function causes the shell library to initialize itself.  If the shell library
-  is already initialized it will de-initialize all the current protocol poitners and
+  is already initialized it will de-initialize all the current protocol pointers and
   re-populate them again.
 
   When the library is used with PcdShellLibAutoInitialize set to true this function
@@ -495,7 +495,7 @@ ShellLibDestructor (
 
   This function is intended for internal access for shell commands only.
 
-  @retval EFI_SUCCESS   the initialization was complete sucessfully
+  @retval EFI_SUCCESS   the initialization was complete successfully
 
 **/
 EFI_STATUS
@@ -921,7 +921,7 @@ ShellWriteFile(
 
 @param FileHandle               the file handle to close.
 
-@retval EFI_SUCCESS             the file handle was closed sucessfully.
+@retval EFI_SUCCESS             the file handle was closed successfully.
 **/
 EFI_STATUS
 EFIAPI
@@ -941,7 +941,7 @@ ShellCloseFile (
 
   @param FileHandle             the file handle to delete
 
-  @retval EFI_SUCCESS           the file was closed sucessfully
+  @retval EFI_SUCCESS           the file was closed successfully
   @retval EFI_WARN_DELETE_FAILURE the handle was closed, but the file was not
                                 deleted
   @retval INVALID_PARAMETER     One of the parameters has an invalid value.
@@ -967,9 +967,9 @@ ShellDeleteFile (
   has the effect of starting the read process of the directory entries over.
 
   @param FileHandle             The file handle on which the position is being set
-  @param Position               Byte position from begining of file
+  @param Position               Byte position from beginning of file
 
-  @retval EFI_SUCCESS           Operation completed sucessfully.
+  @retval EFI_SUCCESS           Operation completed successfully.
   @retval EFI_UNSUPPORTED       the seek request for non-zero is not valid on
                                 directories.
   @retval INVALID_PARAMETER     One of the parameters has an invalid value.
@@ -993,9 +993,9 @@ ShellSetFilePosition (
   if FileHandle is a directory.
 
   @param FileHandle             The open file handle on which to get the position.
-  @param Position               Byte position from begining of file.
+  @param Position               Byte position from beginning of file.
 
-  @retval EFI_SUCCESS           the operation completed sucessfully.
+  @retval EFI_SUCCESS           the operation completed successfully.
   @retval INVALID_PARAMETER     One of the parameters has an invalid value.
   @retval EFI_UNSUPPORTED       the request is not valid on directories.
 **/
@@ -1108,7 +1108,7 @@ ShellFindNextFile(
   @param FileHandle             file handle from which size is retrieved
   @param Size                   pointer to size
 
-  @retval EFI_SUCCESS           operation was completed sucessfully
+  @retval EFI_SUCCESS           operation was completed successfully
   @retval EFI_DEVICE_ERROR      cannot access the file
 **/
 EFI_STATUS
@@ -1207,7 +1207,7 @@ environment variable is created and assigned the specified value.
   @param EnvVal                 The Value of the environment variable
   @param Volatile               Indicates whether the variable is non-volatile (FALSE) or volatile (TRUE).
 
-  @retval EFI_SUCCESS           the operation was completed sucessfully
+  @retval EFI_SUCCESS           the operation was completed successfully
   @retval EFI_UNSUPPORTED       This operation is not allowed in pre UEFI 2.0 Shell environments
 **/
 EFI_STATUS
@@ -1243,7 +1243,7 @@ ShellSetEnvironmentVariable (
   The CommandLine is executed from the current working directory on the current
   device.
 
-  The EnvironmentVariables pararemeter is ignored in a pre-UEFI Shell 2.0
+  The EnvironmentVariables parameter is ignored in a pre-UEFI Shell 2.0
   environment.  The values pointed to by the parameters will be unchanged by the
   ShellExecute() function.  The Output parameter has no effect in a
   UEFI Shell 2.0 environment.
@@ -1255,7 +1255,7 @@ ShellSetEnvironmentVariable (
                                   in the form "x=y".  If NULL, the current set is used.
   @param[out] Status              The status of the run command line.
 
-  @retval EFI_SUCCESS             The operation completed sucessfully.  Status
+  @retval EFI_SUCCESS             The operation completed successfully.  Status
                                   contains the status code returned.
   @retval EFI_INVALID_PARAMETER   A parameter contains an invalid value.
   @retval EFI_OUT_OF_RESOURCES    Out of resources.
@@ -1314,7 +1314,7 @@ ShellExecute (
 }
 
 /**
-  Retreives the current directory path
+  Retrieves the current directory path
 
   If the DeviceName is NULL, it returns the current device's current directory
   name. If the DeviceName is not NULL, it returns the current directory name
@@ -1427,7 +1427,7 @@ typedef struct {
 } EFI_SHELL_FILE_INFO_NO_CONST;
 
 /**
-  Converts a EFI shell list of structures to the coresponding UEFI Shell 2.0 type of list.
+  Converts a EFI shell list of structures to the corresponding UEFI Shell 2.0 type of list.
 
   if OldStyleFileList is NULL then ASSERT()
 
@@ -1504,7 +1504,7 @@ InternalShellConvertFileListType (
     NewInfo->Info         = AllocateCopyPool((UINTN)OldInfo->Info->Size, OldInfo->Info);
 
     //
-    // make sure all the memory allocations were sucessful
+    // make sure all the memory allocations were successful
     //
     if (NULL == NewInfo->FullName || NewInfo->FileName == NULL || NewInfo->Info == NULL) {
       //
@@ -1547,7 +1547,7 @@ InternalShellConvertFileListType (
   @param OpenMode               mode to open files with
   @param ListHead               head of linked list of results
 
-  @retval EFI_SUCCESS           the operation was sucessful and the list head
+  @retval EFI_SUCCESS           the operation was successful and the list head
                                 contains the list of opened files
   @return != EFI_SUCCESS        the operation failed
 
@@ -1665,7 +1665,7 @@ ShellOpenFileMetaArg (
 
   @param ListHead               the pointer to free.
 
-  @retval EFI_SUCCESS           the operation was sucessful.
+  @retval EFI_SUCCESS           the operation was successful.
 **/
 EFI_STATUS
 EFIAPI
@@ -1833,7 +1833,7 @@ ShellFindFilePath (
   If the return value is not NULL then the memory must be caller freed.
 
   @param[in] FileName           Filename string.
-  @param[in] FileExtension      Semi-colon delimeted list of possible extensions.
+  @param[in] FileExtension      Semi-colon delimited list of possible extensions.
 
   @retval NULL                  The file was not found.
   @retval !NULL                 The path to the file.
@@ -2016,14 +2016,14 @@ InternalIsFlag (
   @param[in] CheckList          pointer to list of parameters to check
   @param[out] CheckPackage      pointer to pointer to list checked values
   @param[out] ProblemParam      optional pointer to pointer to unicode string for
-                                the paramater that caused failure.  If used then the
+                                the parameter that caused failure.  If used then the
                                 caller is responsible for freeing the memory.
   @param[in] AutoPageBreak      will automatically set PageBreakEnabled for "b" parameter
   @param[in] Argv               pointer to array of parameters
   @param[in] Argc               Count of parameters in Argv
   @param[in] AlwaysAllowNumbers TRUE to allow numbers always, FALSE otherwise.
 
-  @retval EFI_SUCCESS           The operation completed sucessfully.
+  @retval EFI_SUCCESS           The operation completed successfully.
   @retval EFI_OUT_OF_RESOURCES  A memory allocation failed
   @retval EFI_INVALID_PARAMETER A parameter was invalid
   @retval EFI_VOLUME_CORRUPTED  the command line was corrupt.  an argument was
@@ -2093,7 +2093,7 @@ InternalCommandLineParse (
       //
     } else if (InternalIsOnCheckList(Argv[LoopCounter], CheckList, &CurrentItemType)) {
       //
-      // We might have leftover if last parameter didnt have optional value
+      // We might have leftover if last parameter didn't have optional value
       //
       if (GetItemValue != 0) {
         GetItemValue = 0;
@@ -2243,11 +2243,11 @@ InternalCommandLineParse (
   @param[in] CheckList          The pointer to list of parameters to check.
   @param[out] CheckPackage      The package of checked values.
   @param[out] ProblemParam      Optional pointer to pointer to unicode string for
-                                the paramater that caused failure.
+                                the parameter that caused failure.
   @param[in] AutoPageBreak      Will automatically set PageBreakEnabled.
   @param[in] AlwaysAllowNumbers Will never fail for number based flags.
 
-  @retval EFI_SUCCESS           The operation completed sucessfully.
+  @retval EFI_SUCCESS           The operation completed successfully.
   @retval EFI_OUT_OF_RESOURCES  A memory allocation failed.
   @retval EFI_INVALID_PARAMETER A parameter was invalid.
   @retval EFI_VOLUME_CORRUPTED  The command line was corrupt.
@@ -2395,7 +2395,7 @@ ShellCommandLineGetFlag (
   }
 
   //
-  // enumerate through the list of parametrs
+  // enumerate through the list of parameters
   //
   for ( Node = GetFirstNode(CheckPackage)
       ; !IsNull (CheckPackage, Node)
@@ -2406,7 +2406,7 @@ ShellCommandLineGetFlag (
     //
     if (((SHELL_PARAM_PACKAGE*)Node)->Name != NULL) {
       //
-      // If Type is TypeStart then only compare the begining of the strings
+      // If Type is TypeStart then only compare the beginning of the strings
       //
       if (((SHELL_PARAM_PACKAGE*)Node)->Type == TypeStart) {
         if (StrnCmp(KeyString, ((SHELL_PARAM_PACKAGE*)Node)->Name, StrLen(KeyString)) == 0) {
@@ -2459,7 +2459,7 @@ ShellCommandLineGetValue (
   }
 
   //
-  // enumerate through the list of parametrs
+  // enumerate through the list of parameters
   //
   for ( Node = GetFirstNode(CheckPackage)
       ; !IsNull (CheckPackage, Node)
@@ -2470,7 +2470,7 @@ ShellCommandLineGetValue (
     //
     if (((SHELL_PARAM_PACKAGE*)Node)->Name != NULL) {
       //
-      // If Type is TypeStart then only compare the begining of the strings
+      // If Type is TypeStart then only compare the beginning of the strings
       //
       if (((SHELL_PARAM_PACKAGE*)Node)->Type == TypeStart) {
         if (StrnCmp(KeyString, ((SHELL_PARAM_PACKAGE*)Node)->Name, StrLen(KeyString)) == 0) {
@@ -2523,7 +2523,7 @@ ShellCommandLineGetRawValue (
   }
 
   //
-  // enumerate through the list of parametrs
+  // enumerate through the list of parameters
   //
   for ( Node = GetFirstNode(CheckPackage)
       ; !IsNull (CheckPackage, Node)
@@ -2546,7 +2546,7 @@ ShellCommandLineGetRawValue (
 
   @param[in] CheckPackage       The package of parsed command line arguments.
 
-  @retval (UINTN)-1     No parsing has ocurred
+  @retval (UINTN)-1     No parsing has occurred
   @return other         The number of value parameters found
 **/
 UINTN
@@ -2718,7 +2718,7 @@ ShellCopySearchAndReplace(
 
   @param[in] String       The string to print out.
 
-  @retval EFI_SUCCESS     The operation was sucessful.
+  @retval EFI_SUCCESS     The operation was successful.
   @retval !EFI_SUCCESS    The operation failed.
 **/
 EFI_STATUS
@@ -3163,7 +3163,7 @@ ShellIsFileInPath(
   @param[in] String   String representation of a number.
 
   @return             The unsigned integer result of the conversion.
-  @retval (UINTN)(-1) An error occured.
+  @retval (UINTN)(-1) An error occurred.
 **/
 UINTN
 EFIAPI
@@ -3187,7 +3187,7 @@ ShellHexStrToUintn(
   @param[in] String   String representation of a number
 
   @return             the number
-  @retval (UINTN)(-1) An error ocurred.
+  @retval (UINTN)(-1) An error occurred.
 **/
 UINTN
 EFIAPI
@@ -3339,7 +3339,7 @@ StrnCatGrow (
   @param Prompt                   Pointer to string prompt to use to request input.
   @param Response                 Pointer to Response which will be populated upon return.
 
-  @retval EFI_SUCCESS             The operation was sucessful.
+  @retval EFI_SUCCESS             The operation was successful.
   @retval EFI_UNSUPPORTED         The operation is not supported as requested.
   @retval EFI_INVALID_PARAMETER   A parameter was invalid.
   @return other                   The operation failed.
@@ -3599,7 +3599,7 @@ ShellPromptForResponse (
   @param[in] HiiFormatHandle    The format string Handle for getting from Hii.
   @param Response               Pointer to Response which will be populated upon return.
 
-  @retval EFI_SUCCESS the operation was sucessful.
+  @retval EFI_SUCCESS the operation was successful.
   @return other       the operation failed.
 
   @sa ShellPromptForResponse
@@ -3623,9 +3623,9 @@ ShellPromptForResponseHii (
 }
 
 /**
-  Function to determin if an entire string is a valid number.
+  Function to determine if an entire string is a valid number.
 
-  If Hex it must be preceeded with a 0x or has ForceHex, set TRUE.
+  If Hex it must be preceded with a 0x or has ForceHex, set TRUE.
 
   @param[in] String       The string to evaluate.
   @param[in] ForceHex     TRUE - always assume hex.
@@ -3675,7 +3675,7 @@ InternalShellIsHexOrDecimalNumber (
   if (*String == L'x' || *String == L'X') {
     if (!LeadingZero) {
       //
-      // we got an x without a preceeding 0
+      // we got an x without a preceding 0
       //
       return (FALSE);
     }
@@ -3743,7 +3743,7 @@ ShellFileExists(
   Convert a Unicode character to numerical value.
 
   This internal function only deal with Unicode character
-  which maps to a valid hexadecimal ASII character, i.e.
+  which maps to a valid hexadecimal ASCII character, i.e.
   L'0' to L'9', L'a' to L'f' or L'A' to L'F'. For other
   Unicode character, the value returned does not make sense.
 
@@ -3792,7 +3792,7 @@ InternalShellHexCharToUintn (
 
   @retval EFI_SUCCESS             The conversion was successful.
   @retval EFI_INVALID_PARAMETER   A parameter was NULL or invalid.
-  @retval EFI_DEVICE_ERROR        An overflow occured.
+  @retval EFI_DEVICE_ERROR        An overflow occurred.
 **/
 EFI_STATUS
 InternalShellStrHexToUint64 (
@@ -3893,7 +3893,7 @@ InternalShellStrHexToUint64 (
 
   @retval EFI_SUCCESS             The conversion was successful.
   @retval EFI_INVALID_PARAMETER   A parameter was NULL or invalid.
-  @retval EFI_DEVICE_ERROR        An overflow occured.
+  @retval EFI_DEVICE_ERROR        An overflow occurred.
 **/
 EFI_STATUS
 InternalShellStrDecimalToUint64 (
@@ -3962,7 +3962,7 @@ InternalShellStrDecimalToUint64 (
 /**
   Function to verify and convert a string to its numerical value.
 
-  If Hex it must be preceeded with a 0x, 0X, or has ForceHex set TRUE.
+  If Hex it must be preceded with a 0x, 0X, or has ForceHex set TRUE.
 
   @param[in] String       The string to evaluate.
   @param[out] Value       Upon a successful return the value of the conversion.
@@ -4033,9 +4033,9 @@ ShellConvertStringToUint64(
 }
 
 /**
-  Function to determin if an entire string is a valid number.
+  Function to determine if an entire string is a valid number.
 
-  If Hex it must be preceeded with a 0x or has ForceHex, set TRUE.
+  If Hex it must be preceded with a 0x or has ForceHex, set TRUE.
 
   @param[in] String       The string to evaluate.
   @param[in] ForceHex     TRUE - always assume hex.
@@ -4296,7 +4296,7 @@ ShellPrintHelp (
 
   @param[in]       FileName       Pointer to file name to delete.
 
-  @retval EFI_SUCCESS             the file was deleted sucessfully
+  @retval EFI_SUCCESS             the file was deleted successfully
   @retval EFI_WARN_DELETE_FAILURE the handle was closed, but the file was not
                                   deleted
   @retval EFI_INVALID_PARAMETER   One of the parameters has an invalid value.

@@ -169,7 +169,7 @@ FspGlobalDataInit (
   SerialPortInitialize ();
 
   //
-  // Ensure the golbal data pointer is valid
+  // Ensure the global data pointer is valid
   //
   ASSERT (GetFspGlobalDataPointer () == PeiFspData);
 

@@ -29,7 +29,7 @@ CHAR16 mLanguageWindow[16] = {
 
   @param  Private                Hii database private structure.
   @param  StringPackage          HII string package instance.
-  @param  FontId                Font identifer, which must be unique within the string package.
+  @param  FontId                 Font identifier, which must be unique within the string package.
   @param  DuplicateEnable        If true, duplicate HII_FONT_INFO which refers to
                                  the same EFI_FONT_INFO is permitted. Otherwise it
                                  is not allowed.
@@ -1181,7 +1181,7 @@ HiiNewString (
   GlobalFont = NULL;
 
   //
-  // If StringFontInfo specify a paritcular font, it should exist in current database.
+  // If StringFontInfo specify a particular font, it should exist in current database.
   //
   if (StringFontInfo != NULL) {
     if (!IsFontInfoExisted (Private, (EFI_FONT_INFO *) StringFontInfo, NULL, NULL, &GlobalFont)) {

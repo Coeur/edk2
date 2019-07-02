@@ -418,7 +418,7 @@ FileTimeToLocalTime (
   @param[in] Count          The count of bits enabled in Attribs.
   @param[in] TimeZone       The current time zone offset.
 
-  @retval SHELL_SUCCESS     the printing was sucessful.
+  @retval SHELL_SUCCESS     the printing was successful.
 **/
 SHELL_STATUS
 PrintLsOutput(
@@ -562,7 +562,7 @@ PrintLsOutput(
 
   if (Rec && ShellStatus != SHELL_ABORTED) {
     //
-    // Re-Open all the files under the starting path for directories that didnt necessarily match our file filter
+    // Re-Open all the files under the starting path for directories that didn't necessarily match our file filter
     //
     ShellCloseFileMetaArg(&ListHead);
     CorrectedPath[0] = CHAR_NULL;

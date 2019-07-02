@@ -1,5 +1,5 @@
 ## @file
-#  Implements ReadOnly Variable Services required by PEIM and installs PEI ReadOnly Varaiable2 PPI.
+#  Implements ReadOnly Variable Services required by PEIM and installs PEI ReadOnly Variable2 PPI.
 #
 #  This module implements ReadOnly Variable Services required by PEIM and installs PEI ReadOnly Varaiable2 PPI.
 #

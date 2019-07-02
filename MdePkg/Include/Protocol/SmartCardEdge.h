@@ -668,7 +668,7 @@ EFI_STATUS
   This function performs a secret Diffie Hellman agreement calculation that would
   be used to derive a symmetric encryption / decryption key.
 
-  The function compute a DH agreement that should be diversified togenerate a symmetric
+  The function compute a DH agreement that should be diversified to generate a symmetric
   key to proceed encryption or decryption.
 
   The application and the Smart Card shall agree on the diversification process.

@@ -20,7 +20,7 @@
   }
 
 ///
-/// Forward reference for pure ANSI compatability
+/// Forward reference for pure ANSI compatibility
 ///
 typedef struct _EFI_USB2_HC_PROTOCOL EFI_USB2_HC_PROTOCOL;
 
@@ -140,7 +140,7 @@ EFI_STATUS
   );
 
 /**
-  Enumration value for status of USB HC.
+  Enumeration value for status of USB HC.
 **/
 typedef enum {
   EfiUsbHcStateHalt,                ///< The host controller is in halt
@@ -171,7 +171,7 @@ typedef enum {
                                     ///< when there is no bus traffic for
                                     ///< 3 microseconds.
 
-  EfiUsbHcStateMaximum              ///< Maximum value for enumration value of HC status.
+  EfiUsbHcStateMaximum              ///< Maximum value for enumeration value of HC status.
 } EFI_USB_HC_STATE;
 
 /**
@@ -326,7 +326,7 @@ EFI_STATUS
                               transfer is polled.
   @param  DataLength          Indicates the length of data to be received at the rate specified by
                               PollingInterval from the target asynchronous interrupt endpoint.
-  @param  Translator          A pointr to the transaction translator data.
+  @param  Translator          A pointer to the transaction translator data.
   @param  CallBackFunction    The Callback function. This function is called at the rate specified by
                               PollingInterval.
   @param  Context             The context that is passed to the CallBackFunction. This is an
@@ -373,7 +373,7 @@ EFI_STATUS
   @param  DataToggle            A pointer to the data toggle value.
   @param  TimeOut               Indicates the maximum time, in milliseconds, which the transfer is
                                 allowed to complete.
-  @param  Translator            A pointr to the transaction translator data.
+  @param  Translator            A pointer to the transaction translator data.
   @param  TransferResult        A pointer to the detailed result information from the synchronous
                                 interrupt transfer.
 
@@ -408,9 +408,9 @@ EFI_STATUS
   Submits isochronous transfer to an isochronous endpoint of a USB device.
 
   This function is used to submit isochronous transfer to a target endpoint of a USB device.
-  The target endpoint is specified by DeviceAddressand EndpointAddress. Isochronous transfers are
+  The target endpoint is specified by DeviceAddress and EndpointAddress. Isochronous transfers are
   used when working with isochronous date. It provides periodic, continuous communication between
-  the host and a device. Isochronous transfers can beused only by full-speed, high-speed, and
+  the host and a device. Isochronous transfers can be used only by full-speed, high-speed, and
   super-speed devices.
 
   High-speed isochronous transfers can be performed using multiple data buffers. The number of
@@ -419,17 +419,17 @@ EFI_STATUS
 
   Data represents a list of pointers to the data buffers. For full-speed isochronous transfers
   only the data pointed by Data[0]shall be used. For high-speed isochronous transfers and for
-  the split transactions depending on DataLengththere several data buffers canbe used. For the
+  the split transactions depending on DataLengththere several data buffers can be used. For the
   high-speed isochronous transfers the total number of buffers must not exceed EFI_USB_MAX_ISO_BUFFER_NUM.
 
   For split transactions performed on full-speed device by high-speed host controller the total
   number of buffers is limited to EFI_USB_MAX_ISO_BUFFER_NUM1.
-  If the isochronous transfer is successful, then EFI_SUCCESSis returned. The isochronous transfer
+  If the isochronous transfer is successful, then EFI_SUCCESS is returned. The isochronous transfer
   is designed to be completed within one USB frame time, if it cannot be completed, EFI_TIMEOUT
   is returned. If an error other than timeout occurs during the USB transfer, then EFI_DEVICE_ERROR
   is returned and the detailed status code will be returned in TransferResult.
 
-  EFI_INVALID_PARAMETERis returned if one of the following conditionsis satisfied:
+  EFI_INVALID_PARAMETER is returned if one of the following conditions is satisfied:
     - Data is NULL.
     - DataLength is 0.
     - DeviceSpeed is not one of the supported values listed above.
@@ -486,7 +486,7 @@ EFI_STATUS
   the caller can know the transfer results. If the transfer is successful, the caller can get
   the data received or sent in this callback function.
 
-  The target endpoint is specified by DeviceAddressand EndpointAddress. Isochronous transfers
+  The target endpoint is specified by DeviceAddress and EndpointAddress. Isochronous transfers
   are used when working with isochronous date. It provides periodic, continuous communication
   between the host and a device. Isochronous transfers can be used only by full-speed, high-speed,
   and super-speed devices.
@@ -503,7 +503,7 @@ EFI_STATUS
   For split transactions performed on full-speed device by high-speed host controller the total
   number of buffers is limited to EFI_USB_MAX_ISO_BUFFER_NUM1.
 
-  EFI_INVALID_PARAMETER is returned if one of the following conditionsis satisfied:
+  EFI_INVALID_PARAMETER is returned if one of the following conditions is satisfied:
     - Data is NULL.
     - DataLength is 0.
     - DeviceSpeed is not one of the supported values listed above.

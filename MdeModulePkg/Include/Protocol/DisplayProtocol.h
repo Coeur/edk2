@@ -1,5 +1,5 @@
 /** @file
-  FormDiplay protocol to show Form
+  FormDisplay protocol to show Form
 
 Copyright (c) 2013 - 2018, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -114,7 +114,7 @@ UINT32
 
 /**
   Perform Password check.
-  Passwork may be encrypted by driver that requires the specific check.
+  Password may be encrypted by driver that requires the specific check.
 
   @param  Form             Form where Password Statement is in.
   @param  Statement        Password statement
@@ -238,7 +238,7 @@ struct _FORM_DISPLAY_ENGINE_FORM {
   //
   LIST_ENTRY            StatementListOSF;
   //
-  // The input screen dimenstions info.
+  // The input screen dimensions info.
   //
   EFI_SCREEN_DESCRIPTOR *ScreenDimensions;
   //

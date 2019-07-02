@@ -430,9 +430,9 @@ EFI_STATUS
 
   @param[in]  This                Pointer to EFI_DNS4_PROTOCOL instance.
   @param[in]  DeleteFlag          If FALSE, this function is to add one entry to the
-                                  DNS Cahce. If TRUE, this function will delete
+                                  DNS Cache. If TRUE, this function will delete
                                   matching DNS Cache entry.
-  @param[in]  Override            If TRUE, the maching DNS cache entry will be
+  @param[in]  Override            If TRUE, the matching DNS cache entry will be
                                   overwritten with the supplied parameter. If FALSE,
                                   EFI_ACCESS_DENIED will be returned if the entry to
                                   be added is already existed.

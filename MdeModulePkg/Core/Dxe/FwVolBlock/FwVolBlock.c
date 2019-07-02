@@ -1,7 +1,7 @@
 /** @file
   Implementations for Firmware Volume Block protocol.
 
-  It consumes FV HOBs and creates read-only Firmare Volume Block protocol
+  It consumes FV HOBs and creates read-only Firmware Volume Block protocol
   instances for each of them.
 
 Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
@@ -237,7 +237,7 @@ FwVolBlockReadBlock (
   NumOfBytesRead = *NumBytes;
   if (Offset + NumOfBytesRead > FvbDevice->LbaCache[LbaIndex].Length) {
     //
-    // partial exceed boundary, read data from current postion to end.
+    // partial exceed boundary, read data from current position to end.
     //
     NumOfBytesRead = FvbDevice->LbaCache[LbaIndex].Length - Offset;
   }

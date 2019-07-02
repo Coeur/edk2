@@ -102,7 +102,7 @@ InsertEsrtEntry(
   @param[in]    Attribute            Esrt from Esrt private protocol or FMP instance
 
   @retval EFI_SUCCESS         Insert all entries Successfully
-  @retval EFI_NOT_FOUND       ESRT entry with FwClass doesn't exsit
+  @retval EFI_NOT_FOUND       ESRT entry with FwClass doesn't exist
 
 **/
 EFI_STATUS
@@ -118,7 +118,7 @@ DeleteEsrtEntry(
   @param[in]    Attribute            Esrt from Non Esrt or FMP instance
 
   @retval EFI_SUCCESS          Successfully Update a variable.
-  @retval EFI_NOT_FOUND        The Esrt enry doesn't exist
+  @retval EFI_NOT_FOUND        The Esrt entry doesn't exist
 
 **/
 EFI_STATUS
@@ -182,7 +182,7 @@ EsrtDxeUpdateEsrtEntry(
   @param[in]    FwClass                FwClass of Esrt entry to Unregister
 
   @retval EFI_SUCCESS             Insert all entries Successfully
-  @retval EFI_NOT_FOUND           Entry of FwClass does not exsit
+  @retval EFI_NOT_FOUND           Entry of FwClass does not exist
 
 **/
 EFI_STATUS
@@ -212,7 +212,7 @@ EsrtDxeRegisterEsrtEntry(
 
   @retval EFI_SUCCESS                      Successfully sync cache repository from FMP instances
   @retval EFI_NOT_FOUND                   No FMP Instance are found
-  @retval EFI_OUT_OF_RESOURCES     Resource allocaton fail
+  @retval EFI_OUT_OF_RESOURCES     Resource allocation fail
 
 **/
 EFI_STATUS

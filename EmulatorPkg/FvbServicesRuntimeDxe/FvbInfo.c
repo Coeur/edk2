@@ -81,7 +81,7 @@ EFI_FVB_MEDIA_INFO  mPlatformFvbMediaInfo[] = {
     }
   },
   //
-  // Systen NvStorage FVB
+  // System NvStorage FVB
   //
   {
     FixedPcdGet32 (PcdFlashNvStorageVariableSize) + \

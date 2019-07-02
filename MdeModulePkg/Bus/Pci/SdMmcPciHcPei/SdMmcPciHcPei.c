@@ -156,7 +156,7 @@ InitializeSdMmcHcPeim (
                 PciWrite32 (PCI_LIB_ADDRESS(Bus, Device, Function, PCI_BASE_ADDRESSREG_OFFSET + 4), 0xFFFFFFFF);
                 Size = PciRead32 (PCI_LIB_ADDRESS(Bus, Device, Function, PCI_BASE_ADDRESSREG_OFFSET + 4));
                 //
-                // Fix the length to support some spefic 64 bit BAR
+                // Fix the length to support some specific 64 bit BAR
                 //
                 Size |= ((UINT32)(-1) << HighBitSet32 (Size));
                 //

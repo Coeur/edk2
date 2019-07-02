@@ -99,7 +99,7 @@ ConvertToTestedMemory (
 
   @retval EFI_SUCCESS         The generic memory test initialized correctly.
   @retval EFI_NO_MEDIA        There is not any non-tested memory found, in this
-                              function if not any non-tesed memory found means
+                              function if not any non-tested memory found means
                               that the memory test driver have not detect any
                               non-tested extended memory of current system.
 

@@ -211,7 +211,7 @@ EhcInitSched (
 
   //
   // Second initialize the asynchronous schedule:
-  // Only need to set the AsynListAddr register to
+  // Only need to set the AsyncListAddr register to
   // the reclamation header
   //
   PciAddr = UsbHcGetPciAddressForHostMem (Ehc->MemPool, Ehc->ReclaimHead, sizeof (EHC_QH));
@@ -323,7 +323,7 @@ EhcLinkQhToAsync (
   //
   // Append the queue head after the reclaim header, then
   // fix the hardware visiable parts (EHCI R1.0 page 72).
-  // ReclaimHead is always linked to the EHCI's AsynListAddr.
+  // ReclaimHead is always linked to the EHCI's AsyncListAddr.
   //
   Head                    = Ehc->ReclaimHead;
 
@@ -428,7 +428,7 @@ EhcLinkQhToPeriod (
     ASSERT (Next != NULL);
 
     //
-    // The entry may have been linked into the frame by early insertation.
+    // The entry may have been linked into the frame by early insertion.
     // For example: if insert a Qh with Qh.Interval == 4, and there is a Qh
     // with Qh.Interval == 8 on the frame. If so, we are done with this frame.
     // It isn't necessary to compare all the QH with the same interval to
@@ -463,7 +463,7 @@ EhcLinkQhToPeriod (
     //
     // OK, find the right position, insert it in. If Qh's next
     // link has already been set, it is in position. This is
-    // guarranted by 2^n polling interval.
+    // guaranteed by 2^n polling interval.
     //
     if (Qh->NextQh == NULL) {
       Qh->NextQh              = Next;
@@ -504,7 +504,7 @@ EhcUnlinkQhFromPeriod (
 
   for (Index = 0; Index < EHC_FRAME_LEN; Index += Qh->Interval) {
     //
-    // Frame link can't be NULL because we always keep PeroidOne
+    // Frame link can't be NULL because we always keep PeriodOne
     // on the frame list
     //
     ASSERT (!EHC_LINK_TERMINATED (((UINT32*)Ehc->PeriodFrame)[Index]));
@@ -549,7 +549,7 @@ EhcUnlinkQhFromPeriod (
   @param  Ehc                   The EHCI device.
   @param  Urb                   The URB to check result.
 
-  @return Whether the result of URB transfer is finialized.
+  @return Whether the result of URB transfer is finalized.
 
 **/
 BOOLEAN
@@ -585,7 +585,7 @@ EhcCheckUrbResult (
     if (EHC_BIT_IS_SET (State, QTD_STAT_HALTED)) {
       //
       // EHCI will halt the queue head when met some error.
-      // If it is halted, the result of URB is finialized.
+      // If it is halted, the result of URB is finalized.
       //
       if ((State & QTD_STAT_ERR_MASK) == 0) {
         Urb->Result |= EFI_USB_ERR_STALL;
@@ -608,7 +608,7 @@ EhcCheckUrbResult (
 
     } else if (EHC_BIT_IS_SET (State, QTD_STAT_ACTIVE)) {
       //
-      // The QTD is still active, no need to check furthur.
+      // The QTD is still active, no need to check further.
       //
       Urb->Result |= EFI_USB_ERR_NOTEXECUTE;
 
@@ -629,7 +629,7 @@ EhcCheckUrbResult (
 
         //
         // Short packet read condition. If it isn't a setup transfer,
-        // no need to check furthur: the queue head will halt at the
+        // no need to check further: the queue head will halt at the
         // ShortReadStop. If it is a setup transfer, need to check the
         // Status Stage of the setup transfer to get the finial result
         //
@@ -783,7 +783,7 @@ EhciDelAsyncIntTransfer (
 
 
 /**
-  Remove all the asynchronous interrutp transfers.
+  Remove all the asynchronous interrupt transfers.
 
   @param  Ehc                   The EHCI device.
 
@@ -1068,7 +1068,7 @@ EhcMonitorAsyncRequests (
     //
     Status = EhcFlushAsyncIntMap (Ehc, Urb);
     if (EFI_ERROR (Status)) {
-      DEBUG ((EFI_D_ERROR, "EhcMonitorAsyncRequests: Fail to Flush AsyncInt Mapped Memeory\n"));
+      DEBUG ((EFI_D_ERROR, "EhcMonitorAsyncRequests: Fail to Flush AsyncInt Mapped Memory\n"));
     }
 
     //

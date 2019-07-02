@@ -95,7 +95,7 @@ VariableLockCapsuleLongModeBufferVariable (
 
 /**
   1. Allocate Reserved memory for capsule PEIM to establish a 1:1 Virtual to Physical mapping.
-  2. Allocate Reserved memroy as a stack for capsule PEIM to transfer from 32-bit mdoe to 64-bit mode.
+  2. Allocate Reserved memory as a stack for capsule PEIM to transfer from 32-bit mdoe to 64-bit mode.
 
 **/
 VOID

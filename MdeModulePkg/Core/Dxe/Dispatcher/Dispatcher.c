@@ -17,13 +17,13 @@
             and After dependencies. This is done recursively as the call to add
             to the mScheduledQueue checks for Before and recursively adds
             all Befores. It then addes the item that was passed in and then
-            processess the After dependecies by recursively calling the routine.
+            processes the After dependencies by recursively calling the routine.
 
   Dispatcher Rules:
   The rules for the dispatcher are in chapter 10 of the DXE CIS. Figure 10-3
   is the state diagram for the DXE dispatcher
 
-  Depex - Dependency Expresion.
+  Depex - Dependency Expression.
   SOR   - Schedule On Request - Don't schedule if this bit is set.
 
 Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
@@ -57,7 +57,7 @@ EFI_LOCK  mDispatcherLock = EFI_INITIALIZE_LOCK_VARIABLE (TPL_HIGH_LEVEL);
 
 
 //
-// Flag for the DXE Dispacher.  TRUE if dispatcher is execuing.
+// Flag for the DXE Dispatcher.  TRUE if dispatcher is executing.
 //
 BOOLEAN  gDispatcherRunning = FALSE;
 
@@ -150,7 +150,7 @@ CoreFvToDevicePath (
 
 /**
   Add an entry to the mDiscoveredList. Allocate memory to store the DriverEntry,
-  and initilize any state variables. Read the Depex from the FV and store it
+  and initialize any state variables. Read the Depex from the FV and store it
   in DriverEntry. Pre-process the Depex to set the SOR, Before and After state.
   The Discovered list is never free'ed and contains booleans that represent the
   other possible DXE driver states.
@@ -228,7 +228,7 @@ CoreReleaseDispatcherLock (
 
   @param  DriverEntry           Driver to work on.
 
-  @retval EFI_SUCCESS           Depex read and preprossesed
+  @retval EFI_SUCCESS           Depex read and preprocessed
   @retval EFI_PROTOCOL_ERROR    The section extraction protocol returned an error
                                 and  Depex reading needs to be retried.
   @retval Error                 DEPEX not found.
@@ -295,9 +295,9 @@ CoreGetDepexSectionAndPreProccess (
                                 the firmware  file specified by DriverName.
   @param  DriverName            The Driver name to put in the Dependent state.
 
-  @retval EFI_SUCCESS           The DriverName was found and it's SOR bit was
+  @retval EFI_SUCCESS           The DriverName was found and its SOR bit was
                                 cleared
-  @retval EFI_NOT_FOUND         The DriverName does not exist or it's SOR bit was
+  @retval EFI_NOT_FOUND         The DriverName does not exist or its SOR bit was
                                 not set.
 
 **/
@@ -684,8 +684,8 @@ FvHasBeenProcessed (
 
 
 /**
-  Remember that Fv protocol on FvHandle has had it's drivers placed on the
-  mDiscoveredList. This fucntion adds entries on the mFvHandleList if new
+  Remember that Fv protocol on FvHandle has had its drivers placed on the
+  mDiscoveredList. This function adds entries on the mFvHandleList if new
   entry is different from one in mFvHandleList by checking FvImage Guid.
   Items are never removed/freed from the mFvHandleList.
 
@@ -840,7 +840,7 @@ CoreFvToDevicePath (
 
 /**
   Add an entry to the mDiscoveredList. Allocate memory to store the DriverEntry,
-  and initilize any state variables. Read the Depex from the FV and store it
+  and initialize any state variables. Read the Depex from the FV and store it
   in DriverEntry. Pre-process the Depex to set the SOR, Before and After state.
   The Discovered list is never free'ed and contains booleans that represent the
   other possible DXE driver states.
@@ -1308,7 +1308,7 @@ CoreFwVolEventProtocolNotify (
             if (gDxeCoreLoadedImage->FilePath == NULL) {
               if (CompareGuid (&NameGuid, gDxeCoreFileName)) {
                 //
-                // Maybe One specail Fv cantains only one DXE_CORE module, so its device path must
+                // Maybe One special Fv contains only one DXE_CORE module, so its device path must
                 // be initialized completely.
                 //
                 EfiInitializeFwVolDevicepathNode (&mFvDevicePath.File, &NameGuid);
@@ -1468,7 +1468,7 @@ CoreInitializeDispatcher (
 
 /**
   Traverse the discovered list for any drivers that were discovered but not loaded
-  because the dependency experessions evaluated to false.
+  because the dependency expressions evaluated to false.
 
 **/
 VOID

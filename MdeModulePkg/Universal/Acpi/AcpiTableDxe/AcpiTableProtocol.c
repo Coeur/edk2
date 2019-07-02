@@ -187,7 +187,7 @@ PublishTables (
   @param  This                 Protocol instance pointer.
   @param  AcpiTableBuffer      A pointer to a buffer containing the ACPI table to be installed.
   @param  AcpiTableBufferSize  Specifies the size, in bytes, of the AcpiTableBuffer buffer.
-  @param  TableKey             Reurns a key to refer to the ACPI table.
+  @param  TableKey             Returns a key to refer to the ACPI table.
 
   @return EFI_SUCCESS            The table was successfully inserted.
   @return EFI_INVALID_PARAMETER  Either AcpiTableBuffer is NULL, TableKey is NULL, or AcpiTableBufferSize
@@ -249,7 +249,7 @@ InstallAcpiTable (
   FreePool (AcpiTableBufferConst);
 
   //
-  // Add a new table successfully, notify registed callback
+  // Add a new table successfully, notify registered callback
   //
   if (FeaturePcdGet (PcdInstallAcpiSdtProtocol)) {
     if (!EFI_ERROR (Status)) {
@@ -320,7 +320,7 @@ UninstallAcpiTable (
 
   @param  AcpiTableInstance       ACPI table protocol instance data structure.
 
-  @return EFI_SUCCESS             reallocate the table beffer successfully.
+  @return EFI_SUCCESS             reallocate the table buffer successfully.
   @return EFI_OUT_OF_RESOURCES    Unable to allocate required resources.
 
 **/
@@ -407,7 +407,7 @@ ReallocateAcpiTableBuffer (
   CopyMem (AcpiTableInstance->Xsdt, TempPrivateData.Xsdt, (sizeof (EFI_ACPI_DESCRIPTION_HEADER) + mEfiAcpiMaxNumTables * sizeof (UINT64)));
 
   //
-  // Calculate orignal ACPI table buffer size
+  // Calculate original ACPI table buffer size
   //
   TotalSize = sizeof (EFI_ACPI_DESCRIPTION_HEADER) +         // for ACPI 2.0/3.0 XSDT
               mEfiAcpiMaxNumTables * sizeof (UINT64);

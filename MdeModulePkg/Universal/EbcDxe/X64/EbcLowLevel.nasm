@@ -77,7 +77,7 @@ skip_expansion:
       call   ASM_PFX(CopyMem)
       add    rsp, 0x20
 
-      ; Considering the worst case, load 4 potiential arguments
+      ; Considering the worst case, load 4 potential arguments
       ; into registers.
       mov    rcx, qword [rsp]
       mov    rdx, qword [rsp+0x8]
@@ -171,7 +171,7 @@ ASM_PFX(EbcLLEbcInterpret):
     mov  rcx, dword 16
     rep  movsq
 
-    ; build new paramater calling convention
+    ; build new parameter calling convention
     mov  r9,  [rsp + 0x18]
     mov  r8,  [rsp + 0x10]
     mov  rdx, [rsp + 0x8]
@@ -223,7 +223,7 @@ ASM_PFX(EbcLLExecuteEbcImageEntryPoint):
     ; +-----------+
     ;
 
-    ; build new paramater calling convention
+    ; build new parameter calling convention
     mov  r8, rdx
     mov  rdx, rcx
     mov  rcx, r10

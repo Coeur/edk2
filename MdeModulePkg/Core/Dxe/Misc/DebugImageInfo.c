@@ -67,7 +67,7 @@ CoreInitializeDebugImageInfoTable (
   if (EFI_ERROR (Status)) {
     if (PcdGet64 (PcdMaxEfiSystemTablePointerAddress) != 0) {
       DEBUG ((EFI_D_INFO, "Allocate memory for EFI_SYSTEM_TABLE_POINTER below PcdMaxEfiSystemTablePointerAddress failed. \
-                          Retry to allocate memroy as close to the top of memory as feasible.\n"));
+                          Retry to allocate memory as close to the top of memory as feasible.\n"));
     }
     //
     // If the initial memory allocation fails, then reattempt allocation
@@ -150,7 +150,7 @@ CoreUpdateDebugTableCrc32 (
 
 /**
   Adds a new DebugImageInfo structure to the DebugImageInfo Table.  Re-Allocates
-  the table if it's not large enough to accomidate another entry.
+  the table if it's not large enough to accommodate another entry.
 
   @param  ImageInfoType  type of debug image information
   @param  LoadedImage    pointer to the loaded image protocol for the image being

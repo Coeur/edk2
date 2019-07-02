@@ -61,7 +61,7 @@
 
 [PcdsFeatureFlag]
   ## This flag is used to control whether the shell includes NT32 platform Guids
-  #  and thereby prevents dependancy on that Pkg
+  #  and thereby prevents dependency on that Pkg
   gEfiShellPkgTokenSpaceGuid.PcdShellIncludeNtGuids|TRUE|BOOLEAN|0x0000000E
 
   ## This flag is used to control HII required by the shell

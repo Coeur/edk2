@@ -157,7 +157,7 @@ SMBIOS_TABLE_3_0_ENTRY_POINT Smbios30EntryPointStructureData = {
   @param Size                   The returned size.
   @param NumberOfStrings        The returned number of optional strings that follow the formatted structure.
 
-  @retval EFI_SUCCESS           Size retured in Size.
+  @retval EFI_SUCCESS           Size returned in Size.
   @retval EFI_INVALID_PARAMETER Input SMBIOS structure mal-formed or Size is NULL.
 
 **/
@@ -238,7 +238,7 @@ GetSmbiosStructureSize (
 
 /**
 
-  Determin whether an SmbiosHandle has already in use.
+  Determine whether an SmbiosHandle has already in use.
 
   @param Head        Pointer to the beginning of SMBIOS structure.
   @param Handle      A unique handle will be assigned to the SMBIOS record.
@@ -1022,7 +1022,7 @@ GetNextSmbiosRecord (
 
   @param  TableEntryPointStructure   On exit, points to the SMBIOS entrypoint structure.
 
-  @retval EFI_SUCCESS                Structure created sucessfully.
+  @retval EFI_SUCCESS                Structure created successfully.
   @retval EFI_OUT_OF_RESOURCES       No enough memory.
 
 **/
@@ -1214,7 +1214,7 @@ SmbiosCreateTable (
 
   @param  TableEntryPointStructure   On exit, points to the SMBIOS entrypoint structure.
 
-  @retval EFI_SUCCESS                Structure created sucessfully.
+  @retval EFI_SUCCESS                Structure created successfully.
   @retval EFI_OUT_OF_RESOURCES       No enough memory.
 
 **/

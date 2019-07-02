@@ -23,7 +23,7 @@ ASM_PFX(SevNoRepIo):
   push      rcx
   push      rdx
 
-  ; Check if we are runing under hypervisor
+  ; Check if we are running under hypervisor
   ; CPUID(1).ECX Bit 31
   mov       eax, 1
   cpuid

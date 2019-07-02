@@ -89,7 +89,7 @@
 
 // USB
 #string STR_USB_IO                #language en-US "USBIO"
-#string STR_USB_HC                #language en-US "USBHostControler"
+#string STR_USB_HC                #language en-US "USBHostController"
 #string STR_USB_HC2               #language en-US "USBHostController2"
 
 // Debug
@@ -443,7 +443,7 @@
                                                           "    FCoeBoot               : %%H%d%%N\r\n"
 #string STR_SAN_MAC_ADDRESS_INFO          #language en-US "    SanMacAddress: %%H%02x-%02x-%02x-%02x-%02x-%02x%%N \r\n"
 #string STR_UNDI_IPV6_INFO                #language en-US "    UNDI IPv6 Supported: %%H%d%%N \r\n"
-#string STR_UNKNOWN_INFO_TYPE             #language en-US "    The 'InformationType' - %%H%g%%N can't be recongnized\r\n"
+#string STR_UNKNOWN_INFO_TYPE             #language en-US "    The 'InformationType' - %%H%g%%N can't be recognized\r\n"
 
 #string STR_FMP_IMAGEID_NON_UNIQUE                      #language en-US "  The ImageId value for each Firmware Image is not unique.\r\n"
 #string STR_FMP_IMAGE_INFO_SIZE                         #language en-US "  ImageInfoSize: %%H0x%L016x%%N\r\n"

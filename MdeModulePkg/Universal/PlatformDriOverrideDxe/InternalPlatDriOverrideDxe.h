@@ -1,5 +1,5 @@
 /** @file
-  Ihe internal heder file includes the required Protocol/Guid/Library
+  Ihe internal header file includes the required Protocol/Guid/Library
   and the shared function APIs.
 
 Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>

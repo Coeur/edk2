@@ -37,7 +37,7 @@ UhciInitFrameList (
   //
   // The Frame List is a common buffer that will be
   // accessed by both the cpu and the usb bus master
-  // at the same time. The Frame List ocupies 4K bytes,
+  // at the same time. The Frame List occupies 4K bytes,
   // and must be aligned on 4-Kbyte boundaries.
   //
   Bytes = 4096;
@@ -200,7 +200,7 @@ UhciDestoryFrameList (
 
 
 /**
-  Convert the poll rate to the maxium 2^n that is smaller
+  Convert the poll rate to the maximum 2^n that is smaller
   than Interval.
 
   @param  Interval               The poll rate to convert.
@@ -285,7 +285,7 @@ UhciLinkQhToFrameList (
     }
 
     //
-    // The entry may have been linked into the frame by early insertation.
+    // The entry may have been linked into the frame by early insertion.
     // For example: if insert a Qh with Qh.Interval == 4, and there is a Qh
     // with Qh.Interval == 8 on the frame. If so, we are done with this frame.
     // It isn't necessary to compare all the QH with the same interval to
@@ -320,7 +320,7 @@ UhciLinkQhToFrameList (
     //
     // OK, find the right position, insert it in. If Qh's next
     // link has already been set, it is in position. This is
-    // guarranted by 2^n polling interval.
+    // guaranteed by 2^n polling interval.
     //
     if (Qh->NextQh == NULL) {
       Qh->NextQh            = Next;
@@ -408,7 +408,7 @@ UhciUnlinkQhFromFrameList (
   @param  IsLow                  Is Low Speed Device.
   @param  QhResult               Return the result of this TD list.
 
-  @return Whether the TD's result is finialized.
+  @return Whether the TD's result is finalized.
 
 **/
 BOOLEAN
@@ -451,7 +451,7 @@ UhciCheckTdStatus (
     // bits when corresponding conditions happen. But these
     // conditions are not deadly, that is a TD can successfully
     // completes even these bits are set. But it is likely that
-    // upper layer won't distinguish these condtions. So, only
+    // upper layer won't distinguish these conditions. So, only
     // set these bits when TD is actually halted.
     //
     if ((State & USBTD_STALLED) != 0) {
@@ -513,7 +513,7 @@ UhciCheckTdStatus (
       // terminate the transfer
       //
       if (!IsLow && (TdHw->ShortPacket == 1) && (Len < Td->DataLen)) {
-        DEBUG ((EFI_D_VERBOSE, "UhciCheckTdStatus: short packet read occured\n"));
+        DEBUG ((EFI_D_VERBOSE, "UhciCheckTdStatus: short packet read occurred\n"));
 
         Finished = TRUE;
         goto ON_EXIT;
@@ -590,7 +590,7 @@ UhciExecuteTransfer (
     Finished = UhciCheckTdStatus (Uhc, Td, IsLow, QhResult);
 
     //
-    // Transfer is OK or some error occured (TD inactive)
+    // Transfer is OK or some error occurred (TD inactive)
     //
     if (Finished) {
       break;

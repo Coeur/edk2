@@ -213,7 +213,7 @@ HandleParsingLibDestructor (
   @param[in] TheHandle      The handle that has LoadedImage installed.
   @param[in] Verbose        TRUE for additional information, FALSE otherwise.
 
-  @retval A poitner to a string containing the information.
+  @retval A pointer to a string containing the information.
 **/
 CHAR16*
 EFIAPI
@@ -312,7 +312,7 @@ LoadedImageProtocolDumpInformation(
   @param[in] TheHandle      The handle that has LoadedImage installed.
   @param[in] Verbose        TRUE for additional information, FALSE otherwise.
 
-  @retval A poitner to a string containing the information.
+  @retval A pointer to a string containing the information.
 **/
 CHAR16*
 EFIAPI
@@ -567,7 +567,7 @@ EdidActiveProtocolDumpInformation (
   @param[in] TheHandle      The handle that has PciRootBridgeIo installed.
   @param[in] Verbose        TRUE for additional information, FALSE otherwise.
 
-  @retval A poitner to a string containing the information.
+  @retval A pointer to a string containing the information.
 **/
 CHAR16*
 EFIAPI
@@ -707,7 +707,7 @@ PciRootBridgeIoDumpInformation(
   @param[in] TheHandle      The handle that has SimpleTextOut installed.
   @param[in] Verbose        TRUE for additional information, FALSE otherwise.
 
-  @retval A poitner to a string containing the information.
+  @retval A pointer to a string containing the information.
 **/
 CHAR16*
 EFIAPI
@@ -783,7 +783,7 @@ STATIC CONST UINTN VersionStringSize = 60;
   @param[in] TheHandle      The handle that has the protocol installed.
   @param[in] Verbose        TRUE for additional information, FALSE otherwise.
 
-  @retval A poitner to a string containing the information.
+  @retval A pointer to a string containing the information.
 **/
 CHAR16*
 EFIAPI
@@ -1160,7 +1160,7 @@ DebugSupportProtocolDumpInformation (
   @param[in] TheHandle      The handle that has PciRootBridgeIo installed.
   @param[in] Verbose        TRUE for additional information, FALSE otherwise.
 
-  @retval A poitner to a string containing the information.
+  @retval A pointer to a string containing the information.
 **/
 CHAR16*
 EFIAPI
@@ -1244,7 +1244,7 @@ PciIoProtocolDumpInformation (
   @param[in] TheHandle      The handle that has PciRootBridgeIo installed.
   @param[in] Verbose        TRUE for additional information, FALSE otherwise.
 
-  @retval A poitner to a string containing the information.
+  @retval A pointer to a string containing the information.
 **/
 CHAR16*
 EFIAPI
@@ -2156,7 +2156,7 @@ STATIC CONST GUID_INFO_BLOCK mGuidStringList[] = {
   {STRING_TOKEN(STR_DRIVER_CONFIG2),        &gEfiDriverConfiguration2ProtocolGuid,            NULL},
 
 //
-// these are using local (non-global) definitions to reduce package dependancy.
+// these are using local (non-global) definitions to reduce package dependency.
 //
   {STRING_TOKEN(STR_ISA_IO),                (EFI_GUID*)&EfiIsaIoProtocolGuid,                 NULL},
   {STRING_TOKEN(STR_ISA_ACPI),              (EFI_GUID*)&EfiIsaAcpiProtocolGuid,               NULL},
@@ -2404,7 +2404,7 @@ STATIC CONST GUID_INFO_BLOCK mGuidStringList[] = {
 };
 
 /**
-  Function to get the node for a protocol or struct from it's GUID.
+  Function to get the node for a protocol or struct from its GUID.
 
   if Guid is NULL, then ASSERT.
 
@@ -2451,7 +2451,7 @@ Function to add a new GUID/Name mapping.
 @param[in] DumpFunc   The pointer to the dump function
 
 
-@retval EFI_SUCCESS           The operation was sucessful
+@retval EFI_SUCCESS           The operation was successful
 @retval EFI_OUT_OF_RESOURCES  A memory allocation failed
 @retval EFI_INVALID_PARAMETER Guid NameId was invalid
 **/
@@ -2492,7 +2492,7 @@ InsertNewGuidNameMapping(
   @param[in] TheName    The Guid's name
   @param[in] Lang       RFC4646 language code list or NULL
 
-  @retval EFI_SUCCESS           The operation was sucessful
+  @retval EFI_SUCCESS           The operation was successful
   @retval EFI_ACCESS_DENIED     There was a duplicate
   @retval EFI_OUT_OF_RESOURCES  A memory allocation failed
   @retval EFI_INVALID_PARAMETER Guid or TheName was NULL
@@ -2526,7 +2526,7 @@ AddNewGuidNameMapping(
 }
 
 /**
-  Function to get the name of a protocol or struct from it's GUID.
+  Function to get the name of a protocol or struct from its GUID.
 
   if Guid is NULL, then ASSERT.
 
@@ -2595,7 +2595,7 @@ GetProtocolInformationDump(
 }
 
 /**
-  Function to get the Guid for a protocol or struct based on it's string name.
+  Function to get the Guid for a protocol or struct based on its string name.
 
   do not modify the returned Guid.
 
@@ -2603,7 +2603,7 @@ GetProtocolInformationDump(
   @param[in] Lang           The pointer to the language code.
   @param[out] Guid          The pointer to the Guid.
 
-  @retval EFI_SUCCESS       The operation was sucessful.
+  @retval EFI_SUCCESS       The operation was successful.
 **/
 EFI_STATUS
 EFIAPI
@@ -3178,19 +3178,19 @@ ParseHandleDatabaseByRelationshipWithType (
   If both DriverBindingHandle and ControllerHandle are NULL, then ASSERT.
   If MatchingHandleCount is NULL, then ASSERT.
 
-  If MatchingHandleBuffer is not NULL upon a sucessful return the memory must be
+  If MatchingHandleBuffer is not NULL upon a successful return the memory must be
   caller freed.
 
   @param[in] DriverBindingHandle    Handle to a object with Driver Binding protocol
                                     on it.
   @param[in] ControllerHandle       Handle to a device with Device Path protocol on it.
   @param[in] Mask                   Mask of what relationship(s) is desired.
-  @param[in] MatchingHandleCount    Poitner to UINTN specifying number of HANDLES in
+  @param[in] MatchingHandleCount    Pointer to UINTN specifying number of HANDLES in
                                     MatchingHandleBuffer.
-  @param[out] MatchingHandleBuffer  On a sucessful return a buffer of MatchingHandleCount
+  @param[out] MatchingHandleBuffer  On a successful return a buffer of MatchingHandleCount
                                     EFI_HANDLEs and a terminating NULL EFI_HANDLE.
 
-  @retval EFI_SUCCESS               The operation was sucessful and any related handles
+  @retval EFI_SUCCESS               The operation was successful and any related handles
                                     are in MatchingHandleBuffer;
   @retval EFI_NOT_FOUND             No matching handles were found.
   @retval EFI_INVALID_PARAMETER     A parameter was invalid or out of range.
@@ -3285,7 +3285,7 @@ ParseHandleDatabaseByRelationship (
 
           Status = EFI_SUCCESS;
         } // *MatchingHandleBuffer == NULL (ELSE)
-      } // MacthingHandleBuffer == NULL (ELSE)
+      } // MatchingHandleBuffer == NULL (ELSE)
     } // *MatchingHandleCount  == 0 (ELSE)
   } // no error on ParseHandleDatabaseByRelationshipWithType
 
@@ -3313,7 +3313,7 @@ ParseHandleDatabaseByRelationship (
                                     return.
 
 
-  @retval EFI_SUCCESS               The operation was sucessful.
+  @retval EFI_SUCCESS               The operation was successful.
 **/
 EFI_STATUS
 EFIAPI
@@ -3450,7 +3450,7 @@ BuffernCatGrow (
   }
 
   if (LocalDestinationSize == 0) {
-    // allcoate
+    // allocate
     *DestinationBuffer = AllocateZeroPool(LocalDestinationFinalSize);
   } else {
     // reallocate
@@ -3471,7 +3471,7 @@ BuffernCatGrow (
                                     MatchingHandleBuffer on return.
   @param[out] MatchingHandleBuffer  Buffer containing handles on a successful
                                     return.
-  @retval EFI_SUCCESS               The operation was sucessful.
+  @retval EFI_SUCCESS               The operation was successful.
   @sa ParseHandleDatabaseByRelationship
 **/
 EFI_STATUS

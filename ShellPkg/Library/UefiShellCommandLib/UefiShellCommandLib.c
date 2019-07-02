@@ -140,7 +140,7 @@ CommandInit(
   @param ImageHandle    the image handle of the process
   @param SystemTable    the EFI System Table pointer
 
-  @retval EFI_SUCCESS   the initialization was complete sucessfully
+  @retval EFI_SUCCESS   the initialization was complete successfully
 **/
 RETURN_STATUS
 EFIAPI
@@ -220,7 +220,7 @@ ShellCommandLibDestructor (
   SCRIPT_FILE_LIST                  *Node3;
   SHELL_MAP_LIST                    *MapNode;
   //
-  // enumerate throught the list and free all the memory
+  // enumerate through the list and free all the memory
   //
   while (!IsListEmpty (&mCommandList.Link)) {
     Node = (SHELL_COMMAND_INTERNAL_LIST_ENTRY *)GetFirstNode(&mCommandList.Link);
@@ -243,7 +243,7 @@ ShellCommandLibDestructor (
   }
 
   //
-  // enumerate throught the list and free all the memory
+  // enumerate through the list and free all the memory
   //
   while (!IsListEmpty (&mScriptList.Link)) {
     Node3 = (SCRIPT_FILE_LIST *)GetFirstNode(&mScriptList.Link);
@@ -253,7 +253,7 @@ ShellCommandLibDestructor (
   }
 
   //
-  // enumerate throught the mappings list and free all the memory
+  // enumerate through the mappings list and free all the memory
   //
   if (!IsListEmpty(&gShellMapList.Link)) {
     for (MapNode = (SHELL_MAP_LIST *)GetFirstNode(&gShellMapList.Link)
@@ -432,7 +432,7 @@ ShellCommandGetDynamicCommandHelp(
   @param[in] CommandString        The command name.
 
   @retval NULL  No help text was found.
-  @return       String of help text. Caller reuiqred to free.
+  @return       String of help text. Caller required to free.
 **/
 CHAR16*
 ShellCommandGetInternalCommandHelp(
@@ -471,7 +471,7 @@ ShellCommandGetInternalCommandHelp(
   @param[in] CommandString        The command name.
 
   @retval NULL  No help text was found.
-  @return       String of help text.Caller reuiqred to free.
+  @return       String of help text.Caller required to free.
 **/
 CHAR16*
 EFIAPI
@@ -686,7 +686,7 @@ ShellCommandGetProfileList (
 
   @param[in]  CommandString          Pointer to the command name.  This is the name
                                      found on the command line in the shell.
-  @param[in, out] RetVal             Pointer to the return vaule from the command handler.
+  @param[in, out] RetVal             Pointer to the return value from the command handler.
 
   @param[in, out]  CanAffectLE       indicates whether this command's return value
                                      needs to be placed into LASTERROR environment variable.
@@ -1028,7 +1028,7 @@ ShellCommandRegisterExit (
   Retrieve the Exit indicator.
 
   @retval TRUE      Exit was indicated.
-  @retval FALSE     Exis was not indicated.
+  @retval FALSE     Exit was not indicated.
 **/
 BOOLEAN
 EFIAPI
@@ -1213,7 +1213,7 @@ ShellCommandCreateNewMappingName(
   @param[in] Flags              The Flags attribute for this map item.
   @param[in] Path               TRUE to update path, FALSE to skip this step (should only be TRUE during initialization).
 
-  @retval EFI_SUCCESS           The addition was sucessful.
+  @retval EFI_SUCCESS           The addition was successful.
   @retval EFI_OUT_OF_RESOURCES  A memory allocation failed.
   @retval EFI_INVALID_PARAMETER A parameter was invalid.
 **/
@@ -1296,7 +1296,7 @@ ShellCommandAddMapItemAndUpdatePath(
 
   Also sets up the default path environment variable if Type is FileSystem.
 
-  @retval EFI_SUCCESS           All map names were created sucessfully.
+  @retval EFI_SUCCESS           All map names were created successfully.
   @retval EFI_NOT_FOUND         No protocols were found in the system.
   @return                       Error returned from gBS->LocateHandle().
 

@@ -61,7 +61,7 @@ typedef enum {
 #define EFI_PCI_IO_ATTRIBUTE_MEMORY_DISABLE       0x1000  ///< Disable a memory range
 #define EFI_PCI_IO_ATTRIBUTE_EMBEDDED_DEVICE      0x2000  ///< Clear for an add-in PCI Device
 #define EFI_PCI_IO_ATTRIBUTE_EMBEDDED_ROM         0x4000  ///< Clear for a physical PCI Option ROM accessed through ROM BAR
-#define EFI_PCI_IO_ATTRIBUTE_DUAL_ADDRESS_CYCLE   0x8000  ///< Clear for PCI controllers that can not genrate a DAC
+#define EFI_PCI_IO_ATTRIBUTE_DUAL_ADDRESS_CYCLE   0x8000  ///< Clear for PCI controllers that can not generate a DAC
 #define EFI_PCI_IO_ATTRIBUTE_ISA_IO_16            0x10000 ///< I/O cycles 0x0100-0x03FF or greater (16 bit decode)
 #define EFI_PCI_IO_ATTRIBUTE_VGA_PALETTE_IO_16    0x20000 ///< I/O cycles 0x3C6, 0x3C8, 0x3C9 (16 bit decode)
 #define EFI_PCI_IO_ATTRIBUTE_VGA_IO_16            0x40000 ///< I/O cycles 0x3B0-0x3BB and 0x3C0-0x3DF (16 bit decode)

@@ -90,7 +90,7 @@ ShellCommandRunCls (
       }
     } else {
       //
-      // If there are 0 value parameters, clear sceen
+      // If there are 0 value parameters, clear screen
       //
       BackColorStr = ShellCommandLineGetRawValue (Package, 1);
       ForeColorStr = ShellCommandLineGetRawValue (Package, 2);

@@ -205,7 +205,7 @@ ShellCommandRunUnload (
   );
 
 /**
-  Do a connect from an EFI variable via it's key name.
+  Do a connect from an EFI variable via its key name.
 
   @param[in] Key      The name of the EFI Variable.
 

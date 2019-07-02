@@ -59,7 +59,7 @@ enum {
   @param[in] MmioAddr         Source: MMIO address.
   @param[in] Size             Size for read.
 
-  @retval EFI_SUCCESS         MMIO read sucessfully.
+  @retval EFI_SUCCESS         MMIO read successfully.
 
 **/
 EFI_STATUS
@@ -76,7 +76,7 @@ NvmeMmioRead (
   @param[in] MemBuffer       Source: Memory address.
   @param[in] Size            Size for write.
 
-  @retval EFI_SUCCESS        MMIO write sucessfully.
+  @retval EFI_SUCCESS        MMIO write successfully.
 
 **/
 EFI_STATUS

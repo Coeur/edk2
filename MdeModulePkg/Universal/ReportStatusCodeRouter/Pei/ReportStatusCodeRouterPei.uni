@@ -1,5 +1,5 @@
 // /** @file
-// Report Status Code Router PEIM which produces Report Stataus Code Handler PPI and Status Code PPI.
+// Report Status Code Router PEIM which produces Report Status Code Handler PPI and Status Code PPI.
 //
 // Report Status Code Router is a PEIM that produces Report Status Code Handler PPI and Status Code PPI.
 //

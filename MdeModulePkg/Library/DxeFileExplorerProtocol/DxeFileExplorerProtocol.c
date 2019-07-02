@@ -66,9 +66,9 @@ FileExplorerConstructor (
   @param  FileType         The file type need to choose.
   @param  ChooseHandler    Function pointer to the extra task need to do
                            after choose one file.
-  @param  File             Return the device path for the last time chosed file.
+  @param  File             Return the device path for the last time choosed file.
 
-  @retval EFI_SUCESS             Choose file success.
+  @retval EFI_SUCCESS            Choose file success.
   @retval EFI_INVALID_PARAMETER  Both ChooseHandler and return device path are NULL
                                  One of them must not NULL.
   @retval Other errors           Choose file failed.

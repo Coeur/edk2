@@ -3,10 +3,10 @@
 
   Store PEI Services Table pointer via gEmulatorPkgTokenSpaceGuid.PcdPeiServicesTablePage.
   This emulates a platform SRAM. The PI mechaism does not work in the emulator due to
-  lack of privledge.
+  lack of privilege.
 
   Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
-  Portiions copyrigth (c) 2011, Apple Inc. All rights reserved.
+  Portions copyright (c) 2011, Apple Inc. All rights reserved.
   SPDX-License-Identifier: BSD-2-Clause-Patent
 
 **/

@@ -106,11 +106,11 @@ IsLongModeWakingVectorSupport (
 
   @param[in] LongModeWakingVectorSupport    Support long mode waking vector or not.
 
-  If BootScriptExector driver will run in 64-bit mode, this function will establish the 1:1
+  If BootScriptExecutor driver will run in 64-bit mode, this function will establish the 1:1
   virtual to physical mapping page table when long mode waking vector is supported, otherwise
   create 4G page table when long mode waking vector is not supported and let PF handler to
   handle > 4G request.
-  If BootScriptExector driver will not run in 64-bit mode, this function will do nothing.
+  If BootScriptExecutor driver will not run in 64-bit mode, this function will do nothing.
 
   @return Page table base address.
 

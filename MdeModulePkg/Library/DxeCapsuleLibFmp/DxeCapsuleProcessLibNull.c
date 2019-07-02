@@ -18,7 +18,7 @@
   @param[in]  Completion  A value between 1 and 100 indicating the current
                           completion progress of the firmware update
 
-  @retval EFI_SUCESS             The capsule update progress was updated.
+  @retval EFI_SUCCESS            The capsule update progress was updated.
   @retval EFI_INVALID_PARAMETER  Completion is greater than 100%.
 **/
 EFI_STATUS
@@ -46,7 +46,7 @@ UpdateImageProgress (
      Each individual capsule result is recorded in capsule record variable.
      System may reset in this function, if reset is required by capsule and
      all capsules are processed.
-     If not all capsules are processed, reset will be defered to second call.
+     If not all capsules are processed, reset will be deferred to second call.
 
   2) The second call must be after EndOfDxe and after ConnectAll, so that all
      device capsule FMP protocols are exposed.

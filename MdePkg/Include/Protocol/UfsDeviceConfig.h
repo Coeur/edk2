@@ -19,7 +19,7 @@
   { 0xb81bfab0, 0xeb3, 0x4cf9, { 0x84, 0x65, 0x7f, 0xa9, 0x86, 0x36, 0x16, 0x64 }};
 
 //
-// Forward reference for pure ANSI compatability
+// Forward reference for pure ANSI compatibility
 //
 typedef struct _EFI_UFS_DEVICE_CONFIG_PROTOCOL  EFI_UFS_DEVICE_CONFIG_PROTOCOL;
 

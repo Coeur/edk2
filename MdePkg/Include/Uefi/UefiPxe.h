@@ -24,7 +24,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
     )
 
 ///
-/// UNDI ROM ID and devive ID signature.
+/// UNDI ROM ID and device ID signature.
 ///
 #define PXE_BUSTYPE_PXE PXE_BUSTYPE ('!', 'P', 'X', 'E')
 
@@ -1041,7 +1041,7 @@ typedef struct s_pxe_cpb_start_31 {
   /// the result to the mapped_addr pointer.  If there is no need to
   /// map the given address to a lower address (i.e. the given address is
   /// associated with a physical address that is already compatible to be
-  /// used with the DMA, it converts the given virtual address to it's
+  /// used with the DMA, it converts the given virtual address to its
   /// physical address and write that in the mapped address pointer.
   ///
   /// This field can be set to zero if there is no mapping service available.
@@ -1298,7 +1298,7 @@ typedef struct s_pxe_cpb_initialize {
 typedef struct s_pxe_db_initialize {
   ///
   /// Actual amount of memory used from the supplied memory buffer.  This
-  /// may be less that the amount of memory suppllied and may be zero if
+  /// may be less that the amount of memory supplied and may be zero if
   /// the UNDI and network device do not use external memory buffers.
   ///
   /// Memory used by the UNDI and network device is allocated from the
@@ -1392,7 +1392,7 @@ typedef struct s_pxe_db_statistics {
 #define PXE_STATISTICS_RX_UNDERSIZE_FRAMES  0x02
 
 ///
-/// Number of frames longer than the maxminum length for the
+/// Number of frames longer than the maximum length for the
 /// media.  This would be >1500 for ethernet.
 ///
 #define PXE_STATISTICS_RX_OVERSIZE_FRAMES 0x03
@@ -1413,7 +1413,7 @@ typedef struct s_pxe_db_statistics {
 #define PXE_STATISTICS_RX_BROADCAST_FRAMES  0x06
 
 ///
-/// Number of valid mutlicast frames received and not dropped.
+/// Number of valid multicast frames received and not dropped.
 ///
 #define PXE_STATISTICS_RX_MULTICAST_FRAMES  0x07
 

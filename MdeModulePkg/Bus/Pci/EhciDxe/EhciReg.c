@@ -378,7 +378,7 @@ EhcSetAndWaitDoorBell (
 
 
 /**
-  Clear all the interrutp status bits, these bits
+  Clear all the interrupt status bits, these bits
   are Write-Clean.
 
   @param  Ehc          The EHCI device.
@@ -424,13 +424,13 @@ EhcEnablePeriodSchd (
 
 
 /**
-  Enable asynchrounous schedule.
+  Enable asynchronous schedule.
 
   @param  Ehc          The EHCI device.
   @param  Timeout      Time to wait before abort.
 
   @retval EFI_SUCCESS  The EHCI asynchronous schedule is enabled.
-  @return Others       Failed to enable the asynchronous scheudle.
+  @return Others       Failed to enable the asynchronous schedule.
 
 **/
 EFI_STATUS
@@ -602,7 +602,7 @@ EhcInitHC (
   // ASSERT (EhcIsHalt (Ehc));
 
   //
-  // Allocate the periodic frame and associated memeory
+  // Allocate the periodic frame and associated memory
   // management facilities if not already done.
   //
   if (Ehc->PeriodFrame != NULL) {

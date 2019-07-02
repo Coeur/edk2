@@ -239,7 +239,7 @@ FtwWriteRecord (
     return EFI_ABORTED;
   }
   //
-  // Record the DestionationComplete in record
+  // Record the DestinationComplete in record
   //
   Offset = (UINT8 *) Record - FtwDevice->FtwWorkSpace;
   Status = FtwUpdateFvState (
@@ -662,7 +662,7 @@ FtwRestart (
 
   //
   // Spare Complete but Destination not complete,
-  // Recover the targt block with the spare block.
+  // Recover the target block with the spare block.
   //
   Status = FtwGetFvbByHandle (FvBlockHandle, &Fvb);
   if (EFI_ERROR (Status)) {

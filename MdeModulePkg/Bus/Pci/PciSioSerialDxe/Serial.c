@@ -138,7 +138,7 @@ InitializePciSioSerial (
   ASSERT_EFI_ERROR (Status);
 
   //
-  // Initialize UART default setting in gSerialDevTempate
+  // Initialize UART default setting in gSerialDevTemplate
   //
   gSerialDevTemplate.SerialMode.BaudRate = PcdGet64 (PcdUartDefaultBaudRate);
   gSerialDevTemplate.SerialMode.DataBits = PcdGet8 (PcdUartDefaultDataBits);
@@ -585,8 +585,8 @@ CreateSerialDevice (
 
   //
   // 2. Append UART device path node.
-  //    The Uart setings are zero here.
-  //    SetAttribute() will update them to match the default setings.
+  //    The Uart settings are zero here.
+  //    SetAttribute() will update them to match the default settings.
   //
   TempDevicePath = SerialDevice->DevicePath;
   if (TempDevicePath != NULL) {

@@ -18,7 +18,7 @@
 
   @param  Operand A 64-bit unsigned value.
 
-  @return The byte swaped Operand.
+  @return The byte swapped Operand.
 
 **/
 UINT64

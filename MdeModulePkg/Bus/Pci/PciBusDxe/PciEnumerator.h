@@ -159,7 +159,7 @@ RejectPciDevice (
   );
 
 /**
-  Determine whethter a PCI device can be rejected.
+  Determine whether a PCI device can be rejected.
 
   @param  PciResNode Pointer to Pci resource node instance.
 
@@ -315,7 +315,7 @@ PciBridgeResourceAllocator (
   @param Bridge     Given Pci driver instance.
   @param IoBase     Output for base address of I/O type resource.
   @param Mem32Base  Output for base address of 32-bit memory type resource.
-  @param PMem32Base Ooutput for base address of 32-bit Pmemory type resource.
+  @param PMem32Base Output for base address of 32-bit Pmemory type resource.
   @param Mem64Base  Output for base address of 64-bit memory type resource.
   @param PMem64Base Output for base address of 64-bit Pmemory type resource.
 

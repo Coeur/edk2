@@ -1404,7 +1404,7 @@ CoDClearCapsuleRelocationInfo(
   @param[in]    MaxRetry             Max Connection Retry. Stall 100ms between each connection try to ensure
                                      devices like USB can get enumerated.
 
-  @retval EFI_SUCCESS   Capsule on Disk images are sucessfully relocated to the platform-specific device.
+  @retval EFI_SUCCESS   Capsule on Disk images are successfully relocated to the platform-specific device.
 
 **/
 EFI_STATUS

@@ -1,5 +1,5 @@
 /** @file
-  A emptry template implementation of Ipmi Library.
+  A empty template implementation of Ipmi Library.
 
   Copyright (c) 2011 - 2015, Intel Corporation. All rights reserved.<BR>
   SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -27,7 +27,7 @@
   @retval EFI_DEVICE_ERROR       Ipmi Device hardware error.
   @retval EFI_TIMEOUT            The command time out.
   @retval EFI_UNSUPPORTED        The command was not successfully sent to the device.
-  @retval EFI_OUT_OF_RESOURCES   The resource allcation is out of resource or data size error.
+  @retval EFI_OUT_OF_RESOURCES   The resource allocation is out of resource or data size error.
 **/
 EFI_STATUS
 EFIAPI

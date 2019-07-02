@@ -122,7 +122,7 @@ ReadFileFromVol (
 /**
 
   Read a file.
-  If ScanFs is FLASE, it will use DebuggerPrivate->Vol as default Fs.
+  If ScanFs is FALSE, it will use DebuggerPrivate->Vol as default Fs.
   If ScanFs is TRUE, it will scan all FS and check the file.
   If there is only one file match the name, it will be read.
   If there is more than one file match the name, it will return Error.

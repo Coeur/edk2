@@ -224,7 +224,7 @@ DisplayMmBankConnections (
   );
 
 /**
-  Display memory informcation.
+  Display memory information.
 
   Bits 0:6  Size (n),
       where 2**n is the size in MB with three special-case values:

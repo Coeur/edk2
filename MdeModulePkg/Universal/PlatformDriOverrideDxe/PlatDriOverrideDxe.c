@@ -6,11 +6,11 @@
   drivers to controllers.
 
   The main flow:
-  1. It dynamicly locate all controller device path.
-  2. It dynamicly locate all drivers which support binding protocol.
-  3. It export and dynamicly update two menu to let user select the
+  1. It dynamically locates all controller device path.
+  2. It dynamically locates all drivers which support binding protocol.
+  3. It exports and dynamically update two menu to let user select the
      mapping between drivers to controllers.
-  4. It save all the mapping info in NV variables which will be consumed
+  4. It saves all the mapping info in NV variables which will be consumed
      by platform override protocol driver to publish the platform override protocol.
 
 Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
@@ -257,7 +257,7 @@ GetImageName (
 
   while (!IsDevicePathEnd (DevPathNode)) {
     //
-    // Make sure device path node is aligned when accessing it's FV Name Guid field.
+    // Make sure device path node is aligned when accessing its FV Name Guid field.
     //
     AlignedDevPathNode = AllocateCopyPool (DevicePathNodeLength(DevPathNode), DevPathNode);
 
@@ -307,7 +307,7 @@ GetImageName (
 /**
   Prepare the first page to let user select the device controller which need to
   add mapping drivers if user select 'Refresh' in first page.
-  During first page, user will see all currnet controller device path in system,
+  During first page, user will see all current controller device path in system,
   select any device path will go to second page to select its overrides drivers.
 
   @param  Private        Pointer to EFI_CALLBACK_INFO.
@@ -639,7 +639,7 @@ UpdateBindingDriverSelectPage (
 
   //
   // If user select a controller item in the first page  the following code will be run.
-  // During second page, user will see all currnet driver bind protocol driver, the driver name and its device path will be shown
+  // During second page, user will see all current driver bind protocol driver, the driver name and its device path will be shown
   //
   //First acquire the list of Loaded Image Protocols, and then when  want the name of the driver, look up all the Driver Binding Protocols
   // and find the first one whose ImageHandle field matches the image handle of the Loaded Image Protocol.
@@ -1111,7 +1111,7 @@ CommitChanges (
   UINTN                                     SelectedDriverImageNum;
   EFI_DEVICE_PATH_PROTOCOL                  *LoadedImageDevicePath;
   //
-  //  Following code will be run if user select 'commint changes' in third page
+  //  Following code will be run if user select 'commit changes' in third page
   //  user enter 'Commit Changes' to save the mapping database
   //
   DeleteDriverImage (mControllerDevicePathProtocol[mSelectedCtrIndex], NULL, &mMappingDataBase);
@@ -1316,7 +1316,7 @@ PlatOverMngrRouteConfig (
                          KeyValue == 0x1234       : user select 'Refresh' in first page, or user select 'Go to Previous Menu' in second page
                          KeyValue == 0x1235       : user select 'Pci device filter' in first page
                          KeyValue == 0x1500       : user select 'order ... priority' item in second page
-                         KeyValue == 0x1800       : user select 'commint changes' in third page
+                         KeyValue == 0x1800       : user select 'commit changes' in third page
                          KeyValue == 0x2000       : user select 'Go to Previous Menu' in third page
   @param  Type           The type of value for the question.
   @param  Value          A pointer to the data being sent to the original exporting driver.
@@ -1681,7 +1681,7 @@ PlatDriOverrideDxeInit (
   }
 
   //
-  // Clear all the globle variable
+  // Clear all the global variable
   //
   mDriverImageHandleCount = 0;
   mCurrentPage = 0;

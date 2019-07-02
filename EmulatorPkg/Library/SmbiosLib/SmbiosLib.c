@@ -4,7 +4,7 @@
 
 
 Copyright (c) 2012, Apple Inc. All rights reserved.
-Portitions Copyright (c) 2006 - 2012, Intel Corporation. All rights reserved.<BR>
+Portions Copyright (c) 2006 - 2012, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent
 
 **/
@@ -237,7 +237,7 @@ SmbiosLibUpdateUnicodeString (
   Allow caller to read a specific SMBIOS string
 
   @param[in]    Header          SMBIOS record that contains the string.
-  @param[in[    StringNumber    Instance of SMBIOS string 1 - N.
+  @param[in]    StringNumber    Instance of SMBIOS string 1 - N.
 
   @retval NULL                  Instance of Type SMBIOS string was not found.
   @retval Other                 Pointer to matching SMBIOS string.
@@ -268,10 +268,10 @@ SmbiosLibReadString (
 
 
 /**
-  Allow the caller to discover a specific SMBIOS entry, and patch it if necissary.
+  Allow the caller to discover a specific SMBIOS entry, and patch it if necessary.
 
   @param[in]    Type            Type of the next SMBIOS record to return.
-  @param[in[    Instance        Instance of SMBIOS record 0 - N-1.
+  @param[in]    Instance        Instance of SMBIOS record 0 - N-1.
   @param[out]   SmbiosHandle    Returns SMBIOS handle for the matching record.
 
   @retval NULL                  Instance of Type SMBIOS record was not found.

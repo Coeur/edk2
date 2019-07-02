@@ -22,7 +22,7 @@ STATIC CONST SHELL_PARAM_ITEM ParamList[] = {
 
   @param[in] TheHandle      The handle to get the device path for.
 
-  @retval NULL    An error occured.
+  @retval NULL    An error occurred.
   @return         A pointer to the driver path as a string.  The callee must
                   free this memory.
 **/
@@ -108,7 +108,7 @@ ReturnDriverConfig(
 
   @param[in] TheHandle      The handle to the driver to test.
 
-  @retval TRUE              The driver does have Driver Diasgnostics.
+  @retval TRUE              The driver does have Driver Diagnostics.
   @retval FALSE             The driver does not have Driver Diagnostics.
 **/
 BOOLEAN
@@ -133,7 +133,7 @@ ReturnDriverDiag(
   @param[in] TheHandle      The driver handle to get the version of.
 
   @return             The version of the driver.
-  @retval 0xFFFFFFFF  An error ocurred.
+  @retval 0xFFFFFFFF  An error occurred.
 **/
 UINT32
 ReturnDriverVersion(

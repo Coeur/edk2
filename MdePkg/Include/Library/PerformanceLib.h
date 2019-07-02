@@ -10,7 +10,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 #define __PERFORMANCE_LIB_H__
 
 ///
-/// Performance library propery mask bits
+/// Performance library property mask bits
 ///
 #define PERFORMANCE_LIBRARY_PROPERTY_MEASUREMENT_ENABLED  0x00000001
 

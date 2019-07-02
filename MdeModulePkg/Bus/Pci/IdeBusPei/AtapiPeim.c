@@ -76,7 +76,7 @@ AtapiPeimEntry (
   AtapiBlkIoDev->PpiDescriptor2.Guid                 = &gEfiPeiVirtualBlockIo2PpiGuid;
   AtapiBlkIoDev->PpiDescriptor2.Ppi                  = &AtapiBlkIoDev->AtapiBlkIo2;
 
-  DEBUG ((EFI_D_INFO, "Atatpi Device Count is %d\n", AtapiBlkIoDev->DeviceCount));
+  DEBUG ((EFI_D_INFO, "Atapi Device Count is %d\n", AtapiBlkIoDev->DeviceCount));
   if (AtapiBlkIoDev->DeviceCount != 0) {
     Status = PeiServicesInstallPpi (&AtapiBlkIoDev->PpiDescriptor);
     if (EFI_ERROR (Status)) {
@@ -189,11 +189,11 @@ AtapiGetBlockDeviceMediaInfo (
   //
   // probe media and retrieve latest media information
   //
-  DEBUG ((EFI_D_INFO, "Atatpi GetInfo DevicePosition is %d\n", AtapiBlkIoDev->DeviceInfo[Index].DevicePosition));
-  DEBUG ((EFI_D_INFO, "Atatpi GetInfo DeviceType is   %d\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.DeviceType));
-  DEBUG ((EFI_D_INFO, "Atatpi GetInfo MediaPresent is %d\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.MediaPresent));
-  DEBUG ((EFI_D_INFO, "Atatpi GetInfo BlockSize is  0x%x\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.BlockSize));
-  DEBUG ((EFI_D_INFO, "Atatpi GetInfo LastBlock is  0x%x\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.LastBlock));
+  DEBUG ((EFI_D_INFO, "Atapi GetInfo DevicePosition is %d\n", AtapiBlkIoDev->DeviceInfo[Index].DevicePosition));
+  DEBUG ((EFI_D_INFO, "Atapi GetInfo DeviceType is   %d\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.DeviceType));
+  DEBUG ((EFI_D_INFO, "Atapi GetInfo MediaPresent is %d\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.MediaPresent));
+  DEBUG ((EFI_D_INFO, "Atapi GetInfo BlockSize is  0x%x\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.BlockSize));
+  DEBUG ((EFI_D_INFO, "Atapi GetInfo LastBlock is  0x%x\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.LastBlock));
 
   Status = DetectMedia (
              AtapiBlkIoDev,
@@ -205,11 +205,11 @@ AtapiGetBlockDeviceMediaInfo (
     return EFI_DEVICE_ERROR;
   }
 
-  DEBUG ((EFI_D_INFO, "Atatpi GetInfo DevicePosition is %d\n", AtapiBlkIoDev->DeviceInfo[Index].DevicePosition));
-  DEBUG ((EFI_D_INFO, "Atatpi GetInfo DeviceType is   %d\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.DeviceType));
-  DEBUG ((EFI_D_INFO, "Atatpi GetInfo MediaPresent is %d\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.MediaPresent));
-  DEBUG ((EFI_D_INFO, "Atatpi GetInfo BlockSize is  0x%x\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.BlockSize));
-  DEBUG ((EFI_D_INFO, "Atatpi GetInfo LastBlock is  0x%x\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.LastBlock));
+  DEBUG ((EFI_D_INFO, "Atapi GetInfo DevicePosition is %d\n", AtapiBlkIoDev->DeviceInfo[Index].DevicePosition));
+  DEBUG ((EFI_D_INFO, "Atapi GetInfo DeviceType is   %d\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.DeviceType));
+  DEBUG ((EFI_D_INFO, "Atapi GetInfo MediaPresent is %d\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.MediaPresent));
+  DEBUG ((EFI_D_INFO, "Atapi GetInfo BlockSize is  0x%x\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.BlockSize));
+  DEBUG ((EFI_D_INFO, "Atapi GetInfo LastBlock is  0x%x\n", AtapiBlkIoDev->DeviceInfo[Index].MediaInfo.LastBlock));
 
   //
   // Get media info from AtapiBlkIoDev
@@ -507,7 +507,7 @@ AtapiReadBlocks2 (
 /**
   Enumerate Atapi devices.
 
-  This function is used to enumerate Atatpi device in Ide channel.
+  This function is used to enumerate Atapi device in Ide channel.
 
   @param[in]  AtapiBlkIoDev  A pointer to atapi block IO device
 
@@ -600,10 +600,10 @@ AtapiEnumerateDevices (
         CopyMem (&(AtapiBlkIoDev->DeviceInfo[DeviceCount].MediaInfo), &MediaInfo, sizeof (MediaInfo));
         CopyMem (&(AtapiBlkIoDev->DeviceInfo[DeviceCount].MediaInfo2), &MediaInfo2, sizeof (MediaInfo2));
 
-        DEBUG ((EFI_D_INFO, "Atatpi Device Position is %d\n", DevicePosition));
-        DEBUG ((EFI_D_INFO, "Atatpi DeviceType is   %d\n", MediaInfo.DeviceType));
-        DEBUG ((EFI_D_INFO, "Atatpi MediaPresent is %d\n", MediaInfo.MediaPresent));
-        DEBUG ((EFI_D_INFO, "Atatpi BlockSize is  0x%x\n", MediaInfo.BlockSize));
+        DEBUG ((EFI_D_INFO, "Atapi Device Position is %d\n", DevicePosition));
+        DEBUG ((EFI_D_INFO, "Atapi DeviceType is   %d\n", MediaInfo.DeviceType));
+        DEBUG ((EFI_D_INFO, "Atapi MediaPresent is %d\n", MediaInfo.MediaPresent));
+        DEBUG ((EFI_D_INFO, "Atapi BlockSize is  0x%x\n", MediaInfo.BlockSize));
 
         if (EFI_ERROR (Status)) {
           AtapiBlkIoDev->DeviceInfo[DeviceCount].MediaInfo.MediaPresent = FALSE;
@@ -1202,7 +1202,7 @@ CheckErrorStatus (
 }
 
 /**
-  Idendify Atapi devices.
+  Identify Atapi devices.
 
   @param[in]  AtapiBlkIoDev     A pointer to atapi block IO device.
   @param[in]  DevicePosition    An integer to signify device position.
@@ -1305,12 +1305,12 @@ ATAPIIdentify (
   // data register after each time device set DRQ ready;
   // The data size of "a series of read" is command specific.
   // For most ATA command, data size received from device will not exceed 1 sector,
-  // hense the data size for "a series of read" can be the whole data size of one command request.
+  // hence the data size for "a series of read" can be the whole data size of one command request.
   // For ATA command such as Read Sector command, whole data size of one ATA command request is often larger
   // than 1 sector, according to the Read Sector command, the data size of "a series of read" is exactly
   // 1 sector.
   // Here for simplification reason, we specify the data size for "a series of read" to
-  // 1 sector (256 words) if whole data size of one ATA commmand request is larger than 256 words.
+  // 1 sector (256 words) if whole data size of one ATA command request is larger than 256 words.
   //
   Increment = 256;
   //
@@ -1318,7 +1318,7 @@ ATAPIIdentify (
   //
   WordCount = 0;
   //
-  // WordCount is used to record bytes of currently transfered data
+  // WordCount is used to record bytes of currently transferred data
   //
   while (WordCount < ByteCount / 2) {
     //
@@ -1487,7 +1487,7 @@ AtapiPacketCommandIn (
 
   //
   // set the transfersize to MAX_ATAPI_BYTE_COUNT to let the device
-  // determine how many data should be transfered.
+  // determine how many data should be transferred.
   //
   IoWrite8 (CylinderLsbReg, (UINT8) (ATAPI_MAX_BYTE_COUNT & 0x00ff));
   IoWrite8 (CylinderMsbReg, (UINT8) (ATAPI_MAX_BYTE_COUNT >> 8));
@@ -1537,7 +1537,7 @@ AtapiPacketCommandIn (
   PtrBuffer         = Buffer;
   RequiredWordCount = ByteCount / 2;
   //
-  // ActuralWordCount means the word count of data really transfered.
+  // ActualWordCount means the word count of data really transferred.
   //
   ActualWordCount = 0;
 
@@ -2009,7 +2009,7 @@ RequestSense (
   //
   *SenseCounts = 0;
   //
-  //  request sense data from device continiously until no sense data exists in the device.
+  //  request sense data from device continuously until no sense data exists in the device.
   //
   for (SenseReq = TRUE; SenseReq;) {
 
@@ -2044,7 +2044,7 @@ RequestSense (
     }
     //
     // We limit MAX sense data count to 20 in order to avoid dead loop. Some
-    // incompatible ATAPI devices don't retrive NO_SENSE when there is no media.
+    // incompatible ATAPI devices don't retrieve NO_SENSE when there is no media.
     // In this case, dead loop occurs if we don't have a gatekeeper. 20 is
     // supposed to be large enough for any ATAPI device.
     //
@@ -2222,7 +2222,7 @@ ReadSectors (
   PtrBuffer     = Buffer;
 
   //
-  // limit the data bytes that can be transfered by one Read(10) Command
+  // limit the data bytes that can be transferred by one Read(10) Command
   //
   MaxBlock = (UINT16) (0x10000 / BlockSize);
   //
@@ -2239,7 +2239,7 @@ ReadSectors (
       SectorCount = MaxBlock;
     }
     //
-    // fill the Packet data sturcture
+    // fill the Packet data structure
     //
     Read10Packet->opcode = ATA_CMD_READ_10;
 

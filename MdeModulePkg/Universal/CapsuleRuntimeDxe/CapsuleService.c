@@ -34,13 +34,13 @@ UINT32      mMaxSizeNonPopulateCapsule  = 0;
   @param  CapsuleHeaderArray    Virtual pointer to an array of virtual pointers to the capsules
                                 being passed into update capsule.
   @param  CapsuleCount          Number of pointers to EFI_CAPSULE_HEADER in
-                                CaspuleHeaderArray.
+                                CapsuleHeaderArray.
   @param  ScatterGatherList     Physical pointer to a set of
                                 EFI_CAPSULE_BLOCK_DESCRIPTOR that describes the
                                 location in physical memory of a set of capsules.
 
   @retval EFI_SUCCESS           Valid capsule was passed. If
-                                CAPSULE_FLAGS_PERSIT_ACROSS_RESET is not set, the
+                                CAPSULE_FLAGS_PERSIST_ACROSS_RESET is not set, the
                                 capsule has been successfully processed by the firmware.
   @retval EFI_DEVICE_ERROR      The capsule update was started, but failed due to a device error.
   @retval EFI_INVALID_PARAMETER CapsuleSize is NULL, or an incompatible set of flags were
@@ -232,7 +232,7 @@ UpdateCapsule (
   @param  CapsuleHeaderArray    Virtual pointer to an array of virtual pointers to the capsules
                                 being passed into update capsule.
   @param  CapsuleCount          Number of pointers to EFI_CAPSULE_HEADER in
-                                CaspuleHeaderArray.
+                                CapsuleHeaderArray.
   @param  MaxiumCapsuleSize     On output the maximum size that UpdateCapsule() can
                                 support as an argument to UpdateCapsule() via
                                 CapsuleHeaderArray and ScatterGatherList.

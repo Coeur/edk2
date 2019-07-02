@@ -35,7 +35,7 @@ IHANDLE *
 /**
   Routine to get the next Handle, when you are searching for all handles.
 
-  @param  Position               Information about which Handle to seach for.
+  @param  Position               Information about which Handle to search for.
   @param  Interface              Return the interface structure for the matching
                                  protocol.
 
@@ -53,7 +53,7 @@ CoreGetNextLocateAllHandles (
   Routine to get the next Handle, when you are searching for register protocol
   notifies.
 
-  @param  Position               Information about which Handle to seach for.
+  @param  Position               Information about which Handle to search for.
   @param  Interface              Return the interface structure for the matching
                                  protocol.
 
@@ -70,7 +70,7 @@ CoreGetNextLocateByRegisterNotify (
 /**
   Routine to get the next Handle, when you are searching for a given protocol.
 
-  @param  Position               Information about which Handle to seach for.
+  @param  Position               Information about which Handle to search for.
   @param  Interface              Return the interface structure for the matching
                                  protocol.
 
@@ -256,7 +256,7 @@ CoreLocateHandle (
 /**
   Routine to get the next Handle, when you are searching for all handles.
 
-  @param  Position               Information about which Handle to seach for.
+  @param  Position               Information about which Handle to search for.
   @param  Interface              Return the interface structure for the matching
                                  protocol.
 
@@ -295,7 +295,7 @@ CoreGetNextLocateAllHandles (
   Routine to get the next Handle, when you are searching for register protocol
   notifies.
 
-  @param  Position               Information about which Handle to seach for.
+  @param  Position               Information about which Handle to search for.
   @param  Interface              Return the interface structure for the matching
                                  protocol.
 
@@ -343,7 +343,7 @@ CoreGetNextLocateByRegisterNotify (
 /**
   Routine to get the next Handle, when you are searching for a given protocol.
 
-  @param  Position               Information about which Handle to seach for.
+  @param  Position               Information about which Handle to search for.
   @param  Interface              Return the interface structure for the matching
                                  protocol.
 

@@ -107,7 +107,7 @@ InternalSafeStringNoAsciiStrOverlap (
 
   @retval 0        If String is NULL.
   @retval MaxSize  If there is no null character in the first MaxSize characters of String.
-  @return The number of characters that percede the terminating null character.
+  @return The number of characters that precede the terminating null character.
 
 **/
 UINTN
@@ -1694,7 +1694,7 @@ StrHexToBytes (
 
   @retval 0        If String is NULL.
   @retval MaxSize  If there is no null character in the first MaxSize characters of String.
-  @return The number of characters that percede the terminating null character.
+  @return The number of characters that precede the terminating null character.
 
 **/
 UINTN

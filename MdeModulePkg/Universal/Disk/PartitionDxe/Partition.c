@@ -328,7 +328,7 @@ PartitionDriverBindingStart (
   // between the controller and the driver set up before.
   //
   // In the case that when the media changes on a device it will Reinstall the
-  // BlockIo interaface. This will cause a call to our Stop(), and a subsequent
+  // BlockIo interface. This will cause a call to our Stop(), and a subsequent
   // reentrant call to our Start() successfully. We should leave the device open
   // when this happen. The "media change" case includes either the status is
   // EFI_MEDIA_CHANGED or it is a "media" to "no media" change.
@@ -647,7 +647,7 @@ ProbeMediaStatus (
   @retval EFI_SUCCESS           The data was read correctly from the device.
   @retval EFI_DEVICE_ERROR      The device reported an error while performing the read.
   @retval EFI_NO_MEDIA          There is no media in the device.
-  @retval EFI_MEDIA_CHANGED     The MediaId does not matched the current device.
+  @retval EFI_MEDIA_CHANGED     The MediaId does not match the current device.
   @retval EFI_BAD_BUFFER_SIZE   The Buffer was not a multiple of the block size of the device.
   @retval EFI_INVALID_PARAMETER The read request contains device addresses that are not
                                 valid for the device.
@@ -698,7 +698,7 @@ PartitionReadBlocks (
   @retval EFI_WRITE_PROTECTED   The device can not be written to.
   @retval EFI_DEVICE_ERROR      The device reported an error while performing the write.
   @retval EFI_NO_MEDIA          There is no media in the device.
-  @retval EFI_MEDIA_CHNAGED     The MediaId does not matched the current device.
+  @retval EFI_MEDIA_CHANGED     The MediaId does not match the current device.
   @retval EFI_BAD_BUFFER_SIZE   The Buffer was not a multiple of the block size of the device.
   @retval EFI_INVALID_PARAMETER The write request contains a LBA that is not
                                 valid for the device.
@@ -742,7 +742,7 @@ PartitionWriteBlocks (
   @param  This              Protocol instance pointer.
 
   @retval EFI_SUCCESS       All outstanding data was written to the device
-  @retval EFI_DEVICE_ERROR  The device reported an error while writting back the data
+  @retval EFI_DEVICE_ERROR  The device reported an error while writing back the data
   @retval EFI_NO_MEDIA      There is no media in the device.
 
 **/
@@ -796,7 +796,7 @@ ProbeMediaStatusEx (
 }
 
 /**
-  Reset the Block Device throught Block I/O2 protocol.
+  Reset the Block Device through Block I/O2 protocol.
 
   @param  This                 Protocol instance pointer.
   @param  ExtendedVerification Driver may perform diagnostics on reset.
@@ -985,7 +985,7 @@ PartitionReadBlocksEx (
                                 the Event is NULL.
   @retval EFI_WRITE_PROTECTED   The device can not be written to.
   @retval EFI_NO_MEDIA          There is no media in the device.
-  @retval EFI_MEDIA_CHNAGED     The MediaId does not matched the current device.
+  @retval EFI_MEDIA_CHANGED     The MediaId does not match the current device.
   @retval EFI_DEVICE_ERROR      The device reported an error while performing the write.
   @retval EFI_BAD_BUFFER_SIZE   The Buffer was not a multiple of the block size of the device.
   @retval EFI_INVALID_PARAMETER The write request contains LBAs that are not valid,
@@ -1051,7 +1051,7 @@ PartitionWriteBlocksEx (
   @retval EFI_SUCCESS          The flush request was queued if Event is not NULL.
                                All outstanding data was written correctly to the
                                device if the Event is NULL.
-  @retval EFI_DEVICE_ERROR     The device reported an error while writting back
+  @retval EFI_DEVICE_ERROR     The device reported an error while writing back
                                the data.
   @retval EFI_WRITE_PROTECTED  The device cannot be written to.
   @retval EFI_NO_MEDIA         There is no media in the device.

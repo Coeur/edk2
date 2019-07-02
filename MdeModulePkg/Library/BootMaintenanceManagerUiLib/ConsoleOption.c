@@ -94,7 +94,7 @@ UpdateComAttributeFromVariable (
 
 /**
   Update the multi-instance device path of Terminal Device based on
-  the global TerminalMenu. If ChangeTernimal is TRUE, the terminal
+  the global TerminalMenu. If ChangeTerminal is TRUE, the terminal
   device path in the Terminal Device in TerminalMenu is also updated.
 
   @param DevicePath      The multi-instance device path.

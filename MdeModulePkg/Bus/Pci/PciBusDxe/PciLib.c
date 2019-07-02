@@ -168,7 +168,7 @@ RemoveRejectedPciDevices (
 
     if (IS_PCI_BRIDGE (&Temp->Pci)) {
       //
-      // Remove rejected devices recusively
+      // Remove rejected devices recursively
       //
       RemoveRejectedPciDevices (RootBridgeHandle, Temp);
     } else {
@@ -200,7 +200,7 @@ RemoveRejectedPciDevices (
 }
 
 /**
-  Dump the resourc map of the bridge device.
+  Dump the resource map of the bridge device.
 
   @param[in] BridgeResource   Resource descriptor of the bridge device.
 **/
@@ -456,7 +456,7 @@ PciHostBridgeResourceAllocator (
 
       //
       // If non-standard PCI Bridge I/O window alignment is supported,
-      // set I/O aligment to minimum possible alignment for root bridge.
+      // set I/O alignment to minimum possible alignment for root bridge.
       //
       IoBridge = CreateResourceNode (
                    RootBridgeDev,
@@ -641,7 +641,7 @@ PciHostBridgeResourceAllocator (
 
       while (PciResAlloc->GetNextRootBridge (PciResAlloc, &RootBridgeHandle) == EFI_SUCCESS) {
         //
-        // Get RootBridg Device by handle
+        // Get RootBridge Device by handle
         //
         RootBridgeDev = GetRootBridgeByHandle (RootBridgeHandle);
         if (RootBridgeDev == NULL) {
@@ -761,7 +761,7 @@ PciHostBridgeResourceAllocator (
 
   while (PciResAlloc->GetNextRootBridge (PciResAlloc, &RootBridgeHandle) == EFI_SUCCESS) {
     //
-    // Get RootBridg Device by handle
+    // Get RootBridge Device by handle
     //
     RootBridgeDev = GetRootBridgeByHandle (RootBridgeHandle);
 
@@ -1075,7 +1075,7 @@ PciScanBus (
 
       if (FeaturePcdGet (PcdPciBusHotplugDeviceSupport)) {
         //
-        // For Pci Hotplug controller devcie only
+        // For Pci Hotplug controller device only
         //
         if (gPciHotPlugInit != NULL) {
           //
@@ -1182,7 +1182,7 @@ PciScanBus (
 
 
         //
-        // If it is PPB, resursively search down this bridge
+        // If it is PPB, recursively search down this bridge
         //
         if (IS_PCI_BRIDGE (&Pci)) {
 
@@ -1201,7 +1201,7 @@ PciScanBus (
                                           );
 
           //
-          // Nofify EfiPciBeforeChildBusEnumeration for PCI Brige
+          // Notify EfiPciBeforeChildBusEnumeration for PCI Bridge
           //
           PreprocessController (
             PciDevice,
@@ -1391,7 +1391,7 @@ PciHostBridgeP2CProcess (
   while (PciResAlloc->GetNextRootBridge (PciResAlloc, &RootBridgeHandle) == EFI_SUCCESS) {
 
     //
-    // Get RootBridg Device by handle
+    // Get RootBridge Device by handle
     //
     RootBridgeDev = GetRootBridgeByHandle (RootBridgeHandle);
 

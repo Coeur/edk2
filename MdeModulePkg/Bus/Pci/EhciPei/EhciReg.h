@@ -30,7 +30,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 //
 #define EHC_USBCMD_OFFSET       0x0  // USB command register offset
 #define EHC_USBSTS_OFFSET       0x04 // Statue register offset
-#define EHC_USBINTR_OFFSET      0x08 // USB interrutp offset
+#define EHC_USBINTR_OFFSET      0x08 // USB interrupt offset
 #define EHC_FRINDEX_OFFSET      0x0C // Frame index offset
 #define EHC_CTRLDSSEG_OFFSET    0x10 // Control data structure segment offset
 #define EHC_FRAME_BASE_OFFSET   0x14 // Frame list base address offset
@@ -186,7 +186,7 @@ EhcSetAndWaitDoorBell (
 ;
 
 /**
-  Clear all the interrutp status bits, these bits
+  Clear all the interrupt status bits, these bits
   are Write-Clean.
 
   @param  Ehc       The EHCI device.

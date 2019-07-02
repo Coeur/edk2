@@ -216,7 +216,7 @@ CoreFindProtocolInterface (
                                  database.
 
   @return EFI_SUCCESS   if the event was found and removed.
-  @return EFI_NOT_FOUND if the event was not found in the protocl database.
+  @return EFI_NOT_FOUND if the event was not found in the protocol database.
 
 **/
 EFI_STATUS
@@ -449,7 +449,7 @@ CoreInstallProtocolInterfaceNotify (
   Prot->Interface = Interface;
 
   //
-  // Initalize OpenProtocol Data base
+  // Initialize OpenProtocol Data base
   //
   InitializeListHead (&Prot->OpenList);
   Prot->OpenListCount = 0;
@@ -503,7 +503,7 @@ Done:
 /**
   Installs a list of protocol interface into the boot services environment.
   This function calls InstallProtocolInterface() in a loop. If any error
-  occures all the protocols added by this function are removed. This is
+  occurs all the protocols added by this function are removed. This is
   basically a lib function to save space.
 
   @param  Handle                 The pointer to a handle to install the new
@@ -544,7 +544,7 @@ CoreInstallMultipleProtocolInterfaces (
   }
 
   //
-  // Syncronize with notifcations.
+  // Synchronize with notifications.
   //
   OldTpl = CoreRaiseTpl (TPL_NOTIFY);
   OldHandle = *Handle;
@@ -805,7 +805,7 @@ Done:
 
 /**
   Uninstalls a list of protocol interface in the boot services environment.
-  This function calls UnisatllProtocolInterface() in a loop. This is
+  This function calls UninstallProtocolInterface() in a loop. This is
   basically a lib function to save space.
 
   @param  Handle                 The handle to uninstall the protocol

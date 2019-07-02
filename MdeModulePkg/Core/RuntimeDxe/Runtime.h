@@ -104,7 +104,7 @@ RuntimeDriverSetVirtualAddressMap (
   @param  ImageHandle     Image handle of this driver.
   @param  SystemTable     Pointer to the EFI System Table.
 
-  @retval EFI_SUCEESS  Runtime Driver Architectural Protocol Installed
+  @retval EFI_SUCCESS  Runtime Driver Architectural Protocol Installed
   @return Other value if gBS->InstallMultipleProtocolInterfaces fails. Check
            gBS->InstallMultipleProtocolInterfaces for details.
 

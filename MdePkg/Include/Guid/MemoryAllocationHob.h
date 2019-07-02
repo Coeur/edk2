@@ -1,5 +1,5 @@
 /** @file
-  GUIDs for HOBs used in memory allcation
+  GUIDs for HOBs used in memory allocation
 
   Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
   SPDX-License-Identifier: BSD-2-Clause-Patent

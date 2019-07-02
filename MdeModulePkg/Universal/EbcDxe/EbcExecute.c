@@ -430,7 +430,7 @@ ConvertStackAddr (
   appropriate subfunction, then writes back the returned result.
 
   Format:
-    INSTRUCITON[32|64] {@}R1, {@}R2 {Immed16|Index16}
+    INSTRUCTION[32|64] {@}R1, {@}R2 {Immed16|Index16}
 
   @param  VmPtr             A pointer to VM context.
   @param  IsSignedOp        Indicates whether the operand is signed or not.
@@ -741,7 +741,7 @@ ExecutePOP (
   appropriate subfunction, then writes back the returned result.
 
   Format:
-    INSTRUCITON[32|64] {@}R1, {@}R2 {Immed16|Index16}
+    INSTRUCTION[32|64] {@}R1, {@}R2 {Immed16|Index16}
 
   @param  VmPtr             A pointer to VM context.
 
@@ -763,7 +763,7 @@ ExecuteSignedDataManip (
   appropriate subfunction, then writes back the returned result.
 
   Format:
-    INSTRUCITON[32|64] {@}R1, {@}R2 {Immed16|Index16}
+    INSTRUCTION[32|64] {@}R1, {@}R2 {Immed16|Index16}
 
   @param  VmPtr             A pointer to VM context.
 
@@ -2032,7 +2032,7 @@ ExecuteJMP (
   // Get the index if there is one. May be either an index, or an immediate
   // offset depending on indirect operand.
   //   JMP32 @R1 Index32 -- immediate data is an index
-  //   JMP32 R1 Immed32  -- immedate data is an offset
+  //   JMP32 R1 Immed32  -- immediate data is an offset
   //
   if ((Opcode & OPCODE_M_IMMDATA) != 0) {
     if (OPERAND1_INDIRECT (Operand)) {
@@ -4084,7 +4084,7 @@ ExecuteEXTNDD (
   appropriate subfunction, then writes back the returned result.
 
   Format:
-    INSTRUCITON[32|64] {@}R1, {@}R2 {Immed16|Index16}
+    INSTRUCTION[32|64] {@}R1, {@}R2 {Immed16|Index16}
 
   @param  VmPtr             A pointer to VM context.
 
@@ -4114,7 +4114,7 @@ ExecuteSignedDataManip (
   appropriate subfunction, then writes back the returned result.
 
   Format:
-    INSTRUCITON[32|64] {@}R1, {@}R2 {Immed16|Index16}
+    INSTRUCTION[32|64] {@}R1, {@}R2 {Immed16|Index16}
 
   @param  VmPtr             A pointer to VM context.
 
@@ -4144,7 +4144,7 @@ ExecuteUnsignedDataManip (
   appropriate subfunction, then writes back the returned result.
 
   Format:
-    INSTRUCITON[32|64] {@}R1, {@}R2 {Immed16|Index16}
+    INSTRUCTION[32|64] {@}R1, {@}R2 {Immed16|Index16}
 
   @param  VmPtr             A pointer to VM context.
   @param  IsSignedOp        Indicates whether the operand is signed or not.

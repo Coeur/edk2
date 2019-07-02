@@ -140,7 +140,7 @@ IntersectIoDescriptor (
   @param Base   Base address of the IO space.
   @param Length Length of the IO space.
 
-  @retval EFI_SUCCES The IO space was added successfully.
+  @retval EFI_SUCCESS The IO space was added successfully.
 **/
 EFI_STATUS
 AddIoSpace (
@@ -286,7 +286,7 @@ IntersectMemoryDescriptor (
   @param Length       Length of the MMIO space.
   @param Capabilities Capabilities of the MMIO space.
 
-  @retval EFI_SUCCES The MMIO space was added successfully.
+  @retval EFI_SUCCESS The MMIO space was added successfully.
 **/
 EFI_STATUS
 AddMemoryMappedIoSpace (
@@ -690,7 +690,7 @@ AllocateResource (
 
   if (BaseAddress < Limit) {
     //
-    // Have to make sure Aligment is handled since we are doing direct address allocation
+    // Have to make sure Alignment is handled since we are doing direct address allocation
     // Strictly speaking, alignment requirement should be applied to device
     // address instead of host address which is used in GCD manipulation below,
     // but as we restrict the alignment of Translation to be larger than any BAR
@@ -1396,7 +1396,7 @@ SubmitResources (
           }
         case ACPI_ADDRESS_SPACE_TYPE_IO:
           //
-          // Check aligment, it should be of the form 2^n-1
+          // Check alignment, it should be of the form 2^n-1
           //
           if (GetPowerOfTwo64 (Descriptor->AddrRangeMax + 1) != (Descriptor->AddrRangeMax + 1)) {
             return EFI_INVALID_PARAMETER;

@@ -36,7 +36,7 @@
   @param[in] DestinationX  X coordinate of destination for the BltBuffer.
   @param[in] DestinationY  Y coordinate of destination for the BltBuffer.
   @param[in] Width         Width of rectangle in BltBuffer in pixels.
-  @param[in] Height        Hight of rectangle in BltBuffer in pixels.
+  @param[in] Height        Height of rectangle in BltBuffer in pixels.
 
   @retval EFI_SUCCESS            The boot logo information was updated.
   @retval EFI_INVALID_PARAMETER  One of the parameters has an invalid value.
@@ -64,7 +64,7 @@ SetBootLogo (
   @param[in] DestinationX  X coordinate of destination for the BltBuffer.
   @param[in] DestinationY  Y coordinate of destination for the BltBuffer.
   @param[in] Width         Width of rectangle in BltBuffer in pixels.
-  @param[in] Height        Hight of rectangle in BltBuffer in pixels.
+  @param[in] Height        Height of rectangle in BltBuffer in pixels.
 
   @retval EFI_SUCCESS            The boot logo information was updated.
   @retval EFI_INVALID_PARAMETER  One of the parameters has an invalid value.
@@ -185,7 +185,7 @@ EFI_ACPI_5_0_BOOT_GRAPHICS_RESOURCE_TABLE mBootGraphicsResourceTableTemplate = {
   @param  DestinationX   X coordinate of destination for the BltBuffer.
   @param  DestinationY   Y coordinate of destination for the BltBuffer.
   @param  Width          Width of rectangle in BltBuffer in pixels.
-  @param  Height         Hight of rectangle in BltBuffer in pixels.
+  @param  Height         Height of rectangle in BltBuffer in pixels.
 
   @retval EFI_SUCCESS             The boot logo information was updated.
   @retval EFI_INVALID_PARAMETER   One of the parameters has an invalid value.
@@ -227,7 +227,7 @@ SetBootLogo (
   @param[in] DestinationX  X coordinate of destination for the BltBuffer.
   @param[in] DestinationY  Y coordinate of destination for the BltBuffer.
   @param[in] Width         Width of rectangle in BltBuffer in pixels.
-  @param[in] Height        Hight of rectangle in BltBuffer in pixels.
+  @param[in] Height        Height of rectangle in BltBuffer in pixels.
 
   @retval EFI_SUCCESS            The boot logo information was updated.
   @retval EFI_INVALID_PARAMETER  One of the parameters has an invalid value.
@@ -442,7 +442,7 @@ BgrtReadyToBootEventNotify (
       return;
     } else {
       //
-      // If BGRT data change happens, then uninstall orignal AcpiTable first
+      // If BGRT data change happens, then uninstall original AcpiTable first
       //
       Status = AcpiTableProtocol->UninstallAcpiTable (
                                     AcpiTableProtocol,

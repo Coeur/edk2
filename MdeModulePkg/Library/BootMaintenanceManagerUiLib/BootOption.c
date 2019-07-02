@@ -245,7 +245,7 @@ BOpt_GetMenuEntry (
 }
 
 /**
-  Free resources allocated in Allocate Rountine.
+  Free resources allocated in Allocate Routine.
 
   @param FreeMenu        Menu to be freed
 **/
@@ -276,7 +276,7 @@ BOpt_FreeMenu (
   @param CallbackData The BMM context data.
 
   @return EFI_NOT_FOUND Fail to find "BootOrder" variable.
-  @return EFI_SUCESS    Success build boot option menu.
+  @return EFI_SUCCESS   Success build boot option menu.
 
 **/
 EFI_STATUS
@@ -475,7 +475,7 @@ BOpt_GetBootOptions (
   All valid handles in the system except those consume SimpleFs, LoadFile
   are stored in DriverMenu for future use.
 
-  @retval EFI_SUCCESS The function complets successfully.
+  @retval EFI_SUCCESS The function completes successfully.
   @return Other value if failed to build the DriverMenu.
 
 **/
@@ -660,7 +660,7 @@ BOpt_GetDriverOptionNumber (
 
   @param CallbackData The BMM context data.
 
-  @retval EFI_SUCESS           The functin completes successfully.
+  @retval EFI_SUCCESS          The function completes successfully.
   @retval EFI_OUT_OF_RESOURCES Not enough memory to compete the operation.
   @retval EFI_NOT_FOUND        Fail to get "DriverOrder" variable.
 

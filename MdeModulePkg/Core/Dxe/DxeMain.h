@@ -423,7 +423,7 @@ CoreInitializeImageServices (
 
 
 /**
-  Creates an event that is fired everytime a Protocol of a specific type is installed.
+  Creates an event that is fired every time a Protocol of a specific type is installed.
 
 **/
 VOID
@@ -446,7 +446,7 @@ CoreAllEfiServicesAvailable (
 
 
 /**
-  Calcualte the 32-bit CRC in a EFI table using the service provided by the
+  Calculate the 32-bit CRC in a EFI table using the service provided by the
   gRuntime service.
 
   @param  Hdr                    Pointer to an EFI standard header
@@ -486,7 +486,7 @@ CoreInitializeDispatcher (
 /**
   This is the POSTFIX version of the dependency evaluator.  This code does
   not need to handle Before or After, as it is not valid to call this
-  routine in this case. The SOR is just ignored and is a nop in the grammer.
+  routine in this case. The SOR is just ignored and is a nop in the grammar.
   POSTFIX means all the math is done on top of the stack.
 
   @param  DriverEntry           DriverEntry element to update.
@@ -731,7 +731,7 @@ CoreInstallProtocolInterfaceNotify (
 /**
   Installs a list of protocol interface into the boot services environment.
   This function calls InstallProtocolInterface() in a loop. If any error
-  occures all the protocols added by this function are removed. This is
+  occurs all the protocols added by this function are removed. This is
   basically a lib function to save space.
 
   @param  Handle                 The handle to install the protocol handlers on,
@@ -760,7 +760,7 @@ CoreInstallMultipleProtocolInterfaces (
 
 /**
   Uninstalls a list of protocol interface in the boot services environment.
-  This function calls UnisatllProtocolInterface() in a loop. This is
+  This function calls UninstallProtocolInterface() in a loop. This is
   basically a lib function to save space.
 
   @param  Handle                 The handle to uninstall the protocol
@@ -1190,7 +1190,7 @@ CoreConnectController (
 
 
 /**
-  Disonnects a controller from a driver
+  Disconnects a controller from a driver
 
   @param  ControllerHandle                      ControllerHandle The handle of
                                                 the controller from which
@@ -1448,7 +1448,7 @@ CoreLoadImage (
   @retval EFI_SUCCESS             The image has been unloaded.
   @retval EFI_UNSUPPORTED         The image has been started, and does not support
                                   unload.
-  @retval EFI_INVALID_PARAMPETER  ImageHandle is not a valid image handle.
+  @retval EFI_INVALID_PARAMETER   ImageHandle is not a valid image handle.
 
 **/
 EFI_STATUS
@@ -2048,9 +2048,9 @@ CoreDispatcher (
                                 the firmware  file specified by DriverName.
   @param  DriverName            The Driver name to put in the Dependent state.
 
-  @retval EFI_SUCCESS           The DriverName was found and it's SOR bit was
+  @retval EFI_SUCCESS           The DriverName was found and its SOR bit was
                                 cleared
-  @retval EFI_NOT_FOUND         The DriverName does not exist or it's SOR bit was
+  @retval EFI_NOT_FOUND         The DriverName does not exist or its SOR bit was
                                 not set.
 
 **/
@@ -2146,7 +2146,7 @@ CoreProcessFirmwareVolume (
   );
 
 //
-//Functions used during debug buils
+//Functions used during debug builds
 //
 
 /**
@@ -2162,7 +2162,7 @@ CoreDisplayMissingArchProtocols (
 
 /**
   Traverse the discovered list for any drivers that were discovered but not loaded
-  because the dependency experessions evaluated to false.
+  because the dependency expressions evaluated to false.
 
 **/
 VOID
@@ -2328,7 +2328,7 @@ DxeMainUefiDecompressGetInfo (
   implementation. It is the caller's responsibility to allocate and free the
   Destination and Scratch buffers.
   If the compressed source data specified by Source and SourceSize is
-  sucessfully decompressed into Destination, then EFI_SUCCESS is returned. If
+  successfully decompressed into Destination, then EFI_SUCCESS is returned. If
   the compressed source data specified by Source and SourceSize is not in a
   valid compressed data format, then EFI_INVALID_PARAMETER is returned.
 
@@ -2468,7 +2468,7 @@ GetSection (
   @param  FreeStreamBuffer       TRUE - Need to free stream buffer;
                                  FALSE - No need to free stream buffer.
 
-  @retval EFI_SUCCESS            The section stream is closed sucessfully.
+  @retval EFI_SUCCESS            The section stream is closed successfully.
   @retval EFI_OUT_OF_RESOURCES   Memory allocation failed.
   @retval EFI_INVALID_PARAMETER  Section stream does not end concident with end
                                  of last section.
@@ -2514,7 +2514,7 @@ CoreUpdateDebugTableCrc32 (
 
 /**
   Adds a new DebugImageInfo structure to the DebugImageInfo Table.  Re-Allocates
-  the table if it's not large enough to accomidate another entry.
+  the table if it's not large enough to accommodate another entry.
 
   @param  ImageInfoType  type of debug image information
   @param  LoadedImage    pointer to the loaded image protocol for the image being
@@ -2619,7 +2619,7 @@ CoreAcquireLock (
 
 /**
   Initialize a basic mutual exclusion lock.   Each lock
-  provides mutual exclusion access at it's task priority
+  provides mutual exclusion access at its task priority
   level.  Since there is no-premption (at any TPL) or
   multiprocessor support, acquiring the lock only consists
   of raising to the locks TPL.
@@ -2825,7 +2825,7 @@ CoreInitializePropertiesTable (
   );
 
 /**
-  Initialize MemoryAttrubutesTable support.
+  Initialize MemoryAttributesTable support.
 **/
 VOID
 EFIAPI
@@ -2913,7 +2913,7 @@ MemoryProtectionExitBootServicesCallback (
   @param  Memory            The base address of the range
   @param  Length            The size of the range (in bytes)
 
-  @return EFI_SUCCESS       If the the CPU arch protocol is not installed yet
+  @return EFI_SUCCESS       If the CPU arch protocol is not installed yet
   @return EFI_SUCCESS       If no DXE memory protection policy has been configured
   @return EFI_SUCCESS       If OldType and NewType use the same permission attributes
   @return other             Return value of gCpu->SetMemoryAttributes()
@@ -2929,7 +2929,7 @@ ApplyMemoryProtectionPolicy (
   );
 
 /**
-  Merge continous memory map entries whose have same attributes.
+  Merge continuous memory map entries whose have same attributes.
 
   @param  MemoryMap       A pointer to the buffer in which firmware places
                           the current memory map.

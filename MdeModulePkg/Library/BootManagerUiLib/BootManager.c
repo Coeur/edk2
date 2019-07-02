@@ -530,7 +530,7 @@ UpdateBootManager (
   NeedEndOp = FALSE;
   for (Index = 0; Index < BootOptionCount; Index++) {
     //
-    // At this stage we are creating a menu entry, thus the Keys are reproduceable
+    // At this stage we are creating a menu entry, thus the Keys are reproducible
     //
     mKeyInput++;
 
@@ -851,7 +851,7 @@ BootManagerCallback (
   @param ImageHandle     The image handle.
   @param SystemTable     The system table.
 
-  @retval  EFI_SUCEESS  Install Boot manager menu success.
+  @retval  EFI_SUCCESS  Install Boot manager menu success.
   @retval  Other        Return error status.
 
 **/

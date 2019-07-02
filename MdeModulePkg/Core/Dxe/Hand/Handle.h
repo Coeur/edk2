@@ -43,7 +43,7 @@ typedef struct {
   EFI_GUID            ProtocolID;
   /// All protocol interfaces
   LIST_ENTRY          Protocols;
-  /// Registerd notification handlers
+  /// Registered notification handlers
   LIST_ENTRY          Notify;
 } PROTOCOL_ENTRY;
 

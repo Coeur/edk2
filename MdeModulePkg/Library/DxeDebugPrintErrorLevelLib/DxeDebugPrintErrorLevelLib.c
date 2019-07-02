@@ -74,7 +74,7 @@ EFI_DEBUG_MASK_PROTOCOL  mDebugMaskProtocol = {
 
 ///
 /// Global variable that is set to TRUE after the first attempt is made to
-/// retrieve the global error level mask through the EFI Varibale Services.
+/// retrieve the global error level mask through the EFI Variable Services.
 /// This variable prevents the EFI Variable Services from being called fort
 /// every DEBUG() macro.
 ///
@@ -235,7 +235,7 @@ GetDebugPrintErrorLevel (
         mGlobalErrorLevelInitialized = TRUE;
         if (!EFI_ERROR (Status)) {
           //
-          // If the EFI Varible exists, then set this module's module's mask to
+          // If the EFI Variable exists, then set this module's module's mask to
           // the global debug print error level mask value.
           //
           mDebugPrintErrorLevel = (UINT32)GlobalErrorLevel;
@@ -267,7 +267,7 @@ GetDebugPrintErrorLevel (
 
   @param   ErrorLevel     Global debug print error level
 
-  @retval  TRUE           The debug print error level mask was sucessfully set.
+  @retval  TRUE           The debug print error level mask was successfully set.
   @retval  FALSE          The debug print error level mask could not be set.
 
 **/

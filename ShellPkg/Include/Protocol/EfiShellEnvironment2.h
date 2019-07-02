@@ -16,7 +16,7 @@
 /**
   This function is a prototype for a function that dumps information on a protocol
   to a given location.  The location is dependant on the implementation.  This is
-  used when programatically adding shell commands.
+  used when programmatically adding shell commands.
 
   @param[in] Handle                 The handle the protocol is on.
   @param[in] Interface              The interface to the protocol.
@@ -32,7 +32,7 @@ VOID
 /**
   This function is a prototype for each command internal to the EFI shell
   implementation.  The specific command depends on the implementation.  This is
-  used when programatically adding shell commands.
+  used when programmatically adding shell commands.
 
   @param[in] ImageHandle        The handle to the binary shell.
   @param[in] SystemTable        The pointer to the system table.
@@ -52,7 +52,7 @@ EFI_STATUS
 
 /**
   This function is a prototype for one that gets a help string for a given command.
-  This is used when programatically adding shell commands.  Upon successful return
+  This is used when programmatically adding shell commands.  Upon successful return
   the memory allocated is up to the caller to free.
 
   @param[in, out] Str              Pointer to pointer to string to display for help.
@@ -200,7 +200,7 @@ EFI_STATUS
   @param[in] Protocol           The pointer to the protocol's GUID.
   @param[in] DumpToken          The function pointer to dump token function or
                                 NULL.
-  @param[in] DumpInfo           The function pointer to dump infomation function
+  @param[in] DumpInfo           The function pointer to dump information function
                                 or NULL.
   @param[in] IdString           The English name of the protocol.
 **/
@@ -507,7 +507,7 @@ VOID
   This must be called after INIT_HANDLE_ENUMERATOR and before CLOSE_HANDLE_ENUMERATOR.
 
   @param[in, out] Handle         The pointer to pointer to Handle.  It is set
-                                 on a sucessful return.
+                                 on a successful return.
 
   @retval EFI_SUCCESS           The next handle in the handle database is *Handle.
   @retval EFI_NOT_FOUND         There is not another handle.
@@ -541,7 +541,7 @@ EFI_STATUS
 /**
   This is an internal shell function to enumerate the handle database.
 
-  This function resets the the handle database so that NEXT_HANDLE and SKIP_HANDLE
+  This function resets the handle database so that NEXT_HANDLE and SKIP_HANDLE
   will start from EnumIndex on the next call.
 
   This must be called after INIT_HANDLE_ENUMERATOR and before CLOSE_HANDLE_ENUMERATOR.
@@ -652,7 +652,7 @@ VOID
 
   @param[in, out] ProtocolInfo   The pointer to pointer to protocol information structure.
 
-  @retval EFI_SUCCESS           The next protocol's information was sucessfully returned.
+  @retval EFI_SUCCESS           The next protocol's information was successfully returned.
   @retval NULL                  There are no more protocols.
 **/
 typedef
@@ -684,7 +684,7 @@ EFI_STATUS
   called after INIT_PROTOCOL_INFO_ENUMERATOR.
 
   This function resets the list of protocols such that the next one in the
-  list is the begining of the list.
+  list is the beginning of the list.
 **/
 typedef
 VOID
@@ -723,7 +723,7 @@ typedef struct {
   This function is used to retrieve a user-friendly display name for a handle.
 
   If UseComponentName is TRUE then the component name protocol for this device
-  or it's parent device (if required) will be used to obtain the name of the
+  or its parent device (if required) will be used to obtain the name of the
   device.  If UseDevicePath is TRUE it will get the human readable device path
   and return that.  If both are TRUE it will try to use component name first
   and device path if that fails.
@@ -731,8 +731,8 @@ typedef struct {
   It will use either ComponentName or ComponentName2 protocol, depending on
   what is present.
 
-  This function will furthur verify whether the handle in question produced either
-  EFI_DRIVER_CONFIGRATION_PROTOCOL or EFI_DRIVER_CONFIGURATION2_PROTOCOL and also
+  This function will further verify whether the handle in question produced either
+  EFI_DRIVER_CONFIGURATION_PROTOCOL or EFI_DRIVER_CONFIGURATION2_PROTOCOL and also
   whether the handle in question produced either EFI_DRIVER_DIAGNOSTICS_PROTOCOL or
   EFI_DRIVER_DIAGNOSTICS2_PROTOCOL.
 
@@ -810,7 +810,7 @@ EFI_DEVICE_PATH_PROTOCOL*
 
   This function looks through the shell environment map for a map whose device
   path matches the DevPath parameter.  If one is found the Name is returned via
-  Name parameter.  If sucessful the caller must free the memory allocated for
+  Name parameter.  If successful the caller must free the memory allocated for
   Name.
 
   This function will use the internal lock to prevent changes to the map during
@@ -818,7 +818,7 @@ EFI_DEVICE_PATH_PROTOCOL*
 
   @param[in] DevPath                The device path to search for a name for.
   @param[in] ConsistMapping         What state to verify map flag VAR_ID_CONSIST.
-  @param[out] Name                  On sucessful return the name of that device path.
+  @param[out] Name                  On successful return the name of that device path.
 
   @retval EFI_SUCCESS           The DevPath was found and the name returned
                                 in Name.

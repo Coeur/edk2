@@ -163,7 +163,7 @@ ShellCommandRunAttrib (
         } // for loop for printing out the info
       } else if ((FileAttributesToRemove & FileAttributesToAdd) != 0) {
         //
-        // fail as we have conflcting params.
+        // fail as we have conflicting params.
         //
         ShellPrintHiiEx(-1, -1, NULL, STRING_TOKEN (STR_GEN_PARAM_CON), gShellLevel2HiiHandle, L"attrib");
         ShellStatus = SHELL_INVALID_PARAMETER;

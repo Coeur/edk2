@@ -1,6 +1,6 @@
 /** @file
   Serial Port Lib that thunks back to Emulator services to write to StdErr.
-  All read functions are stubed out.
+  All read functions are stubbed out.
 
   Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
   Portions copyright (c) 2011, Apple Inc. All rights reserved.<BR>

@@ -62,7 +62,7 @@ ProcessCapsuleImage (
      Each individual capsule result is recorded in capsule record variable.
      System may reset in this function, if reset is required by capsule and
      all capsules are processed.
-     If not all capsules are processed, reset will be defered to second call.
+     If not all capsules are processed, reset will be deferred to second call.
 
   2) The second call must be after EndOfDxe and after ConnectAll, so that all
      device capsule FMP protocols are exposed.

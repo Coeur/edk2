@@ -42,7 +42,7 @@ SetCursorPosition (
   @param  Timeout          - An optional timeout value in 100 ns units.
 
   @retval EFI_SUCCESS       - Event fired before Timeout expired.
-  @retval EFI_TIME_OUT     - Timout expired before Event fired..
+  @retval EFI_TIME_OUT     - Timeout expired before Event fired..
 
 **/
 EFI_STATUS
@@ -480,7 +480,7 @@ Input (
       //
       if (Key.UnicodeChar != CHAR_BACKSPACE && !(Key.UnicodeChar == 0 && Key.ScanCode == SCAN_DELETE)) {
         //
-        // Calulate row and column of the tail of current string
+        // Calculate row and column of the tail of current string
         //
         TailRow     = Row + (Len - StrPos + Column + OutputLength) / LineLength;
         TailColumn  = (Len - StrPos + Column + OutputLength) % LineLength;

@@ -80,11 +80,11 @@ typedef struct {
 
   @param[in]      Index     The boot or driver option index update.
   @param[in]      DataSize  The size in bytes of Data.
-  @param[in]      Data      The buffer for the optioanl data.
+  @param[in]      Data      The buffer for the optional data.
   @param[in]      Target    The target of the operation.
 
-  @retval EFI_SUCCESS       The data was sucessfully updated.
-  @retval other             A error occured.
+  @retval EFI_SUCCESS       The data was successfully updated.
+  @retval other             A error occurred.
 **/
 EFI_STATUS
 UpdateOptionalData(
@@ -169,8 +169,8 @@ UpdateOptionalData(
   @param[in, out] Crc         The CRC value to return.
   @param[in]      BootIndex   The boot option index to CRC.
 
-  @retval EFI_SUCCESS           The CRC was sucessfully returned.
-  @retval other                 A error occured.
+  @retval EFI_SUCCESS           The CRC was successfully returned.
+  @retval other                 A error occurred.
 **/
 EFI_STATUS
 GetBootOptionCrc(
@@ -221,9 +221,9 @@ GetBootOptionCrc(
   This function will populate the device path protocol parameter based on TheHandle.
 
   @param[in]      TheHandle     Driver handle.
-  @param[in, out] FilePath      On a sucessful return the device path to the handle.
+  @param[in, out] FilePath      On a successful return the device path to the handle.
 
-  @retval EFI_SUCCESS           The device path was sucessfully returned.
+  @retval EFI_SUCCESS           The device path was successfully returned.
   @retval other                 A error from gBS->HandleProtocol.
 
   @sa HandleProtocol
@@ -275,11 +275,11 @@ GetDevicePathForDriverHandle (
 }
 
 /**
-  Functino to get Device Path by a handle.
+  Function to get Device Path by a handle.
 
   @param[in]        TheHandle   Use it to get DevicePath.
   @param[in]        Target      Boot option target.
-  @param[in, out]   DevicePath  On a sucessful return the device path to the handle.
+  @param[in, out]   DevicePath  On a successful return the device path to the handle.
 
   @retval   SHELL_INVALID_PARAMETER The handle was NULL.
   @retval   SHELL_NOT_FOUND         Not found device path by handle.
@@ -375,7 +375,7 @@ GetDevicePathByHandle(
 
   @retval SHELL_SUCCESS             The operation was successful.
   @retval SHELL_INVALID_PARAMETER   A parameter was invalid.
-  @retval SHELL_OUT_OF_RESOUCES     A memory allocation failed.
+  @retval SHELL_OUT_OF_RESOURCES    A memory allocation failed.
 **/
 SHELL_STATUS
 BcfgMod (
@@ -845,7 +845,7 @@ BcfgAdd(
 }
 
 /**
-  Funciton to remove an item.
+  Function to remove an item.
 
   @param[in] Target         The target item to move.
   @param[in] CurrentOrder   The pointer to the current order of items.
@@ -904,7 +904,7 @@ BcfgRemove(
 }
 
 /**
-  Funciton to move a item to another location.
+  Function to move a item to another location.
 
   @param[in] Target         The target item to move.
   @param[in] CurrentOrder   The pointer to the current order of items.
@@ -973,7 +973,7 @@ BcfgMove(
   @param[in] OrderCount   The number if items in CurrentOrder.
   @param[in] Target       The target of the operation.
 
-  @retval SHELL_SUCCESS   The operation was succesful.
+  @retval SHELL_SUCCESS   The operation was successful.
 **/
 SHELL_STATUS
 BcfgAddOpt(
@@ -1385,7 +1385,7 @@ Cleanup:
 /**
   Function to initialize the BCFG operation structure.
 
-  @param[in] Struct   The stuct to initialize.
+  @param[in] Struct   The struct to initialize.
 **/
 VOID
 InitBcfgStruct(
@@ -1850,7 +1850,7 @@ ShellCommandGetManFileNameBcfg (
   @param[in] SystemTable    the EFI System Table pointer
   @param[in] Name           the profile name to use
 
-  @retval EFI_SUCCESS        the shell command handlers were installed sucessfully
+  @retval EFI_SUCCESS        the shell command handlers were installed successfully
   @retval EFI_UNSUPPORTED    the shell level required was not found.
 **/
 EFI_STATUS

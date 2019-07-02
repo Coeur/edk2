@@ -15,7 +15,7 @@
 
   @param[in] Private          The pointer to the PEI_NVME_CONTROLLER_PRIVATE_DATA data structure.
   @param[in] PhysicalAddr     The physical base address of Data Buffer.
-  @param[in] Pages            The number of pages to be transfered.
+  @param[in] Pages            The number of pages to be transferred.
 
   @retval The pointer Value to the first PRP List of the PRP lists.
 
@@ -601,7 +601,7 @@ NvmePassThruExecute (
   }
 
   //
-  // Copy the Respose Queue entry for this command to the callers response buffer
+  // Copy the Response Queue entry for this command to the callers response buffer
   //
   CopyMem (Packet->NvmeCompletion, Cq, sizeof (EFI_NVM_EXPRESS_COMPLETION));
 

@@ -1809,7 +1809,7 @@ PciPrintClassCode (
 
   if (IncludePIF) {
     //
-    // Print base class, sub class, and programming inferface name
+    // Print base class, sub class, and programming interface name
     //
     ShellPrintEx (-1, -1, L"%s - %s - %s",
       ClassStrings.BaseClass,
@@ -2359,7 +2359,7 @@ CHAR16 *DevicePortTypeTable[] = {
   L"PCI Express Endpoint",
   L"Legacy PCI Express Endpoint",
   L"Unknown Type",
-  L"Unknonw Type",
+  L"Unknown Type",
   L"Root Port of PCI Express Root Complex",
   L"Upstream Port of PCI Express Switch",
   L"Downstream Port of PCI Express Switch",
@@ -2691,7 +2691,7 @@ ShellCommandRunPci (
             }
           }
           //
-          // If Descriptor is NULL, Configuration() returns EFI_UNSUPPRORED,
+          // If Descriptor is NULL, Configuration() returns EFI_UNSUPPORTED,
           // we assume the bus range is 0~PCI_MAX_BUS. After enumerated all
           // devices on all bus, we can leave loop.
           //
@@ -3028,7 +3028,7 @@ PciGetProtocolAndResource (
   EFI_STATUS  Status;
 
   //
-  // Get inferface from protocol
+  // Get interface from protocol
   //
   Status = gBS->HandleProtocol (
                 Handle,
@@ -4208,7 +4208,7 @@ LocatePciCapability (
   EFI_PCI_CAPABILITY_HDR  *CapabilityEntry;
 
   //
-  // To check the cpability of this device supports
+  // To check the capability of this device supports
   //
   if ((ConfigSpace->Common.Status & EFI_PCI_STATUS_CAPABILITY) == 0) {
     return 0;

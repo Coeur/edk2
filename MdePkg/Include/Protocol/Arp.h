@@ -328,7 +328,7 @@ EFI_STATUS
 
   If the request is in the internal ARP request queue, the request is aborted
   immediately and its ResolvedEvent is signaled. Only an asynchronous address
-  request needs to be canceled. If TargeSwAddress and ResolveEvent are both
+  request needs to be canceled. If TargetSwAddress and ResolvedEvent are both
   NULL, all the pending asynchronous requests that have been issued by This
   instance will be cancelled and their corresponding events will be signaled.
 

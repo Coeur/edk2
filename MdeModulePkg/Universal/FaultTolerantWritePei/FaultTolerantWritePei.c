@@ -54,7 +54,7 @@ FtwGetLastWriteHeader (
   while (FtwHeader->Complete == FTW_VALID_STATE) {
     Offset += FTW_WRITE_TOTAL_SIZE (FtwHeader->NumberOfWrites, FtwHeader->PrivateDataSize);
     //
-    // If Offset exceed the FTW work space boudary, return error.
+    // If Offset exceed the FTW work space boundary, return error.
     //
     if (Offset >= FtwWorkSpaceSize) {
       *FtwWriteHeader = FtwHeader;
@@ -254,7 +254,7 @@ PeimFaultTolerantWriteInitialize (
         //
         // If FTW last write was still in progress with SpareComplete set and DestinationComplete not set.
         // It means the target buffer has been backed up in spare block, then target block has been erased,
-        // but the target buffer has not been writen in target block from spare block, we need to build
+        // but the target buffer has not been written in target block from spare block, we need to build
         // FAULT_TOLERANT_WRITE_LAST_WRITE_DATA GUID hob to hold the FTW last write data.
         //
         FtwLastWrite.TargetAddress = (EFI_PHYSICAL_ADDRESS) (UINTN) ((INT64) SpareAreaAddress + FtwLastWriteRecord->RelativeOffset);

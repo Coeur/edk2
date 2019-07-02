@@ -1,6 +1,6 @@
 /** @file
 
-  This file contains the delarations for componet name routines.
+  This file contains the declarations for component name routines.
 
 Copyright (c) 2008 - 2011, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent

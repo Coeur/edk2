@@ -24,9 +24,9 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
   @param  FileType         The file type need to choose.
   @param  ChooseHandler    Function pointer to the extra task need to do
                            after choose one file.
-  @param  File             Return the device path for the last time chosed file.
+  @param  File             Return the device path for the last time choosed file.
 
-  @retval EFI_SUCESS       Choose the file success.
+  @retval EFI_SUCCESS      Choose the file success.
   @retval Other errors     Choose the file failed.
 **/
 EFI_STATUS

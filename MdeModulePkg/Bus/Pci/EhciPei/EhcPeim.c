@@ -216,7 +216,7 @@ EhcSetAndWaitDoorBell (
 }
 
 /**
-  Clear all the interrutp status bits, these bits
+  Clear all the interrupt status bits, these bits
   are Write-Clean.
 
   @param  Ehc       The EHCI device.
@@ -256,13 +256,13 @@ EhcEnablePeriodSchd (
 }
 
 /**
-  Enable asynchrounous schedule.
+  Enable asynchronous schedule.
 
   @param  Ehc       The EHCI device.
   @param  Timeout   Time to wait before abort.
 
   @retval EFI_SUCCESS       The EHCI asynchronous schedule is enabled.
-  @retval Others            Failed to enable the asynchronous scheudle.
+  @retval Others            Failed to enable the asynchronous schedule.
 
 **/
 EFI_STATUS
@@ -448,7 +448,7 @@ EhcInitHC (
   ASSERT (EhcIsHalt (Ehc));
 
   //
-  // Allocate the periodic frame and associated memeory
+  // Allocate the periodic frame and associated memory
   // management facilities if not already done.
   //
   if (Ehc->PeriodFrame != NULL) {
@@ -527,7 +527,7 @@ EhcInitHC (
                                 sending or receiving.
   @param  Data                  Array of pointers to the buffers of data to transmit
                                 from or receive into.
-  @param  DataLength            The lenght of the data buffer.
+  @param  DataLength            The length of the data buffer.
   @param  DataToggle            On input, the initial data toggle for the transfer;
                                 On output, it is updated to to next data toggle to use of
                                 the subsequent bulk transfer.
@@ -535,7 +535,7 @@ EhcInitHC (
                                 transfer is allowed to complete.
                                 If Timeout is 0, then the caller must wait for the function
                                 to be completed until EFI_SUCCESS or EFI_DEVICE_ERROR is returned.
-  @param  Translator            A pointr to the transaction translator data.
+  @param  Translator            A pointer to the transaction translator data.
   @param  TransferResult        A pointer to the detailed result information of the
                                 bulk transfer.
 
@@ -733,7 +733,7 @@ EhcClearRootHubPortFeature (
     // controller. The host controller will unconditionally
     // set this bit to a zero when:
     //   1. software sets the Forct Port Resume bit to a zero from a one.
-    //   2. software sets the Port Reset bit to a one frome a zero.
+    //   2. software sets the Port Reset bit to a one from a zero.
     //
     State &= ~PORSTSC_RESUME;
     EhcWriteOpReg (Ehc, Offset, State);

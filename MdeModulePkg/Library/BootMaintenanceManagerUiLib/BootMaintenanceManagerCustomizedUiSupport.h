@@ -23,7 +23,7 @@ BmmCreateTimeOutMenu (
   );
 
 /**
-  Create the dynamic item to allow user to set the "BootNext" vaule.
+  Create the dynamic item to allow user to set the "BootNext" value.
 
   @param[in]    HiiHandle           The hii handle for the Uiapp driver.
   @param[in]    StartOpCodeHandle   The opcode handle to save the new opcode.
@@ -124,7 +124,7 @@ EFI_STATUS
 
   @param    HiiHandle           The hii handle for the Uiapp driver.
   @param    ClassGuid           The class guid for the driver which is the target.
-  @param    SpecialHandlerFn      The pointer to the specail handler function, if any.
+  @param    SpecialHandlerFn    The pointer to the special handler function, if any.
   @param    StartOpCodeHandle   The opcode handle to save the new opcode.
 
   @retval   EFI_SUCCESS         Search the driver success

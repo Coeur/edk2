@@ -75,10 +75,10 @@ typedef struct _PEI_URB     PEI_URB;
 #define QTD_LINK(Addr, Term)      QH_LINK((Addr), 0, (Term))
 
 //
-// The defination of EHCI hardware used data structure for
+// The definition of EHCI hardware used data structure for
 // little endian architecture. The QTD and QH structures
 // are required to be 32 bytes aligned. Don't add members
-// to the head of the associated software strucuture.
+// to the head of the associated software structure.
 //
 #pragma pack(1)
 typedef struct {
@@ -156,7 +156,7 @@ typedef struct _USB_ENDPOINT {
 } USB_ENDPOINT;
 
 //
-// Software QTD strcture, this is used to manage all the
+// Software QTD structure, this is used to manage all the
 // QTD generated from a URB. Don't add fields before QtdHw.
 //
 struct _PEI_EHC_QTD {
@@ -172,7 +172,7 @@ struct _PEI_EHC_QTD {
 //
 // Software QH structure. All three different transaction types
 // supported by UEFI USB, that is the control/bulk/interrupt
-// transfers use the queue head and queue token strcuture.
+// transfers use the queue head and queue token structure.
 //
 // Interrupt QHs are linked to periodic frame list in the reversed
 // 2^N tree. Each interrupt QH is linked to the list starting at
@@ -236,7 +236,7 @@ struct _PEI_URB {
   @param  DataLen     The length of the data.
   @param  PktId       Packet ID to use in the QTD.
   @param  Toggle      Data toggle to use in the QTD.
-  @param  MaxPacket   Maximu packet length of the endpoint.
+  @param  MaxPacket   Maximum packet length of the endpoint.
 
   @retval the pointer to the created QTD or NULL if failed to create one.
 
@@ -287,7 +287,7 @@ EhcFreeUrb (
 
   @param  Ehc               The EHCI device.
   @param  DevAddr           The device address.
-  @param  EpAddr            Endpoint addrress & its direction.
+  @param  EpAddr            Endpoint address & its direction.
   @param  DevSpeed          The device speed.
   @param  Toggle            Initial data toggle to use.
   @param  MaxPacket         The max packet length of the endpoint.

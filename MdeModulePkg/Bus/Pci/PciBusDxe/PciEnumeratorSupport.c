@@ -1,5 +1,5 @@
 /** @file
-  PCI emumeration support functions implementation for PCI Bus module.
+  PCI enumeration support functions implementation for PCI Bus module.
 
 Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>
 (C) Copyright 2015 Hewlett Packard Enterprise Development LP<BR>
@@ -1092,7 +1092,7 @@ PciSetDeviceAttribute (
     // When this attribute is clear, the RomImage and RomSize fields in the PCI IO were
     // initialized based on the PCI option ROM found through the ROM BAR of the PCI controller.
     // When this attribute is set, the PCI option ROM described by the RomImage and RomSize
-    // fields is not from the the ROM BAR of the PCI controller.
+    // fields is not from the ROM BAR of the PCI controller.
     //
     if (!PciIoDevice->EmbeddedRom) {
       Attributes |= EFI_PCI_IO_ATTRIBUTE_EMBEDDED_ROM;

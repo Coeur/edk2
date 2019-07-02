@@ -683,8 +683,8 @@ EFI_GUID *mUefiDefinedGuid[] = {
 
   @param[in] Char       The character to check against.
 
-  @retval TRUE          If the Char is an upper case hexadecmial character.
-  @retval FALSE         If the Char is not an upper case hexadecmial character.
+  @retval TRUE          If the Char is an upper case hexadecimal character.
+  @retval FALSE         If the Char is not an upper case hexadecimal character.
 
 **/
 BOOLEAN

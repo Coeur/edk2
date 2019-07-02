@@ -68,7 +68,7 @@ ShellCommandRunMkDir (
     //
     if (ShellCommandLineGetRawValue(Package, 1) == NULL) {
       //
-      // we didnt get a single parameter
+      // we didn't get a single parameter
       //
       ShellPrintHiiEx(-1, -1, NULL, STRING_TOKEN (STR_GEN_TOO_FEW), gShellLevel2HiiHandle, L"mkdir");
       ShellStatus = SHELL_INVALID_PARAMETER;

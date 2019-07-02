@@ -10,7 +10,7 @@
 #include <Library/FspCommonLib.h>
 
 /**
-  This function check the signture of UPD.
+  This function check the signature of UPD.
 
   @param[in]  ApiIdx           Internal index of the FSP API.
   @param[in]  ApiParam         Parameter of the FSP API.

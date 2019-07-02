@@ -36,9 +36,9 @@
                                   String is added or updated in the String Package
                                   associated with HiiHandle for all the languages
                                   that the String Package supports.  If this
-                                  parameter is not NULL, then then String is added
+                                  parameter is not NULL, then String is added
                                   or updated in the String Package associated with
-                                  HiiHandle for the set oflanguages specified by
+                                  HiiHandle for the set of languages specified by
                                   SupportedLanguages.  The format of
                                   SupportedLanguages must follow the language
                                   format assumed the HII Database.
@@ -254,7 +254,7 @@ HiiGetString (
   GetEfiGlobalVariable2 (L"PlatformLang", (VOID**)&PlatformLanguage, NULL);
 
   //
-  // If Languag is NULL, then set it to an empty string, so it will be
+  // If Language is NULL, then set it to an empty string, so it will be
   // skipped by GetBestLanguage()
   //
   if (Language == NULL) {

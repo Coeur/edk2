@@ -2758,7 +2758,7 @@ HddPasswordConfigFormInit (
   @param ImageHandle     Image handle this driver.
   @param SystemTable     Pointer to SystemTable.
 
-  @retval EFI_SUCESS     This function always complete successfully.
+  @retval EFI_SUCCESS    This function always complete successfully.
 
 **/
 EFI_STATUS

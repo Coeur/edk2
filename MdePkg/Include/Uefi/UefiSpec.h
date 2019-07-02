@@ -714,7 +714,7 @@ EFI_STATUS
   @retval EFI_DEVICE_ERROR       The variable could not be retrieved due to a hardware error.
   @retval EFI_WRITE_PROTECTED    The variable in question is read-only.
   @retval EFI_WRITE_PROTECTED    The variable in question cannot be deleted.
-  @retval EFI_SECURITY_VIOLATION The variable could not be written due to EFI_VARIABLE_TIME_BASED_AUTHENTICATED_WRITE_ACESS being set,
+  @retval EFI_SECURITY_VIOLATION The variable could not be written due to EFI_VARIABLE_TIME_BASED_AUTHENTICATED_WRITE_ACCESS being set,
                                  but the AuthInfo does NOT pass the validation check carried out by the firmware.
 
   @retval EFI_NOT_FOUND          The variable trying to be updated or deleted was not found.
@@ -858,7 +858,7 @@ EFI_STATUS
 
   @retval EFI_SUCCESS            Image was loaded into memory correctly.
   @retval EFI_NOT_FOUND          Both SourceBuffer and DevicePath are NULL.
-  @retval EFI_INVALID_PARAMETER  One or more parametes are invalid.
+  @retval EFI_INVALID_PARAMETER  One or more parameters are invalid.
   @retval EFI_UNSUPPORTED        The image type is not supported.
   @retval EFI_OUT_OF_RESOURCES   Image was not loaded due to insufficient resources.
   @retval EFI_LOAD_ERROR         Image was not loaded because the image format was corrupt or not
@@ -1661,13 +1661,13 @@ typedef struct {
   @param[in]  CapsuleHeaderArray Virtual pointer to an array of virtual pointers to the capsules
                                  being passed into update capsule.
   @param[in]  CapsuleCount       Number of pointers to EFI_CAPSULE_HEADER in
-                                 CaspuleHeaderArray.
+                                 CapsuleHeaderArray.
   @param[in]  ScatterGatherList  Physical pointer to a set of
                                  EFI_CAPSULE_BLOCK_DESCRIPTOR that describes the
                                  location in physical memory of a set of capsules.
 
   @retval EFI_SUCCESS           Valid capsule was passed. If
-                                CAPSULE_FLAGS_PERSIT_ACROSS_RESET is not set, the
+                                CAPSULE_FLAGS_PERSIST_ACROSS_RESET is not set, the
                                 capsule has been successfully processed by the firmware.
   @retval EFI_INVALID_PARAMETER CapsuleSize is NULL, or an incompatible set of flags were
                                 set in the capsule header.
@@ -1695,8 +1695,8 @@ EFI_STATUS
   @param[in]   CapsuleHeaderArray  Virtual pointer to an array of virtual pointers to the capsules
                                    being passed into update capsule.
   @param[in]   CapsuleCount        Number of pointers to EFI_CAPSULE_HEADER in
-                                   CaspuleHeaderArray.
-  @param[out]  MaxiumCapsuleSize   On output the maximum size that UpdateCapsule() can
+                                   CapsuleHeaderArray.
+  @param[out]  MaximumCapsuleSize  On output the maximum size that UpdateCapsule() can
                                    support as an argument to UpdateCapsule() via
                                    CapsuleHeaderArray and ScatterGatherList.
   @param[out]  ResetType           Returns the type of reset required for the capsule update.

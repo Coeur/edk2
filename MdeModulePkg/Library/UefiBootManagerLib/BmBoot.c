@@ -15,7 +15,7 @@ EFI_BOOT_MANAGER_REFRESH_LEGACY_BOOT_OPTION  mBmRefreshLegacyBootOption = NULL;
 EFI_BOOT_MANAGER_LEGACY_BOOT                 mBmLegacyBoot              = NULL;
 
 ///
-/// This GUID is used for an EFI Variable that stores the front device pathes
+/// This GUID is used for an EFI Variable that stores the front device paths
 /// for a partial device path that starts with the HD node.
 ///
 EFI_GUID mBmHardDriveBootVariableGuid = { 0xfab7e9e1, 0x39dd, 0x4f2b, { 0x84, 0x08, 0xe2, 0x0e, 0x90, 0x6c, 0xb6, 0xde } };
@@ -237,7 +237,7 @@ BmAdjustFvFilePath (
 /**
   Check if it's a Device Path pointing to FV file.
 
-  The function doesn't garentee the device path points to existing FV file.
+  The function doesn't guarantee the device path points to existing FV file.
 
   @param  DevicePath     Input device path.
 
@@ -1049,7 +1049,7 @@ BmExpandMediaDevicePath (
 
   //
   // For device boot option only pointing to the removable device handle,
-  // should make sure all its children handles (its child partion or media handles)
+  // should make sure all its children handles (its child partition or media handles)
   // are created and connected.
   //
   gBS->ConnectController (Handle, NULL, NULL, TRUE);
@@ -1079,7 +1079,7 @@ BmExpandMediaDevicePath (
   }
 
   //
-  // Detect the the default boot file from removable Media
+  // Detect the default boot file from removable Media
   //
   NextFullPath = NULL;
   Size = GetDevicePathSize (DevicePath) - END_DEVICE_PATH_LENGTH;
@@ -1710,11 +1710,11 @@ BmReportLoadFailure (
 }
 
 /**
-  Attempt to boot the EFI boot option. This routine sets L"BootCurent" and
+  Attempt to boot the EFI boot option. This routine sets L"BootCurrent" and
   also signals the EFI ready to boot event. If the device path for the option
   starts with a BBS device path a legacy boot is attempted via the registered
   gLegacyBoot function. Short form device paths are also supported via this
-  rountine. A device path starting with MEDIA_HARDDRIVE_DP, MSG_USB_WWID_DP,
+  routine. A device path starting with MEDIA_HARDDRIVE_DP, MSG_USB_WWID_DP,
   MSG_USB_CLASS_DP gets expaned out to find the first device that matches.
   If the BootOption Device Path fails the removable media boot algorithm
   is attempted (\EFI\BOOTIA32.EFI, \EFI\BOOTX64.EFI,... only one file type
@@ -2028,7 +2028,7 @@ BmMatchPartitionDevicePathNode (
 
       //
       // Match Signature and PartitionNumber.
-      // Unused bytes in Signature are initiaized with zeros.
+      // Unused bytes in Signature are initialized with zeros.
       //
       if ((Node->PartitionNumber == HardDriveDevicePath->PartitionNumber) &&
           (Node->MBRType == HardDriveDevicePath->MBRType) &&
@@ -2045,7 +2045,7 @@ BmMatchPartitionDevicePathNode (
 }
 
 /**
-  Emuerate all possible bootable medias in the following order:
+  Enumerate all possible bootable medias in the following order:
   1. Removable BlockIo            - The boot option only points to the removable media
                                     device, like USB key, DVD, Floppy etc.
   2. Fixed BlockIo                - The boot option only points to a Fixed blockIo device,

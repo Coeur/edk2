@@ -55,7 +55,7 @@ typedef struct {
 
 //
 // AP loop state when APs are in idle state
-// It's value is the same with PcdCpuApLoopMode
+// Its value is the same with PcdCpuApLoopMode
 //
 typedef enum {
   ApInHltLoop   = 1,

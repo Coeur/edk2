@@ -29,7 +29,7 @@
   Diagnostics applications may also use this protocol for multi-processor.
 
 Copyright (c) 2006 - 2012, Intel Corporation. All rights reserved.<BR>
-Portitions Copyright (c) 2011, Apple Inc. All rights reserved.
+Portions Copyright (c) 2011, Apple Inc. All rights reserved.
 SPDX-License-Identifier: BSD-2-Clause-Patent
 
 
@@ -292,7 +292,7 @@ CpuMpServicesGetProcessorInfo (
        and releases the BSP to continue with other tasks.
     -# The caller can use the CheckEvent() and WaitForEvent() services to check
        the state of the WaitEvent created in step 1.
-    -# When the APs complete their task or TimeoutInMicroSecondss expires, the MP
+    -# When the APs complete their task or TimeoutInMicroSeconds expires, the MP
        Service signals WaitEvent by calling the EFI SignalEvent() function. If
        FailedCpuList is not NULL, its content is available when WaitEvent is
        signaled. If all APs returned from Procedure prior to the timeout, then
@@ -332,7 +332,7 @@ CpuMpServicesGetProcessorInfo (
                                       EFI_EVENT is defined in CreateEvent() in
                                       the Unified Extensible Firmware Interface
                                       Specification.
-  @param[in]  TimeoutInMicrosecsond   Indicates the time limit in microseconds for
+  @param[in]  TimeoutInMicroseconds   Indicates the time limit in microseconds for
                                       APs to return from Procedure, either for
                                       blocking or non-blocking mode. Zero means
                                       infinity.  If the timeout expires before
@@ -601,7 +601,7 @@ Done:
   This function is used to dispatch one enabled AP to the function specified by
   Procedure passing in the argument specified by ProcedureArgument.  If WaitEvent
   is NULL, execution is in blocking mode. The BSP waits until the AP finishes or
-  TimeoutInMicroSecondss expires. Otherwise, execution is in non-blocking mode.
+  TimeoutInMicroSeconds expires. Otherwise, execution is in non-blocking mode.
   BSP proceeds to the next task without waiting for the AP. If a non-blocking mode
   is requested after the UEFI Event EFI_EVENT_GROUP_READY_TO_BOOT is signaled,
   then EFI_UNSUPPORTED must be returned.
@@ -636,7 +636,7 @@ Done:
                                       EFI_EVENT is defined in CreateEvent() in
                                       the Unified Extensible Firmware Interface
                                       Specification.
-  @param[in]  TimeoutInMicrosecsond   Indicates the time limit in microseconds for
+  @param[in]  TimeoutInMicroseconds   Indicates the time limit in microseconds for
                                       APs to return from Procedure, either for
                                       blocking or non-blocking mode. Zero means
                                       infinity.  If the timeout expires before
@@ -1283,7 +1283,7 @@ InitializeMpSystemData (
   ZeroMem (&gMPSystem, sizeof (MP_SYSTEM_DATA));
 
   //
-  // First BSP fills and inits all known values, including it's own records.
+  // First BSP fills and inits all known values, including its own records.
   //
   gMPSystem.NumberOfProcessors         = NumberOfProcessors;
   gMPSystem.NumberOfEnabledProcessors  = NumberOfProcessors;

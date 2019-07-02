@@ -48,7 +48,7 @@ CoreInsertEventTimer (
   TriggerTime = Event->Timer.TriggerTime;
 
   //
-  // Insert the timer into the timer database in assending sorted order
+  // Insert the timer into the timer database in ascending sorted order
   //
   for (Link = mEfiTimerList.ForwardLink; Link != &mEfiTimerList; Link = Link->ForwardLink) {
     Event2 = CR (Link, IEVENT, Timer.Link, EVENT_SIGNATURE);
@@ -194,7 +194,7 @@ CoreTimerTick (
   IEVENT          *Event;
 
   //
-  // Check runtiem flag in case there are ticks while exiting boot services
+  // Check runtime flag in case there are ticks while exiting boot services
   //
   CoreAcquireLock (&mEfiSystemTimeLock);
 

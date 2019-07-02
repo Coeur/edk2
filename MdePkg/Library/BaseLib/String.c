@@ -516,8 +516,8 @@ StrStr (
 
   @param  Char  The character to check against.
 
-  @retval TRUE  If the Char is a decmial character.
-  @retval FALSE If the Char is not a decmial character.
+  @retval TRUE  If the Char is a decimal character.
+  @retval FALSE If the Char is not a decimal character.
 
 **/
 BOOLEAN
@@ -561,7 +561,7 @@ CharToUpper (
   Convert a Unicode character to numerical value.
 
   This internal function only deal with Unicode character
-  which maps to a valid hexadecimal ASII character, i.e.
+  which maps to a valid hexadecimal ASCII character, i.e.
   L'0' to L'9', L'a' to L'f' or L'A' to L'F'. For other
   Unicode character, the value returned does not make sense.
 
@@ -593,8 +593,8 @@ InternalHexCharToUintn (
 
   @param  Char  The character to check against.
 
-  @retval TRUE  If the Char is a hexadecmial character.
-  @retval FALSE If the Char is not a hexadecmial character.
+  @retval TRUE  If the Char is a hexadecimal character.
+  @retval FALSE If the Char is not a hexadecimal character.
 
 **/
 BOOLEAN
@@ -806,8 +806,8 @@ StrHexToUint64 (
 
   @param  Char  The character to check against.
 
-  @retval TRUE  If the Char is a decmial character.
-  @retval FALSE If the Char is not a decmial character.
+  @retval TRUE  If the Char is a decimal character.
+  @retval FALSE If the Char is not a decimal character.
 
 **/
 BOOLEAN
@@ -829,8 +829,8 @@ InternalAsciiIsDecimalDigitCharacter (
 
   @param  Char  The character to check against.
 
-  @retval TRUE  If the Char is a hexadecmial character.
-  @retval FALSE If the Char is not a hexadecmial character.
+  @retval TRUE  If the Char is a hexadecimal character.
+  @retval FALSE If the Char is not a hexadecimal character.
 
 **/
 BOOLEAN
@@ -1186,7 +1186,7 @@ AsciiCharToUpper (
   Convert a ASCII character to numerical value.
 
   This internal function only deal with Unicode character
-  which maps to a valid hexadecimal ASII character, i.e.
+  which maps to a valid hexadecimal ASCII character, i.e.
   '0' to '9', 'a' to 'f' or 'A' to 'F'. For other
   ASCII character, the value returned does not make sense.
 

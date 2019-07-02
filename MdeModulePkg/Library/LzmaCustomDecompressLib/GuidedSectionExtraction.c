@@ -20,7 +20,7 @@
   If the required information can not be retrieved from InputSection,
   then RETURN_INVALID_PARAMETER is returned.
   If the GUID of InputSection does match the GUID that this handler supports,
-  then the size required to hold the decoded buffer is returned in OututBufferSize,
+  then the size required to hold the decoded buffer is returned in OutputBufferSize,
   the size of an optional scratch buffer is returned in ScratchSize, and the Attributes field
   from EFI_GUID_DEFINED_SECTION header of InputSection is returned in SectionAttribute.
 

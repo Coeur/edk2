@@ -158,7 +158,7 @@ EFI_STATUS
                                 is cleared to 0 on input, but
                                 the device does not support
                                 disabling reads
-                                (FvAttributes:EFI_FV_READ_DISABL
+                                (FvAttributes:EFI_FV_READ_DISABLE
                                 is clear on return from
                                 GetVolumeAttributes()). Actual
                                 volume attributes are unchanged.
@@ -167,7 +167,7 @@ EFI_STATUS
                                 is set to 1 on input, but the
                                 device does not support enabling
                                 writes
-                                (FvAttributes:EFI_FV_WRITE_ENABL
+                                (FvAttributes:EFI_FV_WRITE_ENABLE
                                 is clear on return from
                                 GetVolumeAttributes()). Actual
                                 volume attributes are unchanged.
@@ -176,7 +176,7 @@ EFI_STATUS
                                 is cleared to 0 on input, but
                                 the device does not support
                                 disabling writes
-                                (FvAttributes:EFI_FV_WRITE_DISAB
+                                (FvAttributes:EFI_FV_WRITE_DISABLE
                                 is clear on return from
                                 GetVolumeAttributes()). Actual
                                 volume attributes are unchanged.

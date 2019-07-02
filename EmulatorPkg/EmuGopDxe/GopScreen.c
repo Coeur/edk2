@@ -10,7 +10,7 @@ Module Name:
 
 Abstract:
 
-  This file produces the graphics abstration of UGA. It is called by
+  This file produces the graphics abstraction of UGA. It is called by
   EmuGopDriver.c file which deals with the EFI 1.1 driver model.
   This file just does graphics.
 
@@ -172,12 +172,12 @@ EmuGopSetMode (
   @param  DestinationX X coordinate of destination for the BltBuffer.
   @param  DestinationY Y coordinate of destination for the BltBuffer.
   @param  Width        Width of rectangle in BltBuffer in pixels.
-  @param  Height       Hight of rectangle in BltBuffer in pixels.
+  @param  Height       Height of rectangle in BltBuffer in pixels.
   @param  Delta        OPTIONAL
 
   @retval EFI_SUCCESS           The Blt operation completed.
   @retval EFI_INVALID_PARAMETER BltOperation is not valid.
-  @retval EFI_DEVICE_ERROR      A hardware error occured writting to the video buffer.
+  @retval EFI_DEVICE_ERROR      A hardware error occurred writing to the video buffer.
 
 **/
 EFI_STATUS

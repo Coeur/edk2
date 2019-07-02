@@ -120,7 +120,7 @@ X2ApicInitialize (
   } else {
     //
     // Enable X2APIC mode only if X2APIC is not enabled,
-    // Needn't to disabe X2APIC mode again if X2APIC is not enabled
+    // Needn't to disable X2APIC mode again if X2APIC is not enabled
     //
     if (State) {
       CPU_REGISTER_TABLE_WRITE_FIELD (

@@ -42,7 +42,7 @@ CheckSevFeature:
     cpuid
 
     ; This check should fail on Intel or Non SEV AMD CPUs. In future if
-    ; Intel CPUs supports this CPUID leaf then we are guranteed to have exact
+    ; Intel CPUs supports this CPUID leaf then we are guaranteed to have exact
     ; same bit definition.
     cmp       eax, 0x8000001f
     jl        NoSev

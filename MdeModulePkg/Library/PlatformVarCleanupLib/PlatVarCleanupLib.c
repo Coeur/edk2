@@ -260,12 +260,12 @@ CreateUserVariableNode (
           ASSERT (UserVariableNameNode->PromptString != NULL);
           UnicodeSPrint (UserVariableNameNode->PromptString, StringSize, L"  %s", UserVariableNameNode->Name);
           //
-          // (33 chars of "Attribtues = 0x and DataSize = 0x" + 1 terminator + (sizeof (UINT32) + sizeof (UINTN)) * 2) * sizeof (CHAR16).
+          // (33 chars of "Attributes = 0x and DataSize = 0x" + 1 terminator + (sizeof (UINT32) + sizeof (UINTN)) * 2) * sizeof (CHAR16).
           //
           StringSize = (33 + 1 + (sizeof (UINT32) + sizeof (UINTN)) * 2) * sizeof (CHAR16);
           UserVariableNameNode->HelpString = AllocatePool (StringSize);
           ASSERT (UserVariableNameNode->HelpString != NULL);
-          UnicodeSPrint (UserVariableNameNode->HelpString, StringSize, L"Attribtues = 0x%08x and DataSize = 0x%x", UserVariableNameNode->Attributes, UserVariableNameNode->DataSize);
+          UnicodeSPrint (UserVariableNameNode->HelpString, StringSize, L"Attributes = 0x%08x and DataSize = 0x%x", UserVariableNameNode->Attributes, UserVariableNameNode->DataSize);
           UserVariableNameNode->Deleted = FALSE;
           InsertTailList (&UserVariableNode->NameLink, &UserVariableNameNode->Link);
           Index++;
@@ -332,7 +332,7 @@ DestroyUserVariableNode (
                                     it's caller's responsibility to free the memory after using it.
 
   @retval EFI_SUCCESS               Create time based payload successfully.
-  @retval EFI_OUT_OF_RESOURCES      There are not enough memory resourses to create time based payload.
+  @retval EFI_OUT_OF_RESOURCES      There are not enough memory resources to create time based payload.
   @retval EFI_INVALID_PARAMETER     The parameter is invalid.
   @retval Others                    Unexpected error happens.
 
@@ -416,7 +416,7 @@ CreateTimeBasedPayload (
                                     it's caller's responsibility to free the memory after using it.
 
   @retval EFI_SUCCESS               Create counter based payload successfully.
-  @retval EFI_OUT_OF_RESOURCES      There are not enough memory resourses to create time based payload.
+  @retval EFI_OUT_OF_RESOURCES      There are not enough memory resources to create time based payload.
   @retval EFI_INVALID_PARAMETER     The parameter is invalid.
   @retval Others                    Unexpected error happens.
 
@@ -801,7 +801,7 @@ UpdateUserVariableForm (
   @param[out] Progress              A pointer to a string filled in with the
                                     offset of the most recent '&' before the
                                     first failing name / value pair (or the
-                                    beginn ing of the string if the failure
+                                    beginning of the string if the failure
                                     is in the first name / value pair) or
                                     the terminating NULL if all was
                                     successful.

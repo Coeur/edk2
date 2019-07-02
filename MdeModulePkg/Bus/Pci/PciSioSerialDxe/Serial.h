@@ -164,7 +164,7 @@ typedef struct {
 typedef union {
   struct {
     UINT8 Ravie : 1;   ///< Receiver Data Available Interrupt Enable
-    UINT8 Theie : 1;   ///< Transmistter Holding Register Empty Interrupt Enable
+    UINT8 Theie : 1;   ///< Transmitter Holding Register Empty Interrupt Enable
     UINT8 Rie : 1;     ///< Receiver Interrupt Enable
     UINT8 Mie : 1;     ///< Modem Interrupt Enable
     UINT8 Reserved : 4;
@@ -178,8 +178,8 @@ typedef union {
 typedef union {
   struct {
     UINT8 TrFIFOE : 1;   ///< Transmit and Receive FIFO Enable
-    UINT8 ResetRF : 1;   ///< Reset Reciever FIFO
-    UINT8 ResetTF : 1;   ///< Reset Transmistter FIFO
+    UINT8 ResetRF : 1;   ///< Reset Receiver FIFO
+    UINT8 ResetTF : 1;   ///< Reset Transmitter FIFO
     UINT8 Dms : 1;       ///< DMA Mode Select
     UINT8 Reserved : 1;
     UINT8 TrFIFO64 : 1;  ///< Enable 64 byte FIFO
@@ -229,7 +229,7 @@ typedef union {
     UINT8 Pe : 1;     ///< Parity Error Status
     UINT8 Fe : 1;     ///< Framing Error Status
     UINT8 Bi : 1;     ///< Break Interrupt Status
-    UINT8 Thre : 1;   ///< Transmistter Holding Register Status
+    UINT8 Thre : 1;   ///< Transmitter Holding Register Status
     UINT8 Temt : 1;   ///< Transmitter Empty Status
     UINT8 FIFOe : 1;  ///< FIFO Error Status
   } Bits;

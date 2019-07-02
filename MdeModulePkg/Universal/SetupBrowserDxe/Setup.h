@@ -62,7 +62,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 //
 #define ONE_SECOND  10000000
 
-// Incremental string lenght of ConfigRequest
+// Incremental string length of ConfigRequest
 //
 #define CONFIG_REQUEST_STRING_INCREMENTAL  1024
 
@@ -414,7 +414,7 @@ typedef struct {
   LIST_ENTRY           FormViewListHead;     // List of type FORMID_INFO is Browser View Form History List.
   LIST_ENTRY           ExpressionListHead;   // List of Expressions (FORM_EXPRESSION)
   LIST_ENTRY           StatementListHead;    // List of Statements and Questions (FORM_BROWSER_STATEMENT)
-  LIST_ENTRY           ConfigRequestHead;    // List of configreques for all storage.
+  LIST_ENTRY           ConfigRequestHead;    // List of configrequest for all storage.
   FORM_EXPRESSION_LIST *SuppressExpression;  // nesting inside of SuppressIf
 } FORM_BROWSER_FORM;
 
@@ -447,7 +447,7 @@ typedef struct {
   UINTN                           IfrBinaryLength;
   UINT8                           *IfrBinaryData;
 
-  BOOLEAN                         QuestionInited;   // Have finished question initilization?
+  BOOLEAN                         QuestionInited;   // Have finished question initialization?
   EFI_GUID                        Guid;
   EFI_STRING_ID                   FormSetTitle;
   EFI_STRING_ID                   Help;
@@ -550,7 +550,7 @@ typedef struct {
 #define BROWSER_CONTEXT_FROM_LINK(a)  CR (a, BROWSER_CONTEXT, Link, BROWSER_CONTEXT_SIGNATURE)
 
 //
-// Scope for get defaut value. It may be GetDefaultForNoStorage, GetDefaultForStorage or GetDefaultForAll.
+// Scope for get default value. It may be GetDefaultForNoStorage, GetDefaultForStorage or GetDefaultForAll.
 //
 typedef enum {
   GetDefaultForNoStorage,       // Get default value for question which not has storage.
@@ -688,7 +688,7 @@ GetToken (
 
   @param  Storage                The NameValue Storage.
   @param  Name                   The Name.
-  @param  Value                  The retured Value.
+  @param  Value                  The returned Value.
   @param  GetValueFrom           Where to get source value, from EditValue or Value.
 
   @retval EFI_SUCCESS            Value found for given Name.
@@ -1086,7 +1086,7 @@ RestoreBrowserContext (
 
 /**
   This is the routine which an external caller uses to direct the browser
-  where to obtain it's information.
+  where to obtain its information.
 
 
   @param This            The Form Browser protocol instanse.
@@ -1100,7 +1100,7 @@ RestoreBrowserContext (
   @param FormId          This field specifies which EFI_IFR_FORM to render as the first
                          displayable page. If this field has a value of 0x0000, then
                          the forms browser will render the specified forms in their encoded order.
-                         ScreenDimenions - This allows the browser to be called so that it occupies a
+                         ScreenDimensions - This allows the browser to be called so that it occupies a
                          portion of the physical screen instead of dynamically determining the screen dimensions.
                          ActionRequest   - Points to the action recommended by the form.
   @param ScreenDimensions Points to recommended form dimensions, including any non-content area, in
@@ -1169,7 +1169,7 @@ BrowserCallback (
                          about the Selection, form and formset to be displayed.
                          On output, Selection return the screen item that is selected
                          by user.
-  @param SettingLevel    Input Settting level, if it is FormLevel, just exit current form.
+  @param SettingLevel    Input Setting level, if it is FormLevel, just exit current form.
                          else, we need to exit current formset.
 
   @retval TRUE           Exit current form.
@@ -1290,7 +1290,7 @@ IsHiiHandleInBrowserContext (
 
   @retval EFI_SUCCESS            Scope is set correctly.
   @retval EFI_INVALID_PARAMETER  Scope is not the valid value specified in BROWSER_SETTING_SCOPE.
-  @retval EFI_UNSPPORTED         Scope level is different from current one that the registered hot keys have.
+  @retval EFI_UNSUPPORTED        Scope level is different from current one that the registered hot keys have.
 
 **/
 EFI_STATUS

@@ -41,7 +41,7 @@ typedef struct {
 // The related FAULT_TOLERANT_WRITE_LAST_WRITE_DATA GUID hob will be only built if
 // FTW last write was still in progress with SpareComplete set and DestinationComplete not set.
 // It means the target buffer has been backed up in spare block, then target block has been erased,
-// but the target buffer has not been writen in target block from spare block.
+// but the target buffer has not been written in target block from spare block.
 //
 extern EFI_GUID gEdkiiFaultTolerantWriteGuid;
 

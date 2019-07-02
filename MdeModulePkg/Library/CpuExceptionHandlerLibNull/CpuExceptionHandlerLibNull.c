@@ -1,5 +1,5 @@
 /** @file
-  CPU Exception Handler library implementition with empty functions.
+  CPU Exception Handler library implementation with empty functions.
 
   Copyright (c) 2012 - 2018, Intel Corporation. All rights reserved.<BR>
   SPDX-License-Identifier: BSD-2-Clause-Patent

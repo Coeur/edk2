@@ -1,5 +1,5 @@
 /** @file
-  Console Splitter Driver. Any Handle that attatched console I/O protocols
+  Console Splitter Driver. Any Handle that attached console I/O protocols
   (Console In device, Console Out device, Console Error device, Simple Pointer
   protocol, Absolute Pointer protocol) can be bound by this driver.
 
@@ -13,7 +13,7 @@
 
   Each virtual handle, that supports the Console I/O protocol, will be produced
   in the driver entry point. The virtual handle are added on driver entry and
-  never removed. Such design ensures sytem function well during none console
+  never removed. Such design ensures system function well during none console
   device situation.
 
 Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>
@@ -594,7 +594,7 @@ ConSplitterDriverEntry(
                                    structure.
 
   @retval EFI_OUT_OF_RESOURCES     Out of resources.
-  @retval EFI_SUCCESS              Text Input Devcie's private data has been constructed.
+  @retval EFI_SUCCESS              Text Input Device's private data has been constructed.
   @retval other                    Failed to construct private data.
 
 **/
@@ -739,7 +739,7 @@ ConSplitterTextInConstructor (
                                    structure.
 
   @retval EFI_OUT_OF_RESOURCES     Out of resources.
-  @retval EFI_SUCCESS              Text Input Devcie's private data has been constructed.
+  @retval EFI_SUCCESS              Text Input Device's private data has been constructed.
 
 **/
 EFI_STATUS
@@ -761,7 +761,7 @@ ConSplitterTextOutConstructor (
   }
 
   //
-  // Initilize console output splitter's private data.
+  // Initialize console output splitter's private data.
   //
   ConOutPrivate->TextOut.Mode = &ConOutPrivate->TextOutMode;
 
@@ -860,7 +860,7 @@ ConSplitterTextOutConstructor (
   @param  Guid                The specified protocol.
 
   @retval EFI_SUCCESS         The specified protocol is supported on this device.
-  @retval EFI_UNSUPPORTED     The specified protocol attempts to be installed on virtul handle.
+  @retval EFI_UNSUPPORTED     The specified protocol attempts to be installed on virtual handle.
   @retval other               Failed to open specified protocol on this device.
 
 **/
@@ -1048,7 +1048,7 @@ ConSplitterStdErrDriverBindingSupported (
 
 
 /**
-  Start ConSplitter on devcie handle by opening Console Device Guid on device handle
+  Start ConSplitter on device handle by opening Console Device Guid on device handle
   and the console virtual handle. And Get the console interface on controller handle.
 
   @param  This                      Driver Binding protocol instance pointer.
@@ -1108,7 +1108,7 @@ ConSplitterStart (
   }
 
   //
-  // Open InterfaceGuid on the virtul handle.
+  // Open InterfaceGuid on the virtual handle.
   //
   Status =  gBS->OpenProtocol (
                 ControllerHandle,
@@ -1256,7 +1256,7 @@ ConSplitterSimplePointerDriverBindingStart (
   }
 
   //
-  // Add this devcie into Simple Pointer devices list.
+  // Add this device into Simple Pointer devices list.
   //
   return ConSplitterSimplePointerAddDevice (&mConIn, SimplePointer);
 }
@@ -1303,7 +1303,7 @@ ConSplitterAbsolutePointerDriverBindingStart (
   }
 
   //
-  // Add this devcie into Absolute Pointer devices list.
+  // Add this device into Absolute Pointer devices list.
   //
   return ConSplitterAbsolutePointerAddDevice (&mConIn, AbsolutePointer);
 }
@@ -1543,7 +1543,7 @@ ConSplitterStop (
 
 
 /**
-  Stop Console In ConSplitter on ControllerHandle by closing Console In Devcice GUID.
+  Stop Console In ConSplitter on ControllerHandle by closing Console In Device GUID.
 
   @param  This              Driver Binding protocol instance pointer.
   @param  ControllerHandle  Handle of device to stop driver on
@@ -1718,7 +1718,7 @@ ConSplitterAbsolutePointerDriverBindingStop (
 
 
 /**
-  Stop Console Out ConSplitter on device handle by closing Console Out Devcice GUID.
+  Stop Console Out ConSplitter on device handle by closing Console Out Device GUID.
 
   @param  This              Driver Binding protocol instance pointer.
   @param  ControllerHandle  Handle of device to stop driver on
@@ -2725,7 +2725,7 @@ ConSplitterGetIntersectionBetweenConOutAndStrErr (
 
 
 /**
-  Add Grahpics Output modes into Consplitter Text Out list.
+  Add Graphics Output modes into Consplitter Text Out list.
 
   @param  Private               Text Out Splitter pointer.
   @param  GraphicsOutput        Graphics Output protocol pointer.
@@ -3190,7 +3190,7 @@ ConSplitterTextOutAddDevice (
   Status       = EFI_DEVICE_ERROR;
 
   //
-  // This device display mode will be added into Graphics Ouput modes.
+  // This device display mode will be added into Graphics Output modes.
   //
   if ((GraphicsOutput != NULL) || (UgaDraw != NULL)) {
     DeviceStatus = ConSplitterAddGraphicsOutputMode (Private, GraphicsOutput, UgaDraw);
@@ -3392,7 +3392,7 @@ ConSplitterTextOutDeleteDevice (
     return EFI_SUCCESS;
   }
   //
-  // Max Mode is realy an intersection of the QueryMode command to all
+  // Max Mode is really an intersection of the QueryMode command to all
   // devices. So we must copy the QueryMode of the first device to
   // QueryData.
   //
@@ -3430,7 +3430,7 @@ ConSplitterTextOutDeleteDevice (
 
 
 /**
-  Reset the input device and optionaly run diagnostics
+  Reset the input device and optionally run diagnostics
 
   @param  This                     Protocol instance pointer.
   @param  ExtendedVerification     Driver may perform diagnostics on reset.
@@ -3514,14 +3514,14 @@ ConSplitterTextInExDequeueKey (
 
 /**
   Reads the next keystroke from the input device. The WaitForKey Event can
-  be used to test for existance of a keystroke via WaitForEvent () call.
+  be used to test for existence of a keystroke via WaitForEvent () call.
 
   @param  Private                  Protocol instance pointer.
   @param  Key                      Driver may perform diagnostics on reset.
 
   @retval EFI_SUCCESS              The keystroke information was returned.
-  @retval EFI_NOT_READY            There was no keystroke data availiable.
-  @retval EFI_DEVICE_ERROR         The keydtroke information was not returned due
+  @retval EFI_NOT_READY            There was no keystroke data available.
+  @retval EFI_DEVICE_ERROR         The keystroke information was not returned due
                                    to hardware errors.
 
 **/
@@ -3565,7 +3565,7 @@ ConSplitterTextInPrivateReadKeyStroke (
                                           );
     if (!EFI_ERROR (Status)) {
       //
-      // If it is not partial keystorke, return the key. Otherwise, continue
+      // If it is not partial keystroke, return the key. Otherwise, continue
       // to read key from THIS physical console input device.
       //
       if ((KeyData.Key.ScanCode != CHAR_NULL) || (KeyData.Key.UnicodeChar != SCAN_NULL)) {
@@ -3587,14 +3587,14 @@ ConSplitterTextInPrivateReadKeyStroke (
 
 /**
   Reads the next keystroke from the input device. The WaitForKey Event can
-  be used to test for existance of a keystroke via WaitForEvent () call.
+  be used to test for existence of a keystroke via WaitForEvent () call.
 
   @param  This                     Protocol instance pointer.
   @param  Key                      Driver may perform diagnostics on reset.
 
   @retval EFI_SUCCESS              The keystroke information was returned.
-  @retval EFI_NOT_READY            There was no keystroke data availiable.
-  @retval EFI_DEVICE_ERROR         The keydtroke information was not returned due
+  @retval EFI_NOT_READY            There was no keystroke data available.
+  @retval EFI_DEVICE_ERROR         The keystroke information was not returned due
                                    to hardware errors.
 
 **/
@@ -3631,7 +3631,7 @@ ConSplitterTextInReadKeyStroke (
   spliter event. This will cause the calling code to call
   ConSplitterTextInReadKeyStroke ().
 
-  @param  Event                    The Event assoicated with callback.
+  @param  Event                    The Event associated with callback.
   @param  Context                  Context registered when Event was created.
 
 **/
@@ -3681,7 +3681,7 @@ ConSplitterTextInWaitForKey (
                                    pressed.
 
   @retval TRUE                     Key be pressed matches a registered key.
-  @retval FLASE                    Match failed.
+  @retval FALSE                    Match failed.
 
 **/
 BOOLEAN
@@ -3715,7 +3715,7 @@ IsKeyRegistered (
 
 
 /**
-  Reset the input device and optionaly run diagnostics
+  Reset the input device and optionally run diagnostics
 
   @param  This                     Protocol instance pointer.
   @param  ExtendedVerification     Driver may perform diagnostics on reset.
@@ -3769,7 +3769,7 @@ ConSplitterTextInResetEx (
 
 /**
   Reads the next keystroke from the input device. The WaitForKey Event can
-  be used to test for existance of a keystroke via WaitForEvent () call.
+  be used to test for existence of a keystroke via WaitForEvent () call.
 
   @param  This                     Protocol instance pointer.
   @param  KeyData                  A pointer to a buffer that is filled in with the
@@ -3777,7 +3777,7 @@ ConSplitterTextInResetEx (
                                    pressed.
 
   @retval EFI_SUCCESS              The keystroke information was returned.
-  @retval EFI_NOT_READY            There was no keystroke data availiable.
+  @retval EFI_NOT_READY            There was no keystroke data available.
   @retval EFI_DEVICE_ERROR         The keystroke information was not returned due
                                    to hardware errors.
   @retval EFI_INVALID_PARAMETER    KeyData is NULL.
@@ -3853,7 +3853,7 @@ ConSplitterTextInReadKeyStrokeEx (
     if (!EFI_ERROR (Status)) {
       //
       // If virtual KeyState has been required to be exposed, or it is not
-      // partial keystorke, queue the key.
+      // partial keystroke, queue the key.
       // It's possible that user presses at multiple keyboards at the same moment,
       // Private->KeyQueue[] are the storage to save all the keys.
       //
@@ -3978,7 +3978,7 @@ ConSplitterTextInSetState (
 
   @retval EFI_SUCCESS              The notification function was registered
                                    successfully.
-  @retval EFI_OUT_OF_RESOURCES     Unable to allocate resources for necesssary data
+  @retval EFI_OUT_OF_RESOURCES     Unable to allocate resources for necessary data
                                    structures.
   @retval EFI_INVALID_PARAMETER    KeyData or KeyNotificationFunction or NotifyHandle is NULL.
 
@@ -4126,7 +4126,7 @@ ConSplitterTextInUnregisterKeyNotify (
 
 
 /**
-  Reset the input device and optionaly run diagnostics
+  Reset the input device and optionally run diagnostics
 
   @param  This                     Protocol instance pointer.
   @param  ExtendedVerification     Driver may perform diagnostics on reset.
@@ -4174,14 +4174,14 @@ ConSplitterSimplePointerReset (
 
 /**
   Reads the next keystroke from the input device. The WaitForKey Event can
-  be used to test for existance of a keystroke via WaitForEvent () call.
+  be used to test for existence of a keystroke via WaitForEvent () call.
 
   @param  Private                  Protocol instance pointer.
   @param  State                    The state information of simple pointer device.
 
   @retval EFI_SUCCESS              The keystroke information was returned.
-  @retval EFI_NOT_READY            There was no keystroke data availiable.
-  @retval EFI_DEVICE_ERROR         The keydtroke information was not returned due
+  @retval EFI_NOT_READY            There was no keystroke data available.
+  @retval EFI_DEVICE_ERROR         The keystroke information was not returned due
                                    to hardware errors.
 
 **/
@@ -4250,14 +4250,14 @@ ConSplitterSimplePointerPrivateGetState (
 
 /**
   Reads the next keystroke from the input device. The WaitForKey Event can
-  be used to test for existance of a keystroke via WaitForEvent () call.
+  be used to test for existence of a keystroke via WaitForEvent () call.
 
   @param  This                     A pointer to protocol instance.
   @param  State                    A pointer to state information on the pointer device
 
   @retval EFI_SUCCESS              The keystroke information was returned in State.
-  @retval EFI_NOT_READY            There was no keystroke data availiable.
-  @retval EFI_DEVICE_ERROR         The keydtroke information was not returned due
+  @retval EFI_NOT_READY            There was no keystroke data available.
+  @retval EFI_DEVICE_ERROR         The keystroke information was not returned due
                                    to hardware errors.
 
 **/
@@ -4279,12 +4279,12 @@ ConSplitterSimplePointerGetState (
 
 
 /**
-  This event agregates all the events of the ConIn devices in the spliter.
+  This event aggregates all the events of the ConIn devices in the spliter.
   If any events of physical ConIn devices are signaled, signal the ConIn
   spliter event. This will cause the calling code to call
   ConSplitterTextInReadKeyStroke ().
 
-  @param  Event                    The Event assoicated with callback.
+  @param  Event                    The Event associated with callback.
   @param  Context                  Context registered when Event was created.
 
 **/
@@ -4493,12 +4493,12 @@ ConSplitterAbsolutePointerGetState (
 
 
 /**
-  This event agregates all the events of the pointer devices in the splitter.
+  This event aggregates all the events of the pointer devices in the splitter.
   If any events of physical pointer devices are signaled, signal the pointer
   splitter event. This will cause the calling code to call
   ConSplitterAbsolutePointerGetState ().
 
-  @param  Event                    The Event assoicated with callback.
+  @param  Event                    The Event associated with callback.
   @param  Context                  Context registered when Event was created.
 
 **/
@@ -4537,10 +4537,10 @@ ConSplitterAbsolutePointerWaitForInput (
 
 
 /**
-  Reset the text output device hardware and optionaly run diagnostics
+  Reset the text output device hardware and optionally run diagnostics
 
   @param  This                     Protocol instance pointer.
-  @param  ExtendedVerification     Driver may perform more exhaustive verfication
+  @param  ExtendedVerification     Driver may perform more exhaustive verification
                                    operation of the device during reset.
 
   @retval EFI_SUCCESS              The text output device was reset.
@@ -4844,7 +4844,7 @@ ConSplitterTextOutSetMode (
     return EFI_UNSUPPORTED;
   }
   //
-  // If the mode is being set to the curent mode, then just clear the screen and return.
+  // If the mode is being set to the current mode, then just clear the screen and return.
   //
   if (Private->TextOutMode.Mode == (INT32) ModeNumber) {
     return ConSplitterTextOutClearScreen (This);

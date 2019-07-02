@@ -740,7 +740,7 @@ GraphicsConsoleControllerDriverStop (
   Check if the current specific mode supported the user defined resolution
   for the Graphics Console device based on Graphics Output Protocol.
 
-  If yes, set the graphic devcice's current mode to this specific mode.
+  If yes, set the graphic device's current mode to this specific mode.
 
   @param  GraphicsOutput        Graphics Output Protocol instance pointer.
   @param  HorizontalResolution  User defined horizontal resolution
@@ -1713,7 +1713,7 @@ GraphicsConsoleConOutEnableCursor (
 }
 
 /**
-  Gets Graphics Console devcie's foreground color and background color.
+  Gets Graphics Console device's foreground color and background color.
 
   @param  This                  Protocol instance pointer.
   @param  Foreground            Returned text foreground color.

@@ -309,7 +309,7 @@ OpalEfiDriverBindingSupported(
   "controller", which is a child handle, contains the EF_STORAGE_SECURITY_COMMAND protocols.
   This function will complete the other necessary checks, such as verifying the device supports
   the correct version of Opal.  Upon verification, it will add the device to the
-  Opal HII list in order to expose Opal managmeent options.
+  Opal HII list in order to expose Opal management options.
 
   @param[in]  This                  A pointer to the EFI_DRIVER_BINDING_PROTOCOL instance.
   @param[in]  ControllerHandle      The handle of the controller to start. This handle

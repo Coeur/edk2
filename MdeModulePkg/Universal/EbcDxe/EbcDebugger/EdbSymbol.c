@@ -1157,7 +1157,7 @@ typedef enum {
   @param  Buffer          - Symbol file buffer
   @param  BufferSize      - Symbol file buffer size
   @param  CodeBufferSize  - Code buffer size
-  @param  FuncOffset      - Code funcion offset
+  @param  FuncOffset      - Code function offset
 
   @return CodeBuffer
 
@@ -1303,7 +1303,7 @@ EdbLoadCodBySymbolByIec (
   @param  Buffer          - Symbol file buffer
   @param  BufferSize      - Symbol file buffer size
   @param  CodeBufferSize  - Code buffer size
-  @param  FuncOffset      - Code funcion offset
+  @param  FuncOffset      - Code function offset
 
   @return CodeBuffer
 
@@ -1345,7 +1345,7 @@ EdbFindCodeFromObject (
   UINTN                      EntryIndex;
 
   //
-  // Go througn each Entry in this Object
+  // Go through each Entry in this Object
   //
   for (EntryIndex = 0; EntryIndex < Object->EntryCount; EntryIndex++) {
     //
@@ -1423,7 +1423,7 @@ EdbLoadCode (
     SourceBuffer = EdbFindCodeFromObject (DebuggerPrivate, Object, FileName);
     if (SourceBuffer != NULL) {
       //
-      // unnload duplicated code
+      // unload duplicated code
       //
       Status = EdbUnloadCode (DebuggerPrivate, MapFileName, FileName, &SourceBuffer);
       if (EFI_ERROR(Status)) {
@@ -1723,7 +1723,7 @@ FindSymbolStr (
   Get line number and offset from this line in code file.
 
   @param  Line            - Line buffer in code file
-  @param  Offset          - Offset to functin entry
+  @param  Offset          - Offset to function entry
 
   @return Line number
 
@@ -1816,7 +1816,7 @@ typedef enum {
   Get line number from this code file.
 
   @param  Entry           - Symbol entry
-  @param  FuncOffset      - Offset to functin entry
+  @param  FuncOffset      - Offset to function entry
   @param  SearchType      - Search type for the code
 
   @return Line number
@@ -1930,7 +1930,7 @@ EdbGetLineNumberFromCode (
   @param  LineNumber      - line number
   @param  FuncEnd         - Function end
 
-  @return Funtion start
+  @return Function start
 
 **/
 VOID *
@@ -1993,10 +1993,10 @@ EdbGetSourceStrFromCodeByLine (
   Get source string from this code file.
 
   @param  Entry           - Symbol entry
-  @param  FuncOffset      - Offset to functin entry
+  @param  FuncOffset      - Offset to function entry
   @param  FuncEnd         - Function end
 
-  @retval Funtion start
+  @retval Function start
 
 **/
 VOID *
@@ -2086,7 +2086,7 @@ EdbPrintSource (
   *(UINT8 *)FuncEnd = 0;
 
   //
-  // seperate buffer by \n, so that \r can be added.
+  // separate buffer by \n, so that \r can be added.
   //
   FuncIndex = FuncStart;
   while (*FuncIndex != 0) {

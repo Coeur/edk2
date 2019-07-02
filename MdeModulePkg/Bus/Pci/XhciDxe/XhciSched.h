@@ -109,7 +109,7 @@ typedef union _USB_DEV_ROUTE {
 typedef struct _USB_ENDPOINT {
   //
   // Store logical device address assigned by UsbBus
-  // It's because some XHCI host controllers may assign the same physcial device
+  // It's because some XHCI host controllers may assign the same physical device
   // address for those devices inserted at different root port.
   //
   UINT8                     BusAddr;
@@ -770,7 +770,7 @@ XhcInitSched (
   );
 
 /**
-  Free the resouce allocated at initializing schedule.
+  Free the resource allocated at initializing schedule.
 
   @param  Xhc        The XHCI Instance.
 
@@ -1428,7 +1428,7 @@ XhcSetTrDequeuePointer (
 
   @param  Xhc       The XHCI Instance
   @param  DevAddr   The device address
-  @param  EpAddr    Endpoint addrress
+  @param  EpAddr    Endpoint address
   @param  DevSpeed  The device speed
   @param  MaxPacket The max packet length of the endpoint
   @param  Type      The transaction type

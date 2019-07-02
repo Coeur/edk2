@@ -129,7 +129,7 @@ NotificationFunction(
   Function to start monitoring for CTRL-C using SimpleTextInputEx.
 
   @retval EFI_SUCCESS           The feature is enabled.
-  @retval EFI_OUT_OF_RESOURCES  There is not enough mnemory available.
+  @retval EFI_OUT_OF_RESOURCES  There is not enough memory available.
 **/
 EFI_STATUS
 EFIAPI
@@ -188,7 +188,7 @@ InternalStartMonitor(
   Function to stop monitoring for CTRL-C using SimpleTextInputEx.
 
   @retval EFI_SUCCESS           The feature is enabled.
-  @retval EFI_OUT_OF_RESOURCES  There is not enough mnemory available.
+  @retval EFI_OUT_OF_RESOURCES  There is not enough memory available.
 **/
 EFI_STATUS
 EFIAPI
@@ -289,7 +289,7 @@ LoadNameValueNames (
                                  to free memory.
   @param  Len                    Length of the <Number>, in characters.
 
-  @retval EFI_OUT_OF_RESOURCES   Insufficient resources to store neccessary
+  @retval EFI_OUT_OF_RESOURCES   Insufficient resources to store necessary
                                  structures.
   @retval EFI_SUCCESS            Value of <Number> is outputted in Number
                                  successfully.
@@ -677,7 +677,7 @@ ExtractConfig (
     //
     if (StrStr (Request, L"OFFSET") == NULL) {
       //
-      // Check Request Element does exist in Reques String
+      // Check Request Element does exist in Request String
       //
       StrPointer = StrStr (Request, L"PATH");
       if (StrPointer == NULL) {
@@ -1416,7 +1416,7 @@ DriverCallback (
                       );
 
       //
-      // Set initial vlaue of dynamic created oneof Question in Form Browser
+      // Set initial value of dynamic created oneof Question in Form Browser
       //
       Configuration = AllocateZeroPool (sizeof (DRIVER_SAMPLE_CONFIGURATION));
       ASSERT (Configuration != NULL);
@@ -1697,7 +1697,7 @@ DriverCallback (
   @param ImageHandle     Image handle this driver.
   @param SystemTable     Pointer to SystemTable.
 
-  @retval EFI_SUCESS     This function always complete successfully.
+  @retval EFI_SUCCESS    This function always complete successfully.
 
 **/
 EFI_STATUS
@@ -1841,7 +1841,7 @@ DriverSampleInit (
   mPrivateData->HiiHandle[0] = HiiHandle[0];
 
   //
-  // Publish another Fromset
+  // Publish another Formset
   //
   Status = gBS->InstallMultipleProtocolInterfaces (
                   &DriverHandle[1],

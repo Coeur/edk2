@@ -75,7 +75,7 @@ BdsDxeOnConnectConInCallBack (
   if (EFI_ERROR (Status)) {
     //
     // Should not enter this case, if enter, the keyboard will not work.
-    // May need platfrom policy to connect keyboard.
+    // May need platform policy to connect keyboard.
     //
     DEBUG ((EFI_D_WARN, "[Bds] Connect ConIn failed - %r!!!\n", Status));
   }
@@ -163,7 +163,7 @@ CheckDeferredLoadImageOnReadyToBoot (
   @param ImageHandle     The image handle.
   @param SystemTable     The system table.
 
-  @retval  EFI_SUCEESS  BDS has finished initializing.
+  @retval  EFI_SUCCESS  BDS has finished initializing.
                         Return the dispatcher and recall BDS.Entry
   @retval  Other        Return status from AllocatePool() or gBS->InstallProtocolInterface
 
@@ -213,7 +213,7 @@ BdsInitialize (
   @param   Timeout            An optional timeout value in 100 ns units.
 
   @retval  EFI_SUCCESS      Event fired before Timeout expired.
-  @retval  EFI_TIME_OUT     Timout expired before Event fired..
+  @retval  EFI_TIME_OUT     Timeout expired before Event fired..
 
 **/
 EFI_STATUS
@@ -542,7 +542,7 @@ BdsFormalizeOSIndicationVariable (
   EFI_BOOT_MANAGER_LOAD_OPTION    BootManagerMenu;
 
   //
-  // OS indicater support variable
+  // OS indicator support variable
   //
   Status = EfiBootManagerGetBootManagerMenu (&BootManagerMenu);
   if (Status != EFI_NOT_FOUND) {
@@ -736,7 +736,7 @@ BdsEntry (
 
   //
   // Initialize L"BootOptionSupport" EFI global variable.
-  // Lazy-ConIn implictly disables BDS hotkey.
+  // Lazy-ConIn implicitly disables BDS hotkey.
   //
   BootOptionSupport = EFI_BOOT_OPTION_SUPPORT_APP | EFI_BOOT_OPTION_SUPPORT_SYSPREP;
   if (!PcdGetBool (PcdConInConnectOnDemand)) {
@@ -800,7 +800,7 @@ BdsEntry (
       for (Index = 0; Index < LoadOptionCount; Index++) {
         //
         // The PlatformRecovery#### options are sorted by OptionNumber.
-        // Find the the smallest unused number as the new OptionNumber.
+        // Find the smallest unused number as the new OptionNumber.
         //
         if (LoadOptions[Index].OptionNumber != Index) {
           break;
@@ -883,11 +883,11 @@ BdsEntry (
   // Do the platform specific action after the console is ready
   // Possible things that can be done in PlatformBootManagerAfterConsole:
   // > Console post action:
-  //   > Dynamically switch output mode from 100x31 to 80x25 for certain senarino
+  //   > Dynamically switch output mode from 100x31 to 80x25 for certain scenario
   //   > Signal console ready platform customized event
   // > Run diagnostics like memory testing
   // > Connect certain devices
-  // > Dispatch aditional option roms
+  // > Dispatch additional option roms
   // > Special boot: e.g.: USB boot, enter UI
   //
   PERF_INMODULE_BEGIN("PlatformBootManagerAfterConsole");
@@ -1104,7 +1104,7 @@ BdsEntry (
   @retval EFI_DEVICE_ERROR       The variable could not be retrieved due to a hardware error.
   @retval EFI_WRITE_PROTECTED    The variable in question is read-only.
   @retval EFI_WRITE_PROTECTED    The variable in question cannot be deleted.
-  @retval EFI_SECURITY_VIOLATION The variable could not be written due to EFI_VARIABLE_TIME_BASED_AUTHENTICATED_WRITE_ACESS
+  @retval EFI_SECURITY_VIOLATION The variable could not be written due to EFI_VARIABLE_TIME_BASED_AUTHENTICATED_WRITE_ACCESS
                                  being set, but the AuthInfo does NOT pass the validation check carried out by the firmware.
 
   @retval EFI_NOT_FOUND          The variable trying to be updated or deleted was not found.

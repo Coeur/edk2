@@ -66,7 +66,7 @@ RecordSecureBootPolicyVarData(
 /**
   Acquires lock only at boot time. Simply returns at runtime.
 
-  This is a temperary function that will be removed when
+  This is a temporary function that will be removed when
   EfiAcquireLock() in UefiLib can handle the call in UEFI
   Runtimer driver in RT phase.
   It calls EfiAcquireLock() at boot time, and simply returns
@@ -88,7 +88,7 @@ AcquireLockOnlyAtBootTime (
 /**
   Releases lock only at boot time. Simply returns at runtime.
 
-  This is a temperary function which will be removed when
+  This is a temporary function which will be removed when
   EfiReleaseLock() in UefiLib can handle the call in UEFI
   Runtimer driver in RT phase.
   It calls EfiReleaseLock() at boot time and simply returns
@@ -158,7 +158,7 @@ InitCommunicateBuffer (
 
   @param[in]   DataSize               This size of the function header and the data.
 
-  @retval      EFI_SUCCESS            Success is returned from the functin in SMM.
+  @retval      EFI_SUCCESS            Success is returned from the function in SMM.
   @retval      Others                 Failure is returned from the function in SMM.
 
 **/
@@ -514,7 +514,7 @@ RuntimeServiceGetVariable (
   //
   if (Status == EFI_SUCCESS || Status == EFI_BUFFER_TOO_SMALL) {
     //
-    // SMM CommBuffer DataSize can be a trimed value
+    // SMM CommBuffer DataSize can be a trimmed value
     // Only update DataSize when needed
     //
     *DataSize = SmmVariableHeader->DataSize;
@@ -628,7 +628,7 @@ RuntimeServiceGetNextVariableName (
   //
   if (Status == EFI_SUCCESS || Status == EFI_BUFFER_TOO_SMALL) {
     //
-    // SMM CommBuffer NameSize can be a trimed value
+    // SMM CommBuffer NameSize can be a trimmed value
     // Only update VariableNameSize when needed
     //
     *VariableNameSize = SmmGetNextVariableName->NameSize;
@@ -1003,7 +1003,7 @@ SmmVariableReady (
   ASSERT (mVariableBuffer != NULL);
 
   //
-  // Save the buffer physical address used for SMM conmunication.
+  // Save the buffer physical address used for SMM communication.
   //
   mVariableBufferPhysical = mVariableBuffer;
 

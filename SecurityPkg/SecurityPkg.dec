@@ -68,11 +68,11 @@
   #
   Tcg2PhysicalPresenceLib|Include/Library/Tcg2PhysicalPresenceLib.h
 
-  ## @libraryclass  Provides interfaces about TCG storage generic commond.
+  ## @libraryclass  Provides interfaces about TCG storage generic command.
   #
   TcgStorageCoreLib|Include/Library/TcgStorageCoreLib.h
 
-  ## @libraryclass  Provides interfaces about TCG storage Opal generic commond.
+  ## @libraryclass  Provides interfaces about TCG storage Opal generic command.
   #
   TcgStorageOpalLib|Include/Library/TcgStorageOpalLib.h
 

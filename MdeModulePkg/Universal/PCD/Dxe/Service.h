@@ -30,7 +30,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 #include <Library/UefiRuntimeServicesTableLib.h>
 
 //
-// Please make sure the PCD Serivce DXE Version is consistent with
+// Please make sure the PCD Service DXE Version is consistent with
 // the version of the generated DXE PCD Database by build tool.
 //
 #define PCD_SERVICE_DXE_VERSION      7
@@ -862,7 +862,7 @@ SetValueWorker (
   @retval EFI_INVALID_PARAMETER  If this PCD type is VPD, VPD PCD can not be set.
   @retval EFI_INVALID_PARAMETER  If Size can not be set to size table.
   @retval EFI_INVALID_PARAMETER  If Size of non-Ptr type PCD does not match the size information in PCD database.
-  @retval EFI_NOT_FOUND          If value type of PCD entry is intergrate, but not in
+  @retval EFI_NOT_FOUND          If value type of PCD entry is integrate, but not in
                                  range of UINT8, UINT16, UINT32, UINT64
   @retval EFI_NOT_FOUND          Can not find the PCD type according to token number.
 **/
@@ -1082,7 +1082,7 @@ GetExPcdTokenNumber (
   token number in found token space, if found, then return next token number in
   this token space.
 
-  @param Guid            Token space guid. Next token number will be scaned in
+  @param Guid            Token space guid. Next token number will be scanned in
                          this token space.
   @param TokenNumber     Token number.
                          If PCD_INVALID_TOKEN_NUMBER, return first token number in

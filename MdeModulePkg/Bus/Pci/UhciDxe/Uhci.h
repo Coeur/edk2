@@ -121,9 +121,9 @@ struct _USB_HC_DEV {
 
   //
   // Structures to maintain asynchronus interrupt transfers.
-  // When asynchronous interrutp transfer is unlinked from
+  // When asynchronous interrupt transfer is unlinked from
   // the frame list, the hardware may still hold a pointer
-  // to it. To synchronize with hardware, its resoureces are
+  // to it. To synchronize with hardware, its resources are
   // released in two steps using Recycle and RecycleWait.
   // Check the asynchronous interrupt management routines.
   //

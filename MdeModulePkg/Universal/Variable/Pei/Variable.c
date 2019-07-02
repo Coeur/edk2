@@ -1,6 +1,6 @@
 /** @file
   Implement ReadOnly Variable Services required by PEIM and install
-  PEI ReadOnly Varaiable2 PPI. These services operates the non volatile storage space.
+  PEI ReadOnly Variable2 PPI. These services operates the non volatile storage space.
 
 Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -843,7 +843,7 @@ FindVariableEx (
 
   if (IndexTable != NULL) {
     //
-    // traverse the variable index table to look for varible.
+    // traverse the variable index table to look for variable.
     // The IndexTable->Index[Index] records the distance of two neighbouring VAR_ADDED type variables.
     //
     for (Offset = 0, Index = 0; Index < IndexTable->Length; Index++) {

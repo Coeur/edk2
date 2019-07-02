@@ -15,7 +15,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 /**
   This function is responsible for calling the S3 resume vector in the ACPI Tables.
 
-  @retval EFI_SUCESS   Success to restore config from S3.
+  @retval EFI_SUCCESS  Success to restore config from S3.
   @retval Others       Fail to restore config from S3.
 **/
 EFI_STATUS

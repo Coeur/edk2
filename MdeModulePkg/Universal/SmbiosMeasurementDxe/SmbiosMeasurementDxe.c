@@ -414,7 +414,7 @@ GetSmbiosTableLength (
 
 /**
 
-  This function updatess full SMBIOS table length.
+  This function updates full SMBIOS table length.
 
   @param  TableAddress      SMBIOS table based address
   @param  TableLength       SMBIOS table length

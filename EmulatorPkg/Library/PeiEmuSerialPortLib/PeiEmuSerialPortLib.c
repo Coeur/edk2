@@ -1,6 +1,6 @@
 /** @file
   Serial Port Lib that thunks back to Emulator services to write to StdErr.
-  All read functions are stubed out. There is no constructor so this lib can
+  All read functions are stubbed out. There is no constructor so this lib can
   be linked with PEI Core.
 
   Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>

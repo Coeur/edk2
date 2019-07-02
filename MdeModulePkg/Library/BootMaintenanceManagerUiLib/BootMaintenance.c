@@ -1,5 +1,5 @@
 /** @file
-The functions for Boot Maintainence Main menu.
+The functions for Boot Maintenance Main menu.
 
 Copyright (c) 2004 - 2019, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -81,7 +81,7 @@ BOOLEAN  mAllMenuInit               = FALSE;
 BOOLEAN  mFirstEnterBMMForm         = FALSE;
 
 /**
-  Init all memu.
+  Init all menu.
 
   @param CallbackData    The BMM context data.
 
@@ -741,7 +741,7 @@ BootMaintExtractConfig (
   @param[out] Progress            A pointer to a string filled in with the
                                   offset of the most recent '&' before the
                                   first failing name / value pair (or the
-                                  beginn ing of the string if the failure
+                                  beginning of the string if the failure
                                   is in the first name / value pair) or
                                   the terminating NULL if all was
                                   successful.
@@ -1101,7 +1101,7 @@ BootMaintCallback (
         // we must do it after the LegacyUi library has already been initialized.
         // Opening the BMM form is the appropriate time that the LegacyUi library has already been initialized.
         // So we do the tasks which are related to legacy menus here.
-        // 1. Update the menus (including legacy munu) show in BootMiantenanceManager page.
+        // 1. Update the menus (including legacy menu) show in BootMaintenanceManager page.
         // 2. Re-scan the BootOption menus (including the legacy boot option).
         //
         CustomizeMenus ();
@@ -1314,7 +1314,7 @@ BootMaintCallback (
   Driver order change.
 
   @param Private            The BMM context data.
-  @param CurrentFakeNVMap   The current Fack NV Map.
+  @param CurrentFakeNVMap   The current Fake NV Map.
 
 **/
 VOID
@@ -1510,7 +1510,7 @@ InitializeBmmConfig (
   CallbackData->BmmFakeNvData.ForceReconnect = TRUE;
 
   //
-  // Backup Initialize BMM configuartion data to BmmOldFakeNVData
+  // Backup Initialize BMM configuration data to BmmOldFakeNVData
   //
   CopyMem (&CallbackData->BmmOldFakeNVData, &CallbackData->BmmFakeNvData, sizeof (BMM_FAKE_NV_DATA));
 }
@@ -1637,7 +1637,7 @@ BmmInitialBootModeInfo (
   @param ImageHandle     The image handle.
   @param SystemTable     The system table.
 
-  @retval  EFI_SUCEESS  Install Boot manager menu success.
+  @retval  EFI_SUCCESS  Install Boot manager menu success.
   @retval  Other        Return error status.
 
 **/

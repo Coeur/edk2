@@ -91,8 +91,8 @@ AsciiAtoi (
 
   @param String2 - Ascii string to process
 
-  @return Return a positive integer if String is lexicall greater than String2; Zero if
-  the two strings are identical; and a negative interger if String is lexically
+  @return Return a positive integer if String is lexically greater than String2; Zero if
+  the two strings are identical; and a negative integer if String is lexically
   less than String2.
 
 **/
@@ -198,7 +198,7 @@ StrGetNextTokenLine (
 
 /**
 
-  Find the next token after one specificed characters.
+  Find the next token after one specified characters.
 
   @param  String    Point to the string where to find the substring.
   @param  CharSet   Point to the string to be found.
@@ -213,7 +213,7 @@ StrGetNewTokenField (
 
 /**
 
-  Find the next token after one specificed characters.
+  Find the next token after one specified characters.
 
   @param  CharSet   Point to the string to be found.
 
@@ -283,7 +283,7 @@ AsciiStrGetNextTokenLine (
 
 /**
 
-  Find the next token after one specificed characters.
+  Find the next token after one specified characters.
 
   @param  String    Point to the string where to find the substring.
   @param  CharSet   Point to the string to be found.
@@ -298,7 +298,7 @@ AsciiStrGetNewTokenField (
 
 /**
 
-  Find the next token after one specificed characters.
+  Find the next token after one specified characters.
 
   @param  CharSet   Point to the string to be found.
 
@@ -427,7 +427,7 @@ EDBSPrintWithOffset (
 /**
 
   Read a file.
-  If ScanFs is FLASE, it will use DebuggerPrivate->Vol as default Fs.
+  If ScanFs is FALSE, it will use DebuggerPrivate->Vol as default Fs.
   If ScanFs is TRUE, it will scan all FS and check the file.
   If there is only one file match the name, it will be read.
   If there is more than one file match the name, it will return Error.

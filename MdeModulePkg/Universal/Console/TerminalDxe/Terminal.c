@@ -1333,8 +1333,8 @@ InitializeTerminal(
 
   @param  DevicePath            Pointer to device's device path.
 
-  @retval TRUE                  The devcie is a hot-plug device
-  @retval FALSE                 The devcie is not a hot-plug device.
+  @retval TRUE                  The device is a hot-plug device
+  @retval FALSE                 The device is not a hot-plug device.
 
 **/
 BOOLEAN
@@ -1347,7 +1347,7 @@ IsHotPlugDevice (
   CheckDevicePath = DevicePath;
   while (!IsDevicePathEnd (CheckDevicePath)) {
     //
-    // Check device whether is hot plug device or not throught Device Path
+    // Check device whether is hot plug device or not through Device Path
     //
     if ((DevicePathType (CheckDevicePath) == MESSAGING_DEVICE_PATH) &&
         (DevicePathSubType (CheckDevicePath) == MSG_USB_DP ||

@@ -216,7 +216,7 @@ WriteMemory (
 /**
   Verify the range of physical memory which covered by memory test pattern.
 
-  This function will also do not return any informatin just cause system reset,
+  This function will also do not return any information just cause system reset,
   because the handle error encount fatal error and disable the bad DIMMs.
 
   @param[in] Private  Point to generic memory test driver's private data.
@@ -280,12 +280,12 @@ InitializeMemoryTest (
   @param[out] TestedMemorySize  Return the tested extended memory size.
   @param[out] TotalMemorySize   Return the whole system physical memory size.
                                 The total memory size does not include memory in a slot with a disabled DIMM.
-  @param[out] ErrorOut          TRUE if the memory error occured.
+  @param[out] ErrorOut          TRUE if the memory error occurred.
   @param[in]  IfTestAbort       Indicates that the user pressed "ESC" to skip the memory test.
 
   @retval EFI_SUCCESS         One block of memory passed the test.
   @retval EFI_NOT_FOUND       All memory blocks have already been tested.
-  @retval EFI_DEVICE_ERROR    Memory device error occured, and no agent can handle it.
+  @retval EFI_DEVICE_ERROR    Memory device error occurred, and no agent can handle it.
 
 **/
 EFI_STATUS

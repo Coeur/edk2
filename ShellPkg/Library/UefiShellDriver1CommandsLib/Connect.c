@@ -180,7 +180,7 @@ ConnectControllers (
 }
 
 /**
-  Do a connect from an EFI variable via it's key name.
+  Do a connect from an EFI variable via its key name.
 
   @param[in] Key      The name of the EFI Variable.
 
@@ -360,7 +360,7 @@ ConvertAndConnectControllers (
    ){
     //
     // Figure out which one should be NULL and move the handle to the right place.
-    // If Handle1 is NULL then test Handle2 and vise versa.
+    // If Handle1 is NULL then test Handle2 and vice versa.
     // The one that DOES has driver binding must be Handle2
     //
     if (Handle1 == NULL) {

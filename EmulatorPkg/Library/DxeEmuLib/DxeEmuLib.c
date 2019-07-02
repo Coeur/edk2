@@ -45,7 +45,7 @@ DxeEmuLibConstructor (
 
 
 /**
-  Serach the EMU IO Thunk database for a matching EMU IO Thunk
+  Search the EMU IO Thunk database for a matching EMU IO Thunk
   Protocol instance.
 
   @param  Protocol   Protocol to search for.

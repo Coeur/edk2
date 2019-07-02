@@ -65,7 +65,7 @@ IsFmpCapsule (
   @param[in]   CapsuleHeader        Points to a capsule header.
   @param[out]  EmbeddedDriverCount  The EmbeddedDriverCount in the FMP capsule.
 
-  @retval EFI_SUCESS             Input capsule is a correct FMP capsule.
+  @retval EFI_SUCCESS            Input capsule is a correct FMP capsule.
   @retval EFI_INVALID_PARAMETER  Input capsule is not a correct FMP capsule.
 **/
 EFI_STATUS
@@ -138,7 +138,7 @@ UINT32                      mCapsuleTotalNumber;
   @param[in]  CapsuleHeader         Points to a capsule header.
   @param[out] ResetRequired         Indicates whether reset is required or not.
 
-  @retval EFI_SUCESS            Process Capsule Image successfully.
+  @retval EFI_SUCCESS           Process Capsule Image successfully.
   @retval EFI_UNSUPPORTED       Capsule image is not supported by the firmware.
   @retval EFI_VOLUME_CORRUPTED  FV volume in the capsule is corrupted.
   @retval EFI_OUT_OF_RESOURCES  Not enough memory.
@@ -158,7 +158,7 @@ ProcessThisCapsuleImage (
   @param[in]  Completion  A value between 1 and 100 indicating the current
                           completion progress of the firmware update
 
-  @retval EFI_SUCESS             The capsule update progress was updated.
+  @retval EFI_SUCCESS            The capsule update progress was updated.
   @retval EFI_INVALID_PARAMETER  Completion is greater than 100%.
 **/
 EFI_STATUS
@@ -445,7 +445,7 @@ PopulateCapsuleInConfigurationTable (
       if ((CapsuleHeader->Flags & CAPSULE_FLAGS_POPULATE_SYSTEM_TABLE) != 0) {
         if (CompareGuid (&CapsuleGuidCache[CacheIndex], &CapsuleHeader->CapsuleGuid)) {
           //
-          // Cache Caspuleheader to the array, this array is uniqued with certain CapsuleGuid.
+          // Cache Capsuleheader to the array, this array is uniqued with certain CapsuleGuid.
           //
           CapsulePtrCache[CapsuleNumber++] = (VOID*)CapsuleHeader;
         }
@@ -645,7 +645,7 @@ DoResetSystem (
      Each individual capsule result is recorded in capsule record variable.
      System may reset in this function, if reset is required by capsule and
      all capsules are processed.
-     If not all capsules are processed, reset will be defered to second call.
+     If not all capsules are processed, reset will be deferred to second call.
 
   2) The second call must be after EndOfDxe and after ConnectAll, so that all
      device capsule FMP protocols are exposed.

@@ -4,7 +4,7 @@
 
 
 Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
-Portitions copyright (c) 2011, Apple Inc. All rights reserved.
+Portions copyright (c) 2011, Apple Inc. All rights reserved.
 SPDX-License-Identifier: BSD-2-Clause-Patent
 
 **/
@@ -428,7 +428,7 @@ EFI_STATUS
 #define EMU_SNP_INTERFACE_REVISION   EMU_SNP_PROTOCOL_REVISION
 
 ///
-/// The EMU_SNP_PROTOCOL protocol abstracts OS network sercices
+/// The EMU_SNP_PROTOCOL protocol abstracts OS network services
 /// from the EFI driver that produces EFI Simple Network Protocol.
 ///
 struct _EMU_SNP_PROTOCOL {

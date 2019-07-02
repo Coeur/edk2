@@ -99,7 +99,7 @@ EFI_STATUS
   This function releases a connection previously taken by SCardConnect.
 
   The SCardDisconnect function releases the lock previously taken by SCardConnect.
-  In case the smart card has been removed before this call, thisfunction
+  In case the smart card has been removed before this call, this function
   returns EFI_SUCCESS. If there is no previous call to SCardConnect, this
   function returns EFI_SUCCESS.
 
@@ -135,7 +135,7 @@ EFI_STATUS
   @param[in]      This             Indicates a pointer to the calling context.
   @param[out]     ReaderName       A pointer to a NULL terminated string that will
                                    contain the reader name.
-  @param[in, out] ReaderNameLength On input, a pointer to the variablethat holds the
+  @param[in, out] ReaderNameLength On input, a pointer to the variable that holds the
                                    maximal size, in bytes,of ReaderName.
                                    On output, the required size, in bytes, for ReaderName.
   @param[out]     State            Current state of the smart card reader.
@@ -143,7 +143,7 @@ EFI_STATUS
   @param[out]     Atr              A pointer to retrieve the ATR of the smart card.
   @param[in, out] AtrLength        On input, a pointer to hold the maximum size, in bytes,
                                    of Atr(usually 33).
-                                   On output, the required size, inbytes, for the smart
+                                   On output, the required size, in bytes, for the smart
                                    card ATR.
 
   @retval EFI_SUCCESS            The requested command completed successfully.
@@ -175,16 +175,16 @@ EFI_STATUS
   The protocol to use to communicate with the smart card has been selected through
   SCardConnectcall.
 
-  In case RAPDULength indicates a buffer too small to holdthe response APDU, the
+  In case RAPDULength indicates a buffer too small to hold the response APDU, the
   function fails with EFI_BUFFER_TOO_SMALL.
 
-  @param[in]      This          A pointer to the EFI_USBFN_IO_PROTOCOLinstance.
-  @param[in]      CAPDU         A pointer to a byte array thatcontains the Command
+  @param[in]      This          A pointer to the EFI_USBFN_IO_PROTOCOL instance.
+  @param[in]      CAPDU         A pointer to a byte array that contains the Command
                                 APDU to send to the smart card or reader.
   @param[in]      CAPDULength   Command APDU size, in bytes.
   @param[out]     RAPDU         A pointer to a byte array that will contain the
                                 Response APDU.
-  @param[in, out] RAPDULength   On input, the maximum size, inbytes, of the Response
+  @param[in, out] RAPDULength   On input, the maximum size, in bytes, of the Response
                                 APDU.
                                 On output, the size, in bytes, of the Response APDU.
 
@@ -233,8 +233,8 @@ EFI_STATUS
   @retval EFI_SUCCESS           The requested command completed successfully.
   @retval EFI_INVALID_PARAMETER This is NULL.
   @retval EFI_INVALID_PARAMETER ControlCode requires input parameters but:
-                                  InBuffer is NULL or InBufferLenth is NULL or
-                                  InBuffer is not NULL but InBufferLenth is less than
+                                  InBuffer is NULL or InBufferLength is NULL or
+                                  InBuffer is not NULL but InBufferLength is less than
                                   expected.
   @retval EFI_INVALID_PARAMETER OutBuffer is not NULL but OutBufferLength is NULL.
   @retval EFI_UNSUPPORTED       ControlCode is not supported.
@@ -282,7 +282,7 @@ EFI_STATUS
   @retval EFI_BUFFER_TOO_SMALL  OutBufferLength is not big enough to hold the output
                                 parameters.
                                 OutBufferLength has been updated to the required value.
-  @retval EFI_UNSUPPORTED       Attribis not supported
+  @retval EFI_UNSUPPORTED       Attrib is not supported
   @retval EFI_NO_MEDIA          There is no card in the reader and Attrib value
                                 requires one.
   @retval EFI_NOT_READY         Attrib requires a powered card to operate.

@@ -580,7 +580,7 @@ FindLogicalVolumeLocation (
 
     default:
       //
-      // An invalid Volume Descriptor has been found in the sequece. Volume is
+      // An invalid Volume Descriptor has been found in the sequence. Volume is
       // corrupted.
       //
       Status = EFI_VOLUME_CORRUPTED;

@@ -66,7 +66,7 @@ LOADED_IMAGE_PRIVATE_DATA mCorePrivateImage  = {
 };
 //
 // The field is define for Loading modules at fixed address feature to tracker the PEI code
-// memory range usage. It is a bit mapped array in which every bit indicates the correspoding memory page
+// memory range usage. It is a bit mapped array in which every bit indicates the corresponding memory page
 // available or not.
 //
 GLOBAL_REMOVE_IF_UNREFERENCED    UINT64                *mDxeCodeMemoryRangeUsageBitMap=NULL;
@@ -375,7 +375,7 @@ CheckAndMarkFixLoadingMemoryUsageBitMap (
      return EFI_NOT_FOUND;
    }
    //
-   // Test if the memory is avalaible or not.
+   // Test if the memory is available or not.
    //
    BaseOffsetPageNumber = EFI_SIZE_TO_PAGES((UINT32)(ImageBase - DxeCodeBase));
    TopOffsetPageNumber  = EFI_SIZE_TO_PAGES((UINT32)(ImageBase + ImageSize - DxeCodeBase));
@@ -470,7 +470,7 @@ GetPeCoffImageFixLoadingAssignedAddress(
        if (ValueInSectionHeader != 0) {
          //
          // When the feature is configured as load module at fixed absolute address, the ImageAddress field of ImageContext
-         // hold the spcified address. If the feature is configured as load module at fixed offset, ImageAddress hold an offset
+         // hold the specified address. If the feature is configured as load module at fixed offset, ImageAddress hold an offset
          // relative to top address
          //
          if ((INT64)PcdGet64(PcdLoadModuleAtFixAddressEnable) < 0) {
@@ -832,7 +832,7 @@ CoreLoadPeImage (
       //
       // Copy the PDB file name to our temporary string, and replace .pdb with .efi
       // The PDB file name is limited in the range of 0~255.
-      // If the length is bigger than 255, trim the redudant characters to avoid overflow in array boundary.
+      // If the length is bigger than 255, trim the redundant characters to avoid overflow in array boundary.
       //
       for (Index = 0; Index < sizeof (EfiFileName) - 4; Index++) {
         EfiFileName[Index] = Image->ImageContext.PdbPointer[Index + StartIndex];
@@ -1857,7 +1857,7 @@ Done:
   @retval EFI_SUCCESS             The image has been unloaded.
   @retval EFI_UNSUPPORTED         The image has been started, and does not support
                                   unload.
-  @retval EFI_INVALID_PARAMPETER  ImageHandle is not a valid image handle.
+  @retval EFI_INVALID_PARAMETER   ImageHandle is not a valid image handle.
 
 **/
 EFI_STATUS

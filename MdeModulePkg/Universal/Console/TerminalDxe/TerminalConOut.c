@@ -87,7 +87,7 @@ CHAR16 mCursorBackwardString[]     = { ESC, '[', '0', '0', 'D', 0 };
 /**
   Implements EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL.Reset().
 
-  If ExtendeVerification is TRUE, then perform dependent serial device reset,
+  If ExtendedVerification is TRUE, then perform dependent serial device reset,
   and set display mode to mode 0.
   If ExtendedVerification is FALSE, only set display mode to mode 0.
 
@@ -782,7 +782,7 @@ TerminalConOutSetCursorPosition (
   // control sequence to move the cursor
   //
   // Optimize cursor motion control sequences for TtyTerm.  Move
-  // within the current line if possible, and don't output anyting if
+  // within the current line if possible, and don't output anything if
   // it isn't necessary.
   //
   if (TerminalDevice->TerminalType == TerminalTypeTtyTerm &&

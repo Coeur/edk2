@@ -104,7 +104,7 @@ UhciDestoryFrameList (
 
 
 /**
-  Convert the poll rate to the maxium 2^n that is smaller
+  Convert the poll rate to the maximum 2^n that is smaller
   than Interval.
 
   @param  Interval               The poll rate to convert.
@@ -185,12 +185,12 @@ UhciExecuteTransfer (
   @param  DataLen                Data length.
   @param  Interval               Polling Interval when inserted to frame list.
   @param  Data                   Data buffer, unmapped.
-  @param  Callback               Callback after interrupt transfeer.
+  @param  Callback               Callback after interrupt transfer.
   @param  Context                Callback Context passed as function parameter.
   @param  IsLow                  Is Low Speed.
 
   @retval EFI_SUCCESS            An asynchronous transfer is created.
-  @retval EFI_INVALID_PARAMETER  Paremeter is error.
+  @retval EFI_INVALID_PARAMETER  Parameter is error.
   @retval EFI_OUT_OF_RESOURCES   Failed because of resource shortage.
 
 **/
@@ -219,7 +219,7 @@ UhciCreateAsyncReq (
   @param  Toggle                 The next data toggle to use.
 
   @retval EFI_SUCCESS            The request is deleted.
-  @retval EFI_INVALID_PARAMETER  Paremeter is error.
+  @retval EFI_INVALID_PARAMETER  Parameter is error.
   @retval EFI_NOT_FOUND          The asynchronous isn't found.
 
 **/

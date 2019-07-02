@@ -26,7 +26,7 @@ BOOLEAN            mFinishRetrieveCall = FALSE;
   @param  FormSet        FormSet this Form belongs to.
   @param  Form           The Form.
 
-  @retval EFI_SUCCESS    The expression evaluated successfuly
+  @retval EFI_SUCCESS    The expression evaluated successfully
 
 **/
 EFI_STATUS
@@ -257,7 +257,7 @@ CreateRefreshEventForForm (
 
   Initialize the Display statement structure data.
 
-  @param DisplayStatement      Pointer to the display Statement data strucure.
+  @param DisplayStatement      Pointer to the display Statement data structure.
   @param Statement             The statement need to check.
 **/
 VOID
@@ -285,7 +285,7 @@ InitializeDisplayStatement (
   }
 
   //
-  // Initilize the option list in statement.
+  // Initialize the option list in statement.
   //
   Link = GetFirstNode (&Statement->OptionListHead);
   while (!IsNull (&Statement->OptionListHead, Link)) {
@@ -313,7 +313,7 @@ InitializeDisplayStatement (
   //
   if (Statement->BufferValue != NULL) {
     //
-    // Ordered list opcode may not initilized, get default value here.
+    // Ordered list opcode may not initialized, get default value here.
     //
     if (Statement->OpCode->OpCode == EFI_IFR_ORDERED_LIST_OP && GetArrayData (Statement->BufferValue, Statement->ValueType, 0) == 0) {
       GetQuestionDefault (gCurrentSelection->FormSet, gCurrentSelection->Form, Statement, 0);
@@ -872,7 +872,7 @@ UpdateStatementStatusForForm (
     Link = GetNextNode (&Form->StatementListHead, Link);
 
     //
-    // For password opcode, not set the the value changed flag.
+    // For password opcode, not set the value changed flag.
     //
     if (Question->Operand == EFI_IFR_PASSWORD_OP) {
       continue;
@@ -957,7 +957,7 @@ UpdateStatementStatus (
   @param Action                  The user input action request info.
   @param DefaultId               The user input default Id info.
 
-  @retval EFI_SUCESSS            This function always return successfully for now.
+  @retval EFI_SUCCESS            This function always return successfully for now.
 
 **/
 EFI_STATUS
@@ -1503,7 +1503,7 @@ ProcessQuestionConfig (
 
   @param UserInput               The user input data.
 
-  @retval EFI_SUCESSS            This function always return successfully for now.
+  @retval EFI_SUCCESS            This function always return successfully for now.
 
 **/
 EFI_STATUS
@@ -1523,7 +1523,7 @@ ProcessUserInput (
   ASSERT (UserInput->Action != 0 || UserInput->SelectedStatement != NULL);
 
   //
-  // Remove the last highligh question id, this id will update when show next form.
+  // Remove the last highlight question id, this id will update when show next form.
   //
   gCurrentSelection->QuestionId = 0;
   if (UserInput->SelectedStatement != NULL){
@@ -1631,7 +1631,7 @@ ProcessUserInput (
 
   Display form and wait for user to select one menu option, then return it.
 
-  @retval EFI_SUCESSS            This function always return successfully for now.
+  @retval EFI_SUCCESS            This function always return successfully for now.
 
 **/
 EFI_STATUS
@@ -1806,7 +1806,7 @@ IsNvUpdateRequiredForForm (
                          about the Selection, form and formset to be displayed.
                          On output, Selection return the screen item that is selected
                          by user.
-  @param SettingLevel    Input Settting level, if it is FormLevel, just exit current form.
+  @param SettingLevel    Input Setting level, if it is FormLevel, just exit current form.
                          else, we need to exit current formset.
 
   @retval TRUE           Exit current form.
@@ -2296,7 +2296,7 @@ ProcessRetrieveForQuestion (
                          by user.
 
   @retval EFI_SUCCESS    The page is displayed successfully.
-  @return Other value if the page failed to be diplayed.
+  @return Other value if the page failed to be displayed.
 
 **/
 EFI_STATUS
@@ -2333,7 +2333,7 @@ SetupBrowser (
   InitializeCurrentSetting (Selection->FormSet);
 
   //
-  // Initilize Action field.
+  // Initialize Action field.
   //
   Selection->Action = UI_ACTION_REFRESH_FORM;
 

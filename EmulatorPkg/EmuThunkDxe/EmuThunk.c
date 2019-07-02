@@ -57,13 +57,13 @@ InitializeEmuThunk (
 /*++
 
 Routine Description:
-  Install UnixThunk Protocol and it's associated Device Path protocol
+  Install UnixThunk Protocol and its associated Device Path protocol
 
 Arguments:
   (Standard EFI Image entry - EFI_IMAGE_ENTRY_POINT)
 
 Returns:
-  EFI_SUCEESS - UnixThunk protocol is added or error status from
+  EFI_SUCCESS - UnixThunk protocol is added or error status from
                 gBS->InstallMultiProtocolInterfaces().
 
 **/

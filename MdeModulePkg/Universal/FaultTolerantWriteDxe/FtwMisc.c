@@ -795,7 +795,7 @@ FtwGetLastWriteHeader (
   while (FtwHeader->Complete == FTW_VALID_STATE) {
     Offset += FTW_WRITE_TOTAL_SIZE (FtwHeader->NumberOfWrites, FtwHeader->PrivateDataSize);
     //
-    // If Offset exceed the FTW work space boudary, return error.
+    // If Offset exceed the FTW work space boundary, return error.
     //
     if (Offset >= FtwWorkSpaceSize) {
       *FtwWriteHeader = FtwHeader;
@@ -1228,7 +1228,7 @@ InitFtwProtocol (
   DEBUG ((EFI_D_INFO, "Ftw: NumberOfWorkBlock - 0x%x, FtwWorkBlockLba - 0x%lx\n", FtwDevice->NumberOfWorkBlock, FtwDevice->FtwWorkBlockLba));
 
   //
-  // Calcualte the LBA and base of work space in spare block.
+  // Calculate the LBA and base of work space in spare block.
   // Note: Do not assume Spare Block and Work Block have same block size.
   //
   WorkSpaceLbaOffset = FtwDevice->FtwWorkSpaceLba - FtwDevice->FtwWorkBlockLba;

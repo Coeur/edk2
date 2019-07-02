@@ -28,7 +28,7 @@ Arguments:
 
 Returns:
   TRUE              - Key be pressed matches a registered key.
-  FLASE             - Match failed.
+  FALSE             - Match failed.
 
 **/
 {
@@ -283,7 +283,7 @@ EmuGopSimpleTextInExResetEx (
 /*++
 
   Routine Description:
-    Reset the input device and optionaly run diagnostics
+    Reset the input device and optionally run diagnostics
 
   Arguments:
     This                 - Protocol instance pointer.
@@ -358,7 +358,7 @@ EmuGopSimpleTextInExReadKeyStrokeEx (
 
   Routine Description:
     Reads the next keystroke from the input device. The WaitForKey Event can
-    be used to test for existance of a keystroke via WaitForEvent () call.
+    be used to test for existence of a keystroke via WaitForEvent () call.
 
   Arguments:
     This       - Protocol instance pointer.
@@ -367,7 +367,7 @@ EmuGopSimpleTextInExReadKeyStrokeEx (
 
   Returns:
     EFI_SUCCESS           - The keystroke information was returned.
-    EFI_NOT_READY         - There was no keystroke data availiable.
+    EFI_NOT_READY         - There was no keystroke data available.
     EFI_DEVICE_ERROR      - The keystroke information was not returned due to
                             hardware errors.
     EFI_INVALID_PARAMETER - KeyData is NULL.
@@ -660,7 +660,7 @@ EmuGopSimpleTextInExUnregisterKeyNotify (
 
 
 /**
-  Initialize SimplelTextIn and SimpleTextInEx protocols in the Private
+  Initialize SimpleTextIn and SimpleTextInEx protocols in the Private
   context structure.
 
   @param  Private               Context structure to fill in.
@@ -676,7 +676,7 @@ EmuGopInitializeSimpleTextInForWindow (
   EFI_STATUS  Status;
 
   //
-  // Initialize Simple Text In protoocol
+  // Initialize Simple Text In protocol
   //
   Private->SimpleTextIn.Reset         = EmuGopSimpleTextInReset;
   Private->SimpleTextIn.ReadKeyStroke = EmuGopSimpleTextInReadKeyStroke;
@@ -879,7 +879,7 @@ EmuGopInitializeSimplePointerForWindow (
   EFI_STATUS  Status;
 
   //
-  // Initialize Simple Pointer protoocol
+  // Initialize Simple Pointer protocol
   //
   Private->PointerMode.ResolutionX = 1;
   Private->PointerMode.ResolutionY = 1;

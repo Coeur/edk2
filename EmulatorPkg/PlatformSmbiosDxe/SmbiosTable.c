@@ -10,7 +10,7 @@
     System Slots (Type 9) - If system has slots
     Physical Memory Array (Type 16)
     Memory Device (Type 17) - For each socketed system-memory Device
-    Memory Array Mapped Address (Type 19) - One per contiguous block per Physical Memroy Array
+    Memory Array Mapped Address (Type 19) - One per contiguous block per Physical Memory Array
     System Boot Information (Type 32)
 
   Copyright (c) 2012, Apple Inc. All rights reserved.<BR>

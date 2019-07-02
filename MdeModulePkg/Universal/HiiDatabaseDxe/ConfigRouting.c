@@ -1974,7 +1974,7 @@ Done:
   @param  IfrOpHdr               Ifr opcode header for this opcode.
   @param  VarWidth               The buffer width for this opcode.
   @param  ReturnData             The data block added for this opcode.
-  @param  IsBitVar               Whether the the opcode refers to bit storage.
+  @param  IsBitVar               Whether the opcode refers to bit storage.
 
   @retval  EFI_SUCCESS           This opcode is required.
   @retval  EFI_NOT_FOUND         This opcode is not required.
@@ -2391,7 +2391,7 @@ ParseIfrData (
       }
 
       //
-      //when go to there,BlockData can't be NULLL.
+      //when go to there,BlockData can't be NULL.
       //
       ASSERT (BlockData != NULL);
 
@@ -2494,7 +2494,7 @@ ParseIfrData (
       // width is 1 sizeof (BOOLEAN)
       // default id by CheckBox Flags if CheckBox flags (Default or Mau) is set, the default value is 1 to be set.
       // value by DefaultOption
-      // default id by DeaultOption DefaultId can override CheckBox Flags and Default value.
+      // default id by DefaultOption DefaultId can override CheckBox Flags and Default value.
       //
 
       //
@@ -2535,7 +2535,7 @@ ParseIfrData (
       }
 
       //
-      //when go to there,BlockData can't be NULLL.
+      //when go to there,BlockData can't be NULL.
       //
       ASSERT (BlockData != NULL);
 
@@ -2618,7 +2618,7 @@ ParseIfrData (
         }
       } else {
         //
-        // When flag is not set, default value is FASLE.
+        // When flag is not set, default value is FALSE.
         //
         DefaultData.Type    = DefaultValueFromDefault;
         if (QuestionReferBitField) {
@@ -3589,14 +3589,14 @@ Done:
   Update the default value in the block data which is used as bit var store.
 
   For example:
-  A question value saved in a bit fied: bitoffset = 1; bitwidth = 2;default value = 1.
+  A question value saved in a bit field: bitoffset = 1; bitwidth = 2;default value = 1.
   And corresponding block data info: offset==0; width==1;currently the default value
   is saved as 1.Actually the default value 1 need to be set to bit field 1, so the
-  default value of this block data shuold be:2.
+  default value of this block data should be:2.
 
   typedef struct {
     UINT8  Bit1 : 1; //
-    UINT8  Bit2 : 2; // Question saved in Bit2,so originalBlock info: offset = 0; width = 1;(byte level) defaul = 1.
+    UINT8  Bit2 : 2; // Question saved in Bit2,so originalBlock info: offset = 0; width = 1;(byte level) default = 1.
                      // (default value record for the bit field)
     ......
   }ExampleData;
@@ -3644,7 +3644,7 @@ UpdateDefaultValue (
       EndBit = StartBit + BlockData->BitWidth - 1;
 
       //
-      // Set the bit field default value to related bit filed, then we will got the new default vaule for the block data.
+      // Set the bit field default value to related bit filed, then we will got the new default value for the block data.
       //
       DefaultValueData->Value.u32 = BitFieldWrite32 (0, StartBit, EndBit, BitFieldDefaultValue);
     }
@@ -3671,12 +3671,12 @@ Block2: offset = 0; width = 2;(byte level) default = 320 (5 * (2 << 6))
 After function MergeBlockDefaultValue:
 Block1: offset = 0; width = 1;(byte level) default = 65
 Block2: offset = 0; width = 2;(byte level) default = 321
-(Block1 and Block2 has overlap region, merge the overlap value to Block1 and Blcok2)
+(Block1 and Block2 has overlap region, merge the overlap value to Block1 and Block2)
 
-Block1 and Block2 have overlap byte region, but currntly the default value of Block1 only contains
+Block1 and Block2 have overlap byte region, but currently the default value of Block1 only contains
 value of Bit1 (low 6 bits),the default value of Block2 only contains the value of Bit2 (middle 5 bits).
 
-This fuction merge the default value of these two blocks, and make the default value of block1
+This function merge the default value of these two blocks, and make the default value of block1
 also contain the value of lower 2 bits of the Bit2. And make the default value of Block2 also
 contain the default value of Bit1.
 
@@ -3722,7 +3722,7 @@ MergeBlockDefaultValue (
       FirstDefaultValue = &FirstDefaultValueData->Value.u32;
       SecondDefaultValue = &SecondDefaultValueData->Value.u32;
       //
-      // 1. Get the default value of the whole blcok that can just cover FirstBlock and SecondBlock.
+      // 1. Get the default value of the whole block that can just cover FirstBlock and SecondBlock.
       // 2. Get the default value of FirstBlock and SecondBlock form the value of whole block based
       //    on the offset and width of FirstBlock and SecondBlock.
       //
@@ -3762,7 +3762,7 @@ UpdateBlockDataArray (
 
   //
   // 1. Update default value in BitVar block data.
-  // Sine some block datas are used as BitVarStore, then the default value recored in the block
+  // Since some block datas are used as BitVarStore, then the default value recored in the block
   // is for related bit field in the block. so we need to set the default value to the related bit
   // fields in the block data if the block data is used as bit varstore, then the default value of
   // the block will be updated.
@@ -3770,7 +3770,7 @@ UpdateBlockDataArray (
   UpdateDefaultValue (BlockLink);
 
   //
-  // 2.Update default value for overlap BitVar blcok datas.
+  // 2.Update default value for overlap BitVar block datas.
   // For block datas have overlap region, we need to merge the default value in different blocks.
   //
   for (Link = BlockLink->ForwardLink; Link != BlockLink; Link = Link->ForwardLink) {
@@ -4131,7 +4131,7 @@ GetFullStringFromHiiFormPackages (
   }
 
   //
-  // Initialize DefaultIdArray to store the map between DeaultId and DefaultName
+  // Initialize DefaultIdArray to store the map between DefaultId and DefaultName
   //
   DefaultIdArray   = (IFR_DEFAULT_DATA *) AllocateZeroPool (sizeof (IFR_DEFAULT_DATA));
   if (DefaultIdArray == NULL) {
@@ -5223,7 +5223,7 @@ HiiConfigRoutingExportConfig (
   @param  This                   A pointer to the EFI_HII_CONFIG_ROUTING_PROTOCOL
                                  instance.
   @param  Configuration          A null-terminated Unicode string in
-                                 <MulltiConfigResp> format.
+                                 <MultiConfigResp> format.
   @param  Progress               A pointer to a string filled in with the offset of
                                  the most recent & before the first failing name /
                                  value pair (or the beginning of the string if the

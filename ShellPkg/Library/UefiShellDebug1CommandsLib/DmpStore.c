@@ -391,7 +391,7 @@ AppendSingleVariableToFile (
   @param[in] StandardFormatOutput TRUE indicates Standard-Format Output.
 
   @retval SHELL_SUCCESS           The operation was successful.
-  @retval SHELL_OUT_OF_RESOURCES  A memorty allocation failed.
+  @retval SHELL_OUT_OF_RESOURCES  A memory allocation failed.
   @retval SHELL_ABORTED           The abort message was received.
   @retval SHELL_DEVICE_ERROR      UEFI Variable Services returned an error.
   @retval SHELL_NOT_FOUND         the Name/Guid pair could not be found.
@@ -594,7 +594,7 @@ CascadeProcessVariables (
   @param[in] StandardFormatOutput TRUE indicates Standard-Format Output.
 
   @retval SHELL_SUCCESS           The operation was successful.
-  @retval SHELL_OUT_OF_RESOURCES  A memorty allocation failed.
+  @retval SHELL_OUT_OF_RESOURCES  A memory allocation failed.
   @retval SHELL_ABORTED           The abort message was received.
   @retval SHELL_DEVICE_ERROR      UEFI Variable Services returned an error.
   @retval SHELL_NOT_FOUND         the Name/Guid pair could not be found.

@@ -435,7 +435,7 @@ ModeSwitch (
   }
 
   //
-  // Initialize context jumping to 64-bit enviroment
+  // Initialize context jumping to 64-bit environment
   //
   Context.JumpBuffer            = (EFI_PHYSICAL_ADDRESS)(UINTN)&JumpBuffer;
   Context.StackBufferBase       = LongModeBuffer->StackBaseAddress;
@@ -653,7 +653,7 @@ SortMemoryResourceDescriptor (
 }
 
 /**
-  Merge continous memory resource entries.
+  Merge continuous memory resource entries.
 
   @param[in, out] MemoryResource    A pointer to the memory resource entry buffer.
 
@@ -1150,7 +1150,7 @@ CheckCapsuleUpdate (
   If it is, then it will verify it and emit an error message if corruption is detected.
 
   @param PeiServices   Standard pei services pointer
-  @param CapsuleBase   Base address of coalesced capsule, which is preceeded
+  @param CapsuleBase   Base address of coalesced capsule, which is preceded
                        by private data. Very implementation specific.
 
   @retval TRUE    Capsule image is the test image

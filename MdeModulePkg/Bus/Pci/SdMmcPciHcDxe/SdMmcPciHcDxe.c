@@ -397,7 +397,7 @@ SdMmcPciHcDriverBindingSupported (
   ParentDevicePath = NULL;
 
   //
-  // SdPciHcDxe is a device driver, and should ingore the
+  // SdPciHcDxe is a device driver, and should ignore the
   // "RemainingDevicePath" according to EFI spec.
   //
   Status = gBS->OpenProtocol (
@@ -515,7 +515,7 @@ SdMmcPciHcDriverBindingSupported (
   @retval EFI_SUCCESS              The device was started.
   @retval EFI_DEVICE_ERROR         The device could not be started due to a device error.Currently not implemented.
   @retval EFI_OUT_OF_RESOURCES     The request could not be completed due to a lack of resources.
-  @retval Others                   The driver failded to start the device.
+  @retval Others                   The driver failed to start the device.
 
 **/
 EFI_STATUS

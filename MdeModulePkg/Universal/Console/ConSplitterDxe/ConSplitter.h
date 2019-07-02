@@ -283,7 +283,7 @@ ConSplitterDriverEntry (
                                    structure.
 
   @retval EFI_OUT_OF_RESOURCES     Out of resources.
-  @retval EFI_SUCCESS              Text Input Devcie's private data has been constructed.
+  @retval EFI_SUCCESS              Text Input Device's private data has been constructed.
   @retval other                    Failed to construct private data.
 
 **/
@@ -299,7 +299,7 @@ ConSplitterTextInConstructor (
                                    structure.
 
   @retval EFI_OUT_OF_RESOURCES     Out of resources.
-  @retval EFI_SUCCESS              Text Input Devcie's private data has been constructed.
+  @retval EFI_SUCCESS              Text Input Device's private data has been constructed.
 
 **/
 EFI_STATUS
@@ -469,7 +469,7 @@ ConSplitterStdErrDriverBindingStart (
   );
 
 /**
-  Stop Console In ConSplitter on ControllerHandle by closing Console In Devcice GUID.
+  Stop Console In ConSplitter on ControllerHandle by closing Console In Device GUID.
 
   @param  This              Driver Binding protocol instance pointer.
   @param  ControllerHandle  Handle of device to stop driver on
@@ -514,7 +514,7 @@ ConSplitterSimplePointerDriverBindingStop (
   );
 
 /**
-  Stop Console Out ConSplitter on device handle by closing Console Out Devcice GUID.
+  Stop Console Out ConSplitter on device handle by closing Console Out Device GUID.
 
   @param  This              Driver Binding protocol instance pointer.
   @param  ControllerHandle  Handle of device to stop driver on
@@ -700,13 +700,13 @@ ConSplitterAbsolutePointerGetState (
   );
 
 /**
-  This event agregates all the events of the pointer devices in the splitter.
+  This event aggregates all the events of the pointer devices in the splitter.
 
   If any events of physical pointer devices are signaled, signal the pointer
   splitter event. This will cause the calling code to call
   ConSplitterAbsolutePointerGetState ().
 
-  @param  Event                    The Event assoicated with callback.
+  @param  Event                    The Event associated with callback.
   @param  Context                  Context registered when Event was created.
 
 **/
@@ -1251,7 +1251,7 @@ ConSplitterTextOutDeleteDevice (
 //
 
 /**
-  Reset the input device and optionaly run diagnostics
+  Reset the input device and optionally run diagnostics
 
   @param  This                     Protocol instance pointer.
   @param  ExtendedVerification     Driver may perform diagnostics on reset.
@@ -1270,14 +1270,14 @@ ConSplitterTextInReset (
 
 /**
   Reads the next keystroke from the input device. The WaitForKey Event can
-  be used to test for existance of a keystroke via WaitForEvent () call.
+  be used to test for existence of a keystroke via WaitForEvent () call.
 
   @param  This                     Protocol instance pointer.
   @param  Key                      Driver may perform diagnostics on reset.
 
   @retval EFI_SUCCESS              The keystroke information was returned.
-  @retval EFI_NOT_READY            There was no keystroke data availiable.
-  @retval EFI_DEVICE_ERROR         The keydtroke information was not returned due
+  @retval EFI_NOT_READY            There was no keystroke data available.
+  @retval EFI_DEVICE_ERROR         The keystroke information was not returned due
                                    to hardware errors.
 
 **/
@@ -1325,7 +1325,7 @@ ConSplitterTextInExDeleteDevice (
 //
 
 /**
-  Reset the input device and optionaly run diagnostics
+  Reset the input device and optionally run diagnostics
 
   @param  This                     Protocol instance pointer.
   @param  ExtendedVerification     Driver may perform diagnostics on reset.
@@ -1345,7 +1345,7 @@ ConSplitterTextInResetEx (
 
 /**
   Reads the next keystroke from the input device. The WaitForKey Event can
-  be used to test for existance of a keystroke via WaitForEvent () call.
+  be used to test for existence of a keystroke via WaitForEvent () call.
 
   @param  This                     Protocol instance pointer.
   @param  KeyData                  A pointer to a buffer that is filled in with the
@@ -1353,7 +1353,7 @@ ConSplitterTextInResetEx (
                                    pressed.
 
   @retval EFI_SUCCESS              The keystroke information was returned.
-  @retval EFI_NOT_READY            There was no keystroke data availiable.
+  @retval EFI_NOT_READY            There was no keystroke data available.
   @retval EFI_DEVICE_ERROR         The keystroke information was not returned due
                                    to hardware errors.
   @retval EFI_INVALID_PARAMETER    KeyData is NULL.
@@ -1407,7 +1407,7 @@ ConSplitterTextInSetState (
 
   @retval EFI_SUCCESS              The notification function was registered
                                    successfully.
-  @retval EFI_OUT_OF_RESOURCES     Unable to allocate resources for necesssary data
+  @retval EFI_OUT_OF_RESOURCES     Unable to allocate resources for necessary data
                                    structures.
   @retval EFI_INVALID_PARAMETER    KeyData or KeyNotificationFunction or NotifyHandle is NULL.
 
@@ -1449,7 +1449,7 @@ ConSplitterTextInUnregisterKeyNotify (
   spliter event. This will cause the calling code to call
   ConSplitterTextInReadKeyStroke ().
 
-  @param  Event                    The Event assoicated with callback.
+  @param  Event                    The Event associated with callback.
   @param  Context                  Context registered when Event was created.
 
 **/
@@ -1463,14 +1463,14 @@ ConSplitterTextInWaitForKey (
 
 /**
   Reads the next keystroke from the input device. The WaitForKey Event can
-  be used to test for existance of a keystroke via WaitForEvent () call.
+  be used to test for existence of a keystroke via WaitForEvent () call.
 
   @param  Private                  Protocol instance pointer.
   @param  Key                      Driver may perform diagnostics on reset.
 
   @retval EFI_SUCCESS              The keystroke information was returned.
-  @retval EFI_NOT_READY            There was no keystroke data availiable.
-  @retval EFI_DEVICE_ERROR         The keydtroke information was not returned due
+  @retval EFI_NOT_READY            There was no keystroke data available.
+  @retval EFI_DEVICE_ERROR         The keystroke information was not returned due
                                    to hardware errors.
 
 **/
@@ -1482,7 +1482,7 @@ ConSplitterTextInPrivateReadKeyStroke (
   );
 
 /**
-  Reset the input device and optionaly run diagnostics
+  Reset the input device and optionally run diagnostics
 
   @param  This                     Protocol instance pointer.
   @param  ExtendedVerification     Driver may perform diagnostics on reset.
@@ -1501,14 +1501,14 @@ ConSplitterSimplePointerReset (
 
 /**
   Reads the next keystroke from the input device. The WaitForKey Event can
-  be used to test for existance of a keystroke via WaitForEvent () call.
+  be used to test for existence of a keystroke via WaitForEvent () call.
 
   @param  This                     A pointer to protocol instance.
   @param  State                    A pointer to state information on the pointer device
 
   @retval EFI_SUCCESS              The keystroke information was returned in State.
-  @retval EFI_NOT_READY            There was no keystroke data availiable.
-  @retval EFI_DEVICE_ERROR         The keydtroke information was not returned due
+  @retval EFI_NOT_READY            There was no keystroke data available.
+  @retval EFI_DEVICE_ERROR         The keystroke information was not returned due
                                    to hardware errors.
 
 **/
@@ -1520,12 +1520,12 @@ ConSplitterSimplePointerGetState (
   );
 
 /**
-  This event agregates all the events of the ConIn devices in the spliter.
+  This event aggregates all the events of the ConIn devices in the spliter.
   If any events of physical ConIn devices are signaled, signal the ConIn
   spliter event. This will cause the calling code to call
   ConSplitterTextInReadKeyStroke ().
 
-  @param  Event                    The Event assoicated with callback.
+  @param  Event                    The Event associated with callback.
   @param  Context                  Context registered when Event was created.
 
 **/
@@ -1541,10 +1541,10 @@ ConSplitterSimplePointerWaitForInput (
 //
 
 /**
-  Reset the text output device hardware and optionaly run diagnostics
+  Reset the text output device hardware and optionally run diagnostics
 
   @param  This                     Protocol instance pointer.
-  @param  ExtendedVerification     Driver may perform more exhaustive verfication
+  @param  ExtendedVerification     Driver may perform more exhaustive verification
                                    operation of the device during reset.
 
   @retval EFI_SUCCESS              The text output device was reset.
@@ -1847,12 +1847,12 @@ ConSplitterGraphicsOutputSetMode (
   @param  DestinationX            X coordinate of destination for the BltBuffer.
   @param  DestinationY            Y coordinate of destination for the BltBuffer.
   @param  Width                   Width of rectangle in BltBuffer in pixels.
-  @param  Height                  Hight of rectangle in BltBuffer in pixels.
+  @param  Height                  Height of rectangle in BltBuffer in pixels.
   @param  Delta                   OPTIONAL.
 
   @retval EFI_SUCCESS             The Blt operation completed.
   @retval EFI_INVALID_PARAMETER   BltOperation is not valid.
-  @retval EFI_DEVICE_ERROR        A hardware error occured writting to the video
+  @retval EFI_DEVICE_ERROR        A hardware error occurred writing to the video
                                   buffer.
 
 **/
@@ -1961,12 +1961,12 @@ ConSplitterUgaDrawSetMode (
   @param  DestinationX   X coordinate of destination for the BltBuffer.
   @param  DestinationY   Y coordinate of destination for the BltBuffer.
   @param  Width          Width of rectangle in BltBuffer in pixels.
-  @param  Height         Hight of rectangle in BltBuffer in pixels.
+  @param  Height         Height of rectangle in BltBuffer in pixels.
   @param  Delta          OPTIONAL
 
   @retval EFI_SUCCESS            The Blt operation completed.
   @retval EFI_INVALID_PARAMETER  BltOperation is not valid.
-  @retval EFI_DEVICE_ERROR       A hardware error occured writting to the video buffer.
+  @retval EFI_DEVICE_ERROR       A hardware error occurred writing to the video buffer.
 
 **/
 EFI_STATUS

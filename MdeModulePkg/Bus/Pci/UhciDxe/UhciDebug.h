@@ -1,6 +1,6 @@
 /** @file
 
-  This file contains the definination for host controller debug support routines
+  This file contains the definition for host controller debug support routines
 
 Copyright (c) 2007, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent

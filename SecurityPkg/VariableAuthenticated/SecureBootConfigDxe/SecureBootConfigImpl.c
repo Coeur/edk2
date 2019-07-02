@@ -234,7 +234,7 @@ SaveSecureBootVariable (
                                    it's caller's responsibility to free the memory when finish using it.
 
   @retval EFI_SUCCESS              Create time based payload successfully.
-  @retval EFI_OUT_OF_RESOURCES     There are not enough memory resourses to create time based payload.
+  @retval EFI_OUT_OF_RESOURCES     There are not enough memory resources to create time based payload.
   @retval EFI_INVALID_PARAMETER    The parameter is invalid.
   @retval Others                   Unexpected error happens.
 
@@ -390,7 +390,7 @@ SetSecureBootMode (
   @param[out]  PkCert                Point to the data buffer to store the signature list.
 
   @return EFI_UNSUPPORTED            Unsupported Key Length.
-  @return EFI_OUT_OF_RESOURCES       There are not enough memory resourses to form the signature list.
+  @return EFI_OUT_OF_RESOURCES       There are not enough memory resources to form the signature list.
 
 **/
 EFI_STATUS
@@ -1312,7 +1312,7 @@ Done:
 /**
   Check whether the signature list exists in given variable data.
 
-  It searches the signature list for the ceritificate hash by CertType.
+  It searches the signature list for the certificate hash by CertType.
   If the signature list is found, get the offset of Database for the
   next hash of a certificate.
 
@@ -3269,7 +3269,7 @@ SecureBootExtractConfigFromVariable (
   SecureBootMode   = NULL;
 
   //
-  // Initilize the Date and Time using system time.
+  // Initialize the Date and Time using system time.
   //
   ConfigData->CertificateFormat = HASHALG_RAW;
   ConfigData->AlwaysRevocation = TRUE;
@@ -4071,7 +4071,7 @@ ON_EXIT:
 }
 
 /**
-  This functino to load signature data under the signature list.
+  This function to load signature data under the signature list.
 
   @param[in]  PrivateData         Module's private data.
   @param[in]  LabelId             Label number to insert opcodes.

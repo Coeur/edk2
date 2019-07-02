@@ -460,7 +460,7 @@ UhcControlTransfer (
                                 sending or receiving.
   @param  Data                  Array of pointers to the buffers of data to transmit
                                 from or receive into.
-  @param  DataLength            The lenght of the data buffer.
+  @param  DataLength            The length of the data buffer.
   @param  DataToggle            On input, the initial data toggle for the transfer;
                                 On output, it is updated to to next data toggle to use of
                                 the subsequent bulk transfer.
@@ -534,7 +534,7 @@ UhcBulkTransfer (
   StatusReg   = UhcDev->UsbHostControllerBaseAddress + USBSTS;
 
   //
-  // these code lines are added here per complier's strict demand
+  // these code lines are added here per compiler's strict demand
   //
   PktID             = INPUT_PACKET_ID;
   PtrTD             = NULL;
@@ -1095,7 +1095,7 @@ CreateFrameList (
   UINTN                 Index;
 
   //
-  // The Frame List ocupies 4K bytes,
+  // The Frame List occupies 4K bytes,
   // and must be aligned on 4-Kbyte boundaries.
   //
   Status = PeiServicesAllocatePages (
@@ -2338,11 +2338,11 @@ IsTDStatusBitStuffError (
 }
 
 /**
-  Retrieve the actual number of bytes that were tansferred.
+  Retrieve the actual number of bytes that were transferred.
 
   @param  PtrTDStruct   Place to store TD_STRUCT pointer.
 
-  @retval The actual number of bytes that were tansferred.
+  @retval The actual number of bytes that were transferred.
 
 **/
 UINT16
@@ -2351,7 +2351,7 @@ GetTDStatusActualLength (
   )
 {
   //
-  // Retrieve the actual number of bytes that were tansferred.
+  // Retrieve the actual number of bytes that were transferred.
   // the value is encoded as n-1. so return the decoded value.
   //
   return (UINT16) ((PtrTDStruct->TDData.TDStatusActualLength) + 1);
@@ -2982,7 +2982,7 @@ AllocMemInMemoryBlock (
       }
     } else {
       //
-      // Encountering a '1', meant the bit is ocupied.
+      // Encountering a '1', meant the bit is occupied.
       //
       if (NumberOfZeros >= NumberOfMemoryUnit) {
         //
@@ -3168,7 +3168,7 @@ InsertMemoryHeaderToList (
   @param  Uhc                The UHCI device.
   @param  Request            The user request buffer.
   @param  MappedAddr         Mapped address of request.
-  @param  Map                Identificaion of this mapping to return.
+  @param  Map                Identification of this mapping to return.
 
   @return EFI_SUCCESS        Success.
   @return EFI_DEVICE_ERROR   Fail to map the user request.
@@ -3210,9 +3210,9 @@ UhciMapUserRequest (
   @param  Direction          Direction of the data transfer.
   @param  Data               The user data buffer.
   @param  Len                Length of the user data.
-  @param  PktId              Packet identificaion.
+  @param  PktId              Packet identification.
   @param  MappedAddr         Mapped address to return.
-  @param  Map                Identificaion of this mapping to return.
+  @param  Map                Identification of this mapping to return.
 
   @return EFI_SUCCESS        Success.
   @return EFI_DEVICE_ERROR   Fail to map the user data.

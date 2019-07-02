@@ -727,7 +727,7 @@ SecCoreStartupWithStack (
 
   //
   // To ensure SMM can't be compromised on S3 resume, we must force re-init of
-  // the BaseExtractGuidedSectionLib. Since this is before library contructors
+  // the BaseExtractGuidedSectionLib. Since this is before library constructors
   // are called, we must use a loop rather than SetMem.
   //
   Table = (UINT8*)(UINTN)FixedPcdGet64 (PcdGuidedExtractHandlerTableAddress);

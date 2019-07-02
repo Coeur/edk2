@@ -173,7 +173,7 @@ UiFindMenuList (
     }
 
     //
-    // Find the same FromSet.
+    // Find the same FormSet.
     //
     if (MenuList->HiiHandle == HiiHandle) {
       if (IsZeroGuid (&MenuList->FormSetGuid)) {
@@ -352,7 +352,7 @@ LoadAllHiiFormset (
     }
 
     //
-    // Initilize FormSet Setting
+    // Initialize FormSet Setting
     //
     LocalFormSet = AllocateZeroPool (sizeof (FORM_BROWSER_FORMSET));
     ASSERT (LocalFormSet != NULL);
@@ -367,7 +367,7 @@ LoadAllHiiFormset (
     InitializeCurrentSetting (LocalFormSet);
 
     //
-    // Initilize Questions' Value
+    // Initialize Questions' Value
     //
     Status = LoadFormSetConfig (NULL, LocalFormSet);
     if (EFI_ERROR (Status)) {
@@ -438,7 +438,7 @@ PopupErrorMessage (
 
 /**
   This is the routine which an external caller uses to direct the browser
-  where to obtain it's information.
+  where to obtain its information.
 
 
   @param This            The Form Browser protocol instanse.
@@ -601,7 +601,7 @@ SendForm (
 /**
   Get or set data to the storage.
 
-  @param  ResultsDataSize        The size of the buffer associatedwith ResultsData.
+  @param  ResultsDataSize        The size of the buffer associated with ResultsData.
   @param  ResultsData            A string returned from an IFR browser or
                                  equivalent. The results string will have no
                                  routing information in them.
@@ -677,7 +677,7 @@ ProcessStorage (
     StrCatS (ConfigResp, MaxLen, *ResultsData);
 
     //
-    // Update Browser uncommited data
+    // Update Browser uncommitted data
     //
     Status = ConfigRespToStorage (Storage, ConfigResp);
     FreePool (ConfigResp);
@@ -1062,10 +1062,10 @@ NewStringCpy (
 
 
 /**
-  Allocate new memory and concatinate Source on the end of Destination.
+  Allocate new memory and concatenate Source on the end of Destination.
 
   @param  Dest                   String to added to the end of.
-  @param  Src                    String to concatinate.
+  @param  Src                    String to concatenate.
 
 **/
 VOID
@@ -1098,7 +1098,7 @@ NewStringCat (
 
   @param  Storage                The NameValue Storage.
   @param  Name                   The Name.
-  @param  Value                  The retured Value.
+  @param  Value                  The returned Value.
   @param  GetValueFrom           Where to get source value, from EditValue or Value.
 
   @retval EFI_SUCCESS            Value found for given Name.
@@ -1210,7 +1210,7 @@ SetValueByName (
 /**
   Convert setting of Buffer Storage or NameValue Storage to <ConfigResp>.
 
-  @param  Storage                The Storage to be conveted.
+  @param  Storage                The Storage to be converted.
   @param  ConfigResp             The returned <ConfigResp>.
   @param  ConfigRequest          The ConfigRequest string.
   @param  GetEditBuf             Get the data from editbuffer or buffer.
@@ -6309,7 +6309,7 @@ GetHotKeyFromRegisterList (
 
   @retval EFI_SUCCESS            Scope is set correctly.
   @retval EFI_INVALID_PARAMETER  Scope is not the valid value specified in BROWSER_SETTING_SCOPE.
-  @retval EFI_UNSPPORTED         Scope level is different from current one that the registered hot keys have.
+  @retval EFI_UNSUPPORTED        Scope level is different from current one that the registered hot keys have.
 
 **/
 EFI_STATUS

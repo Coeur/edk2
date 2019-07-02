@@ -1,5 +1,5 @@
 /** @file
-  Boot Logo protocol is used to convey information of Logo dispayed during boot.
+  Boot Logo protocol is used to convey information of Logo displayed during boot.
 
 Copyright (c) 2011, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -17,7 +17,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
   }
 
 //
-// Forward reference for pure ANSI compatability
+// Forward reference for pure ANSI compatibility
 //
 typedef struct _EFI_BOOT_LOGO_PROTOCOL  EFI_BOOT_LOGO_PROTOCOL;
 
@@ -31,7 +31,7 @@ typedef struct _EFI_BOOT_LOGO_PROTOCOL  EFI_BOOT_LOGO_PROTOCOL;
   @param  DestinationX   X coordinate of destination for the BltBuffer.
   @param  DestinationY   Y coordinate of destination for the BltBuffer.
   @param  Width          Width of rectangle in BltBuffer in pixels.
-  @param  Height         Hight of rectangle in BltBuffer in pixels.
+  @param  Height         Height of rectangle in BltBuffer in pixels.
 
   @retval EFI_SUCCESS             The boot logo information was updated.
   @retval EFI_INVALID_PARAMETER   One of the parameters has an invalid value.

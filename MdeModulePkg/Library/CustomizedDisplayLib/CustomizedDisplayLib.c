@@ -38,10 +38,10 @@ Statement
 **/
 
 /**
-  This funtion defines Page Frame and Backgroud.
+  This function defines Page Frame and Background.
 
   Based on the above layout, it will be responsible for HeaderHeight, FooterHeight,
-  StatusBarHeight and Backgroud. And, it will reserve Screen for Statement.
+  StatusBarHeight and Background. And, it will reserve Screen for Statement.
 
   @param[in]  FormData             Form Data to be shown in Page.
   @param[out] ScreenForStatement   Screen to be used for Statement. (Prompt, Value and Help)
@@ -604,9 +604,9 @@ FormExitPolicy (
 }
 
 /**
-  Set Timeout value for a ceratain Form to get user response.
+  Set Timeout value for a certain Form to get user response.
 
-  This function allows to set timeout value on a ceratain form if necessary.
+  This function allows to set timeout value on a certain form if necessary.
   If timeout is not zero, the form will exit if user has no response in timeout.
 
   @param[in]  FormData   Form Data to be shown in Page
@@ -694,12 +694,12 @@ PrintCharAt (
 }
 
 /**
-  Clear retangle with specified text attribute.
+  Clear rectangle with specified text attribute.
 
-  @param  LeftColumn     Left column of retangle.
-  @param  RightColumn    Right column of retangle.
-  @param  TopRow         Start row of retangle.
-  @param  BottomRow      End row of retangle.
+  @param  LeftColumn     Left column of rectangle.
+  @param  RightColumn    Right column of rectangle.
+  @param  TopRow         Start row of rectangle.
+  @param  BottomRow      End row of rectangle.
   @param  TextAttribute  The character foreground and background.
 
 **/

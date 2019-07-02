@@ -53,7 +53,7 @@ typedef struct {
   NOTE:
   To simplify this function, leave returned CapabilityData for caller to unpack since there are
   many capability categories and only few categories will be used in firmware. It means the caller
-  need swap the byte order for the feilds in CapabilityData.
+  need swap the byte order for the fields in CapabilityData.
 
   @param[in]  Capability         Group selection; determines the format of the response.
   @param[in]  Property           Further definition of information.

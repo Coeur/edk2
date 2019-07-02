@@ -96,7 +96,7 @@ LibSmbios64BitGetEPS (
   @param[in] StringNumber   String number to return. -1 is used to skip all strings and
                             point to the next SMBIOS structure.
 
-  @return Pointer to string, or pointer to next SMBIOS strcuture if StringNumber == -1
+  @return Pointer to string, or pointer to next SMBIOS structure if StringNumber == -1
 **/
 CHAR8*
 LibGetSmbiosString (

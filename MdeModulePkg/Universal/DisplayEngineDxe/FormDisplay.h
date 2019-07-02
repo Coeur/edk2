@@ -1,5 +1,5 @@
 /** @file
-  FormDiplay protocol to show Form
+  FormDisplay protocol to show Form
 
 Copyright (c) 2013 - 2018, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -586,7 +586,7 @@ GetSelectionInputPopUp (
   FormattedString and the glyph width of each line cannot exceed gHelpBlockWidth.
 
   @param  StringPtr              The entire help string.
-  @param  FormattedString        The oupput formatted string.
+  @param  FormattedString        The output formatted string.
   @param  EachLineWidth          The max string length of each line in the formatted string.
   @param  RowCount               TRUE: if Question is selected.
 
@@ -699,8 +699,8 @@ RefreshTimeOutProcess (
 /**
   Record the highlight menu and top of screen menu info.
 
-  @param  Highlight               The menu opton which is highlight.
-  @param  TopOfScreen             The menu opton which is at the top of the form.
+  @param  Highlight               The menu option which is highlight.
+  @param  TopOfScreen             The menu option which is at the top of the form.
   @param  SkipValue               The skip line info for the top of screen menu.
 
 **/

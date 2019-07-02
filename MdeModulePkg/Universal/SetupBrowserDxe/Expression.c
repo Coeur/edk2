@@ -9,7 +9,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 #include "Setup.h"
 
 //
-// Global stack used to evaluate boolean expresions
+// Global stack used to evaluate boolean expressions
 //
 EFI_HII_VALUE *mOpCodeScopeStack = NULL;
 EFI_HII_VALUE *mOpCodeScopeStackEnd = NULL;
@@ -952,7 +952,7 @@ InitializeUnicodeCollationProtocol (
   }
 
   //
-  // BUGBUG: Proper impelmentation is to locate all Unicode Collation Protocol
+  // BUGBUG: Proper implementation is to locate all Unicode Collation Protocol
   // instances first and then select one which support English language.
   // Current implementation just pick the first instance.
   //
@@ -991,8 +991,8 @@ IfrStrToUpper (
 
   @param  Value                  Expression value to compare on.
 
-  @retval TRUE                   This value type can be transter to EFI_IFR_TYPE_BUFFER type.
-  @retval FALSE                  This value type can't be transter to EFI_IFR_TYPE_BUFFER type.
+  @retval TRUE                   This value type can be transfer to EFI_IFR_TYPE_BUFFER type.
+  @retval FALSE                  This value type can't be transfer to EFI_IFR_TYPE_BUFFER type.
 
 **/
 BOOLEAN
@@ -1017,8 +1017,8 @@ IsTypeInBuffer (
 
   @param  Value                  Expression value to compare on.
 
-  @retval TRUE                   This value type can be transter to EFI_IFR_TYPE_BUFFER type.
-  @retval FALSE                  This value type can't be transter to EFI_IFR_TYPE_BUFFER type.
+  @retval TRUE                   This value type can be transfer to EFI_IFR_TYPE_BUFFER type.
+  @retval FALSE                  This value type can't be transfer to EFI_IFR_TYPE_BUFFER type.
 
 **/
 BOOLEAN
@@ -2506,7 +2506,7 @@ Done:
   @param  Form                   Form associated with this expression.
   @param  Expression             Expression to be evaluated.
 
-  @retval EFI_SUCCESS            The expression evaluated successfuly
+  @retval EFI_SUCCESS            The expression evaluated successfully
   @retval EFI_NOT_FOUND          The Question which referenced by a QuestionId
                                  could not be found.
   @retval EFI_OUT_OF_RESOURCES   There is not enough system memory to grow the

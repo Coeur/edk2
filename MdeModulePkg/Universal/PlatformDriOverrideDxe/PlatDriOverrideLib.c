@@ -1,5 +1,5 @@
 /** @file
-  Implementation of the shared functions to do the platform driver vverride mapping.
+  Implementation of the shared functions to do the platform driver override mapping.
 
   Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
   SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -42,7 +42,7 @@ typedef struct _DEVICE_PATH_STACK_ITEM{
 LIST_ENTRY   mDevicePathStack = INITIALIZE_LIST_HEAD_VARIABLE (mDevicePathStack);
 
 /**
-  Push a controller device path into a globle device path list.
+  Push a controller device path into a global device path list.
 
   @param  DevicePath     The controller device path to push into stack
 
@@ -67,7 +67,7 @@ PushDevPathStack (
 
 
 /**
-  Pop a controller device path from a globle device path list
+  Pop a controller device path from a global device path list
 
   @param  DevicePath     The controller device path popped from stack
 
@@ -103,7 +103,7 @@ PopDevPathStack (
 
 
 /**
-  Check whether a controller device path is in a globle device path list
+  Check whether a controller device path is in a global device path list
 
   @param  DevicePath     The controller device path to check
 
@@ -968,7 +968,7 @@ SaveOverridesMapping (
   }
 
   //
-  // Get the the maximum size of an individual EFI variable in current system
+  // Get the maximum size of an individual EFI variable in current system
   //
   gRT->QueryVariableInfo (
           EFI_VARIABLE_BOOTSERVICE_ACCESS | EFI_VARIABLE_NON_VOLATILE,
@@ -1403,8 +1403,8 @@ GetDriverFromMapping (
           // Try to connect all device in the driver image path.
           //
           // Note: LoadImage() and  StartImage() should be called under CALLBACK TPL in theory, but
-          // since many device need to be connected in  CALLBACK level environment( e.g. Usb devices )
-          // and the Fat and Patition driver can endure executing in CALLBACK level in fact, so here permit
+          // since many device need to be connected in CALLBACK level environment( e.g. Usb devices )
+          // and the Fat and Partition driver can endure executing in CALLBACK level in fact, so here permit
           // to use LoadImage() and  StartImage() in CALLBACK TPL.
           //
           Status = ConnectDevicePath (DriverImageInfo->DriverImagePath);
@@ -1740,7 +1740,7 @@ InsertDriverImage (
   }
   //
   // If cannot find, this is a new controller item
-  // Add the Controller related PLATFORM_OVERRIDE_ITEM structrue in mapping data base
+  // Add the Controller related PLATFORM_OVERRIDE_ITEM structure in mapping data base
   //
   if (!Found) {
     OverrideItem = AllocateZeroPool (sizeof (PLATFORM_OVERRIDE_ITEM));

@@ -149,7 +149,7 @@ FreePages (
   ASSERT (Pages != 0);
   if (!gEmuThunk->Free (Buffer)) {
     // The Free thunk will not free memory allocated in emulated EFI memory.
-    // The assmuption is this was allocated directly by EFI. We need this as some
+    // The assumption is this was allocated directly by EFI. We need this as some
     // times protocols or EFI BootServices can return dynamically allocated buffers.
     Status = gBS->FreePages ((EFI_PHYSICAL_ADDRESS) (UINTN) Buffer, Pages);
     ASSERT_EFI_ERROR (Status);
@@ -197,7 +197,7 @@ InternalAllocateAlignedPages (
   }
   if (Alignment > EFI_PAGE_SIZE) {
     //
-    // Caculate the total number of pages since alignment is larger than page size.
+    // Calculate the total number of pages since alignment is larger than page size.
     //
     AlignmentMask  = Alignment - 1;
     RealPages      = Pages + EFI_SIZE_TO_PAGES (Alignment);
@@ -804,7 +804,7 @@ FreePool (
 
   if (!gEmuThunk->Free (Buffer)) {
     // The Free thunk will not free memory allocated in emulated EFI memory.
-    // The assmuption is this was allocated directly by EFI. We need this as some
+    // The assumption is this was allocated directly by EFI. We need this as some
     // times protocols or EFI BootServices can return dynamically allocated buffers.
     Status = gBS->FreePool (Buffer);
     ASSERT_EFI_ERROR (Status);

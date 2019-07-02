@@ -1,5 +1,5 @@
 /** @file
-  Post code library instace bases on report status code library
+  Post code library instance bases on report status code library
   PostCode Library for PEIMs and DXE drivers that send PostCode to ReportStatusCode
 
   Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
@@ -115,9 +115,9 @@ PostCodeWithDescription (
   bit of PcdPostCodePropertyMask is set.  Otherwise FALSE is returned.
 
   @retval  TRUE   The POST_CODE_PROPERTY_POST_CODE_ENABLED bit of
-                  PcdPostCodeProperyMask is set.
+                  PcdPostCodePropertyMask is set.
   @retval  FALSE  The POST_CODE_PROPERTY_POST_CODE_ENABLED bit of
-                  PcdPostCodeProperyMask is clear.
+                  PcdPostCodePropertyMask is clear.
 
 **/
 BOOLEAN
@@ -137,9 +137,9 @@ PostCodeEnabled (
   bit of PcdPostCodePropertyMask is set.  Otherwise FALSE is returned.
 
   @retval  TRUE   The POST_CODE_PROPERTY_POST_CODE_DESCRIPTION_ENABLED bit of
-                  PcdPostCodeProperyMask is set.
+                  PcdPostCodePropertyMask is set.
   @retval  FALSE  The POST_CODE_PROPERTY_POST_CODE_DESCRIPTION_ENABLED bit of
-                  PcdPostCodeProperyMask is clear.
+                  PcdPostCodePropertyMask is clear.
 
 **/
 BOOLEAN

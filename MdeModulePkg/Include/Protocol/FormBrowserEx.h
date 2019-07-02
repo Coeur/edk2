@@ -29,7 +29,7 @@ typedef EDKII_FORM_BROWSER_EXTENSION_PROTOCOL   EFI_FORM_BROWSER_EXTENSION_PROTO
 #define BROWSER_KEEP_CURRENT        3
 
 //
-// Browser actions. They can be cominbed together.
+// Browser actions. They can be combined together.
 // If more than one actions are specified, the action with low bit will be executed first.
 //
 #define BROWSER_ACTION_UNREGISTER   0
@@ -60,7 +60,7 @@ typedef enum {
 
   @retval EFI_SUCCESS            Scope is set correctly.
   @retval EFI_INVALID_PARAMETER  Scope is not the valid value specified in BROWSER_SETTING_SCOPE.
-  @retval EFI_UNSPPORTED         Scope level is different from current one that the registered hot keys have.
+  @retval EFI_UNSUPPORTED        Scope level is different from current one that the registered hot keys have.
 
 **/
 typedef
@@ -95,7 +95,7 @@ EFI_STATUS
   );
 
 /**
-  This handler is responsbile for the left things on normal boot after all UI forms are closed.
+  This handler is responsible for the left things on normal boot after all UI forms are closed.
   For example, it can continue to boot the first boot option.
 
   It will be used only when EXIT action is trigged as system level.

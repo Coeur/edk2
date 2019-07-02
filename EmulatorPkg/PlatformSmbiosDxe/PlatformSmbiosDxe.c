@@ -77,7 +77,7 @@ CreatePlatformSmbiosMemoryRecords (
   @param ImageHandle     Image handle this driver.
   @param SystemTable     Pointer to SystemTable.
 
-  @retval EFI_SUCESS     This function always complete successfully.
+  @retval EFI_SUCCESS    This function always complete successfully.
 
 **/
 EFI_STATUS
@@ -120,7 +120,7 @@ PlatfomrSmbiosDriverEntryPoint (
   // Phase 3 - Create tables from scratch
 
   // Create Type 13 record from EFI Variables
-  // Do we need this record for EFI as the info is available from EFI varaibles
+  // Do we need this record for EFI as the info is available from EFI variables
   // Also language types don't always match between EFI and SMBIOS
   // CreateSmbiosLanguageInformation (1, gSmbiosLangToEfiLang);
 

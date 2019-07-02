@@ -702,7 +702,7 @@ UdfSetPosition (
   if (IS_FID_DIRECTORY_FILE (FileIdentifierDesc)) {
     //
     // If the file handle is a directory, the _only_ position that may be set is
-    // zero. This has no effect of starting the read proccess of the directory
+    // zero. This has no effect of starting the read process of the directory
     // entries over.
     //
     if (Position == 0) {

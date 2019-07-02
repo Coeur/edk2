@@ -374,7 +374,7 @@ RootBridgeIoCheckParameter (
   //
   // Since Limit can be the maximum integer value supported by the CPU and
   // Count can also be the maximum integer value supported by the CPU, this
-  // range check must be adjusted to avoid all oveflow conditions.
+  // range check must be adjusted to avoid all overflow conditions.
   //
   if (OperationType == IoOperation) {
     //

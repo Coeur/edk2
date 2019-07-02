@@ -117,7 +117,7 @@ EFI_STATUS
   Retrieves the I/O port base addresses for command and control registers of the
   enabled IDE/SATA channels.
 
-  This service fills in the structure poionted to by IdeRegsBaseAddr with the I/O
+  This service fills in the structure pointed to by IdeRegsBaseAddr with the I/O
   port base addresses for the command and control registers of the IDE and SATA
   channels that were previously enabled in EnableAtaChannel().  The number of
   enabled IDE and SATA channels is returned.
@@ -126,7 +126,7 @@ EFI_STATUS
   @param[in]  This              The pointer to this instance of the PEI_ATA_CONTROLLER_PPI.
   @param[out] IdeRegsBaseAddr   The pointer to caller allocated space to return the
                                 I/O port base addresses of the IDE and SATA channels
-                                that were previosuly enabled with EnableAtaChannel().
+                                that were previously enabled with EnableAtaChannel().
 
   @return   The number of enabled IDE and SATA channels in the platform.
 

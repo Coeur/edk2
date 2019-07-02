@@ -79,7 +79,7 @@ typedef struct _EFI_MP_SERVICES_PROTOCOL EFI_MP_SERVICES_PROTOCOL;
 #define PROCESSOR_HEALTH_STATUS_BIT  0x00000004
 
 ///
-/// Structure that describes the pyhiscal location of a logical CPU.
+/// Structure that describes the physical location of a logical CPU.
 ///
 typedef struct {
   ///
@@ -263,7 +263,7 @@ EFI_STATUS
        and releases the BSP to continue with other tasks.
     -# The caller can use the CheckEvent() and WaitForEvent() services to check
        the state of the WaitEvent created in step 1.
-    -# When the APs complete their task or TimeoutInMicroSecondss expires, the MP
+    -# When the APs complete their task or TimeoutInMicroSeconds expires, the MP
        Service signals WaitEvent by calling the EFI SignalEvent() function. If
        FailedCpuList is not NULL, its content is available when WaitEvent is
        signaled. If all APs returned from Procedure prior to the timeout, then
@@ -303,7 +303,7 @@ EFI_STATUS
                                       EFI_EVENT is defined in CreateEvent() in
                                       the Unified Extensible Firmware Interface
                                       Specification.
-  @param[in]  TimeoutInMicrosecsond   Indicates the time limit in microseconds for
+  @param[in]  TimeoutInMicroSeconds   Indicates the time limit in microseconds for
                                       APs to return from Procedure, either for
                                       blocking or non-blocking mode. Zero means
                                       infinity.  If the timeout expires before
@@ -370,7 +370,7 @@ EFI_STATUS
   This function is used to dispatch one enabled AP to the function specified by
   Procedure passing in the argument specified by ProcedureArgument.  If WaitEvent
   is NULL, execution is in blocking mode. The BSP waits until the AP finishes or
-  TimeoutInMicroSecondss expires. Otherwise, execution is in non-blocking mode.
+  TimeoutInMicroSeconds expires. Otherwise, execution is in non-blocking mode.
   BSP proceeds to the next task without waiting for the AP. If a non-blocking mode
   is requested after the UEFI Event EFI_EVENT_GROUP_READY_TO_BOOT is signaled,
   then EFI_UNSUPPORTED must be returned.
@@ -405,7 +405,7 @@ EFI_STATUS
                                       EFI_EVENT is defined in CreateEvent() in
                                       the Unified Extensible Firmware Interface
                                       Specification.
-  @param[in]  TimeoutInMicrosecsond   Indicates the time limit in microseconds for
+  @param[in]  TimeoutInMicroseconds   Indicates the time limit in microseconds for
                                       this AP to finish this Procedure, either for
                                       blocking or non-blocking mode. Zero means
                                       infinity.  If the timeout expires before

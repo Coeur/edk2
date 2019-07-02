@@ -145,7 +145,7 @@ VerifyHashedFv (
   ASSERT (HashValue != NULL);
 
   //
-  // Calcuate hash value for each FV first.
+  // Calculate hash value for each FV first.
   //
   FvHashValue = HashValue;
   for (FvIndex = 0; FvIndex < FvNumber; ++FvIndex) {

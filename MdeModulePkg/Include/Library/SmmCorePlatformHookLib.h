@@ -16,7 +16,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
   This function performs platform specific tasks before invoking registered SMI handlers.
 
   @retval EFI_SUCCESS       The platform hook completes successfully.
-  @retval Other values      The paltform hook cannot complete due to some error.
+  @retval Other values      The platform hook cannot complete due to some error.
 
 **/
 EFI_STATUS
@@ -32,7 +32,7 @@ PlatformHookBeforeSmmDispatch (
   This function performs platform specific tasks after invoking registered SMI handlers.
 
   @retval EFI_SUCCESS       The platform hook completes successfully.
-  @retval Other values      The paltform hook cannot complete due to some error.
+  @retval Other values      The platform hook cannot complete due to some error.
 
 **/
 EFI_STATUS

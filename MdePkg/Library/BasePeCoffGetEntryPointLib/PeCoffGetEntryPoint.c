@@ -1,6 +1,6 @@
 /** @file
   Provides the services to get the entry point to a PE/COFF image that has either been
-  loaded into memory or is executing at it's linked address.
+  loaded into memory or is executing at its linked address.
 
   Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
   Portions copyright (c) 2008 - 2009, Apple Inc. All rights reserved.<BR>
@@ -207,7 +207,7 @@ PeCoffLoaderGetPdbPointer (
       break;
     default:
       //
-      // For unknow Machine field, use Magic in optional Header
+      // For unknown Machine field, use Magic in optional Header
       //
       Magic = Hdr.Pe32->OptionalHeader.Magic;
     }

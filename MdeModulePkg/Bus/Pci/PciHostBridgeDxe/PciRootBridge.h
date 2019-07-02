@@ -168,7 +168,7 @@ RootBridgeIoPollIo (
   @param This     -  Pointer to EFI_PCI_ROOT_BRIDGE_IO_PROTOCOL instance.
   @param Width    -  The width of memory operation.
   @param Address  -  Base address of the memory operation.
-  @param Count    -  Number of memory opeartion to perform.
+  @param Count    -  Number of memory operation to perform.
   @param Buffer   -  The destination buffer to store data.
 
   @retval EFI_SUCCESS            -  Success.
@@ -194,7 +194,7 @@ RootBridgeIoMemRead (
   @param This     -  Pointer to EFI_PCI_ROOT_BRIDGE_IO_PROTOCOL instance.
   @param Width    -  The width of memory operation.
   @param Address  -  Base address of the memory operation.
-  @param Count    -  Number of memory opeartion to perform.
+  @param Count    -  Number of memory operation to perform.
   @param Buffer   -  The source buffer to write data from.
 
   @retval EFI_SUCCESS            -  Success.

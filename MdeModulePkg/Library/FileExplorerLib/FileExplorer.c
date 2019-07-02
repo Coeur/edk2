@@ -75,7 +75,7 @@ UINTN  mNewFolderQuestionId  = NEW_FOLDER_QUESTION_ID_BASE;
 /**
   Create a new file or folder in current directory.
 
-  @param FileName              Point to the fileNmae or folder.
+  @param FileName              Point to the fileName or folder.
   @param CreateFile            CreateFile== TRUE  means create a new file.
                                CreateFile== FALSE means create a new Folder.
 
@@ -394,7 +394,7 @@ LibDestroyMenuEntry (
 
 
 /**
-  Free resources allocated in Allocate Rountine.
+  Free resources allocated in Allocate Routine.
 
   @param FreeMenu        Menu to be freed
 **/
@@ -788,7 +788,7 @@ LibFindFileSystem (
                   );
   if (!EFI_ERROR (Status)) {
     //
-    // Find all the instances of the File System prototocol
+    // Find all the instances of the File System protocol
     //
     for (Index = 0; Index < NoSimpleFsHandles; Index++) {
       //
@@ -869,7 +869,7 @@ LibFindFileSystem (
   @param  MenuEntry        Input Menu info.
   @param  RetFileHandle    Return the file handle for the input device path.
 
-  @retval EFI_SUCESS       Find the file handle success.
+  @retval EFI_SUCCESS      Find the file handle success.
   @retval Other            Find the file handle failure.
 **/
 EFI_STATUS
@@ -917,7 +917,7 @@ LibGetFileHandleFromMenu (
   @param  ParentFileName   Parent file name.
   @param  DeviceHandle     Driver handle for this partition.
 
-  @retval EFI_SUCESS       Find the file handle success.
+  @retval EFI_SUCCESS      Find the file handle success.
   @retval Other            Find the file handle failure.
 **/
 EFI_STATUS
@@ -987,7 +987,7 @@ LibGetFileHandleFromDevicePath (
 
   //
   // Parse each MEDIA_FILEPATH_DP node. There may be more than one, since the
-  // directory information and filename can be seperate. The goal is to inch
+  // directory information and filename can be separate. The goal is to inch
   // our way down each device path node and close the previous node
   //
   DevicePathNode = TempDevicePathNode;
@@ -1052,7 +1052,7 @@ Done:
 /**
   Create a new file or folder in current directory.
 
-  @param FileName              Point to the fileNmae or folder name.
+  @param FileName              Point to the fileName or folder name.
   @param CreateFile            CreateFile== TRUE  means create a new file.
                                CreateFile== FALSE means create a new Folder.
 
@@ -1385,7 +1385,7 @@ LibUpdateFileExplorePage (
 }
 
 /**
-  Update the file explower page with the refershed file system.
+  Update the file explorer page with the refreshed file system.
 
   @param KeyValue        Key value to identify the type of data to expect.
 
@@ -1464,9 +1464,9 @@ LibGetDevicePath (
   @param  FileType         The file type need to choose.
   @param  ChooseHandler    Function pointer to the extra task need to do
                            after choose one file.
-  @param  File             Return the device path for the last time chosed file.
+  @param  File             Return the device path for the last time choosed file.
 
-  @retval EFI_SUCESS             Choose file success.
+  @retval EFI_SUCCESS            Choose file success.
   @retval EFI_INVALID_PARAMETER  Both ChooseHandler and return device path are NULL
                                  One of them must not NULL.
   @retval Other errors           Choose file failed.
@@ -1555,7 +1555,7 @@ Done:
   @param ImageHandle     The image handle.
   @param SystemTable     The system table.
 
-  @retval  EFI_SUCEESS  Install File explorer library success.
+  @retval  EFI_SUCCESS  Install File explorer library success.
 
 **/
 EFI_STATUS

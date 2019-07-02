@@ -363,7 +363,7 @@ Ping6OnMatchEchoReply (
   The original intention is to send a request.
   Currently, the application retransmits an icmp6 echo request packet
   per second in sendnumber times that is specified by the user.
-  Because nothing can be done here, all things move to the timer rountine.
+  Because nothing can be done here, all things move to the timer routine.
 
   @param[in]    Event      A EFI_EVENT type event.
   @param[in]    Context    The pointer to Context.
@@ -379,7 +379,7 @@ Ping6OnEchoRequestSent6 (
 }
 
 /**
-  receive reply, match and print reply infomation.
+  receive reply, match and print reply information.
 
   @param[in]    Event      A EFI_EVENT type event.
   @param[in]    Context    The pointer to context.
@@ -478,7 +478,7 @@ ON_EXIT:
     Private->Status = EFI_SUCCESS;
   }
   //
-  // Singal to recycle the each rxdata here, not at the end of process.
+  // Signal to recycle the each rxdata here, not at the end of process.
   //
   gBS->SignalEvent (RxData->RecycleSignal);
 }
@@ -1022,7 +1022,7 @@ Ping6DestroyIpInstance (
   @param[in]   SrcAddress     The source IPv6 address.
   @param[in]   DstAddress     The destination IPv6 address.
 
-  @retval SHELL_SUCCESS    The ping6 processed successfullly.
+  @retval SHELL_SUCCESS    The ping6 processed successfully.
   @retval others           The ping6 processed unsuccessfully.
 
 **/
@@ -1240,7 +1240,7 @@ ON_EXIT:
   @param[in] ImageHandle  Handle to the Image (NULL if Internal).
   @param[in] SystemTable  Pointer to the System Table (NULL if Internal).
 
-  @retval SHELL_SUCCESS  The ping6 processed successfullly.
+  @retval SHELL_SUCCESS  The ping6 processed successfully.
   @retval others         The ping6 processed unsuccessfully.
 
 **/

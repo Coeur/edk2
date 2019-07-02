@@ -39,7 +39,7 @@ InternalX86GetTimerFrequency (
   Stalls the CPU for at least the given number of ticks. It's invoked by
   MicroSecondDelay() and NanoSecondDelay().
 
-  This function will ASSERT if the APIC timer intial count returned from
+  This function will ASSERT if the APIC timer initial count returned from
   GetApicTimerInitCount() is zero.
 
   @param  Delay     A period of time to delay in ticks.

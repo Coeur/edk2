@@ -92,14 +92,14 @@ QuickSortWorker (
     }
   }
   //
-  // swap pivot to it's final position (NextSwapLocaiton)
+  // swap pivot to its final position (NextSwapLocation)
   //
   CopyMem (Buffer, Pivot, ElementSize);
   CopyMem (Pivot, (UINT8*)BufferToSort+(NextSwapLocation*ElementSize), ElementSize);
   CopyMem ((UINT8*)BufferToSort+(NextSwapLocation*ElementSize), Buffer, ElementSize);
 
   //
-  // Now recurse on 2 paritial lists.  neither of these will have the 'pivot' element
+  // Now recurse on 2 partial lists.  neither of these will have the 'pivot' element
   // IE list is sorted left half, pivot element, sorted right half...
   //
   if (NextSwapLocation >= 2) {
@@ -122,7 +122,7 @@ QuickSortWorker (
   return;
 }
 /**
-  Function to perform a Quick Sort alogrithm on a buffer of comparable elements.
+  Function to perform a Quick Sort algorithm on a buffer of comparable elements.
 
   Each element must be equal sized.
 

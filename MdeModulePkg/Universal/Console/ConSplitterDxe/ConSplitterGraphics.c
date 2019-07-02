@@ -73,7 +73,7 @@ ConSplitterGraphicsOutputQueryMode (
     return Status;
   } else {
     //
-    // If 2 more phyiscal GOP device exist or GOP protocol does not exist,
+    // If 2 more physical GOP device exist or GOP protocol does not exist,
     // return GOP information (PixelFormat is PixelBltOnly) created in ConSplitterAddGraphicsOutputMode ().
     //
     *Info = AllocatePool (sizeof (EFI_GRAPHICS_OUTPUT_MODE_INFORMATION));
@@ -185,7 +185,7 @@ ConSplitterGraphicsOutputSetMode (
     This->Mode->FrameBufferSize = PhysicalGraphicsOutput->Mode->FrameBufferSize;
   } else {
     //
-    // If 2 more phyiscal GOP device exist or GOP protocol does not exist,
+    // If 2 more physical GOP device exist or GOP protocol does not exist,
     // return GOP information (PixelFormat is PixelBltOnly) created in ConSplitterAddGraphicsOutputMode ().
     //
     CopyMem (This->Mode->Info, &Private->GraphicsOutputModeBuffer[ModeNumber], This->Mode->SizeOfInfo);
@@ -233,12 +233,12 @@ ConSplitterGraphicsOutputSetMode (
   @param  DestinationX            X coordinate of destination for the BltBuffer.
   @param  DestinationY            Y coordinate of destination for the BltBuffer.
   @param  Width                   Width of rectangle in BltBuffer in pixels.
-  @param  Height                  Hight of rectangle in BltBuffer in pixels.
+  @param  Height                  Height of rectangle in BltBuffer in pixels.
   @param  Delta                   OPTIONAL.
 
   @retval EFI_SUCCESS             The Blt operation completed.
   @retval EFI_INVALID_PARAMETER   BltOperation is not valid.
-  @retval EFI_DEVICE_ERROR        A hardware error occured writting to the video
+  @retval EFI_DEVICE_ERROR        A hardware error occurred writing to the video
                                   buffer.
 
 **/
@@ -508,12 +508,12 @@ ConSplitterUgaDrawSetMode (
   @param  DestinationX   X coordinate of destination for the BltBuffer.
   @param  DestinationY   Y coordinate of destination for the BltBuffer.
   @param  Width          Width of rectangle in BltBuffer in pixels.
-  @param  Height         Hight of rectangle in BltBuffer in pixels.
+  @param  Height         Height of rectangle in BltBuffer in pixels.
   @param  Delta          OPTIONAL
 
   @retval EFI_SUCCESS            The Blt operation completed.
   @retval EFI_INVALID_PARAMETER  BltOperation is not valid.
-  @retval EFI_DEVICE_ERROR       A hardware error occured writting to the video buffer.
+  @retval EFI_DEVICE_ERROR       A hardware error occurred writing to the video buffer.
 
 **/
 EFI_STATUS

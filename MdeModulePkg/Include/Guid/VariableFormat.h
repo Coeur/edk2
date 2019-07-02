@@ -26,7 +26,7 @@ extern EFI_GUID gEfiAuthenticatedVariableGuid;
 #define ALIGNMENT         1
 
 //
-// GET_PAD_SIZE calculates the miminal pad bytes needed to make the current pad size satisfy the alignment requirement.
+// GET_PAD_SIZE calculates the minimal pad bytes needed to make the current pad size satisfy the alignment requirement.
 //
 #if (ALIGNMENT == 1)
 #define GET_PAD_SIZE(a) (0)
@@ -143,7 +143,7 @@ typedef struct {
   ///
   UINT32      DataSize;
   ///
-  /// A unique identifier for the vendor that produces and consumes this varaible.
+  /// A unique identifier for the vendor that produces and consumes this variable.
   ///
   EFI_GUID    VendorGuid;
 } VARIABLE_HEADER;
@@ -186,7 +186,7 @@ typedef struct {
   ///
   UINT32      DataSize;
   ///
-  /// A unique identifier for the vendor that produces and consumes this varaible.
+  /// A unique identifier for the vendor that produces and consumes this variable.
   ///
   EFI_GUID    VendorGuid;
 } AUTHENTICATED_VARIABLE_HEADER;

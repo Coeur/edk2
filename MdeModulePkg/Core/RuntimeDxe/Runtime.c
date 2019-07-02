@@ -368,7 +368,7 @@ RuntimeDriverSetVirtualAddressMap (
   @param ImageHandle     Image handle of this driver.
   @param SystemTable     a Pointer to the EFI System Table.
 
-  @retval  EFI_SUCEESS  Runtime Driver Architectural Protocol is successfully installed
+  @retval  EFI_SUCCESS  Runtime Driver Architectural Protocol is successfully installed
   @return  Others       Some error occurs when installing Runtime Driver Architectural Protocol.
 
 **/

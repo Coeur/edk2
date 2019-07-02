@@ -42,7 +42,7 @@ EFI_HII_IMAGE_PROTOCOL  *gHiiImage = NULL;
 EFI_HII_DATABASE_PROTOCOL  *gHiiDatabase = NULL;
 
 ///
-/// Pointer to the UEFI HII Config Rounting Protocol
+/// Pointer to the UEFI HII Config Routing Protocol
 ///
 EFI_HII_CONFIG_ROUTING_PROTOCOL  *gHiiConfigRouting = NULL;
 
@@ -56,7 +56,7 @@ EFI_HII_CONFIG_ROUTING_PROTOCOL  *gHiiConfigRouting = NULL;
   All of these protocols are optional if the platform does not support configuration
   and the UEFI HII Image Protocol and the UEFI HII Font Protocol are optional if
   the platform does not support a graphical console.  As a result, the consumers
-  of this library much check the protocol pointers againt NULL before using them,
+  of this library much check the protocol pointers against NULL before using them,
   or use dependency expressions to guarantee that some of them are present before
   assuming they are not NULL.
 

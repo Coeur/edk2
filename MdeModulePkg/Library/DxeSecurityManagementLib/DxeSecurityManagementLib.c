@@ -128,7 +128,7 @@ CheckAuthenticationOperation (
 
   If SecurityHandler is NULL, then ASSERT().
   If no enough resources available to register new handler, then ASSERT().
-  If AuthenticationOperation is not recongnized, then ASSERT().
+  If AuthenticationOperation is not recognized, then ASSERT().
   If the previous register handler can't be executed before the later register handler, then ASSERT().
 
   @param[in]  SecurityHandler           Security measurement service handler to be registered.
@@ -178,8 +178,8 @@ RegisterSecurityHandler (
   Execute registered handlers until one returns an error and that error is returned.
   If none of the handlers return an error, then EFI_SUCCESS is returned.
 
-  Before exectue handler, get the image buffer by file device path if a handler
-  requires the image file. And return the image buffer to each handler when exectue handler.
+  Before execute handler, get the image buffer by file device path if a handler
+  requires the image file. And return the image buffer to each handler when execute handler.
 
   The handlers are executed in same order to their registered order.
 
@@ -288,7 +288,7 @@ ExecuteSecurityHandlers (
 }
 
 /**
-  Reallocates more global memory to store the registered Securit2Handler list.
+  Reallocates more global memory to store the registered Security2Handler list.
 
   @retval  RETURN_SUCCESS            Reallocate memory successfully.
   @retval  RETURN_OUT_OF_RESOURCES   No enough memory to allocated.
@@ -326,7 +326,7 @@ ReallocateSecurity2HandlerTable (
   Check whether an operation is valid according to the requirement of current operation,
   which must make sure that the measure image operation is the last one.
 
-  If AuthenticationOperation is not recongnized, return FALSE.
+  If AuthenticationOperation is not recognized, return FALSE.
   If AuthenticationOperation is EFI_AUTH_OPERATION_NONE, return FALSE.
   If AuthenticationOperation includes security operation and authentication operation, return FALSE.
   If the previous register handler can't be executed before the later register handler, return FALSE.
@@ -380,7 +380,7 @@ CheckAuthentication2Operation (
 
   If Security2Handler is NULL, then ASSERT().
   If no enough resources available to register new handler, then ASSERT().
-  If AuthenticationOperation is not recongnized, then ASSERT().
+  If AuthenticationOperation is not recognized, then ASSERT().
   If AuthenticationOperation is EFI_AUTH_OPERATION_NONE, then ASSERT().
   If the previous register handler can't be executed before the later register handler, then ASSERT().
 

@@ -1,5 +1,5 @@
 ## @file
-#  Report Status Code Router Driver which produces SMM Report Stataus Code Handler Protocol and SMM Status Code Protocol.
+#  Report Status Code Router Driver which produces SMM Report Status Code Handler Protocol and SMM Status Code Protocol.
 #
 #  Copyright (c) 2009 - 2018, Intel Corporation. All rights reserved.<BR>
 #

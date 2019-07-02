@@ -1506,7 +1506,7 @@ GetQuestionIdInfo (
   Find the top of screen menu base on the current menu.
 
   @param  CurPos                 Current input menu.
-  @param  Rows                   Totol screen rows.
+  @param  Rows                   Total screen rows.
   @param  SkipValue              SkipValue for this new form.
 
   @retval TopOfScreen            Top of screen menu for the new form.
@@ -1703,7 +1703,7 @@ FindHighLightMenuOption (
     }
 
     //
-    // Highlight statement has disappear (suppressed/disableed)
+    // Highlight statement has disappear (suppressed/disabled)
     //
     if (NewPos == &gMenuOption) {
       NewPos = NULL;
@@ -1778,7 +1778,7 @@ GetDistanceBetweenMenus(
 
   @param  HighLightMenu      The link_entry pointer to highlight menu.
 
-  @retval  Return the the link_entry pointer top of screen menu.
+  @retval  Return the link_entry pointer top of screen menu.
 
 **/
 LIST_ENTRY *
@@ -1816,7 +1816,7 @@ FindTopOfScreenMenuOption (
   }
   //
   // Check whether highlight menu and top of screen menu can be shown within one page,
-  // if can't, return NULL to re-calcaulate the top of scrren menu. Because some new menus
+  // if can't, return NULL to re-calculate the top of screen menu. Because some new menus
   // may be dynamically inserted between highlightmenu and previous top of screen menu,
   // So previous record top of screen menu is not appropriate for current display.
   //
@@ -1994,8 +1994,8 @@ FindTopMenu (
 /**
   Record the highlight menu and top of screen menu info.
 
-  @param  Highlight               The menu opton which is highlight.
-  @param  TopOfScreen             The menu opton which is at the top of the form.
+  @param  Highlight               The menu option which is highlight.
+  @param  TopOfScreen             The menu option which is at the top of the form.
   @param  SkipValue               The skip line info for the top of screen menu.
 
 **/
@@ -2071,9 +2071,9 @@ UpdateHighlightMenuInfo (
 }
 
 /**
-  Update attribut for this menu.
+  Update attribute for this menu.
 
-  @param  MenuOption               The menu opton which this attribut used to.
+  @param  MenuOption               The menu option which this attribute used to.
   @param  Highlight                Whether this menu will be highlight.
 
 **/
@@ -2106,7 +2106,7 @@ SetDisplayAttribute (
 /**
   Print string for this menu option.
 
-  @param  MenuOption               The menu opton which this attribut used to.
+  @param  MenuOption               The menu option which this attribute used to.
   @param  Col                      The column that this string will be print at.
   @param  Row                      The row that this string will be print at.
   @param  String                   The string which need to print.
@@ -2152,7 +2152,7 @@ DisplayMenuString (
 /**
   Check whether this menu can has option string.
 
-  @param  MenuOption               The menu opton which this attribut used to.
+  @param  MenuOption               The menu option which this attribute used to.
 
   @retval TRUE                     This menu option can have option string.
   @retval FALSE                    This menu option can't have option string.
@@ -2347,7 +2347,7 @@ FxConfirmPopup (
 /**
   Print string for this menu option.
 
-  @param  MenuOption               The menu opton which this attribut used to.
+  @param  MenuOption               The menu option which this attribute used to.
   @param  SkipWidth                The skip width between the left to the start of the prompt.
   @param  BeginCol                 The begin column for one menu.
   @param  SkipLine                 The skip line for this menu.
@@ -2355,7 +2355,7 @@ FxConfirmPopup (
   @param  Highlight                Whether this menu will be highlight.
   @param  UpdateCol                Whether need to update the column info for Date/Time.
 
-  @retval EFI_SUCESSS              Process the user selection success.
+  @retval EFI_SUCCESS              Process the user selection success.
 
 **/
 EFI_STATUS
@@ -2429,7 +2429,7 @@ DisplayOneMenu (
       if (((Temp2 == 0)) && (Row <= BottomRow)) {
         if (Statement->OpCode->OpCode == EFI_IFR_DATE_OP || Statement->OpCode->OpCode == EFI_IFR_TIME_OP) {
           //
-          // For date/time question, it has three menu options for this qustion.
+          // For date/time question, it has three menu options for this question.
           // The first/second menu options with the skip value is 0. the last one
           // with skip value is 1.
           //
@@ -2599,7 +2599,7 @@ DisplayOneMenu (
 
   @param  FormData               The current form data info.
 
-  @retval EFI_SUCESSS            Process the user selection success.
+  @retval EFI_SUCCESS            Process the user selection success.
   @retval EFI_NOT_FOUND          Process option string for orderedlist/Oneof fail.
 
 **/
@@ -2870,9 +2870,9 @@ UiDisplayMenu (
     case CfRefreshHighLight:
 
       //
-      // MenuOption: Last menu option that need to remove hilight
+      // MenuOption: Last menu option that need to remove highlight
       //             MenuOption is set to NULL in Repaint
-      // NewPos:     Current menu option that need to hilight
+      // NewPos:     Current menu option that need to highlight
       //
       ControlFlag = CfUpdateHelpString;
 
@@ -2948,13 +2948,13 @@ UiDisplayMenu (
       }
 
       //
-      // NewLine means only update highlight menu (remove old highlight and highlith
+      // NewLine means only update highlight menu (remove old highlight and highlight
       // the new one), not need to full repain the form.
       //
       if (Repaint || NewLine) {
         if (IsListEmpty (&gMenuOption)) {
           //
-          // Don't print anything if no mwnu option.
+          // Don't print anything if no menu option.
           //
           StringPtr = GetToken (STRING_TOKEN (EMPTY_STRING), gHiiHandle);
         } else {
@@ -3456,7 +3456,7 @@ UiDisplayMenu (
       Difference = MoveToNextStatement (TRUE, &NewPos, MenuOption->Row - TopRow, FALSE);
       if (Difference < 0) {
         //
-        // We hit the begining MenuOption that can be focused
+        // We hit the beginning MenuOption that can be focused
         // so we simply scroll to the top.
         //
         Repaint     = TRUE;
@@ -3520,7 +3520,7 @@ UiDisplayMenu (
 
       Link      = TopOfScreen;
       //
-      // First minus the menu of the top screen, it's value is SkipValue.
+      // First minus the menu of the top screen, its value is SkipValue.
       //
       if (SkipValue >= BottomRow - TopRow + 1) {
         //

@@ -332,7 +332,7 @@ DxeMain (
   ASSERT_EFI_ERROR (Status);
 
   //
-  // If Loading modules At fixed address feature is enabled, install Load moduels at fixed address
+  // If Loading modules At fixed address feature is enabled, install Load modules at fixed address
   // Configuration Table so that user could easily to retrieve the top address to load Dxe and PEI
   // Code and Tseg base to load SMM driver.
   //
@@ -697,7 +697,7 @@ CoreEfiNotAvailableYetArg5 (
 
 
 /**
-  Calcualte the 32-bit CRC in a EFI table using the service provided by the
+  Calculate the 32-bit CRC in a EFI table using the service provided by the
   gRuntime service.
 
   @param  Hdr                    Pointer to an EFI standard header
@@ -808,7 +808,7 @@ CoreExitBootServices (
   gBS = NULL;
 
   //
-  // Update the AtRuntime field in Runtiem AP.
+  // Update the AtRuntime field in Runtime AP.
   //
   gRuntime->AtRuntime = TRUE;
 

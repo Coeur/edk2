@@ -86,7 +86,7 @@ EFI_MEMORY_TYPE_INFORMATION gMemoryTypeInformation[EfiMaxMemoryType + 1] = {
   { EfiMaxMemoryType,           0 }
 };
 //
-// Only used when load module at fixed address feature is enabled. True means the memory is alreay successfully allocated
+// Only used when load module at fixed address feature is enabled. True means the memory is already successfully allocated
 // and ready to load the module in to specified address.or else, the memory is not ready and module will be loaded at a
 //  address assigned by DXE core.
 //
@@ -176,7 +176,7 @@ CoreAddRange (
   //
   // If memory of type EfiConventionalMemory is being added that includes the page
   // starting at address 0, then zero the page starting at address 0.  This has
-  // two benifits.  It helps find NULL pointer bugs and it also maximizes
+  // two benefits.  It helps find NULL pointer bugs and it also maximizes
   // compatibility with operating systems that may evaluate memory in this page
   // for legacy data structures.  If memory of any other type is added starting
   // at address 0, then do not zero the page at address 0 because the page is being
@@ -194,12 +194,12 @@ CoreAddRange (
   mMemoryMapKey += 1;
 
   //
-  // UEFI 2.0 added an event group for notificaiton on memory map changes.
+  // UEFI 2.0 added an event group for notification on memory map changes.
   // So we need to signal this Event Group every time the memory map changes.
-  // If we are in EFI 1.10 compatability mode no event groups will be
+  // If we are in EFI 1.10 compatibility mode no event groups will be
   // found and nothing will happen we we call this function. These events
   // will get signaled but since a lock is held around the call to this
-  // function the notificaiton events will only be called after this function
+  // function the notification events will only be called after this function
   // returns and the lock is released.
   //
   CoreNotifySignalList (&gEfiEventMemoryMapChangeGuid);
@@ -266,7 +266,7 @@ CoreAddRange (
   memory map entries is still allocated from EfiBootServicesMemory.
 
 
-  @return The Memory map descriptor dequed from the mFreeMemoryMapEntryList
+  @return The Memory map descriptor dequeued from the mFreeMemoryMapEntryList
 
 **/
 MEMORY_MAP *
@@ -290,7 +290,7 @@ AllocateMemoryMapEntry (
                               );
     if (FreeDescriptorEntries != NULL) {
       //
-      // Enque the free memmory map entries into the list
+      // Enqueue the free memory map entries into the list
       //
       for (Index = 0; Index < DEFAULT_PAGE_ALLOCATION_GRANULARITY / sizeof(MEMORY_MAP); Index++) {
         FreeDescriptorEntries[Index].Signature = MEMORY_MAP_SIGNATURE;
@@ -486,7 +486,7 @@ CoreLoadingFixedAddressHook (
    EFI_STATUS                 Status;
 
    //
-   // Make sure these 2 areas are not initialzied.
+   // Make sure these 2 areas are not initialized.
    //
    if (!gLoadFixedAddressCodeMemoryReady) {
      RuntimeCodePageNumber = PcdGet32(PcdLoadFixAddressRuntimeCodePageNumber);
@@ -658,7 +658,7 @@ CoreAddMemoryDescriptor (
   }
 
   //
-  // There was enough system memory for all the the memory types were allocated.  So,
+  // There was enough system memory for all the memory types were allocated.  So,
   // those memory areas can be freed for future allocations, and all future memory
   // allocations can occur within their respective bins
   //
@@ -715,7 +715,7 @@ CoreAddMemoryDescriptor (
 
   @retval EFI_INVALID_PARAMETER  Invalid parameter
   @retval EFI_NOT_FOUND          Could not find a descriptor cover the specified
-                                 range  or convertion not allowed.
+                                 range  or conversion not allowed.
   @retval EFI_SUCCESS            Successfully converts the memory range to the
                                  specified type.
 
@@ -965,7 +965,7 @@ CoreConvertPagesEx (
 
   @retval EFI_INVALID_PARAMETER  Invalid parameter
   @retval EFI_NOT_FOUND          Could not find a descriptor cover the specified
-                                 range  or convertion not allowed.
+                                 range  or conversion not allowed.
   @retval EFI_SUCCESS            Successfully converts the memory range to the
                                  specified type.
 
@@ -1211,7 +1211,7 @@ FindFreePages (
   }
 
   //
-  // The allocation did not succeed in any of the prefered bins even after
+  // The allocation did not succeed in any of the preferred bins even after
   // promoting resources. Attempt to find free pages anywhere is the requested
   // address range.  If this allocation fails, then there are not enough
   // resources anywhere to satisfy the request.
@@ -1624,7 +1624,7 @@ MergeMemoryMapDescriptor (
   }
 
   //
-  // MemoryMapDescrtiptor could not be merged with any descriptors in MemoryMap.
+  // MemoryMapDescriptor could not be merged with any descriptors in MemoryMap.
   //
   // Return the slot immediately after MemoryMapDescriptor as the next available
   // slot in the MemoryMap array

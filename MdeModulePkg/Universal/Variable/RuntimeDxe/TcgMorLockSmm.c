@@ -1,7 +1,7 @@
 /** @file
   TCG MOR (Memory Overwrite Request) Lock Control support (SMM version).
 
-  This module initilizes MemoryOverwriteRequestControlLock variable.
+  This module initializes MemoryOverwriteRequestControlLock variable.
   This module adds Variable Hook and check MemoryOverwriteRequestControlLock.
 
 Copyright (c) 2016 - 2018, Intel Corporation. All rights reserved.<BR>

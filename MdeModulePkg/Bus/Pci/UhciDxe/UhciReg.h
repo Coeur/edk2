@@ -163,7 +163,7 @@ UhciClearRegBit (
 
 
 /**
-  Clear all the interrutp status bits, these bits
+  Clear all the interrupt status bits, these bits
   are Write-Clean.
 
   @param  Uhc          The UHCI device.

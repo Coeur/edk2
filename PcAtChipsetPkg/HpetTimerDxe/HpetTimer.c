@@ -1,5 +1,5 @@
 /** @file
-  Timer Architectural Protocol module using High Precesion Event Timer (HPET)
+  Timer Architectural Protocol module using High Precision Event Timer (HPET)
 
   Copyright (c) 2011 - 2018, Intel Corporation. All rights reserved.<BR>
   SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -246,7 +246,7 @@ HpetRead (
 /**
   Write a 64-bit HPET register.
 
-  @param  Offset  Specifies the ofsfert of the HPET register to write.
+  @param  Offset  Specifies the offset of the HPET register to write.
   @param  Value   Specifies the value to write to the HPET register specified by Offset.
 
   @return  The 64-bit value written to HPET register specified by Offset.

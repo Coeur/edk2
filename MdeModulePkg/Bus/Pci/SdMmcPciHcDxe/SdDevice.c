@@ -657,7 +657,7 @@ SdCardSendTuningBlk (
 }
 
 /**
-  Tunning the sampling point of SDR104 or SDR50 bus speed mode.
+  Tuning the sampling point of SDR104 or SDR50 bus speed mode.
 
   Command SD_SEND_TUNING_BLOCK may be sent up to 40 times until the host finishes the
   tuning procedure.

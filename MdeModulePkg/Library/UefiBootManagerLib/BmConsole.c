@@ -389,7 +389,7 @@ BmUpdateSystemTableConsole (
   } while (Instance != NULL);
 
   //
-  // No any available console devcie found.
+  // No any available console device found.
   //
   FreePool (FullDevicePath);
   return FALSE;
@@ -599,7 +599,7 @@ EfiBootManagerConnectConsoleVariable (
       }
       if (EFI_ERROR (Status)) {
         //
-        // Delete the instance from the console varialbe
+        // Delete the instance from the console variable
         //
         EfiBootManagerUpdateConsoleVariable (ConsoleType, NULL, Instance);
       } else {
@@ -733,7 +733,7 @@ EfiBootManagerConnectAllDefaultConsoles (
 
   SystemTableUpdated = FALSE;
   //
-  // Fill console handles in System Table if no console device assignd.
+  // Fill console handles in System Table if no console device assigned.
   //
   if (BmUpdateSystemTableConsole (L"ConIn", &gEfiSimpleTextInProtocolGuid, &gST->ConsoleInHandle, (VOID **) &gST->ConIn)) {
     SystemTableUpdated = TRUE;

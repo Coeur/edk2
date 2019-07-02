@@ -1,5 +1,5 @@
 ## @file
-# Platfrom Boot Manager library
+# Platform Boot Manager library
 #
 # Do platform action customized by IBV/OEM.
 # Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>

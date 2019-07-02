@@ -77,9 +77,9 @@ EFI_STATUS
   Tests to see if a controller's current configuration options are valid.
 
   @param  This             A pointer to the EFI_DRIVER_CONFIGURATION_PROTOCOL instance.
-  @param  ControllerHandle The handle of the controller to test if it's current
+  @param  ControllerHandle The handle of the controller to test if its current
                            configuration options are valid.
-  @param  ChildHandle      The handle of the child controller to test if it's current
+  @param  ChildHandle      The handle of the child controller to test if its current
                            configuration options are valid.  This is an optional
                            parameter that may be NULL.  It will be NULL for device
                            drivers.  It will also be NULL for bus drivers that wish

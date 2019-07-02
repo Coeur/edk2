@@ -24,7 +24,7 @@
 #string STR_EDIT_LIBEDITOR_STATUSBAR_CLEANUP  #language en-US "StatusBar cleanup was not successful\r\n"
 #string STR_EDIT_LIBEDITOR_INPUTBAR_CLEANUP    #language en-US "InputBar cleanup was not successful\r\n"
 #string STR_EDIT_LIBEDITOR_FILEBUFFER_CLEANUP  #language en-US "FileBuffer cleanup was not successful\r\n"
-#string STR_EDIT_LIBEDITOR_MAINEDITOR_INIT    #language en-US "%EMainEditor init was not succesful on TitleBar init\r\n%N"
+#string STR_EDIT_LIBEDITOR_MAINEDITOR_INIT    #language en-US "%EMainEditor init was not successful on TitleBar init\r\n%N"
 #string STR_EDIT_LIBINPUTBAR_MAININPUTBAR     #language en-US "%s"
 #string STR_EDIT_LIBMENUBAR_OPEN_FILE          #language en-US "Open File"
 #string STR_EDIT_LIBMENUBAR_SAVE_FILE          #language en-US "Save File"

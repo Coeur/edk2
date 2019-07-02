@@ -18,7 +18,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
   }
 
 //
-// Forward reference for pure ANSI compatability
+// Forward reference for pure ANSI compatibility
 //
 typedef struct _EFI_FAULT_TOLERANT_WRITE_PROTOCOL  EFI_FAULT_TOLERANT_WRITE_PROTOCOL;
 

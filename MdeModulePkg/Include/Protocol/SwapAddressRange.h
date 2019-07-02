@@ -19,7 +19,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
   }
 
 //
-// Forward reference for pure ANSI compatability
+// Forward reference for pure ANSI compatibility
 //
 typedef struct _EFI_SWAP_ADDRESS_RANGE_PROTOCOL  EFI_SWAP_ADDRESS_RANGE_PROTOCOL;
 
@@ -137,7 +137,7 @@ EFI_STATUS
 /**
   This service is used to acquire or release appointed kind of lock for Swap Address Range operations.
 
-  Note that software and hardware lock mothod can be used simultaneously.
+  Note that software and hardware lock methods can be used simultaneously.
 
   @param This              Indicates the calling context.
   @param LockCapability    Indicates which lock to acquire or release.

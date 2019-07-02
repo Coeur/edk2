@@ -203,7 +203,7 @@ PopCurrentExpression (
   @param  Form                   Form associated with this expression.
   @param  Expression             Expression to be evaluated.
 
-  @retval EFI_SUCCESS            The expression evaluated successfuly
+  @retval EFI_SUCCESS            The expression evaluated successfully
   @retval EFI_NOT_FOUND          The Question which referenced by a QuestionId
                                  could not be found.
   @retval EFI_OUT_OF_RESOURCES   There is not enough system memory to grow the

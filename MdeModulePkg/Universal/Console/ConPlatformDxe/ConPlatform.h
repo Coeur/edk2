@@ -1,5 +1,5 @@
 /** @file
-  Header file for Console Platfrom DXE Driver.
+  Header file for Console Platform DXE Driver.
 
 Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -55,7 +55,7 @@ typedef enum {
 
   @param  This                Protocol instance pointer.
   @param  ControllerHandle    Handle of device to test.
-  @param  ProtocolGuid        The specfic protocol.
+  @param  ProtocolGuid        The specific protocol.
 
   @retval EFI_SUCCESS         This driver supports this device
   @retval other               This driver does not support this device
@@ -112,7 +112,7 @@ ConPlatformTextOutDriverBindingSupported (
   Start this driver on the device for console input.
 
   Start this driver on ControllerHandle by opening Simple Text Input Protocol,
-  reading Device Path, and installing Console In Devcice GUID on ControllerHandle.
+  reading Device Path, and installing Console In Device GUID on ControllerHandle.
 
   Append its device path into the console environment variables ConInDev.
 
@@ -138,7 +138,7 @@ ConPlatformTextInDriverBindingStart (
   Start this driver on the device for console output and standard error output.
 
   Start this driver on ControllerHandle by opening Simple Text Output Protocol,
-  reading Device Path, and installing Console Out Devcic GUID, Standard Error
+  reading Device Path, and installing Console Out Device GUID, Standard Error
   Device GUID on ControllerHandle.
 
   Append its device path into the console environment variables ConOutDev, ErrOutDev.
@@ -162,7 +162,7 @@ ConPlatformTextOutDriverBindingStart (
   );
 
 /**
-  Stop this driver on ControllerHandle by removing Console In Devcice GUID
+  Stop this driver on ControllerHandle by removing Console In Device GUID
   and closing the Simple Text Input protocol on ControllerHandle.
 
   @param  This              Protocol instance pointer.
@@ -185,7 +185,7 @@ ConPlatformTextInDriverBindingStop (
   );
 
 /**
-  Stop this driver on ControllerHandle by removing Console Out Devcice GUID
+  Stop this driver on ControllerHandle by removing Console Out Device GUID
   and closing the Simple Text Output protocol on ControllerHandle.
 
   @param  This              Protocol instance pointer.
@@ -229,7 +229,7 @@ ConPlatformUnInstallProtocol (
   @param  Name             String part of EFI variable name
 
   @return Dynamically allocated memory that contains a copy of the EFI variable.
-          Caller is repsoncible freeing the buffer. Return NULL means Variable
+          Caller is responsible freeing the buffer. Return NULL means Variable
           was not read.
 
 **/
@@ -272,7 +272,7 @@ ConPlatformMatchDevicePaths (
 
   @param  VariableName    Console environment variables, ConOutDev, ConInDev
                           StdErrDev, ConIn or ConOut.
-  @param  DevicePath      Console devcie's device path.
+  @param  DevicePath      Console device's device path.
   @param  Operation       Variable operations, including APPEND, CHECK and DELETE.
 
   @retval EFI_SUCCESS           Variable operates successfully.
@@ -407,8 +407,8 @@ ConPlatformComponentNameGetControllerName (
 
   @param  DevicePath            Pointer to device's device path.
 
-  @retval TRUE                  The devcie is a GOP device.
-  @retval FALSE                 The devcie is not a GOP device.
+  @retval TRUE                  The device is a GOP device.
+  @retval FALSE                 The device is not a GOP device.
 
 **/
 BOOLEAN

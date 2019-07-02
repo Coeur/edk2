@@ -592,8 +592,8 @@ InternalHiiBlockToConfig (
   @param[in]  VariableName    Pointer to a Null-terminated Unicode string.  This
                               is an optional parameter that may be NULL.
   @param[in]  SetResultsData  If not NULL, then this parameter specified the buffer
-                              of uncommited data to set.  If this parameter is NULL,
-                              then the caller is requesting to get the uncommited data
+                              of uncommitted data to set.  If this parameter is NULL,
+                              then the caller is requesting to get the uncommitted data
                               from the Form Browser.
 
   @retval NULL   The uncommitted data could not be retrieved.
@@ -645,7 +645,7 @@ InternalHiiBrowserCallback (
 
     if (!EFI_ERROR (Status)) {
       //
-      // No Resluts Data, only allocate one char for '\0'
+      // No Results Data, only allocate one char for '\0'
       //
       ResultsData = AllocateZeroPool (sizeof (CHAR16));
       return ResultsData;
@@ -849,7 +849,7 @@ HiiConstructConfigHdr (
   @param  Buffer                 Binary of Guid, Name or Device path.
 
   @retval EFI_INVALID_PARAMETER  Any incoming parameter is invalid.
-  @retval EFI_OUT_OF_RESOURCES   Lake of resources to store neccesary structures.
+  @retval EFI_OUT_OF_RESOURCES   Lake of resources to store necessary structures.
   @retval EFI_SUCCESS            The buffer data is retrieved and translated to
                                  binary format.
 
@@ -998,7 +998,7 @@ BlockArrayCheck (
                                  to free memory.
   @param  ValueLength            Length of the <Number>, in characters.
 
-  @retval EFI_OUT_OF_RESOURCES   Insufficient resources to store neccessary
+  @retval EFI_OUT_OF_RESOURCES   Insufficient resources to store necessary
                                  structures.
   @retval EFI_SUCCESS            Value of <Number> is outputted in Number
                                  successfully.
@@ -1117,11 +1117,11 @@ GetValueFromRequest (
   else the VarBuffer and CurrentBlockArray is valid.
 
   @param HiiPackageList     Point to Hii package list.
-  @param PackageListLength  The length of the pacakge.
+  @param PackageListLength  The length of the package.
   @param VarGuid            Guid of the buffer storage.
   @param VarName            Name of the buffer storage.
   @param VarBuffer          The data buffer for the storage.
-  @param CurrentBlockArray  The block array from the config Requst string.
+  @param CurrentBlockArray  The block array from the config Request string.
   @param RequestElement     The config string for this storage.
   @param HiiHandle          The HiiHandle for this formset.
   @param NameValueType      Whether current storage is name/value varstore or not.
@@ -2097,7 +2097,7 @@ Done:
 
   @param ConfigResp         ConfigResp string contains the current setting.
   @param HiiPackageList     Point to Hii package list.
-  @param PackageListLength  The length of the pacakge.
+  @param PackageListLength  The length of the package.
   @param VarGuid            Guid of the buffer storage.
   @param VarName            Name of the buffer storage.
   @param HiiHandle          The HiiHandle for this package.
@@ -2287,7 +2287,7 @@ InternalHiiIfrValueAction (
   }
 
   //
-  // Get the full requested value and deault value string.
+  // Get the full requested value and default value string.
   //
   if (Request != NULL) {
     Status = gHiiConfigRouting->ExtractConfig (
@@ -2478,7 +2478,7 @@ InternalHiiIfrValueAction (
 
 NextConfigAltResp:
     //
-    // Free the allocated pacakge buffer and the got ConfigResp string.
+    // Free the allocated package buffer and the got ConfigResp string.
     //
     if (HiiPackageList != NULL) {
       FreePool (HiiPackageList);
@@ -2669,7 +2669,7 @@ HiiSetToDefaults (
   @retval FALSE             StopSearchString is not present in SecondString.
   @retval FALSE             The length of the substring in FirstString is not the
                             same length as the substring in SecondString.
-  @retval FALSE             The value string in FirstString does not matche the
+  @retval FALSE             The value string in FirstString does not match the
                             value string in SecondString.
   @retval TRUE              The value string in FirstString matches the value
                             string in SecondString.
@@ -3550,7 +3550,7 @@ HiiCreateGotoExOpCode (
   }
 
   //
-  // Cacluate OpCodeSize based on the input Ref value.
+  // Calculate OpCodeSize based on the input Ref value.
   // Try to use the small OpCode to save size.
   //
   OpCodeSize = sizeof (EFI_IFR_REF);
@@ -4439,7 +4439,7 @@ HiiUpdateForm (
     }
 
     //
-    // Add pacakge buffer
+    // Add package buffer
     //
     CopyMem (&PackageHeader, Package, sizeof (EFI_HII_PACKAGE_HEADER));
     CopyMem (UpdateBufferPos, Package, PackageHeader.Length);

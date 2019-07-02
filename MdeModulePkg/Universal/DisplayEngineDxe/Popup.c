@@ -472,12 +472,12 @@ CalculatePopupPosition (
   }
 
   //
-  // Avialble row width for message string = screen width - left popup border width - right popup border width.
-  // Avialble line number for message string = screen height - 1 - popup header height -  popup footer height.
-  // (Notice: screen height - 1 because in current UI page, the bottom row of srceen is usded to show Status Bar,not for form itself.
+  // Available row width for message string = screen width - left popup border width - right popup border width.
+  // Available line number for message string = screen height - 1 - popup header height -  popup footer height.
+  // (Notice: screen height - 1 because in current UI page, the bottom row of screen is usded to show Status Bar,not for form itself.
   // So we don't use the bottom row for popup either. If macro STATUS_BAR_HEIGHT changed, we also need to update the height here.)
   //
-  // Select the smaller one between actual dimension of message string and the avialble dimension for message string.
+  // Select the smaller one between actual dimension of message string and the available dimension for message string.
   //
   gST->ConOut->QueryMode (gST->ConOut, gST->ConOut->Mode->Mode, &Columns, &Rows);
   gMaxRowWidth = MIN (gMaxRowWidth, Columns - 2 * POPUP_BORDER);
@@ -574,7 +574,7 @@ DrawMessageBox (
   PrintCharAt (EndCol, DisplayRow, Character);
 
   //
-  // 4. Draw the mesage string.
+  // 4. Draw the message string.
   //
   DisplayRow = TopRow + POPUP_HEADER_HEIGHT;
   for (Index = DisplayRow ,StringIndex = 0; ParseMessageString (gMessageString, &OutputString, &OutputStrWidth,  &StringIndex) != 0 && DrawMesStrRowNum < gMesStrLineNum;) {

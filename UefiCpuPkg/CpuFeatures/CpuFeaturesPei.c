@@ -49,7 +49,7 @@ CpuFeaturesPeimInitialize (
   if (BootMode == BOOT_ON_S3_RESUME &&
       !PcdGetBool (PcdCpuFeaturesInitOnS3Resume)) {
     //
-    // Does nothing when if PcdCpuFeaturesInitOnS3Resume is FLASE
+    // Does nothing when if PcdCpuFeaturesInitOnS3Resume is FALSE
     // on S3 boot mode
     //
     return EFI_SUCCESS;

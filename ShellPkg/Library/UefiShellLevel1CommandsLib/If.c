@@ -697,7 +697,7 @@ BuildNextStatement (
   Move the script file pointer to a different place in the script file.
   This one is special since it handles the if/else/endif syntax.
 
-  @param[in] ScriptFile     The script file from GetCurrnetScriptFile().
+  @param[in] ScriptFile     The script file from GetCurrentScriptFile().
 
   @retval TRUE     The move target was found and the move was successful.
   @retval FALSE    Something went wrong.

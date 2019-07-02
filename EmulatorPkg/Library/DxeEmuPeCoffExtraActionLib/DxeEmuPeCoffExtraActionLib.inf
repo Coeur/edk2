@@ -1,5 +1,5 @@
 ## @file
-# PeCoff extra action libary for DXE phase that run Emu emulator.
+# PeCoff extra action library for DXE phase that run Emu emulator.
 #
 # Copyright (c) 2007 - 2010, Intel Corporation. All rights reserved.<BR>
 # Portions copyright (c) 2011, Apple Inc. All rights reserved.

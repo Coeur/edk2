@@ -220,7 +220,7 @@ WriteLocalApicReg (
     MsrIndex =  (UINT32)(MmioOffset >> 4) + X2APIC_MSR_BASE_ADDRESS;
     //
     // The serializing semantics of WRMSR are relaxed when writing to the APIC registers.
-    // Use memory fence here to force the serializing semantics to be consisent with xAPIC mode.
+    // Use memory fence here to force the serializing semantics to be consistent with xAPIC mode.
     //
     MemoryFence ();
     AsmWriteMsr32 (MsrIndex, Value);
@@ -822,7 +822,7 @@ GetApicTimerCurrentCount (
   @param DivideValue   The divide value for the DCR. It is one of 1,2,4,8,16,32,64,128.
                        If it is 0, then use the current divide value in the DCR.
   @param InitCount     The initial count value.
-  @param PeriodicMode  If TRUE, timer mode is peridoic. Othewise, timer mode is one-shot.
+  @param PeriodicMode  If TRUE, timer mode is periodic. Otherwise, timer mode is one-shot.
   @param Vector        The timer interrupt vector number.
 **/
 VOID
@@ -879,7 +879,7 @@ InitializeApicTimer (
   This function will ASSERT if the local APIC is not software enabled.
 
   @param DivideValue   Return the divide value for the DCR. It is one of 1,2,4,8,16,32,64,128.
-  @param PeriodicMode  Return the timer mode. If TRUE, timer mode is peridoic. Othewise, timer mode is one-shot.
+  @param PeriodicMode  Return the timer mode. If TRUE, timer mode is periodic. Otherwise, timer mode is one-shot.
   @param Vector        Return the timer interrupt vector number.
 **/
 VOID

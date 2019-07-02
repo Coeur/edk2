@@ -874,7 +874,7 @@ GetFileSize (
   @param[in]      File        File pointer.
   @param[in]      FileSize    Size of the file.
   @param[in]      FileName    Filename of the file.
-  @param[in, out] BufferSize  Size of the returned file infomation.
+  @param[in, out] BufferSize  Size of the returned file information.
   @param[out]     Buffer      Data of the returned file information.
 
   @retval EFI_SUCCESS          File information set.

@@ -208,7 +208,7 @@ IsValidMove(
   that there is only a single possible target (IE we cant have wildcards that
   have 2 possible destination).
 
-  if the result is sucessful the caller must free *DestPathPointer.
+  if the result is successful the caller must free *DestPathPointer.
 
   @param[in] DestParameter               The original path to the destination.
   @param[in, out] DestPathPointer  A pointer to the callee allocated final path.
@@ -219,7 +219,7 @@ IsValidMove(
   @retval SHELL_INVALID_PARAMETER  The DestParameter could not be resolved to a location.
   @retval SHELL_INVALID_PARAMETER  The DestParameter could be resolved to more than 1 location.
   @retval SHELL_INVALID_PARAMETER  Cwd is required and is NULL.
-  @retval SHELL_SUCCESS            The operation was sucessful.
+  @retval SHELL_SUCCESS            The operation was successful.
 **/
 SHELL_STATUS
 GetDestinationLocation(
@@ -386,7 +386,7 @@ MoveBetweenFileSystems(
 
   @param[in] DestPath           A pointer to the destination file path string.
   @param[out] FullDestPath      A pointer to the full destination path string.
-  @param[in] FileName           Name string of  the targe file.
+  @param[in] FileName           Name string of the target file.
 
   @retval SHELL_SUCCESS             the files were all moved.
   @retval SHELL_INVALID_PARAMETER   a parameter was invalid
@@ -506,7 +506,7 @@ MoveWithinFileSystems(
 
   @retval SHELL_SUCCESS             the files were all moved.
   @retval SHELL_INVALID_PARAMETER   a parameter was invalid
-  @retval SHELL_SECURITY_VIOLATION  a security violation ocurred
+  @retval SHELL_SECURITY_VIOLATION  a security violation occurred
   @retval SHELL_WRITE_PROTECTED     the destination was write protected
   @retval SHELL_OUT_OF_RESOURCES    a memory allocation failed
 **/
@@ -818,7 +818,7 @@ ShellCommandRunMv (
           } else  {
             //
             // ValidateAndMoveFiles will report errors to the screen itself
-            // Only change ShellStatus if it's sucessful
+            // Only change ShellStatus if it's successful
             //
             if (ShellStatus == SHELL_SUCCESS) {
               ShellStatus = ValidateAndMoveFiles(FileList, &Response, ShellCommandLineGetRawValue(Package, ParamCount));

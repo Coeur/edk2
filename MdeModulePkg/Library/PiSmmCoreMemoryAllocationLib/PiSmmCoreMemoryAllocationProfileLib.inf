@@ -1,7 +1,7 @@
 ## @file
 # Memory Allocation/Profile Library instance dedicated to SMM Core.
 # The implementation borrows the SMM Core Memory Allocation/Profile services as the primitive
-# for memory allocation/profile instead of using SMM System Table servces or SMM memory profile protocol in an indirect way.
+# for memory allocation/profile instead of using SMM System Table services or SMM memory profile protocol in an indirect way.
 # It is assumed that this library instance must be linked with SMM Cre in this package.
 #
 # Copyright (c) 2010 - 2016, Intel Corporation. All rights reserved.<BR>

@@ -94,7 +94,7 @@ typedef struct {
   ///
   /// UINT8            ReverseChapName[];
   ///
-  /// Reverse CHAP Secret Length in bytes on offseet ReverseChapName + ReverseChapNameLength.
+  /// Reverse CHAP Secret Length in bytes on offset ReverseChapName + ReverseChapNameLength.
   ///
   /// UINT16           ReverseChapSecretLength;
   ///

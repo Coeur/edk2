@@ -591,7 +591,7 @@ Decode (
         goto Done;
       } else {
         //
-        // Write orignal character into mDstBase
+        // Write original character into mDstBase
         //
         Sd->mDstBase[Sd->mOutBuf++] = (UINT8) CharC;
       }

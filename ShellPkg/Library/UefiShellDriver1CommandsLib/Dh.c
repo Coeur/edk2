@@ -91,7 +91,7 @@ IsValidGuidString(
   Convert a hex-character to decimal value.
 
   This internal function only deal with Unicode character
-  which maps to a valid hexadecimal ASII character, i.e.
+  which maps to a valid hexadecimal ASCII character, i.e.
   L'0' to L'9', L'a' to L'f' or L'A' to L'F'. For other
   Unicode character, the value returned does not make sense.
 
@@ -168,7 +168,7 @@ ConvertStrToGuid(
 }
 
 /**
-  Get the name of a driver by it's handle.
+  Get the name of a driver by its handle.
 
   If a name is found the memory must be callee freed.
 
@@ -1155,7 +1155,7 @@ ShellCommandRunDh (
         ShellStatus = SHELL_INVALID_PARAMETER;
       } else {
         //
-        // Print decode informatino by protocol.
+        // Print decode information by protocol.
         //
         ShellStatus = DoDecodeByProtocol (ProtocolVal, Language);
       }

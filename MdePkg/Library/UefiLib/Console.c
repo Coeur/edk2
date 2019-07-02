@@ -182,7 +182,7 @@ GLOBAL_REMOVE_IF_UNREFERENCED CONST UNICODE_WIDTH_ENTRY mUnicodeWidthTable[] = {
   {(CHAR16)0xFE6F,  1},       // Small Form Variants. 0xFE50-0xFE6F
   {(CHAR16)0xFEFF,  1},       // Arabic presentation forms-B. 0xFE70-0xFEFF
   {(CHAR16)0xFFEF,  1},       // Half width and full width forms. 0xFF00-0xFFEF
-  {(CHAR16)0xFFFF,  0},       // Speicials. 0xFFF0-0xFFFF
+  {(CHAR16)0xFFFF,  0},       // Specials. 0xFFF0-0xFFFF
 };
 
 /**
@@ -411,7 +411,7 @@ CreatePopUp (
   CHAR16                           *TmpString;
 
   //
-  // Determine the length of the longest line in the popup and the the total
+  // Determine the length of the longest line in the popup and the total
   // number of lines in the popup
   //
   VA_START (Args, Key);

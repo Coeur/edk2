@@ -901,10 +901,10 @@ GetRegisterIndex (
   @param[out] Buffer         Upon return, this holds the CPU register value
                              read from the save state.
 
-  @retval EFI_SUCCESS           The register was read from Save State.
-  @retval EFI_NOT_FOUND         The register is not defined for the Save State
-                                of Processor.
-  @retval EFI_INVALID_PARAMTER  This or Buffer is NULL.
+  @retval EFI_SUCCESS            The register was read from Save State.
+  @retval EFI_NOT_FOUND          The register is not defined for the Save State
+                                 of Processor.
+  @retval EFI_INVALID_PARAMETER  This or Buffer is NULL.
 
 **/
 STATIC
@@ -998,10 +998,10 @@ ReadSaveStateRegisterByIndex (
   @param[out] Buffer    Upon return, this holds the CPU register value read
                         from the save state.
 
-  @retval EFI_SUCCESS           The register was read from Save State.
-  @retval EFI_INVALID_PARAMTER  Buffer is NULL.
-  @retval EFI_UNSUPPORTED       This function does not support reading
-                                Register.
+  @retval EFI_SUCCESS            The register was read from Save State.
+  @retval EFI_INVALID_PARAMETER  Buffer is NULL.
+  @retval EFI_UNSUPPORTED        This function does not support reading
+                                 Register.
 **/
 EFI_STATUS
 EFIAPI
@@ -1074,10 +1074,10 @@ SmmCpuFeaturesReadSaveStateRegister (
   @param[in] Width     The number of bytes to write to the CPU save state.
   @param[in] Buffer    Upon entry, this holds the new CPU register value.
 
-  @retval EFI_SUCCESS           The register was written to Save State.
-  @retval EFI_INVALID_PARAMTER  Buffer is NULL.
-  @retval EFI_UNSUPPORTED       This function does not support writing
-                                Register.
+  @retval EFI_SUCCESS            The register was written to Save State.
+  @retval EFI_INVALID_PARAMETER  Buffer is NULL.
+  @retval EFI_UNSUPPORTED        This function does not support writing
+                                 Register.
 **/
 EFI_STATUS
 EFIAPI

@@ -95,7 +95,7 @@ GET_PCD_INFO_PROTOCOL mGetPcdInfoInstance = {
 
 ///
 /// Instance of EFI_GET_PCD_INFO_PROTOCOL which is defined in PI 1.2.1 Vol 3.
-/// This PPI instance only support dyanmicEx type PCD.
+/// This PPI instance only support dynamicEx type PCD.
 ///
 EFI_GET_PCD_INFO_PROTOCOL  mEfiGetPcdInfoInstance = {
   DxeGetPcdInfoGetInfoEx,
@@ -415,7 +415,7 @@ DxePcdGet64 (
 
   @param[in]  TokenNumber The PCD token number.
 
-  @return The pointer to the buffer to be retrived.
+  @return The pointer to the buffer to be retrieved.
 
 **/
 VOID *
@@ -619,7 +619,7 @@ DxePcdGet64Ex (
   @param[in]  Guid The token space for the token number.
   @param[in]  ExTokenNumber The PCD token number.
 
-  @return The pointer to the buffer to be retrived.
+  @return The pointer to the buffer to be retrieved.
 
 **/
 VOID *
@@ -1055,7 +1055,7 @@ DxeRegisterCallBackOnSet (
     return EFI_INVALID_PARAMETER;
   }
   //
-  // Aquire lock to prevent reentrance from TPL_CALLBACK level
+  // Acquire lock to prevent reentrance from TPL_CALLBACK level
   //
   EfiAcquireLock (&mPcdDatabaseLock);
 
@@ -1093,7 +1093,7 @@ DxeUnRegisterCallBackOnSet (
   }
 
   //
-  // Aquire lock to prevent reentrance from TPL_CALLBACK level
+  // Acquire lock to prevent reentrance from TPL_CALLBACK level
   //
   EfiAcquireLock (&mPcdDatabaseLock);
 
@@ -1214,7 +1214,7 @@ DxePcdGetNextToken (
   Get all token space guid table which is different with given token space guid.
 
   @param ExMapTableSize  The size of ExMapTable in item
-  @param ExMapTable      Token space guid table that want to be scaned.
+  @param ExMapTable      Token space guid table that want to be scanned.
   @param GuidTable       Guid table
 
   @return all token space guid table which is different with given token space guid.

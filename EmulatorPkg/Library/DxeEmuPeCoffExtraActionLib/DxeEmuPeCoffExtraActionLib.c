@@ -1,6 +1,6 @@
 /** @file
   Provides services to perform additional actions to relocate and unload
-  PE/Coff image for Emu environment specific purpose such as souce level debug.
+  PE/Coff image for Emu environment specific purpose such as source level debug.
   This version only works for DXE phase
 
 Copyright (c) 2006 - 2009, Intel Corporation. All rights reserved.<BR>

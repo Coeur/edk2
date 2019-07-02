@@ -19,7 +19,7 @@
                              TRUE if the handle has configuration, FALSE
                              otherwise.
   @param[in, out] Diag       On successful return this buffer will be
-                             TRUE if the handle has disgnostics, FALSE
+                             TRUE if the handle has diagnostics, FALSE
                              otherwise.
   @param[in, out] Parents    On successful return this buffer will be
                              contain the number of parent handles.

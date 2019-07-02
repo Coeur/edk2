@@ -102,8 +102,8 @@ HiiValueToUINT64 (
 
   @param  Value                  Expression value to compare on.
 
-  @retval TRUE                   This value type can be transter to EFI_IFR_TYPE_BUFFER type.
-  @retval FALSE                  This value type can't be transter to EFI_IFR_TYPE_BUFFER type.
+  @retval TRUE                   This value type can be transfer to EFI_IFR_TYPE_BUFFER type.
+  @retval FALSE                  This value type can't be transfer to EFI_IFR_TYPE_BUFFER type.
 
 **/
 BOOLEAN
@@ -128,8 +128,8 @@ IsTypeInBuffer (
 
   @param  Value                  Expression value to compare on.
 
-  @retval TRUE                   This value type can be transter to EFI_IFR_TYPE_BUFFER type.
-  @retval FALSE                  This value type can't be transter to EFI_IFR_TYPE_BUFFER type.
+  @retval TRUE                   This value type can be transfer to EFI_IFR_TYPE_BUFFER type.
+  @retval FALSE                  This value type can't be transfer to EFI_IFR_TYPE_BUFFER type.
 
 **/
 BOOLEAN
@@ -1399,7 +1399,7 @@ ProcessOptions (
   FormattedString and the glyph width of each line cannot exceed gHelpBlockWidth.
 
   @param  StringPtr              The entire help string.
-  @param  FormattedString        The oupput formatted string.
+  @param  FormattedString        The output formatted string.
   @param  EachLineWidth          The max string length of each line in the formatted string.
   @param  RowCount               TRUE: if Question is selected.
 

@@ -137,7 +137,7 @@ BmGetFreeOptionNumber (
   }
 
   //
-  // When BootOrder & BootNext conver all numbers in the range [0 ... 0xffff],
+  // When BootOrder & BootNext convert all numbers in the range [0 ... 0xffff],
   //   OptionNumber equals to 0x10000 which is not valid.
   //
   ASSERT (OptionNumber <= 0x10000);

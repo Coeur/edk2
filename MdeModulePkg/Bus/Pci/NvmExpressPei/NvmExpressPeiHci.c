@@ -17,7 +17,7 @@
   @param[in] MmioAddr         Source: MMIO address.
   @param[in] Size             Size for read.
 
-  @retval EFI_SUCCESS         MMIO read sucessfully.
+  @retval EFI_SUCCESS         MMIO read successfully.
 
 **/
 EFI_STATUS
@@ -68,7 +68,7 @@ NvmeMmioRead (
   @param[in] MemBuffer       Source: Memory address.
   @param[in] Size            Size for write.
 
-  @retval EFI_SUCCESS        MMIO write sucessfully.
+  @retval EFI_SUCCESS        MMIO write successfully.
 
 **/
 EFI_STATUS
@@ -153,7 +153,7 @@ NvmeBaseMemPageOffset (
   Wait for NVME controller status to be ready or not.
 
   @param[in] Private      The pointer to the PEI_NVME_CONTROLLER_PRIVATE_DATA data structure.
-  @param[in] WaitReady    Flag for waitting status ready or not.
+  @param[in] WaitReady    Flag for waiting status ready or not.
 
   @return EFI_SUCCESS     Successfully to wait specific status.
   @return others          Fail to wait for specific controller status.
@@ -172,7 +172,7 @@ NvmeWaitController (
 
   //
   // Cap.To specifies max delay time in 500ms increments for Csts.Rdy to set after
-  // Cc.Enable. Loop produces a 1 millisecond delay per itteration, up to 500 * Cap.To.
+  // Cc.Enable. Loop produces a 1 millisecond delay per iteration, up to 500 * Cap.To.
   //
   if (Private->Cap.To == 0) {
     Timeout = 1;

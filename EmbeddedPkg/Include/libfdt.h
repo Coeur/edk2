@@ -107,7 +107,7 @@
 	 * nodes, or subnodes preceding properties). */
 #define FDT_ERR_BADLAYOUT	12
 	/* FDT_ERR_BADLAYOUT: For read-write functions, the given
-	 * device tree has it's sub-blocks in an order that the
+	 * device tree has its sub-blocks in an order that the
 	 * function can't handle (memory reserve map, then structure,
 	 * then strings).  Use fdt_open_into() to reorganize the tree
 	 * into a form suitable for the read-write operations. */

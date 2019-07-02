@@ -137,7 +137,7 @@ Arguments:
                           returned
   Global                - Pointer to ESAL_FWB_GLOBAL that contains all
                           instance data
-  FwhInstance           - The EFI_FW_VOL_INSTANCE fimrware instance structure
+  FwhInstance           - The EFI_FW_VOL_INSTANCE firmware instance structure
   Virtual               - Whether CPU is in virtual or physical mode
 
 Returns:
@@ -956,7 +956,7 @@ Routine Description:
   Writes data beginning at Lba:Offset from FV. The write terminates either
   when *NumBytes of data have been written, or when a block boundary is
   reached.  *NumBytes is updated to reflect the actual number of bytes
-  written. The write opertion does not include erase. This routine will
+  written. The write operation does not include erase. This routine will
   attempt to write only the specified bytes. If the writes do not stick,
   it will return an error.
 
@@ -1004,7 +1004,7 @@ Routine Description:
   Reads data beginning at Lba:Offset from FV. The Read terminates either
   when *NumBytes of data have been read, or when a block boundary is
   reached.  *NumBytes is updated to reflect the actual number of bytes
-  written. The write opertion does not include erase. This routine will
+  written. The write operation does not include erase. This routine will
   attempt to write only the specified bytes. If the writes do not stick,
   it will return an error.
 
@@ -1185,7 +1185,7 @@ Returns:
   //
   // Only need to allocate once. There is only one copy of physical memory for
   // the private data of each FV instance. But in virtual mode or in physical
-  // mode, the address of the the physical memory may be different.
+  // mode, the address of the physical memory may be different.
   //
   Status = gBS->AllocatePool (
                   EfiRuntimeServicesData,
@@ -1313,7 +1313,7 @@ Returns:
       ASSERT_EFI_ERROR (Status);
     } else if (IsDevicePathEnd (TempFwbDevicePath)) {
       //
-      // Device allready exists, so reinstall the FVB protocol
+      // Device already exists, so reinstall the FVB protocol
       //
       Status = gBS->HandleProtocol (
                       FwbHandle,

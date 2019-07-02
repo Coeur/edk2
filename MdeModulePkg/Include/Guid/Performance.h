@@ -64,7 +64,7 @@ typedef struct _PERFORMANCE_EX_PROTOCOL PERFORMANCE_EX_PROTOCOL;
 #define DXE_PERFORMANCE_STRING_LENGTH   (DXE_PERFORMANCE_STRING_SIZE - 1)
 
 //
-// The default guage entries number for DXE phase.
+// The default gauge entries number for DXE phase.
 //
 #define INIT_DXE_GAUGE_DATA_ENTRIES     800
 
@@ -110,7 +110,7 @@ typedef struct {
 #define SMM_PERFORMANCE_STRING_LENGTH   (SMM_PERFORMANCE_STRING_SIZE - 1)
 
 //
-// The default guage entries number for SMM phase.
+// The default gauge entries number for SMM phase.
 //
 #define INIT_SMM_GAUGE_DATA_ENTRIES     200
 
@@ -210,7 +210,7 @@ EFI_STATUS
                                   If 0, then the first performance measurement log entry is retrieved.
   @param  GaugeDataEntry          Out parameter for the indirect pointer to the gauge data entry specified by LogEntryKey.
 
-  @retval EFI_SUCCESS             The GuageDataEntry is successfully found based on LogEntryKey.
+  @retval EFI_SUCCESS             The GaugeDataEntry is successfully found based on LogEntryKey.
   @retval EFI_NOT_FOUND           There is no entry after the measurement referred to by LogEntryKey.
   @retval EFI_INVALID_PARAMETER   The LogEntryKey is not a valid entry, or GaugeDataEntry is NULL.
 
@@ -303,9 +303,9 @@ EFI_STATUS
 
   @param  LogEntryKey             The key for the previous performance measurement log entry.
                                   If 0, then the first performance measurement log entry is retrieved.
-  @param  GaugeDataEntryEx        Out parameter for the indirect pointer to the extented gauge data entry specified by LogEntryKey.
+  @param  GaugeDataEntryEx        Out parameter for the indirect pointer to the extended gauge data entry specified by LogEntryKey.
 
-  @retval EFI_SUCCESS             The GuageDataEntryEx is successfully found based on LogEntryKey.
+  @retval EFI_SUCCESS             The GaugeDataEntryEx is successfully found based on LogEntryKey.
   @retval EFI_NOT_FOUND           There is no entry after the measurement referred to by LogEntryKey.
   @retval EFI_INVALID_PARAMETER   The LogEntryKey is not a valid entry, or GaugeDataEntryEx is NULL.
 

@@ -12,7 +12,7 @@
 #include <Protocol/SerialIo.h>
 
 /**
-  Display information about a serial device by it's handle.
+  Display information about a serial device by its handle.
 
   If HandleValid is FALSE, do all devices.
 

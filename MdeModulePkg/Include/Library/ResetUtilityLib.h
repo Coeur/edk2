@@ -60,7 +60,7 @@ ResetPlatformSpecificGuid (
 
 /**
   This function examines the DataSize and ResetData parameters passed to
-  to ResetSystem() and detemrines if the ResetData contains a Null-terminated
+  to ResetSystem() and determines if the ResetData contains a Null-terminated
   Unicode string followed by a GUID specific subtype.  If the GUID specific
   subtype is present, then a pointer to the GUID value in ResetData is returned.
 

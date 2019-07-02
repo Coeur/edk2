@@ -229,7 +229,7 @@ EFI_STATUS
   This protocol currently does not support isochronous or interrupt transfers. Future
   revisions of this protocol may eventually support it.
 
-  @param[in]  This              A pointer to the EFI_USBFN_IO_PROTOCOLinstance.
+  @param[in]  This              A pointer to the EFI_USBFN_IO_PROTOCOL instance.
   @param[in]  EndpointType      Endpoint type as defined as EFI_USB_ENDPOINT_TYPE.
   @param[in]  BusSpeed          Bus speed as defined as EFI_USB_BUS_SPEED.
   @param[out] MaxPacketSize     The maximum packet size, in bytes, of the specified
@@ -260,13 +260,13 @@ EFI_STATUS
 
   An Id of EfiUsbDeviceInfoUnknown is treated as an invalid parameter.
 
-  @param[in]  This              A pointer to the EFI_USBFN_IO_PROTOCOLinstance.
+  @param[in]  This              A pointer to the EFI_USBFN_IO_PROTOCOL instance.
   @param[in]  Id                The requested information id.
 
 
   @param[in]  BufferSize        On input, the size of the Buffer in bytes. On output, the
                                 amount of data returned in Buffer in bytes.
-  @param[out] Buffer            A pointer to a buffer to returnthe requested information
+  @param[out] Buffer            A pointer to a buffer to return the requested information
                                 as a Unicode string.
 
   @retval EFI_SUCCESS           The function returned successfully.
@@ -447,15 +447,15 @@ EFI_STATUS
                                 needs to take place.
   @param[in]      Direction     Direction of the endpoint.
   @param[in, out] BufferSize    If Direction is EfiUsbEndpointDirectionDeviceRx:
-                                  On input, the size of the Bufferin bytes.
+                                  On input, the size of the Buffer in bytes.
                                   On output, the amount of data returned in Buffer
                                   in bytes.
                                 If Direction is EfiUsbEndpointDirectionDeviceTx:
-                                  On input, the size of the Bufferin bytes.
+                                  On input, the size of the Buffer in bytes.
                                   On output, the amount of data transmitted in bytes.
   @param[in, out] Buffer        If Direction is EfiUsbEndpointDirectionDeviceRx:
                                   The Buffer to return the received data.
-                                If Directionis EfiUsbEndpointDirectionDeviceTx:
+                                If Direction is EfiUsbEndpointDirectionDeviceTx:
                                   The Buffer that contains the data to be transmitted.
 
   @retval EFI_SUCCESS           The function returned successfully.
@@ -499,7 +499,7 @@ EFI_STATUS
   );
 
 /**
-  Allocates a transfer buffer of the specified sizethat satisfies the controller
+  Allocates a transfer buffer of the specified size that satisfies the controller
   requirements.
 
   The AllocateTransferBuffer() function allocates a memory region of Size bytes and
@@ -596,7 +596,7 @@ EFI_STATUS
   @param[in]  Direction         Direction of the endpoint.
   @param[in]  PolicyType        Policy type the user is trying to set for the
                                 specified non-control endpoint.
-  @param[in]  BufferSize        The size of the Bufferin bytes.
+  @param[in]  BufferSize        The size of the Buffer in bytes.
   @param[in]  Buffer            The new value for the policy parameter that
                                 PolicyType specifies.
 
@@ -630,8 +630,8 @@ EFI_STATUS
   @param[in]      Direction     Direction of the endpoint.
   @param[in]      PolicyType    Policy type the user is trying to retrieve for
                                 the specified non-control endpoint.
-  @param[in, out] BufferSize    On input, the size of Bufferin bytes. On output,
-                                the amount of data returned in Bufferin bytes.
+  @param[in, out] BufferSize    On input, the size of Buffer in bytes. On output,
+                                the amount of data returned in Buffer in bytes.
   @param[in, out] Buffer        A pointer to a buffer to return requested endpoint
                                 policy value.
 

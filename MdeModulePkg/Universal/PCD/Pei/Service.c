@@ -1,5 +1,5 @@
 /** @file
-  The driver internal functions are implmented here.
+  The driver internal functions are implemented here.
   They build Pei PCD database, and provide access service to PCD database.
 
 Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
@@ -281,7 +281,7 @@ PeiGetPcdInfo (
 }
 
 /**
-  The function registers the CallBackOnSet fucntion
+  The function registers the CallBackOnSet function
   according to TokenNumber and EFI_GUID space.
 
   @param  ExTokenNumber       The token number.
@@ -462,7 +462,7 @@ BuildPcdDatabase (
   @param VariableSize    The size of the variable.
 
   @retval EFI_SUCCESS         Operation successful.
-  @retval EFI_NOT_FOUND         Variablel not found.
+  @retval EFI_NOT_FOUND         Variable not found.
 **/
 EFI_STATUS
 GetHiiVariable (
@@ -517,7 +517,7 @@ GetHiiVariable (
   Invoke the callback function when dynamic PCD entry was set, if this PCD entry
   has registered callback function.
 
-  @param ExTokenNumber   DynamicEx PCD's token number, if this PCD entry is dyanmicEx
+  @param ExTokenNumber   DynamicEx PCD's token number, if this PCD entry is dynamicEx
                          type PCD.
   @param Guid            DynamicEx PCD's guid, if this PCD entry is dynamicEx type
                          PCD.
@@ -608,7 +608,7 @@ SetValueWorker (
   @retval EFI_INVALID_PARAMETER  If this PCD type is VPD, VPD PCD can not be set.
   @retval EFI_INVALID_PARAMETER  If Size can not be set to size table.
   @retval EFI_INVALID_PARAMETER  If Size of non-Ptr type PCD does not match the size information in PCD database.
-  @retval EFI_NOT_FOUND          If value type of PCD entry is intergrate, but not in
+  @retval EFI_NOT_FOUND          If value type of PCD entry is integrate, but not in
                                  range of UINT8, UINT16, UINT32, UINT64
   @retval EFI_NOT_FOUND          Can not find the PCD type according to token number.
 **/
@@ -806,7 +806,7 @@ ExSetWorker (
   Wrapper function for get PCD value for dynamic-ex PCD.
 
   @param Guid            Token space guid for dynamic-ex PCD.
-  @param ExTokenNumber   Token number for dyanmic-ex PCD.
+  @param ExTokenNumber   Token number for dynamic-ex PCD.
   @param GetSize         The size of dynamic-ex PCD value.
 
   @return PCD entry in PCD database.

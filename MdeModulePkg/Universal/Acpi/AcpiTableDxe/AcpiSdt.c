@@ -178,7 +178,7 @@ SdtNotifyAcpiList (
     CurrentNotifyList = EFI_ACPI_NOTIFY_LIST_FROM_LINK (CurrentLink);
 
     //
-    // Inovke notification
+    // Invoke notification
     //
     CurrentNotifyList->Notification ((EFI_ACPI_SDT_HEADER *)Table->Table, Version, Handle);
 

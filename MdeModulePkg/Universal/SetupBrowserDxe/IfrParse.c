@@ -257,7 +257,7 @@ InitializeConfigHdr (
 }
 
 /**
-  Find the global storage link base on the input storate type, name and guid.
+  Find the global storage link base on the input storage type, name and guid.
 
   For EFI_HII_VARSTORE_EFI_VARIABLE and EFI_HII_VARSTORE_EFI_VARIABLE_BUFFER,
   same guid + name = same storage
@@ -316,7 +316,7 @@ FindStorageInList (
 }
 
 /**
-  Intialize the Global Storage.
+  Initialize the Global Storage.
 
   @param  BrowserStorage              Pointer to the global storage.
   @param  StorageType                Storage type.

@@ -647,7 +647,7 @@ HiiNewImage (
   EfiAcquireLock (&mHiiDatabaseLock);
 
   //
-  // Calcuate the size of new image.
+  // Calculate the size of new image.
   // Make sure the size doesn't overflow UINT32.
   // Note: 24Bit BMP occpuies 3 bytes per pixel.
   //
@@ -1381,7 +1381,7 @@ HiiDrawImage (
     //
     if ((Flags & EFI_HII_DIRECT_TO_SCREEN) == EFI_HII_DIRECT_TO_SCREEN) {
       //
-      // Caller should make sure the current UGA console is grarphic mode.
+      // Caller should make sure the current UGA console is graphic mode.
       //
 
       //

@@ -13,7 +13,7 @@
 # PCD DXE driver will produce above two protocols at same time.
 #
 # PCD database is generated as the separate binary image at build time. The binary image
-# will be intergrated into Firmware volume together with PCD driver.
+# will be integrated into Firmware volume together with PCD driver.
 #
 # ////////////////////////////////////////////////////////////////////////////////
 # //                                                                            //
@@ -37,7 +37,7 @@
 #      b) The PCD setting value is set/get by user from FrontPage.
 #      c) The PCD setting value is produced by platform OEM vendor in specified area.
 #
-#    2.2 According to module distribution way, dynamic PCD could be classfied as:
+#    2.2 According to module distribution way, dynamic PCD could be classified as:
 #      a) Dynamic:
 #         If module is released in source code and will be built with platform
 #         DSC, the dynamic PCD used by this module can be accessed as:
@@ -45,13 +45,13 @@
 #         In building platform, build tools will translate PcdSampleDynamicPcd to
 #         pair of {Token Space Guid: Token Number} for this PCD.
 #      b) DynamicEx:
-#         If module is release as binary and will not pariticpate platform building,
+#         If module is release as binary and will not participate platform building,
 #         the dynamic PCD used by this module need be accessed as:
 #               PcdGetxxEx(gEfiMyTokenspaceGuid, PcdSampleDynamicPcd)
 #         Developer need explicity gives {Token Space Guid:Token Number} as parameter
-#         in writting source code.
+#         in writing source code.
 #
-#    2.3 According to PCD value's storage method, dynamic PCD could be classfied as:
+#    2.3 According to PCD value's storage method, dynamic PCD could be classified as:
 #      a) Default Storage:
 #         - The PCD value is stored in PCD database maintained by PCD driver in boot
 #           time memory.
@@ -71,7 +71,7 @@
 #         - [PcdsDynamicHii] is used as section name for this type PCD in platform
 #           DSC file. [PcdsDynamicExHii] is for dynamicEx type PCD.
 #
-#      c) OEM specificed storage area:
+#      c) OEM specified storage area:
 #         - The PCD value is stored in OEM specified area which base address is
 #           specified by PCD setting - PcdVpdBaseAddress64 or PcdVpdBaseAddress.
 #         - The area is read only for PEI and DXE phase.
@@ -79,7 +79,7 @@
 #           DSC file. [PcdsDynamicExVpd] is for dynamicex type PCD.
 #
 #    2.4 When and how to use dynamic PCD
-#      Module developer do not care the used PCD is dynamic or static when writting
+#      Module developer do not care the used PCD is dynamic or static when writing
 #      source code/INF. Dynamic PCD and dynamic type is pointed by platform integrator
 #      in platform DSC file. Please ref section 2.3 to get matching between dynamic
 #      PCD type and section name in DSC file.
@@ -90,7 +90,7 @@
 #    by PCD database maintained by PEI/DXE driver.
 #
 #    As the whole EFI BIOS boot path is divided into PEI/DXE phase, the PCD database
-#    also is divided into Pei/Dxe database maintaied by PcdPeim/PcdDxe driver separatly.
+#    also is divided into Pei/Dxe database maintained by PcdPeim/PcdDxe driver separately.
 #    To make PcdPeim's driver image smaller, PEI PCD database only hold all dynamic
 #    PCD information used in PEI phase or use in both PEI/DXE phase. And DXE PCD
 #    database contains all PCDs used in PEI/DXE phase in memory.
@@ -148,9 +148,9 @@
 #        "internal token number" need build tool establish, so "platform token number"
 #        mechanism is not suitable for binary module which use DynamicEx type PCD.
 #        To access a dynamicEx type PCD, pair of "token space guid/token number" all need
-#        to be specificed for PcdSet/PcdGet accessing macro.
+#        to be specified for PcdSet/PcdGet accessing macro.
 #
-#        Platform Token Number is started from 1, and inceased continuous. From whole
+#        Platform Token Number is started from 1, and increased continuous. From whole
 #        platform scope, there are two zones: PEI Zone and DXE Zone
 #                  |                      Platform Token Number
 #        ----------|----------------------------------------------------------------
@@ -175,7 +175,7 @@
 #                         PCD_TYPE_HII
 #                         PCD_TYPE_VPD
 #                         PCD_TYPE_STRING
-#          Datum Type   : indicate PCD vaue type from following macro:
+#          Datum Type   : indicate PCD value type from following macro:
 #                         PCD_DATUM_TYPE_POINTER
 #                         PCD_DATUM_TYPE_UINT8
 #                         PCD_DATUM_TYPE_UINT16
@@ -214,7 +214,7 @@
 #      be seemed as "no default value".
 #
 #      3.3.1 Simple Sample PCD Database C Structure
-#        A general sample of PCD database structue is as follows:
+#        A general sample of PCD database structure is as follows:
 #        typedef struct _PCD_DATABASE {
 #          typedef struct _PCD_DATABASE_INIT {
 #            //===== Following is PCD database internal maintain structures
@@ -267,7 +267,7 @@
 #
 #          3.3.2.2.2 VOID* - byte array
 #            If the default value of VOID* datum type PCD like {'0x29', '0x01', '0xf2'}
-#            the PCD is used for byte array. The generated structrue is same as
+#            the PCD is used for byte array. The generated structure is same as
 #            above ascii string table,
 #            UINT8 StringTable[13];
 #            The number of 13 in above sample is max size of byte array.

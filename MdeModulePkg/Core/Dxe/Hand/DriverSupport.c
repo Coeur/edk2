@@ -110,7 +110,7 @@ CoreConnectController (
   Handle = ControllerHandle;
 
   //
-  // Make a copy of RemainingDevicePath to guanatee it is aligned
+  // Make a copy of RemainingDevicePath to guarantee it is aligned
   //
   AlignedRemainingDevicePath = NULL;
   if (RemainingDevicePath != NULL) {
@@ -345,7 +345,7 @@ AddSortedDriverBindingProtocol (
   *NumberOfSortedDriverBindingProtocols = *NumberOfSortedDriverBindingProtocols + 1;
 
   //
-  // Mark the cooresponding handle in DriverBindingHandleBuffer as used
+  // Mark the corresponding handle in DriverBindingHandleBuffer as used
   //
   for (Index = 0; Index < DriverBindingHandleCount; Index++) {
     if (DriverBindingHandleBuffer[Index] == DriverBindingHandle) {
@@ -685,7 +685,7 @@ CoreConnectSingleController (
 
 
 /**
-  Disonnects a controller from a driver
+  Disconnects a controller from a driver
 
   @param  ControllerHandle                      ControllerHandle The handle of
                                                 the controller from which

@@ -47,7 +47,7 @@ TouchFileByHandle (
 }
 
 /**
-  Touch a given file and potantially recurse down if it was a directory.
+  Touch a given file and potentially recurse down if it was a directory.
 
   @param[in] Name   The name of this file.
   @param[in] FS     The name of the file system this file is on.
@@ -225,8 +225,8 @@ ShellCommandRunTouch (
           break;
         }
         //
-        // make sure we completed the param parsing sucessfully...
-        // Also make sure that any previous action was sucessful
+        // make sure we completed the param parsing successfully...
+        // Also make sure that any previous action was successful
         //
         if (ShellStatus == SHELL_SUCCESS) {
           //

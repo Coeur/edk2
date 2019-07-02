@@ -133,7 +133,7 @@ PrintFramework (
   );
 
 /**
-  Validate the input screen diemenstion info.
+  Validate the input screen dimension info.
 
   @param  FormData               The input form data info.
 
@@ -186,7 +186,7 @@ LibGetStringWidth (
 /**
   Show all registered HotKey help strings on bottom Rows.
 
-  @param FormData          The curent input form data info.
+  @param FormData          The current input form data info.
   @param SetState          Set HotKey or Clear HotKey
 
 **/

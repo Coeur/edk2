@@ -114,7 +114,7 @@ ON_EXIT:
 
   @param  Xhc       The XHCI Instance
   @param  BusAddr   The logical device address assigned by UsbBus driver
-  @param  EpAddr    Endpoint addrress
+  @param  EpAddr    Endpoint address
   @param  DevSpeed  The device speed
   @param  MaxPacket The max packet length of the endpoint
   @param  Type      The transaction type
@@ -935,7 +935,7 @@ XhcFreeEventRing (
 }
 
 /**
-  Free the resouce allocated at initializing schedule.
+  Free the resource allocated at initializing schedule.
 
   @param  Xhc        The XHCI Instance.
 
@@ -1070,7 +1070,7 @@ IsAsyncIntTrb (
   @param  Xhc             The XHCI Instance.
   @param  Urb             The URB to check result.
 
-  @return Whether the result of URB transfer is finialized.
+  @return Whether the result of URB transfer is finalized.
 
 **/
 BOOLEAN
@@ -1371,7 +1371,7 @@ XhciDelAsyncIntTransfer (
 }
 
 /**
-  Remove all the asynchronous interrutp transfers.
+  Remove all the asynchronous interrupt transfers.
 
   @param  Xhc    The XHCI Instance.
 
@@ -1605,7 +1605,7 @@ XhcMonitorAsyncRequests (
     //
     Status = XhcFlushAsyncIntMap (Xhc, Urb);
     if (EFI_ERROR (Status)) {
-      DEBUG ((EFI_D_ERROR, "XhcMonitorAsyncRequests: Fail to Flush AsyncInt Mapped Memeory\n"));
+      DEBUG ((EFI_D_ERROR, "XhcMonitorAsyncRequests: Fail to Flush AsyncInt Mapped Memory\n"));
     }
 
     //
@@ -1980,7 +1980,7 @@ XhcCheckNewEvent (
 
   EvtRing->EventRingDequeue++;
   //
-  // If the dequeue pointer is beyond the ring, then roll-back it to the begining of the ring.
+  // If the dequeue pointer is beyond the ring, then roll-back it to the beginning of the ring.
   //
   if ((UINTN)EvtRing->EventRingDequeue >= ((UINTN) EvtRing->EventRingSeg0 + sizeof (TRB_TEMPLATE) * EvtRing->TrbNumber)) {
     EvtRing->EventRingDequeue = EvtRing->EventRingSeg0;
@@ -2775,7 +2775,7 @@ XhcInitializeEndpointContext (
           InputContext->EP[Dci-1].EPType = ED_ISOCH_OUT;
         }
         //
-        // Get the bInterval from descriptor and init the the interval field of endpoint context.
+        // Get the bInterval from descriptor and init the interval field of endpoint context.
         // Refer to XHCI 1.1 spec section 6.2.3.6.
         //
         if (DeviceSpeed == EFI_USB_SPEED_FULL) {
@@ -2805,7 +2805,7 @@ XhcInitializeEndpointContext (
         InputContext->EP[Dci-1].AverageTRBLength = 0x1000;
         InputContext->EP[Dci-1].MaxESITPayload   = EpDesc->MaxPacketSize;
         //
-        // Get the bInterval from descriptor and init the the interval field of endpoint context
+        // Get the bInterval from descriptor and init the interval field of endpoint context
         //
         if ((DeviceSpeed == EFI_USB_SPEED_FULL) || (DeviceSpeed == EFI_USB_SPEED_LOW)) {
           Interval = EpDesc->Interval;
@@ -2967,7 +2967,7 @@ XhcInitializeEndpointContext64 (
           InputContext->EP[Dci-1].EPType = ED_ISOCH_OUT;
         }
         //
-        // Get the bInterval from descriptor and init the the interval field of endpoint context.
+        // Get the bInterval from descriptor and init the interval field of endpoint context.
         // Refer to XHCI 1.1 spec section 6.2.3.6.
         //
         if (DeviceSpeed == EFI_USB_SPEED_FULL) {
@@ -2997,7 +2997,7 @@ XhcInitializeEndpointContext64 (
         InputContext->EP[Dci-1].AverageTRBLength = 0x1000;
         InputContext->EP[Dci-1].MaxESITPayload   = EpDesc->MaxPacketSize;
         //
-        // Get the bInterval from descriptor and init the the interval field of endpoint context
+        // Get the bInterval from descriptor and init the interval field of endpoint context
         //
         if ((DeviceSpeed == EFI_USB_SPEED_FULL) || (DeviceSpeed == EFI_USB_SPEED_LOW)) {
           Interval = EpDesc->Interval;

@@ -182,7 +182,7 @@ SmbiosPrintEPSInfo (
      );
     ShellPrintHiiEx(-1,-1,NULL,STRING_TOKEN (STR_SMBIOSVIEW_PRINTINFO_BCD_REVISION), gShellDebug1HiiHandle, SmbiosTable->SmbiosBcdRevision);
     //
-    // Since raw data is not string, add a NULL terminater.
+    // Since raw data is not string, add a NULL terminator.
     //
     MemToString (InAnchor, SmbiosTable->IntermediateAnchorString, 5);
     ShellPrintHiiEx(-1,-1,NULL,STRING_TOKEN (STR_SMBIOSVIEW_PRINTINFO_INTER_ACHOR), gShellDebug1HiiHandle, InAnchor);
@@ -2064,7 +2064,7 @@ DisplayProcessorFamily (
     break;
 
   case 0xB7:
-    Print (L"AMD Althon MP Promcessor Family\n");
+    Print (L"AMD Althon MP Processor Family\n");
     break;
 
   case 0xB8:
@@ -2606,7 +2606,7 @@ DisplayMmBankConnections (
 }
 
 /**
-  Display memory informcation.
+  Display memory information.
 
   Bits 0:6  Size (n),
       where 2**n is the size in MB with three special-case values:

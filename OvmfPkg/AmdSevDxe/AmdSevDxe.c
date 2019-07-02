@@ -41,7 +41,7 @@ AmdSevDxeEntryPoint (
   // Iterate through the GCD map and clear the C-bit from MMIO and NonExistent
   // memory space. The NonExistent memory space will be used for mapping the
   // MMIO space added later (eg PciRootBridge). By clearing both known MMIO and
-  // NonExistent memory space can gurantee that current and furture MMIO adds
+  // NonExistent memory space can guarantee that current and future MMIO adds
   // will have C-bit cleared.
   //
   Status = gDS->GetMemorySpaceMap (&NumEntries, &AllDescMap);

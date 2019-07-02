@@ -472,7 +472,7 @@ FvCheck (
         continue;
       } else {
         //
-        // File system is corrputed
+        // File system is corrupted
         //
         Status = EFI_VOLUME_CORRUPTED;
         goto Done;
@@ -572,8 +572,8 @@ Done:
   EFI_FIRMWARE_VOLUME2_PROTOCOL on the same handle.  This is the function where
   the actual initialization of the EFI_FIRMWARE_VOLUME2_PROTOCOL is done.
 
-  @param  Event                 The event that occured
-  @param  Context               For EFI compatiblity.  Not used.
+  @param  Event                 The event that occurred
+  @param  Context               For EFI compatibility.  Not used.
 
 **/
 VOID

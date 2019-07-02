@@ -133,7 +133,7 @@ DriverHealthManagerFakeRouteConfig (
   @param ImageHandle     The image handle.
   @param SystemTable     The system table.
 
-  @retval  EFI_SUCEESS   The health manager forms are successfully installed.
+  @retval  EFI_SUCCESS   The health manager forms are successfully installed.
 
 **/
 EFI_STATUS
@@ -236,7 +236,7 @@ DriverHealthManagerSelectBestLanguage (
   @param  ProtocolGuid         A pointer to an EFI_GUID. It points to Component Name (2) protocol GUID.
   @param  DriverBindingHandle  The handle on which the Component Name (2) protocol instance is retrieved.
   @param  ComponentName        A pointer to the Component Name (2) protocol interface.
-  @param  SupportedLanguage    The best suitable language that matches the SupportedLangues interface for the
+  @param  SupportedLanguage    The best suitable language that matches the SupportedLanguages interface for the
                                located Component Name (2) instance.
 
   @retval EFI_SUCCESS          The Component Name (2) protocol instance is successfully located and we find
@@ -868,7 +868,7 @@ DriverHealthManagerUpdateForm (
 }
 
 /**
-  Called when the form is closing to remove the dynamicly added string from the HII package list.
+  Called when the form is closing to remove the dynamically added string from the HII package list.
 **/
 VOID
 DriverHealthManagerCleanDynamicString (

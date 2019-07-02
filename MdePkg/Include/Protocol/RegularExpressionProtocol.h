@@ -63,7 +63,7 @@ typedef EFI_GUID EFI_REGEX_SYNTAX_TYPE;
                            RegExSyntaxTypeListrequired to obtain the list.
 
   RegExSyntaxTypeList      A caller-allocated memory buffer filled by the
-                           driver with one EFI_REGEX_SYNTAX_TYPEelement
+                           driver with one EFI_REGEX_SYNTAX_TYPE element
                            for each supported Regular expression syntax
                            type. The list must not change across multiple
                            calls to the same driver. The first syntax

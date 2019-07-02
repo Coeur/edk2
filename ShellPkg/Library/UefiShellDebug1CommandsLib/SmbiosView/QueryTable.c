@@ -2790,7 +2790,7 @@ TABLE_ITEM  PointingDeviceInterfaceTable[] = {
   },
   {
     0xA1,
-    L" Bus mouse mirco-DIN"
+    L" Bus mouse micro-DIN"
   },
   {
     0xA2,

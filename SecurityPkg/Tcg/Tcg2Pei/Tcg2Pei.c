@@ -79,7 +79,7 @@ UINT32 mMeasuredMaxChildFvIndex = 0;
 UINT32 mMeasuredChildFvIndex = 0;
 
 /**
-  Measure and record the Firmware Volum Information once FvInfoPPI install.
+  Measure and record the Firmware Volume Information once FvInfoPPI install.
 
   @param[in] PeiServices       An indirect pointer to the EFI_PEI_SERVICES table published by the PEI Foundation.
   @param[in] NotifyDescriptor  Address of the notification descriptor data structure.
@@ -98,7 +98,7 @@ FirmwareVolmeInfoPpiNotifyCallback (
   );
 
 /**
-  Record all measured Firmware Volum Information into a Guid Hob
+  Record all measured Firmware Volume Information into a Guid Hob
 
   @param[in] PeiServices       An indirect pointer to the EFI_PEI_SERVICES table published by the PEI Foundation.
   @param[in] NotifyDescriptor  Address of the notification descriptor data structure.
@@ -136,7 +136,7 @@ EFI_PEI_NOTIFY_DESCRIPTOR           mNotifyList[] = {
 
 
 /**
-  Record all measured Firmware Volum Information into a Guid Hob
+  Record all measured Firmware Volume Information into a Guid Hob
   Guid Hob payload layout is
 
      UINT32 *************************** FIRMWARE_BLOB number
@@ -688,7 +688,7 @@ MeasureMainBios (
 }
 
 /**
-  Measure and record the Firmware Volum Information once FvInfoPPI install.
+  Measure and record the Firmware Volume Information once FvInfoPPI install.
 
   @param[in] PeiServices       An indirect pointer to the EFI_PEI_SERVICES table published by the PEI Foundation.
   @param[in] NotifyDescriptor  Address of the notification descriptor data structure.
@@ -933,7 +933,7 @@ PeimEntryMA (
     }
 
     //
-    // Only intall TpmInitializedPpi on success
+    // Only install TpmInitializedPpi on success
     //
     Status = PeiServicesInstallPpi (&mTpmInitializedPpiList);
     ASSERT_EFI_ERROR (Status);
@@ -954,7 +954,7 @@ Done:
       );
   }
   //
-  // Always intall TpmInitializationDonePpi no matter success or fail.
+  // Always install TpmInitializationDonePpi no matter success or fail.
   // Other driver can know TPM initialization state by TpmInitializedPpi.
   //
   Status2 = PeiServicesInstallPpi (&mTpmInitializationDonePpiList);

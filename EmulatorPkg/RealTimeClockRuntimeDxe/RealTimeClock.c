@@ -61,7 +61,7 @@ Arguments:
 
 Returns:
 
-  EFI_SUCEESS   - The underlying GetSystemTime call occurred and returned
+  EFI_SUCCESS   - The underlying GetSystemTime call occurred and returned
                   Note that in the NT32 emulation, the GetSystemTime call has no return value
                   thus you will always receive a EFI_SUCCESS on this.
 
@@ -98,7 +98,7 @@ Arguments:
 
 Returns:
 
-  EFI_SUCEESS           - The operation completed successfully.
+  EFI_SUCCESS           - The operation completed successfully.
 
   EFI_INVALID_PARAMETER - One of the fields in Time is out of range.
 
@@ -145,7 +145,7 @@ Arguments:
 
 Returns:
 
-  EFI_SUCEESS           - The operation completed successfully.
+  EFI_SUCCESS           - The operation completed successfully.
 
   EFI_DEVICE_ERROR      - The operation could not be complete due to a device error.
 
@@ -177,7 +177,7 @@ Arguments:
 
 Returns:
 
-  EFI_SUCEESS           - The operation completed successfully.
+  EFI_SUCCESS           - The operation completed successfully.
 
   EFI_DEVICE_ERROR      - The operation could not be complete due to a device error.
 
@@ -207,7 +207,7 @@ Arguments:
 
 Returns:
 
-  EFI_SUCEESS - Real Time Clock Services are installed into the Runtime Services Table
+  EFI_SUCCESS - Real Time Clock Services are installed into the Runtime Services Table
 
 **/
 {

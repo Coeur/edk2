@@ -222,7 +222,7 @@ IsValidVariableHeader (
   This function writes data to the FWH at the correct LBA even if the LBAs
   are fragmented.
 
-  @param Global                  Pointer to VARAIBLE_GLOBAL structure.
+  @param Global                  Pointer to VARIABLE_GLOBAL structure.
   @param Volatile                Point out the Variable is Volatile or Non-Volatile.
   @param SetByIndex              TRUE if target pointer is given as index.
                                  FALSE if target pointer is absolute.
@@ -949,7 +949,7 @@ InitializeVariableQuota (
 
   @return EFI_SUCCESS                  Reclaim operation has finished successfully.
   @return EFI_OUT_OF_RESOURCES         No enough memory resources or variable space.
-  @return Others                       Unexpect error happened during reclaim operation.
+  @return Others                       Unexpected error happened during reclaim operation.
 
 **/
 EFI_STATUS
@@ -1508,7 +1508,7 @@ GetLangFromSupportedLangCodes (
       }
       if ((*Supported == '\0') && (SubIndex != Index)) {
         //
-        // Have completed the traverse, but not find corrsponding string.
+        // Have completed the traverse, but not find corresponding string.
         // This case is not allowed to happen.
         //
         ASSERT(FALSE);
@@ -2372,7 +2372,7 @@ UpdateVariable (
 
         //
         // Append the new data to the end of existing data.
-        // Max Harware error record variable data size is different from common/auth variable.
+        // Max Hardware error record variable data size is different from common/auth variable.
         //
         if ((Attributes & EFI_VARIABLE_HARDWARE_ERROR_RECORD) == EFI_VARIABLE_HARDWARE_ERROR_RECORD) {
           MaxDataSize = PcdGet32 (PcdMaxHardwareErrorVariableSize) - DataOffset;
@@ -3201,7 +3201,7 @@ VariableServiceSetVariable (
   } else if ((Attributes & EFI_VARIABLE_HARDWARE_ERROR_RECORD) != 0) {
     if (PcdGet32 (PcdHwErrStorageSize) == 0) {
       //
-      // Not support harware error record variable variable.
+      // Not support hardware error record variable variable.
       //
       return EFI_INVALID_PARAMETER;
     }
@@ -3464,7 +3464,7 @@ VariableServiceQueryVariableInfoInternal (
   *MaximumVariableStorageSize   = VariableStoreHeader->Size - sizeof (VARIABLE_STORE_HEADER);
 
   //
-  // Harware error record variable needs larger size.
+  // Hardware error record variable needs larger size.
   //
   if ((Attributes & (EFI_VARIABLE_NON_VOLATILE | EFI_VARIABLE_HARDWARE_ERROR_RECORD)) == (EFI_VARIABLE_NON_VOLATILE | EFI_VARIABLE_HARDWARE_ERROR_RECORD)) {
     *MaximumVariableStorageSize = PcdGet32 (PcdHwErrStorageSize);
@@ -3647,7 +3647,7 @@ VariableServiceQueryVariableInfo (
   } else if ((Attributes & EFI_VARIABLE_HARDWARE_ERROR_RECORD) != 0) {
     if (PcdGet32 (PcdHwErrStorageSize) == 0) {
       //
-      // Not support harware error record variable variable.
+      // Not support hardware error record variable variable.
       //
       return EFI_UNSUPPORTED;
     }

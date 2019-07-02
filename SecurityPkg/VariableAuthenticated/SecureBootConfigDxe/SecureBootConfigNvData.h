@@ -132,7 +132,7 @@ typedef struct {
   UINT8   CertificateFormat;   // The type of the certificate
   EFI_HII_DATE RevocationDate; // The revocation date of the certificate
   EFI_HII_TIME RevocationTime; // The revocation time of the certificate
-  UINT8   FileEnrollType;      // File type of sigunature enroll
+  UINT8   FileEnrollType;      // File type of signature enroll
   UINT32  ListCount;           // The count of signature list.
   UINT32  CheckedDataCount;    // The count of checked signature data.
 } SECUREBOOT_CONFIGURATION;

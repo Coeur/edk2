@@ -48,7 +48,7 @@ IsNumberLetterOnly(
 /**
   Do a search in the Target delimited list.
 
-  @param[in] List         The list to seatch in.
+  @param[in] List         The list to search in.
   @param[in] MetaTarget   The item to search for. MetaMatching supported.
   @param[out] FullName    Optional pointer to an allocated buffer containing
                           the match.
@@ -113,7 +113,7 @@ SearchList(
 }
 
 /**
-  Determine what type of device is represented and return it's string.  The
+  Determine what type of device is represented and return its string.  The
   string is in allocated memory and must be callee freed.  The HII is is listed below.
   The actual string cannot be determined.
 
@@ -162,7 +162,7 @@ GetDeviceMediaType (
 }
 
 /**
-  Function to detemine if a handle has removable storage.
+  Function to determine if a handle has removable storage.
 
   @param[in] DevicePath             DevicePath to test.
 
@@ -194,7 +194,7 @@ IsRemoveableDevice (
 }
 
 /**
-  Function to detemine if a something on the map list matches.
+  Function to determine if a something on the map list matches.
 
   @param[in] MapList          The pointer to the list to test.
   @param[in] Specific         The pointer to a specific name to test for.
@@ -362,7 +362,7 @@ PerformSingleMappingDisplay(
     }
     if (CurrentName == NULL) {
       //
-      // We didnt find anything, so just the first one in the list...
+      // We didn't find anything, so just the first one in the list...
       //
       CurrentName = StrnCatGrow(&CurrentName, 0, MapList, 0);
       if (CurrentName == NULL) {
@@ -1278,7 +1278,7 @@ ShellCommandRunMap (
                   SName,
                   TRUE
                  );
-              } // we were sucessful so do an output
+              } // we were successful so do an output
             }
           } // got a valid map target
         } // got 2 variables

@@ -61,7 +61,7 @@ ApStartup:
     ;
     ; Jmp Rel16 instruction
     ; Use machine code directly in case of the assembler optimization
-    ; SEC entry point relatvie address will be fixed up by some build tool.
+    ; SEC entry point relative address will be fixed up by some build tool.
     ;
     ; Typically, SEC entry point is the function _ModuleEntryPoint() defined in
     ; SecEntry.asm

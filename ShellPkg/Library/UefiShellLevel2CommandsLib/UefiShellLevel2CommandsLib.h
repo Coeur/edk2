@@ -241,10 +241,10 @@ ShellCommandRunMv (
   );
 
 /**
-  returns a fully qualified directory (contains a map drive at the begining)
+  returns a fully qualified directory (contains a map drive at the beginning)
   path from a unknown directory path.
 
-  If Path is already fully qualified this will return a duplicat otherwise this
+  If Path is already fully qualified this will return a duplicate otherwise this
   will use get the current directory and use that to build the fully qualified
   version.
 
@@ -254,7 +254,7 @@ ShellCommandRunMv (
 
   @retval NULL            A memory allocation failed
   @retval NULL            a fully qualified path could not be discovered.
-  @retval other           pointer to a fuly qualified path.
+  @retval other           pointer to a fully qualified path.
 **/
 CHAR16*
 GetFullyQualifiedPath(
@@ -351,7 +351,7 @@ CopySingleFile(
   @retval SHELL_SUCCESS       The operation was successful.
   @retval SHELL_ACCESS_DENIED A file was read only.
   @retval SHELL_ABORTED       The abort message was received.
-  @retval SHELL_DEVICE_ERROR  A device error occured reading this Node.
+  @retval SHELL_DEVICE_ERROR  A device error occurred reading this Node.
 **/
 SHELL_STATUS
 CascadeDelete(

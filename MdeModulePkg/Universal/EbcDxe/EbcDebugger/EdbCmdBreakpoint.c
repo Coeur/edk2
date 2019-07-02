@@ -256,7 +256,7 @@ DebuggerBreakpointList (
   UINTN Index;
 
   //
-  // Check breakpoint cound
+  // Check breakpoint count
   //
   if (DebuggerPrivate->DebuggerBreakpointCount == 0) {
     EDBPrint (L"No Breakpoint\n");

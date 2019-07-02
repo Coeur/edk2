@@ -33,7 +33,7 @@ typedef struct _EFI_TCP6_PROTOCOL EFI_TCP6_PROTOCOL;
 
 ///
 /// EFI_TCP6_SERVICE_POINT is deprecated in the UEFI 2.4B and should not be used any more.
-/// The definition in here is only present to provide backwards compatability.
+/// The definition in here is only present to provide backwards compatibility.
 ///
 typedef struct {
   ///
@@ -65,7 +65,7 @@ typedef struct {
 
 ///
 /// EFI_TCP6_VARIABLE_DATA is deprecated in the UEFI 2.4B and should not be used any more.
-/// The definition in here is only present to provide backwards compatability.
+/// The definition in here is only present to provide backwards compatibility.
 ///
 typedef struct {
   EFI_HANDLE             DriverHandle; ///< The handle of the driver that creates this entry.
@@ -623,7 +623,7 @@ EFI_STATUS
   @retval EFI_INVALID_PARAMETER  One or more of the following are TRUE:
                                  - This is NULL.
                                  - ListenToken is NULL.
-                                 - ListentToken->CompletionToken.Event is NULL.
+                                 - ListenToken->CompletionToken.Event is NULL.
   @retval EFI_OUT_OF_RESOURCES   Could not allocate enough resource to finish the operation.
   @retval EFI_DEVICE_ERROR       Any unexpected and not belonged to above category error.
 

@@ -181,7 +181,7 @@ BOOLEAN
 
   @param[in] FileHandle         The file handle to be closed.
 
-  @retval EFI_SUCCESS           The file closed sucessfully.
+  @retval EFI_SUCCESS           The file closed successfully.
 **/
 typedef
 EFI_STATUS
@@ -204,7 +204,7 @@ EFI_STATUS
   already exists and is non-volatile then EFI_INVALID_PARAMETER is returned.
 
   @param[in] FileName           Pointer to NULL-terminated file path.
-  @param[in] FileAttribs        The new file's attrbiutes.  The different attributes are
+  @param[in] FileAttribs        The new file's attributes.  The different attributes are
                                 described in EFI_FILE_PROTOCOL.Open().
   @param[out] FileHandle        On return, points to the created file handle or directory's handle.
 
@@ -732,7 +732,7 @@ EFI_STATUS
   device path. If there is an exact match, the mapping is returned and *DevicePath
   points to the end-of-device-path node.
 
-  If there are multiple map names they will be semi-colon seperated in the
+  If there are multiple map names they will be semi-colon separated in the
   NULL-terminated string.
 
   @param[in, out] DevicePath     On entry, points to a device path pointer. On
@@ -1010,7 +1010,7 @@ EFI_STATUS
                                 If Alias is NULL, ReturnedData points to a ';'
                                 delimited list of alias (e.g.
                                 ReturnedData = "dir;del;copy;mfp") that is NULL-terminated.
-  @retval NULL                  An error ocurred.
+  @retval NULL                  An error occurred.
   @retval NULL                  Alias was not a valid Alias.
 **/
 typedef

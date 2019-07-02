@@ -36,7 +36,7 @@ typedef struct _EDITOR_MENU_ITEM {
 } EDITOR_MENU_ITEM;
 
 /**
-  Initializa the menu bar with the specified items.
+  Initialize the menu bar with the specified items.
 
   @param[in] Items              The items to display and their functions.
 

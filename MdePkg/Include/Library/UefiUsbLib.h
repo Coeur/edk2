@@ -281,7 +281,7 @@ UsbGetDescriptor (
   Set the descriptor of the specified USB device.
 
   Submit a USB set descriptor request for the USB device specified by UsbIo,
-  Value, and Index, and set the descriptor using the buffer specified by DesriptorLength
+  Value, and Index, and set the descriptor using the buffer specified by DescriptorLength
   and Descriptor.  The status of the transfer is returned in Status.
   If UsbIo is NULL, then ASSERT().
   If Descriptor is NULL, then ASSERT().

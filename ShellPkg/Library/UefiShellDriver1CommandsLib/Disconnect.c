@@ -34,7 +34,7 @@ DisconnectAll(
 
   //
   // Disconnect All Handles Example
-  // The following example recusively disconnects all drivers from all
+  // The following example recursively disconnects all drivers from all
   // controllers in a platform.
   //
   EFI_STATUS Status;

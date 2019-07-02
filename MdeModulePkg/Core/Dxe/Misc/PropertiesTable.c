@@ -169,7 +169,7 @@ SortMemoryMap (
 }
 
 /**
-  Merge continous memory map entries whose have same attributes.
+  Merge continuous memory map entries whose have same attributes.
 
   @param  MemoryMap              A pointer to the buffer in which firmware places
                                  the current memory map.
@@ -314,7 +314,7 @@ GetImageRecordByAddress (
   @param  ImageRecord            An image record whose [ImageBase, ImageSize] covered
                                  by old memory map entry.
   @param  NewRecord              A pointer to several new memory map entries.
-                                 The caller gurantee the buffer size be 1 +
+                                 The caller guarantee the buffer size be 1 +
                                  (SplitRecordCount * DescriptorSize) calculated
                                  below.
   @param  OldRecord              A pointer to one old memory map entry.
@@ -465,7 +465,7 @@ GetMaxSplitRecordCount (
 
   @param  OldRecord              A pointer to one old memory map entry.
   @param  NewRecord              A pointer to several new memory map entries.
-                                 The caller gurantee the buffer size be 1 +
+                                 The caller guarantee the buffer size be 1 +
                                  (SplitRecordCount * DescriptorSize) calculated
                                  below.
   @param  MaxSplitRecordCount    The max number of splitted entries
@@ -706,7 +706,7 @@ SplitTable (
   This function for GetMemoryMap() with properties table capability.
 
   It calls original GetMemoryMap() to get the original memory map information. Then
-  plus the additional memory map entries for PE Code/Data seperation.
+  plus the additional memory map entries for PE Code/Data separation.
 
   @param  MemoryMapSize          A pointer to the size, in bytes, of the
                                  MemoryMap buffer. On input, this is the size of

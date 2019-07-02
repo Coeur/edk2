@@ -16,7 +16,7 @@
   This function will connect all current system handles recursively. The
   connection will finish until every handle's child handle created if it have.
 
-  @retval EFI_SUCCESS           All handles and it's child handle have been
+  @retval EFI_SUCCESS           All handles and its child handle have been
                                 connected
   @retval EFI_STATUS            Return the status of gBS->LocateHandleBuffer().
 
@@ -220,7 +220,7 @@ ShellCommandRunLoad (
       ASSERT(FALSE);
     } else if (ShellCommandLineGetRawValue(Package, 1) == NULL) {
       //
-      // we didnt get a single file to load parameter
+      // we didn't get a single file to load parameter
       //
       ShellPrintHiiEx(-1, -1, NULL, STRING_TOKEN (STR_GEN_TOO_FEW), gShellLevel2HiiHandle, L"load");
       ShellStatus = SHELL_INVALID_PARAMETER;

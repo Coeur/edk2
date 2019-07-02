@@ -1,5 +1,5 @@
 /** @file
-  Report Status Code Router PEIM which produces Report Stataus Code Handler PPI and Status Code PPI.
+  Report Status Code Router PEIM which produces Report Status Code Handler PPI and Status Code PPI.
 
   Copyright (c) 2009 - 2018, Intel Corporation. All rights reserved.<BR>
   SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -265,12 +265,12 @@ ReportDispatcher (
   Entry point of Status Code PEIM.
 
   This function is the entry point of this Status Code Router PEIM.
-  It produces Report Stataus Code Handler PPI and Status Code PPI.
+  It produces Report Status Code Handler PPI and Status Code PPI.
 
   @param  FileHandle  Handle of the file being invoked.
   @param  PeiServices Describes the list of possible PEI Services.
 
-  @retval EFI_SUCESS  The entry point of DXE IPL PEIM executes successfully.
+  @retval EFI_SUCCESS The entry point of DXE IPL PEIM executes successfully.
 
 **/
 EFI_STATUS

@@ -17,7 +17,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
   { 0x4c8a2451, 0xc207, 0x405b, {0x96, 0x94, 0x99, 0xea, 0x13, 0x25, 0x13, 0x41} }
 
 ///
-/// Forward reference for pure ANSI compatability
+/// Forward reference for pure ANSI compatibility
 ///
 typedef struct _EFI_DEBUG_MASK_PROTOCOL  EFI_DEBUG_MASK_PROTOCOL;
 
@@ -55,7 +55,7 @@ struct _EFI_DEBUG_MASK_PROTOCOL {
 extern EFI_GUID gEfiDebugMaskProtocolGuid;
 
 ///
-/// GUID used to store the global debug mask in an the "EFIDebug" EFI Variabe
+/// GUID used to store the global debug mask in an the "EFIDebug" EFI Variable
 /// Also used as a GUIDed HOB that contains a UINT32 debug mask default value
 ///
 #define EFI_GENERIC_VARIABLE_GUID \

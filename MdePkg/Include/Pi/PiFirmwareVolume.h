@@ -169,7 +169,7 @@ typedef struct {
 } EFI_FIRMWARE_VOLUME_EXT_HEADER;
 
 ///
-/// Entry struture for describing FV extension header
+/// Entry structure for describing FV extension header
 ///
 typedef struct {
   ///
@@ -219,7 +219,7 @@ typedef struct {
   ///
   EFI_GUID                          FormatType;
   ///
-  /// An arry of bytes of length Length.
+  /// An array of bytes of length Length.
   ///
   /// UINT8                             Data[1];
   ///

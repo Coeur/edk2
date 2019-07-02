@@ -157,7 +157,7 @@ BmSetMemoryTypeInformationVariable (
   }
 
   //
-  // Only check the the Memory Type Information variable in the boot mode
+  // Only check the Memory Type Information variable in the boot mode
   // other than BOOT_WITH_DEFAULT_SETTINGS because the Memory Type
   // Information is not valid in this boot mode.
   //
@@ -233,7 +233,7 @@ BmSetMemoryTypeInformationVariable (
 
     //
     // Inconsistent Memory Reserved across bootings may lead to S4 fail
-    // Write next varible to 125% * current when the pre-allocated memory is:
+    // Write next variable to 125% * current when the pre-allocated memory is:
     //  1. More than 150% of needed memory and boot mode is BOOT_WITH_DEFAULT_SETTING
     //  2. Less than the needed memory
     //
@@ -317,7 +317,7 @@ BmSetMemoryTypeInformationVariable (
   @retval EFI_DEVICE_ERROR       The variable could not be retrieved due to a hardware error.
   @retval EFI_WRITE_PROTECTED    The variable in question is read-only.
   @retval EFI_WRITE_PROTECTED    The variable in question cannot be deleted.
-  @retval EFI_SECURITY_VIOLATION The variable could not be written due to EFI_VARIABLE_TIME_BASED_AUTHENTICATED_WRITE_ACESS
+  @retval EFI_SECURITY_VIOLATION The variable could not be written due to EFI_VARIABLE_TIME_BASED_AUTHENTICATED_WRITE_ACCESS
                                  being set, but the AuthInfo does NOT pass the validation check carried out by the firmware.
 
   @retval EFI_NOT_FOUND          The variable trying to be updated or deleted was not found.

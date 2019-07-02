@@ -18,7 +18,7 @@ CHAR16 *mBranchTypeStr[] = {
 
 /**
 
-  Comvert Branch Type to string.
+  Convert Branch Type to string.
 
   @param Type        Branch Type
 

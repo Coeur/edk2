@@ -428,7 +428,7 @@ EfiGetVariable (
                            As output, returns the name of variable. The name
                            string is Null-Terminated Unicode string.
   @param  VendorGuid       As input, supplies the last VendorGuid that was returned by
-                           GetNextVriableName().
+                           GetNextVariableName().
                            As output, returns the VendorGuid of the current variable.
 
   @retval  EFI_SUCCESS           The function completed successfully.
@@ -504,7 +504,7 @@ EfiSetVariable (
   the low 32 bits. During boot service time the low 32-bit value is volatile: it is reset to zero
   on every system reset and is increased by 1 on every call to GetNextMonotonicCount(). The high
   32-bit value is nonvolatile and is increased by 1 whenever the system resets or whenever the low
-  32-bit count (returned by GetNextMonoticCount()) overflows.
+  32-bit count (returned by GetNextMonotonicCount()) overflows.
 
   @param  HighCount The pointer to returned value.
 
@@ -538,7 +538,7 @@ EfiGetNextHighMonotonicCount (
   @retval  EFI_NOT_FOUND          The pointer pointed to by Address was not found to be part of
                                   the current memory map. This is normally fatal.
   @retval  EFI_INVALID_PARAMETER  Address is NULL.
-  @retval  EFI_INVALID_PARAMETER  *Address is NULL and DebugDispositio
+  @retval  EFI_INVALID_PARAMETER  *Address is NULL and DebugDisposition
 
 **/
 EFI_STATUS
@@ -559,10 +559,10 @@ EfiConvertPointer (
   ConvertPointer().  See the UEFI Specification for details.
   For IPF, this function interprets Address as a pointer to an EFI_PLABEL structure
   and both the EntryPoint and GP fields of an EFI_PLABEL are converted from physical
-  to virtiual addressing.  Since IPF allows the GP to point to an address outside
+  to virtual addressing.  Since IPF allows the GP to point to an address outside
   a PE/COFF image, the physical to virtual offset for the EntryPoint field is used
   to adjust the GP field.  The UEFI Runtime Service ConvertPointer() is used to convert
-  EntryPoint and the status code for this conversion is always returned.   If the convertion
+  EntryPoint and the status code for this conversion is always returned.   If the conversion
   of EntryPoint fails, then neither EntryPoint nor GP are modified.  See the UEFI
   Specification for details on the UEFI Runtime Service ConvertPointer().
 
@@ -596,7 +596,7 @@ EfiConvertFunctionPointer (
   @param  ListHead           Head of linked list to convert.
 
   @retval  EFI_SUCCESS  Success to execute the function.
-  @retval  !EFI_SUCCESS Failed to e3xecute the function.
+  @retval  !EFI_SUCCESS Failed to execute the function.
 
 **/
 EFI_STATUS
@@ -698,7 +698,7 @@ EfiSetVirtualAddressMap (
                                 ScatterGatherList. The CapsuleHeaderArray must
                                 have the capsules in the same order as the ScatterGatherList.
   @param  CapsuleCount          The number of pointers to EFI_CAPSULE_HEADER in
-                                CaspuleHeaderArray.
+                                CapsuleHeaderArray.
   @param  ScatterGatherList     Physical pointer to a set of
                                 EFI_CAPSULE_BLOCK_DESCRIPTOR that describes the
                                 location in physical memory of a set of capsules. See Related
@@ -708,7 +708,7 @@ EfiSetVirtualAddressMap (
                                 CapsuleHeaderArray. This parameter is only referenced if
                                 the capsules are defined to persist across system reset.
 
-  @retval EFI_SUCCESS           Valid capsule was passed. If CAPSULE_FLAGS_PERSIT_ACROSS_RESET is not set,
+  @retval EFI_SUCCESS           Valid capsule was passed. If CAPSULE_FLAGS_PERSIST_ACROSS_RESET is not set,
                                 the capsule has been successfully processed by the firmware.
   @retval EFI_INVALID_PARAMETER CapsuleSize or HeaderSize is NULL.
   @retval EFI_INVALID_PARAMETER CapsuleCount is 0
@@ -753,7 +753,7 @@ EfiUpdateCapsule (
                                 being passed into update capsule. The capsules are assumed to
                                 stored in contiguous virtual memory.
   @param  CapsuleCount          The number of pointers to EFI_CAPSULE_HEADER in
-                                CaspuleHeaderArray.
+                                CapsuleHeaderArray.
   @param  MaximumCapsuleSize     On output the maximum size that UpdateCapsule() can
                                 support as an argument to UpdateCapsule() via
                                 CapsuleHeaderArray and ScatterGatherList.

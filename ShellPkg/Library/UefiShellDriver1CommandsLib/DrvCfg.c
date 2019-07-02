@@ -17,11 +17,11 @@ STATIC CONST EFI_GUID *CfgGuidList[] = {&gEfiDriverConfigurationProtocolGuid, &g
   Find the EFI_HII_HANDLE by device path.
 
   @param[in] DevPath1     The Device Path to match.
-  @param[out] HiiHandle   The EFI_HII_HANDLE after the converstion.
+  @param[out] HiiHandle   The EFI_HII_HANDLE after the conversion.
   @param[in] HiiDb        The Hii database protocol
 
   @retval EFI_SUCCESS     The operation was successful.
-  @retval EFI_NOT_FOUND   There was no EFI_HII_HANDLE found for that deviec path.
+  @retval EFI_NOT_FOUND   There was no EFI_HII_HANDLE found for that device path.
 **/
 EFI_STATUS
 FindHiiHandleViaDevPath(
@@ -111,7 +111,7 @@ FindHiiHandleViaDevPath(
   Convert a EFI_HANDLE to a EFI_HII_HANDLE.
 
   @param[in] Handle       The EFI_HANDLE to convert.
-  @param[out] HiiHandle   The EFI_HII_HANDLE after the converstion.
+  @param[out] HiiHandle   The EFI_HII_HANDLE after the conversion.
   @param[in] HiiDb        The Hii database protocol
 
   @retval EFI_SUCCESS   The operation was successful.
@@ -148,7 +148,7 @@ ConvertHandleToHiiHandle(
   Function to print out all HII configuration information to a file.
 
   @param[in] Handle           The handle to get info on.  NULL to do all handles.
-  @param[in] FileName         The filename to rwite the info to.
+  @param[in] FileName         The filename to write the info to.
 **/
 SHELL_STATUS
 ConfigToFile(
@@ -397,7 +397,7 @@ ConfigFromFile(
     }
   } else {
     //
-    // we need to parse the buffer and try to match the device paths for each item to try to find it's device path.
+    // we need to parse the buffer and try to match the device paths for each item to try to find its device path.
     //
 
     for (PackageListHeader = (EFI_HII_PACKAGE_LIST_HEADER*)MainBuffer
@@ -1372,7 +1372,7 @@ ShellCommandRunDrvCfg (
     }
 
     //
-    // We allways need to do this one since it does both by default.
+    // We always need to do this one since it does both by default.
     //
     if (!InFromFile && !OutToFile) {
       ShellStatus = PreHiiDrvCfg (

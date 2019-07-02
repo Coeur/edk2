@@ -93,7 +93,7 @@ typedef enum {
                                   significant N bits.
   @param[in]  ReadBytes         The length of the ReadBuffer in bytes.
                                 Specify zero for write-only operations.
-  @param[out] ReadBuffer        The buffer to receeive data from the SPI chip
+  @param[out] ReadBuffer        The buffer to receive data from the SPI chip
                                 during the transaction. Specify NULL for write
                                 only operations.
                                 * Frame sizes 1-8 bits: UINT8 (one byte) per
@@ -152,9 +152,9 @@ EFI_STATUS
   @retval EFI_SUCCESS            The SPI peripheral was updated successfully
   @retval EFI_INVALID_PARAMETER  The SpiPeripheral value is NULL,
                                  or the SpiPeripheral->SpiBus is NULL,
-                                 or the SpiP eripheral - >SpiBus pointing at
+                                 or the SpiPeripheral->SpiBus pointing at
                                  wrong bus,
-                                 or the SpiP eripheral - >SpiPart is NULL
+                                 or the SpiPeripheral->SpiPart is NULL
 
 **/
 typedef EFI_STATUS

@@ -14,8 +14,8 @@
 /**
   Function will replace drive identifier with CWD.
 
-  If FullPath begining with ':' is invalid path, then ASSERT.
-  If FullPath not include dirve identifier , then do nothing.
+  If FullPath beginning with ':' is invalid path, then ASSERT.
+  If FullPath not include drive identifier , then do nothing.
   If FullPath likes "fs0:\xx" or "fs0:/xx" , then do nothing.
   If FullPath likes "fs0:xxx" or "fs0:", the drive replaced by CWD.
 
@@ -71,7 +71,7 @@ ReplaceDriveWithCwd (
   @param[in]    Cwd         Current directory.
 
   @retval       TRUE        The FullPath is in the current filesystem.
-  @retval       FALSE       The FullPaht isn't in the current filesystem.
+  @retval       FALSE       The FullPath isn't in the current filesystem.
 **/
 BOOLEAN
 IsCurrentFileSystem (
@@ -115,7 +115,7 @@ IsCurrentFileSystem (
   @param[out]   Path        Buffer to save path.
 
   @retval       EFI_SUCCESS           Success.
-  @retval       EFI_OUT_OF_RESOUCES   A memory allocation failed.
+  @retval       EFI_OUT_OF_RESOURCES  A memory allocation failed.
 **/
 EFI_STATUS
 ExtractDriveAndPath (
@@ -233,7 +233,7 @@ ShellCommandRunCd (
     // remember that param 0 is the command name
     // If there are 0 value parameters, then print the current directory
     // else If there are 2 value parameters, then print the error message
-    // else If there is  1 value paramerer , then change the directory
+    // else If there is  1 value parameter , then change the directory
     //
     Cwd = ShellGetCurrentDir (NULL);
     if (Cwd == NULL) {

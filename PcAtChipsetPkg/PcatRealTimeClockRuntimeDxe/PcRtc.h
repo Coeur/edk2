@@ -110,7 +110,7 @@ typedef struct {
   UINT8 Uf : 1;       // Update End Interrupt Flag
   UINT8 Af : 1;       // Alarm Interrupt Flag
   UINT8 Pf : 1;       // Periodic Interrupt Flag
-  UINT8 Irqf : 1;     // Iterrupt Request Flag = PF & PIE | AF & AIE | UF & UIE
+  UINT8 Irqf : 1;     // Interrupt Request Flag = PF & PIE | AF & AIE | UF & UIE
 } RTC_REGISTER_C_BITS;
 
 typedef union {

@@ -39,7 +39,7 @@ extern EFI_HII_IMAGE_PROTOCOL  *gHiiImage;
 extern EFI_HII_DATABASE_PROTOCOL  *gHiiDatabase;
 
 ///
-/// The pointer to the UEFI HII Config Rounting Protocol.
+/// The pointer to the UEFI HII Config Routing Protocol.
 ///
 extern EFI_HII_CONFIG_ROUTING_PROTOCOL  *gHiiConfigRouting;
 

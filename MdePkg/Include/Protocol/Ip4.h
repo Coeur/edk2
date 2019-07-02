@@ -37,7 +37,7 @@ typedef struct _EFI_IP4_PROTOCOL EFI_IP4_PROTOCOL;
 
 ///
 /// EFI_IP4_ADDRESS_PAIR is deprecated in the UEFI 2.4B and should not be used any more.
-/// The definition in here is only present to provide backwards compatability.
+/// The definition in here is only present to provide backwards compatibility.
 ///
 typedef struct {
   EFI_HANDLE              InstanceHandle;
@@ -47,7 +47,7 @@ typedef struct {
 
 ///
 /// EFI_IP4_VARIABLE_DATA is deprecated in the UEFI 2.4B and should not be used any more.
-/// The definition in here is only present to provide backwards compatability.
+/// The definition in here is only present to provide backwards compatibility.
 ///
 typedef struct {
   EFI_HANDLE              DriverHandle;
@@ -455,7 +455,7 @@ EFI_STATUS
   @retval  EFI_NOT_STARTED       This instance has not been started.
   @retval  EFI_NO_MAPPING        When using the default address, configuration (DHCP, BOOTP,
                                  RARP, etc.) is not finished yet.
-  @retval  EFI_INVALID_PARAMETER One or more pameters are invalid.
+  @retval  EFI_INVALID_PARAMETER One or more parameters are invalid.
   @retval  EFI_ACCESS_DENIED     The transmit completion token with the same Token.Event
                                  was already in the transmit queue.
   @retval  EFI_NOT_READY         The completion token could not be queued because the transmit

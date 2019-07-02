@@ -197,7 +197,7 @@ Rsa2048Sha256GuidedSectionHandler (
   }
 
   //
-  // All paths from here return EFI_SUCESS and result is returned in AuthenticationStatus
+  // All paths from here return EFI_SUCCESS and result is returned in AuthenticationStatus
   //
   Status = EFI_SUCCESS;
 

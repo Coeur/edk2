@@ -134,7 +134,7 @@ RegisterResetNotify (
     List = (RESET_FILTER_LIST *)GET_GUID_HOB_DATA (Hob);
     ASSERT (List->Signature == RESET_FILTER_LIST_SIGNATURE);
     //
-    // Firstly check whether the ResetFunction is already registerred.
+    // Firstly check whether the ResetFunction is already registered.
     //
     for (Index = 0; Index < List->Count; Index++) {
       if (List->ResetFilters[Index] == ResetFunction) {

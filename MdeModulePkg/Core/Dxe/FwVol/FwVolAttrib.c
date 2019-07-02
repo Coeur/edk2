@@ -81,7 +81,7 @@ FvSetVolumeAttributes (
   @param  InformationType  InformationType for requested.
   @param  BufferSize       On input, size of Buffer.On output, the amount of data
                            returned in Buffer.
-  @param  Buffer           A poniter to the data buffer to return.
+  @param  Buffer           A pointer to the data buffer to return.
 
   @retval EFI_SUCCESS      Successfully got volume Information.
 
@@ -108,7 +108,7 @@ FvGetVolumeInfo (
   @param  InformationType  InformationType for requested.
   @param  BufferSize       On input, size of Buffer.On output, the amount of data
                            returned in Buffer.
-  @param  Buffer           A poniter to the data buffer to return.
+  @param  Buffer           A pointer to the data buffer to return.
 
   @retval EFI_SUCCESS      Successfully set volume Information.
 

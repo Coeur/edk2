@@ -391,12 +391,12 @@ BootScriptWriteDispatch2 (
   return S3BootScriptSaveDispatch2 (EntryPoint, Context);
 }
 /**
-  Internal function to add INFORAMTION opcode node to the table
+  Internal function to add INFORMATION opcode node to the table
   list.
   @param  Marker                The variable argument list to get the opcode
                                 and associated attributes.
 
-  @retval EFI_OUT_OF_RESOURCES  Not enought resource to complete the operations.
+  @retval EFI_OUT_OF_RESOURCES  Not enough resource to complete the operations.
   @retval EFI_SUCCESS           The opcode entry is added to the  table
                                 successfully.
 **/
@@ -417,7 +417,7 @@ BootScriptWriteInformation (
   @param  Marker                The variable argument list to get the opcode
                                 and associated attributes.
 
-  @retval EFI_OUT_OF_RESOURCES  Not enought resource to complete the operations.
+  @retval EFI_OUT_OF_RESOURCES  Not enough resource to complete the operations.
   @retval EFI_SUCCESS           The opcode entry is added to the  table
                                 successfully.
 **/
@@ -446,7 +446,7 @@ BootScriptWriteIoPoll (
   @param  Marker                The variable argument list to get the opcode
                                 and associated attributes.
 
-  @retval EFI_OUT_OF_RESOURCES  Not enought resource to complete the operations.
+  @retval EFI_OUT_OF_RESOURCES  Not enough resource to complete the operations.
   @retval EFI_SUCCESS           The opcode entry is added to the  table
                                 successfully.
 **/
@@ -476,7 +476,7 @@ BootScriptWritePciConfigPoll (
   @param  Marker                The variable argument list to get the opcode
                                 and associated attributes.
 
-  @retval EFI_OUT_OF_RESOURCES  Not enought resource to complete the operations.
+  @retval EFI_OUT_OF_RESOURCES  Not enough resource to complete the operations.
   @retval EFI_SUCCESS           The opcode entry is added to the  table
                                 successfully.
 **/
@@ -524,7 +524,7 @@ BootScriptWritePciConfig2Poll (
   @retval EFI_SUCCESS           The operation succeeded. A record was added into the
                                 specified script table.
   @retval EFI_INVALID_PARAMETER The parameter is illegal or the given boot script is not supported.
-                                If the opcode is unknow or not supported because of the PCD
+                                If the opcode is unknown or not supported because of the PCD
                                 Feature Flags.
   @retval EFI_OUT_OF_RESOURCES  There is insufficient memory to store the boot script.
 
@@ -886,8 +886,8 @@ BootScriptCompare (
   @param  SystemTable           EFI system table.
 
   @retval EFI_OUT_OF_RESOURCES  No enough resource
-  @retval EFI_SUCCESS           Succesfully installed the ScriptSave driver.
-  @retval other                 Errors occured.
+  @retval EFI_SUCCESS           Successfully installed the ScriptSave driver.
+  @retval other                 Errors occurred.
 
 **/
 EFI_STATUS

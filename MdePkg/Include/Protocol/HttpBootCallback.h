@@ -32,12 +32,12 @@ typedef enum {
   ///
   HttpBootDhcp6,
   ///
-  /// Data points to an EFI_HTTP_MESSAGE structure, whichcontians a HTTP request message
+  /// Data points to an EFI_HTTP_MESSAGE structure, which contains a HTTP request message
   /// to be transmitted.
   ///
   HttpBootHttpRequest,
   ///
-  /// Data points to an EFI_HTTP_MESSAGE structure, which contians a received HTTP
+  /// Data points to an EFI_HTTP_MESSAGE structure, which contains a received HTTP
   /// response message.
   ///
   HttpBootHttpResponse,

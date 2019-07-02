@@ -1,7 +1,7 @@
 ## @file
-# Component description file for Emu Fimware Volume Block DXE driver module.
+# Component description file for Emu Firmware Volume Block DXE driver module.
 #
-# This DXE runtime driver implements and produces the Fimware Volue Block Protocol on
+# This DXE runtime driver implements and produces the Firmware Volue Block Protocol on
 #  Emu emulator.
 # Copyright (c) 2008 - 2018, Intel Corporation. All rights reserved.<BR>
 # Portions copyright (c) 2011, Apple Inc. All rights reserved.

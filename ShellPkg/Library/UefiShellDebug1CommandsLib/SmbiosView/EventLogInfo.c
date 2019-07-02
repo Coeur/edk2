@@ -208,7 +208,7 @@ DisplaySysEventLogHeaderType1 (
   Function to display system event log header information.
 
   @param[in] LogHeaderFormat  Format identifier.
-  @param[in] LogHeader        Format informcation.
+  @param[in] LogHeader        Format information.
 **/
 VOID
 DisplaySysEventLogHeader (

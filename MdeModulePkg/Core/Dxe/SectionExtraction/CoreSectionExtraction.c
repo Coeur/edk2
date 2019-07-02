@@ -12,7 +12,7 @@
   The database is only created far enough to return the requested data from
   any given stream, or to determine that the requested data is not found.
 
-  If a GUIDed encapsulation is encountered, there are three possiblilites.
+  If a GUIDed encapsulation is encountered, there are three possibilities.
 
   1) A support protocol is found, in which the stream is simply processed with
      the support protocol.
@@ -521,7 +521,7 @@ VerifyGuidedSectionGuid (
       Status = CoreLocateProtocol (GuidedSectionGuid, NULL, (VOID **) &Interface);
       if (!EFI_ERROR (Status) && Interface != NULL) {
         //
-        // Found the supported Guided Section Extraction Porotocol for the Guided Section.
+        // Found the supported Guided Section Extraction Protocol for the Guided Section.
         //
         *GuidedSectionExtraction = (EFI_GUIDED_SECTION_EXTRACTION_PROTOCOL *) Interface;
         return TRUE;
@@ -539,7 +539,7 @@ VerifyGuidedSectionGuid (
 
   @param Event               The event that fired
   @param RpnContext          A pointer to the context that allows us to identify
-                             the relevent encapsulation.
+                             the relevant encapsulation.
 **/
 VOID
 EFIAPI
@@ -611,7 +611,7 @@ NotifyGuidedExtraction (
 /**
   Constructor for RPN event when a missing GUIDED_SECTION_EXTRACTION_PROTOCOL appears...
 
-  @param ParentStream        Indicates the parent of the ecnapsulation section (child)
+  @param ParentStream        Indicates the parent of the encapsulation section (child)
   @param ChildNode           Indicates the child node that is the encapsulation section.
 
 **/
@@ -758,7 +758,7 @@ CreateChildNode (
           CopyMem (NewStreamBuffer, CompressionSource, NewStreamBufferSize);
         } else if (CompressionType == EFI_STANDARD_COMPRESSION) {
           //
-          // Only support the EFI_SATNDARD_COMPRESSION algorithm.
+          // Only support the EFI_STANDARD_COMPRESSION algorithm.
           //
 
           //
@@ -1329,7 +1329,7 @@ FreeChildNode (
 {
   ASSERT (ChildNode->Signature == CORE_SECTION_CHILD_SIGNATURE);
   //
-  // Remove the child from it's list
+  // Remove the child from its list
   //
   RemoveEntryList (&ChildNode->Link);
 
@@ -1359,7 +1359,7 @@ FreeChildNode (
   @param  FreeStreamBuffer       TRUE - Need to free stream buffer;
                                  FALSE - No need to free stream buffer.
 
-  @retval EFI_SUCCESS            The section stream is closed sucessfully.
+  @retval EFI_SUCCESS            The section stream is closed successfully.
   @retval EFI_OUT_OF_RESOURCES   Memory allocation failed.
   @retval EFI_INVALID_PARAMETER  Section stream does not end concident with end
                                  of last section.

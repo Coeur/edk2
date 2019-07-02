@@ -138,7 +138,7 @@ EsrtDxeUpdateEsrtEntry(
   @param[in]    FwClass                FwClass of Esrt entry to Unregister
 
   @retval EFI_SUCCESS             Insert all entries Successfully
-  @retval EFI_NOT_FOUND           Entry of FwClass does not exsit
+  @retval EFI_NOT_FOUND           Entry of FwClass does not exist
 
 **/
 EFI_STATUS
@@ -215,7 +215,7 @@ EsrtDxeRegisterEsrtEntry(
 
   @retval EFI_SUCCESS                      Successfully sync cache repository from FMP instances
   @retval EFI_NOT_FOUND                   No FMP Instance are found
-  @retval EFI_OUT_OF_RESOURCES     Resource allocaton fail
+  @retval EFI_OUT_OF_RESOURCES     Resource allocation fail
 
 **/
 EFI_STATUS

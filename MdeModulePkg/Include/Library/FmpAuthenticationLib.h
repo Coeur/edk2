@@ -1,5 +1,5 @@
 /** @file
-  FMP capsule authenitcation Library.
+  FMP capsule authentication Library.
 
 Copyright (c) 2016, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent

@@ -125,7 +125,7 @@ EFI_STATUS
   for the specific data structure or the image signature. If the image is not supported
   by this image decoder, this function returns EFI_UNSUPPORTED to the caller.
   Otherwise, this function returns the proper image information to the caller.
-  It is the caller?s responsibility to free the ImageInfo.
+  It is the caller's responsibility to free the ImageInfo.
 
   @param This                    EFI_HII_IMAGE_DECODER_PROTOCOL instance.
   @param Image                   Pointer to the image raw data.
@@ -157,8 +157,8 @@ EFI_STATUS
   image. Forcing Transparent to FALSE may also improve the performance of the image
   decoding because the image decoder can skip the transparency processing.  If **Bitmap
   is NULL, the image decoder allocates the memory buffer for the EFI_IMAGE_OUTPUT
-  and decodes the image to the image buffer. It is the caller?s responsibility to
-  free the memory for EFI_IMAGE_OUTPUT. Image decoder doesn?t have to handle the
+  and decodes the image to the image buffer. It is the caller's responsibility to
+  free the memory for EFI_IMAGE_OUTPUT. Image decoder doesn't have to handle the
   transparency in this case because there is no background image given by the caller.
   The background color in this case is all black (#00000000).
 

@@ -185,7 +185,7 @@ CleanUpPage (
 
 /**
   Create a list of Goto Opcode for all terminal devices logged
-  by TerminaMenu. This list will be inserted to form FORM_CON_COM_SETUP_ID.
+  by TerminalMenu. This list will be inserted to form FORM_CON_COM_SETUP_ID.
 
   @param CallbackData    The BMM context data.
 **/
@@ -712,7 +712,7 @@ UpdateConModePage (
   ASSERT(ModeToken != NULL);
 
   //
-  // Determin which mode should be the first entry in menu
+  // Determine which mode should be the first entry in menu
   //
   GetConsoleOutMode (CallbackData);
 

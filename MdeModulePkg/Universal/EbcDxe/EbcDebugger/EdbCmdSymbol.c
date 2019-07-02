@@ -100,7 +100,7 @@ CHAR16 *mSymbolTypeStr[] = {
 
 /**
 
-  Comvert Symbol Type to string.
+  Convert Symbol Type to string.
 
   @param  Type            - Symbol Type
 
@@ -144,10 +144,10 @@ DebuggerDisplaySymbolAccrodingToAddress (
   //
   CandidateAddress = EbdFindSymbolAddress (Address, EdbMatchSymbolTypeNearestAddress, &Object, &Entry);
   if (CandidateAddress == 0 || CandidateAddress == (UINTN) -1) {
-    EDBPrint (L"Symbole at Address not found!\n");
+    EDBPrint (L"Symbol at Address not found!\n");
     return EFI_DEBUG_CONTINUE;
   } else if (Address != CandidateAddress) {
-    EDBPrint (L"Symbole at Address not found, print nearest one!\n");
+    EDBPrint (L"Symbol at Address not found, print nearest one!\n");
   }
 
   //
@@ -211,7 +211,7 @@ DebuggerDisplaySymbolAccrodingToName (
   }
 
   //
-  // Go throuth each symbol file
+  // Go through each symbol file
   //
   Object = DebuggerPrivate->DebuggerSymbolContext.Object;
   for (Index = 0; Index < DebuggerPrivate->DebuggerSymbolContext.ObjectCount; Index++, Object++) {
@@ -476,7 +476,7 @@ DebuggerLoadSymbol (
   }
 
   //
-  // Go throuth each file under this dir
+  // Go through each file under this dir
   //
   Index = 0;
   CodFileName = GetFileNameUnderDir (DebuggerPrivate, DirName, L".cod", &Index);

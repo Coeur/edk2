@@ -5,7 +5,7 @@
   executed in memory.
 
   Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
-  Portiions copyrigth (c) 2011, Apple Inc. All rights reserved.
+  Portions copyright (c) 2011, Apple Inc. All rights reserved.
   SPDX-License-Identifier: BSD-2-Clause-Patent
 
 **/
@@ -101,7 +101,7 @@ EFI_PEI_NOTIFY_DESCRIPTOR mNotifyOnThunkList = {
 
 /**
   Constructor register notification on when PPI updates. If PPI is
-  alreay installed registering the notify will cause the handle to
+  already installed registering the notify will cause the handle to
   run.
 
   @param  FileHandle   The handle of FFS header the loaded driver.

@@ -138,7 +138,7 @@ EhcDumpQh (
 
   QhHw = &Qh->QhHw;
 
-  DEBUG ((EFI_D_VERBOSE, "Hoziontal link: %x\n", QhHw->HorizonLink));
+  DEBUG ((EFI_D_VERBOSE, "Horizont. link: %x\n", QhHw->HorizonLink));
   DEBUG ((EFI_D_VERBOSE, "Device address: %d\n", QhHw->DeviceAddr));
   DEBUG ((EFI_D_VERBOSE, "Inactive      : %d\n", QhHw->Inactive));
   DEBUG ((EFI_D_VERBOSE, "EP number     : %d\n", QhHw->EpNum));

@@ -246,7 +246,7 @@ S3BootScriptEventCallBack (
   //
   if (!mS3BootScriptTablePtr->SmmLocked) {
     //
-    // Before SmmReadyToLock, we need not write the terminate node when adding a node to boot scipt table
+    // Before SmmReadyToLock, we need not write the terminate node when adding a node to boot script table
     // or else, that will impact the performance. However, after SmmReadyToLock, we should append terminate
     // node on every add to boot script table.
     //
@@ -629,8 +629,8 @@ S3BootScriptLibDeinitialize (
 
 /**
   To get the start address from which a new boot time s3 boot script entry will write into.
-  If the table is not exist, the functio will first allocate a buffer for the table
-  If the table buffer is not enough for the new entry, in non-smm mode, the funtion will
+  If the table is not exist, the function will first allocate a buffer for the table
+  If the table buffer is not enough for the new entry, in non-smm mode, the function will
   invoke reallocate to enlarge buffer.
 
   @param EntryLength      the new entry length.
@@ -708,12 +708,12 @@ S3BootScriptGetBootTimeEntryAddAddress (
      mS3BootScriptTablePtr->TableMemoryPageNumber =  (UINT16) (2 + PageNumber + PcdGet16(PcdS3BootScriptRuntimeTableReservePageNumber));
    }
    //
-   // calculate the the start address for the new entry.
+   // calculate the start address for the new entry.
    //
    NewEntryPtr = mS3BootScriptTablePtr->TableBase + TableLength;
 
    //
-   // update the table lenghth
+   // update the table length
    //
    mS3BootScriptTablePtr->TableLength =  TableLength + EntryLength;
 
@@ -2032,7 +2032,7 @@ S3BootScriptCalculateInsertAddress (
      //
      CopyMem (S3TableBase+PositionOffset+EntryLength, S3TableBase+PositionOffset, TableLength - PositionOffset);
      //
-     // calculate the the start address for the new entry.
+     // calculate the start address for the new entry.
      //
      *Script = S3TableBase + PositionOffset;
 
@@ -2220,7 +2220,7 @@ S3BootScriptLabelInternal (
   @retval EFI_SUCCESS           The operation succeeded. A record was added into the
                                 specified script table.
   @retval EFI_INVALID_PARAMETER The parameter is illegal or the given boot script is not supported.
-                                If the opcode is unknow or not supported because of the PCD
+                                If the opcode is unknown or not supported because of the PCD
                                 Feature Flags.
   @retval EFI_OUT_OF_RESOURCES  There is insufficient memory to store the boot script.
 
@@ -2302,7 +2302,7 @@ S3BootScriptLabel (
   @retval EFI_SUCCESS           The operation succeeded. A record was added into the
                                 specified script table.
   @retval EFI_INVALID_PARAMETER The parameter is illegal or the given boot script is not supported.
-                                If the opcode is unknow or not supported because of the PCD
+                                If the opcode is unknown or not supported because of the PCD
                                 Feature Flags.
   @retval EFI_OUT_OF_RESOURCES  There is insufficient memory to store the boot script.
 

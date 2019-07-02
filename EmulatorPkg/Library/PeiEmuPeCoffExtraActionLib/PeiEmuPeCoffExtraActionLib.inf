@@ -1,5 +1,5 @@
 ## @file
-# PeCoff extra action libary for Pei phase that run Emu emulator.
+# PeCoff extra action library for Pei phase that run Emu emulator.
 #
 # Lib to provide memory journal status code reporting Routines
 # Copyright (c) 2007 - 2010, Intel Corporation. All rights reserved.<BR>

@@ -121,7 +121,7 @@ PeiPciSegmentLibPciCfg2ReadWorker (
 
   This function wraps EFI_PEI_PCI_CFG2_PPI.Write() service.
   It writes the PCI configuration register specified by Address with the
-  value specified by Data. The width of data is specifed by Width.
+  value specified by Data. The width of data is specified by Width.
   Data is returned.
 
   @param  Address The address that encodes the PCI Bus, Device, Function and
@@ -1217,7 +1217,7 @@ PciSegmentBitFieldAndThenOr32 (
   Size into the buffer specified by Buffer. This function only allows the PCI
   configuration registers from a single PCI function to be read. Size is
   returned. When possible 32-bit PCI configuration read cycles are used to read
-  from StartAdress to StartAddress + Size. Due to alignment restrictions, 8-bit
+  from StartAddress to StartAddress + Size. Due to alignment restrictions, 8-bit
   and 16-bit PCI configuration read cycles may be used at the beginning and the
   end of the range.
 
@@ -1316,7 +1316,7 @@ PciSegmentReadBuffer (
   Size from the buffer specified by Buffer. This function only allows the PCI
   configuration registers from a single PCI function to be written. Size is
   returned. When possible 32-bit PCI configuration write cycles are used to
-  write from StartAdress to StartAddress + Size. Due to alignment restrictions,
+  write from StartAddress to StartAddress + Size. Due to alignment restrictions,
   8-bit and 16-bit PCI configuration write cycles may be used at the beginning
   and the end of the range.
 

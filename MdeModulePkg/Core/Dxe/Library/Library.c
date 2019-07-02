@@ -13,7 +13,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 //
 /**
   Initialize a basic mutual exclusion lock.   Each lock
-  provides mutual exclusion access at it's task priority
+  provides mutual exclusion access at its task priority
   level.  Since there is no-premption (at any TPL) or
   multiprocessor support, acquiring the lock only consists
   of raising to the locks TPL.

@@ -921,7 +921,7 @@ EFI_STATUS
   @retval EFI_INVALID_PARAMETER      This is NULL, ClientId is required but it is NULL,
                                      KeyAttributesCount is NULL, or KeyAttributes
                                      is NULL, or KeyIdentifierSize is NULL, or
-                                     KeyIdentifer is NULL.
+                                     KeyIdentifier is NULL.
   @retval EFI_NOT_FOUND              The KeyIdentifier could not be found. On return the
                                      KeyAttributesCount contains the number of attributes
                                      processed. Individual structures will reflect the status of the
@@ -1003,7 +1003,7 @@ EFI_STATUS
   @retval EFI_INVALID_PARAMETER      This is NULL, ClientId is required but it is NULL,
                                      KeyAttributesCount is NULL, or
                                      KeyAttributes is NULL, or KeyIdentifierSize
-                                     is NULL, or KeyIdentifer is NULL.
+                                     is NULL, or KeyIdentifier is NULL.
   @retval EFI_NOT_FOUND              The KeyIdentifier could not be found or the attribute
                                      could not be found. On return the KeyAttributesCount
                                      contains the number of attributes processed. Individual

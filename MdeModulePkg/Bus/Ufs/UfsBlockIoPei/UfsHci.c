@@ -1427,7 +1427,7 @@ UfsDeviceDetection (
 
   @param[in] Private                 The pointer to the UFS_PEIM_HC_PRIVATE_DATA data structure.
 
-  @retval EFI_SUCCESS                The UFS task management list was initialzed successfully.
+  @retval EFI_SUCCESS                The UFS task management list was initialized successfully.
   @retval EFI_DEVICE_ERROR           The initialization fails.
 
 **/
@@ -1494,7 +1494,7 @@ UfsInitTaskManagementRequestList (
 
   @param[in] Private                 The pointer to the UFS_PEIM_HC_PRIVATE_DATA data structure.
 
-  @retval EFI_SUCCESS                The UFS transfer list was initialzed successfully.
+  @retval EFI_SUCCESS                The UFS transfer list was initialized successfully.
   @retval EFI_DEVICE_ERROR           The initialization fails.
 
 **/

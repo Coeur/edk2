@@ -22,13 +22,13 @@ typedef enum {
 } READ_STATUS;
 
 /**
-  Function to print differnt point data.
+  Function to print different point data.
 
   @param[in]  FileName        File name.
   @param[in]  FileTag         File tag name.
   @param[in]  Buffer          Data buffer to be printed.
   @param[in]  BufferSize      Size of the data to be printed.
-  @param[in]  Address         Address of the differnt point.
+  @param[in]  Address         Address of the different point.
   @param[in]  DifferentBytes  Total size of the buffer.
 
 **/
@@ -302,7 +302,7 @@ ShellCommandRunComp (
             PrintDifferentPoint (FileName2, L"File2", DataFromFile2, InsertPosition2, DiffPointAddress, DifferentBytes);
 
             //
-            // One of two buffuers is empty, it means this is the last different point.
+            // One of two buffers is empty, it means this is the last different point.
             //
             if (InsertPosition1 == 0 || InsertPosition2 == 0) {
               break;

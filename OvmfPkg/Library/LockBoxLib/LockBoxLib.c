@@ -110,7 +110,7 @@ FindHeaderByGuid (
   @retval RETURN_ACCESS_DENIED      it is too late to invoke this interface
   @retval RETURN_NOT_STARTED        it is too early to invoke this interface
   @retval RETURN_UNSUPPORTED        the service is not supported by
-                                    implementaion.
+                                    implementation.
 **/
 RETURN_STATUS
 EFIAPI
@@ -178,7 +178,7 @@ SaveLockBox (
   @retval RETURN_ACCESS_DENIED      it is too late to invoke this interface
   @retval RETURN_NOT_STARTED        it is too early to invoke this interface
   @retval RETURN_UNSUPPORTED        the service is not supported by
-                                    implementaion.
+                                    implementation.
 **/
 RETURN_STATUS
 EFIAPI
@@ -228,7 +228,7 @@ SetLockBoxAttributes (
   @retval RETURN_ACCESS_DENIED      it is too late to invoke this interface
   @retval RETURN_NOT_STARTED        it is too early to invoke this interface
   @retval RETURN_UNSUPPORTED        the service is not supported by
-                                    implementaion.
+                                    implementation.
 **/
 RETURN_STATUS
 EFIAPI
@@ -285,7 +285,7 @@ UpdateLockBox (
   @retval RETURN_NOT_STARTED        it is too early to invoke this interface
   @retval RETURN_ACCESS_DENIED      not allow to restore to the address
   @retval RETURN_UNSUPPORTED        the service is not supported by
-                                    implementaion.
+                                    implementation.
 **/
 RETURN_STATUS
 EFIAPI
@@ -348,7 +348,7 @@ RestoreLockBox (
   @retval RETURN_SUCCESS            the information is restored successfully.
   @retval RETURN_NOT_STARTED        it is too early to invoke this interface
   @retval RETURN_UNSUPPORTED        the service is not supported by
-                                    implementaion.
+                                    implementation.
 **/
 RETURN_STATUS
 EFIAPI

@@ -35,7 +35,7 @@ extern EFI_HANDLE gShellNetwork2HiiHandle;
   @param[in] ImageHandle  Handle to the Image (NULL if Internal).
   @param[in] SystemTable  Pointer to the System Table (NULL if Internal).
 
-  @retval SHELL_SUCCESS  The ping6 processed successfullly.
+  @retval SHELL_SUCCESS  The ping6 processed successfully.
   @retval others         The ping6 processed unsuccessfully.
 
 **/

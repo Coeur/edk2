@@ -365,7 +365,7 @@ typedef struct {
   All valid handles in the system except those consume SimpleFs, LoadFile
   are stored in DriverMenu for future use.
 
-  @retval EFI_SUCCESS The function complets successfully.
+  @retval EFI_SUCCESS The function completes successfully.
   @return Other value if failed to build the DriverMenu.
 
 **/
@@ -395,7 +395,7 @@ BOpt_GetBootOptions (
 
   @param CallbackData The BMM context data.
 
-  @return EFI_SUCESS The functin completes successfully.
+  @return EFI_SUCCESS The function completes successfully.
   @retval EFI_OUT_OF_RESOURCES Not enough memory to compete the operation.
 
 
@@ -406,7 +406,7 @@ BOpt_GetDriverOptions (
   );
 
 /**
-  Free resources allocated in Allocate Rountine.
+  Free resources allocated in Allocate Routine.
 
   @param FreeMenu        Menu to be freed
 
@@ -590,7 +590,7 @@ ChangeVariableDevicePath (
 
 /**
   Update the multi-instance device path of Terminal Device based on
-  the global TerminalMenu. If ChangeTernimal is TRUE, the terminal
+  the global TerminalMenu. If ChangeTerminal is TRUE, the terminal
   device path in the Terminal Device in TerminalMenu is also updated.
 
   @param DevicePath      The multi-instance device path.
@@ -612,12 +612,12 @@ ChangeTerminalDevicePath (
 /**
   This function create a currently loaded Boot Option from
   the BMM. It then appends this Boot Option to the end of
-  the "BootOrder" list. It also append this Boot Opotion to the end
+  the "BootOrder" list. It also append this Boot Option to the end
   of BootOptionMenu.
 
   @param CallbackData           The BMM context data.
 
-  @retval EFI_OUT_OF_RESOURCES  If not enought memory to complete the operation.
+  @retval EFI_OUT_OF_RESOURCES  If not enough memory to complete the operation.
   @retval EFI_SUCCESS           If function completes successfully.
 
 **/
@@ -642,7 +642,7 @@ Var_DelBootOption (
 /**
   This function create a currently loaded Drive Option from
   the BMM. It then appends this Driver Option to the end of
-  the "DriverOrder" list. It append this Driver Opotion to the end
+  the "DriverOrder" list. It append this Driver Option to the end
   of DriverOptionMenu.
 
   @param CallbackData    The BMM context data.
@@ -651,7 +651,7 @@ Var_DelBootOption (
   @param OptionalData    The optional load option.
   @param ForceReconnect  If to force reconnect.
 
-  @retval EFI_OUT_OF_RESOURCES If not enought memory to complete the operation.
+  @retval EFI_OUT_OF_RESOURCES If not enough memory to complete the operation.
   @retval EFI_SUCCESS          If function completes successfully.
 
 **/
@@ -778,7 +778,7 @@ Var_UpdateDriverOrder (
 
   @param CallbackData  The context data for BMM.
 
-  @retval EFI_SUCCSS If the Text Mode of Console is updated.
+  @retval EFI_SUCCESS If the Text Mode of Console is updated.
   @return Other value if the Text Mode of Console is not updated.
 
 **/
@@ -901,7 +901,7 @@ UpdateConModePage (
 
 /**
   Create a list of Goto Opcode for all terminal devices logged
-  by TerminaMenu. This list will be inserted to form FORM_CON_COM_SETUP_ID.
+  by TerminalMenu. This list will be inserted to form FORM_CON_COM_SETUP_ID.
 
   @param CallbackData    The BMM context data.
 **/
@@ -1000,7 +1000,7 @@ GetLegacyBootOptionVar (
   Driver order change.
 
   @param Private         The BMM context data.
-  @param CurrentFakeNVMap The current Fack NV Map.
+  @param CurrentFakeNVMap The current Fake NV Map.
 
 **/
 VOID
@@ -1193,7 +1193,7 @@ BootMaintExtractConfig (
   @param[out] Progress            A pointer to a string filled in with the
                                   offset of the most recent '&' before the
                                   first failing name / value pair (or the
-                                  beginn ing of the string if the failure
+                                  beginning of the string if the failure
                                   is in the first name / value pair) or
                                   the terminating NULL if all was
                                   successful.

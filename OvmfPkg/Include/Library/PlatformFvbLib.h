@@ -1,6 +1,6 @@
 /** @file
   Library to define platform customization functions for a
-  Firmare Volume Block driver.
+  Firmware Volume Block driver.
 
   Copyright (c) 2009 - 2011, Intel Corporation. All rights reserved.<BR>
   SPDX-License-Identifier: BSD-2-Clause-Patent

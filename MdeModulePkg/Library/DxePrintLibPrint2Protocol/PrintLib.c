@@ -2028,7 +2028,7 @@ InternalPrintLibSPrintMarker (
     }
 
     //
-    // Retrieve the ArgumentString attriubutes
+    // Retrieve the ArgumentString attributes
     //
     if ((Flags & ARGUMENT_UNICODE) != 0) {
       ArgumentMask = 0xffff;

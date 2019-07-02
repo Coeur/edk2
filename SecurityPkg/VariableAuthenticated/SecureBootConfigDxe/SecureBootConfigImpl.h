@@ -172,7 +172,7 @@ typedef struct {
   CURRENT_VARIABLE_NAME             VariableName;     // The variable name we are processing.
   UINT32                            ListCount;        // Record current variable has how many signature list.
   UINTN                             ListIndex;        // Record which signature list is processing.
-  BOOLEAN                           *CheckArray;      // Record whcih siganture data checked.
+  BOOLEAN                           *CheckArray;      // Record which signature data checked.
 } SECUREBOOT_CONFIG_PRIVATE_DATA;
 
 extern SECUREBOOT_CONFIG_PRIVATE_DATA      mSecureBootConfigPrivateDateTemplate;
@@ -182,7 +182,7 @@ extern SECUREBOOT_CONFIG_PRIVATE_DATA      *gSecureBootPrivateData;
 #define SECUREBOOT_CONFIG_PRIVATE_FROM_THIS(a)  CR (a, SECUREBOOT_CONFIG_PRIVATE_DATA, ConfigAccess, SECUREBOOT_CONFIG_PRIVATE_DATA_SIGNATURE)
 
 //
-// Cryptograhpic Key Information
+// Cryptographic Key Information
 //
 #pragma pack(1)
 typedef struct _CPL_KEY_INFO {

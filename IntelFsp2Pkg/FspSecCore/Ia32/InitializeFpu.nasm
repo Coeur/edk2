@@ -46,7 +46,7 @@ ASM_PFX(InitializeFloatingPointUnits):
     fldcw    [ASM_PFX(mFpuControlWord)]
 
     ;
-    ; Use CpuId instructuion (CPUID.01H:EDX.SSE[bit 25] = 1) to test
+    ; Use CpuId instruction (CPUID.01H:EDX.SSE[bit 25] = 1) to test
     ; whether the processor supports SSE instruction.
     ;
     mov     eax, 1

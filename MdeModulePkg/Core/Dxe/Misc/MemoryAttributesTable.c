@@ -26,7 +26,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
   This function for GetMemoryMap() with properties table capability.
 
   It calls original GetMemoryMap() to get the original memory map information. Then
-  plus the additional memory map entries for PE Code/Data seperation.
+  plus the additional memory map entries for PE Code/Data separation.
 
   @param  MemoryMapSize          A pointer to the size, in bytes, of the
                                  MemoryMap buffer. On input, this is the size of
@@ -187,7 +187,7 @@ InstallMemoryAttributesTable (
   FreePool (MemoryMap);
 
   //
-  // Update configuratoin table for MemoryAttributesTable.
+  // Update configuration table for MemoryAttributesTable.
   //
   Status = gBS->InstallConfigurationTable (&gEfiMemoryAttributesTableGuid, MemoryAttributesTable);
   ASSERT_EFI_ERROR (Status);
@@ -252,7 +252,7 @@ InstallMemoryAttributesTableOnEndOfDxe (
 }
 
 /**
-  Initialize MemoryAttrubutesTable support.
+  Initialize MemoryAttributesTable support.
 **/
 VOID
 EFIAPI

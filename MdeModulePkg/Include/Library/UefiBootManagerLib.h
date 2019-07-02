@@ -398,10 +398,10 @@ EfiBootManagerRefreshAllBootOption (
   );
 
 /**
-  Attempt to boot the EFI boot option. This routine sets L"BootCurent" and
+  Attempt to boot the EFI boot option. This routine sets L"BootCurrent" and
   signals the EFI ready to boot event. If the device path for the option starts
   with a BBS device path a legacy boot is attempted. Short form device paths are
-  also supported via this rountine. A device path starting with
+  also supported via this routine. A device path starting with
   MEDIA_HARDDRIVE_DP, MSG_USB_WWID_DP, MSG_USB_CLASS_DP gets expaned out
   to find the first device that matches. If the BootOption Device Path
   fails the removable media boot algorithm is attempted (\EFI\BOOTIA32.EFI,

@@ -20,7 +20,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 #include <Library/UefiRuntimeServicesTableLib.h>
 
 //
-// The handle to install Monotonic Counter Architctural Protocol
+// The handle to install Monotonic Counter Architectural Protocol
 //
 EFI_HANDLE  mMonotonicCounterHandle = NULL;
 
@@ -103,7 +103,7 @@ MonotonicCounterDriverGetNextMonotonicCount (
   zero on every system reset and is increased by 1 on every call to GetNextMonotonicCount().
   The high 32 bit value is non-volatile and is increased by 1 whenever the system resets,
   whenever GetNextHighMonotonicCount() is called, or whenever the low 32 bit count
-  (returned by GetNextMonoticCount()) overflows.
+  (returned by GetNextMonotonicCount()) overflows.
   The GetNextMonotonicCount() function is only available at boot services time.
   If the operating system wishes to extend the platform monotonic counter to runtime,
   it may do so by utilizing GetNextHighMonotonicCount().  To do this, before calling
@@ -255,7 +255,7 @@ MonotonicCounterDriverInitialize (
   gRT->GetNextHighMonotonicCount  = MonotonicCounterDriverGetNextHighMonotonicCount;
 
   //
-  // Install the Monotonic Counter Architctural Protocol onto a new handle
+  // Install the Monotonic Counter Architectural Protocol onto a new handle
   //
   Status = gBS->InstallMultipleProtocolInterfaces (
                   &mMonotonicCounterHandle,

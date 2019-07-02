@@ -82,7 +82,7 @@ FfsAttributes2FvFileAttributes (
                                      to GetNextFile().
   @param  FileType                   FileType is a pointer to a caller allocated
                                      EFI_FV_FILETYPE. The GetNextFile() API can
-                                     filter it's search for files based on the
+                                     filter its search for files based on the
                                      value of *FileType input. A *FileType input
                                      of 0 causes GetNextFile() to search for
                                      files of all types.  If a file is found, the
@@ -526,7 +526,7 @@ FvReadFileSection (
   }
 
   //
-  // Close of stream defered to close of FfsHeader list to allow SEP to cache data
+  // Close of stream deferred to close of FfsHeader list to allow SEP to cache data
   //
 
 Done:

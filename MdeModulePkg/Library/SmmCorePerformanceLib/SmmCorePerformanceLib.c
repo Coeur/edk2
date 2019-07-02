@@ -115,7 +115,7 @@ GetFpdtRecordPtr (
 
 
 /**
-Check whether the Token is a known one which is uesed by core.
+Check whether the Token is a known one which is used by core.
 
 @param  Token      Pointer to a Null-terminated ASCII string
 
@@ -276,7 +276,7 @@ GetModuleInfoFromHandle (
   }
 
   //
-  // Try to get the ModuleGuid and name string form the caached array.
+  // Try to get the ModuleGuid and name string from the cached array.
   //
   if (mCachePairCount > 0) {
     for (Count = mCachePairCount - 1; Count >= 0; Count--) {
@@ -365,7 +365,7 @@ GetModuleInfoFromHandle (
       }
       //
       // Copy the PDB file name to our temporary string.
-      // If the length is bigger than BufferSize, trim the redudant characters to avoid overflow in array boundary.
+      // If the length is bigger than BufferSize, trim the redundant characters to avoid overflow in array boundary.
       //
       for (Index = 0; Index < BufferSize - 1; Index++) {
         NameString[Index] = PdbFileName[Index + StartIndex];
@@ -532,10 +532,10 @@ InsertFpdtRecord (
   //
   if (Attribute != PerfEntry) {
     //
-    // If PERF_START_EX()/PERF_END_EX() have specified the ProgressID,it has high priority.
+    // If PERF_START_EX()/PERF_END_EX() have specified the ProgressID, it has high priority.
     // !!! Note: If the Perf is not the known Token used in the core but have same
     // ID with the core Token, this case will not be supported.
-    // And in currtnt usage mode, for the unkown ID, there is a general rule:
+    // And in current usage mode, for the unknown ID, there is a general rule:
     // If it is start pref: the lower 4 bits of the ID should be 0.
     // If it is end pref: the lower 4 bits of the ID should not be 0.
     // If input ID doesn't follow the rule, we will adjust it.

@@ -19,7 +19,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
     }
 
 //
-// Forward reference for pure ANSI compatability
+// Forward reference for pure ANSI compatibility
 //
 typedef struct _EDKII_IOMMU_PROTOCOL  EDKII_IOMMU_PROTOCOL;
 

@@ -91,7 +91,7 @@ Uhci2Reset (
     break;
 
   default:
-    goto ON_INVAILD_PARAMETER;
+    goto ON_INVALID_PARAMETER;
   }
 
   //
@@ -106,7 +106,7 @@ Uhci2Reset (
 
   return EFI_SUCCESS;
 
-ON_INVAILD_PARAMETER:
+ON_INVALID_PARAMETER:
 
   gBS->RestoreTPL (OldTpl);
 
@@ -208,7 +208,7 @@ Uhci2SetState (
 
     if (CurState == EfiUsbHcStateHalt) {
       //
-      // Set Run/Stop bit to 1, also set the bandwidht reclamation
+      // Set Run/Stop bit to 1, also set the bandwidth reclamation
       // point to 64 bytes
       //
       UsbCmd |= USBCMD_RS | USBCMD_MAXP;
@@ -728,7 +728,7 @@ Uhci2ControlTransfer (
 
   //
   // According to the speed of the end point, link
-  // the TD to corrosponding queue head, then check
+  // the TD to corresponding queue head, then check
   // the execution result
   //
   UhciLinkTdToQh (Uhc, Uhc->CtrlQh, TDs);
@@ -769,7 +769,7 @@ ON_EXIT:
                                  actually transferred data size.
   @param  DataToggle             On input, data toggle to use; On output, next data toggle.
   @param  TimeOut                Maximum time out, in microseconds.
-  @param  Translator             A pointr to the transaction translator data.
+  @param  Translator             A pointer to the transaction translator data.
   @param  TransferResult         Variable to receive transfer result.
 
   @return EFI_SUCCESS            The bulk transfer was completed successfully.
@@ -881,7 +881,7 @@ Uhci2BulkTransfer (
 
   //
   // Link the TDs to bulk queue head. According to the platfore
-  // defintion of UHCI_NO_BW_RECLAMATION, BulkQh is either configured
+  // definition of UHCI_NO_BW_RECLAMATION, BulkQh is either configured
   // to do full speed bandwidth reclamation or not.
   //
   BulkQh = Uhc->BulkQh;
@@ -919,7 +919,7 @@ ON_EXIT:
   @param  PollingInterval        Interrupt poll rate in milliseconds.
   @param  DataLength             On input, size of the data buffer, On output,
                                  actually transferred data size.
-  @param  Translator             A pointr to the transaction translator data.
+  @param  Translator             A pointer to the transaction translator data.
   @param  CallBackFunction       Function to call periodically.
   @param  Context                User context.
 
@@ -1100,7 +1100,7 @@ FREE_DATA:
                                  actually transferred data size.
   @param  DataToggle             On input, data toggle to use; On output, next data toggle.
   @param  TimeOut                Maximum time out, in microseconds.
-  @param  Translator             A pointr to the transaction translator data.
+  @param  Translator             A pointer to the transaction translator data.
   @param  TransferResult         Variable to receive transfer result.
 
   @return EFI_SUCCESS            The transfer was completed successfully.
@@ -1246,7 +1246,7 @@ ON_EXIT:
   @param  Data                  Array of pointers to the buffers of data.
   @param  DataLength            On input, size of the data buffer, On output,
                                 actually transferred data size.
-  @param  Translator            A pointr to the transaction translator data.
+  @param  Translator            A pointer to the transaction translator data.
   @param  TransferResult        Variable to receive transfer result.
 
   @return EFI_UNSUPPORTED
@@ -1283,7 +1283,7 @@ Uhci2IsochronousTransfer (
   @param  Data                  Array of pointers to the buffers of data.
   @param  DataLength            On input, size of the data buffer, On output,
                                 actually transferred data size.
-  @param  Translator            A pointr to the transaction translator data.
+  @param  Translator            A pointer to the transaction translator data.
   @param  IsochronousCallBack   Function to call when the transfer complete.
   @param  Context               Pass to the call back function as parameter.
 
@@ -1443,7 +1443,7 @@ UhciAllocateDev (
 
   //
   // This driver supports both USB_HC_PROTOCOL and USB2_HC_PROTOCOL.
-  // USB_HC_PROTOCOL is for EFI 1.1 backward compability.
+  // USB_HC_PROTOCOL is for EFI 1.1 backward compatibility.
   //
   Uhc->Signature                        = USB_HC_DEV_SIGNATURE;
   Uhc->Usb2Hc.GetCapability             = Uhci2GetCapability;

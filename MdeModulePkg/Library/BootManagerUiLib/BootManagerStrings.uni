@@ -28,9 +28,9 @@
 #string STR_AND                        #language en-US  " and "
                                        #language fr-FR  " et "
 #string STR_BOOT_OPTION_BANNER         #language en-US  "Boot Manager Menu"
-                                       #language fr-FR  "le Menu d'Option de Botte"
+                                       #language fr-FR  "le Menu d'Option d'amorçage"
 #string STR_ANY_KEY_CONTINUE           #language en-US  "Press any key to continue..."
-                                       #language fr-FR  "Appuie n'importe quelle pour continuer..."
+                                       #language fr-FR  "Appuie n'importe quelle touche pour continuer..."
 #string STR_LAST_STRING                #language en-US  ""
                                        #language fr-FR  ""
 

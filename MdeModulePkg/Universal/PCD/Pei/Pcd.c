@@ -54,7 +54,7 @@ PCD_PPI mPcdPpiInstance = {
 
 ///
 /// Instance of EFI_PEI_PCD_PPI which is defined in PI 1.2 Vol 3.
-/// This PPI instance only support dyanmicEx type PCD.
+/// This PPI instance only support dynamicEx type PCD.
 ///
 EFI_PEI_PCD_PPI  mEfiPcdPpiInstance = {
   PeiPcdSetSku,
@@ -90,7 +90,7 @@ GET_PCD_INFO_PPI mGetPcdInfoInstance = {
 
 ///
 /// Instance of EFI_GET_PCD_INFO_PPI which is defined in PI 1.2.1 Vol 3.
-/// This PPI instance only support dyanmicEx type PCD.
+/// This PPI instance only support dynamicEx type PCD.
 ///
 EFI_GET_PCD_INFO_PPI  mEfiGetPcdInfoInstance = {
   PeiGetPcdInfoGetInfoEx,

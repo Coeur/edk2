@@ -161,7 +161,7 @@ EbcLLCALLEX (
   );
 
 /**
-  Returns the stack index and buffer assosicated with the Handle parameter.
+  Returns the stack index and buffer associated with the Handle parameter.
 
   @param  Handle                The EFI handle as the index to the EBC stack.
   @param  StackBuffer           A pointer to hold the returned stack buffer.

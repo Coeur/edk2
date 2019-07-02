@@ -316,7 +316,7 @@ EFI_STATUS
   @param  PeiServices      An indirect pointer to the EFI_PEI_SERVICES table published by the PEI Foundation.
   @param  Instance         This instance of the firmware volume to find.
                            The value 0 is the Boot Firmware Volume (BFV).
-  @param  VolumeHandle     On exit, points to the next volumn handle or NULL if it does not exist.
+  @param  VolumeHandle     On exit, points to the next volume handle or NULL if it does not exist.
 
   @retval EFI_SUCCESS           The volume was found.
   @retval EFI_NOT_FOUND         The volume was not found.
@@ -862,7 +862,7 @@ EFI_STATUS
 #define PEI_SERVICES_SIGNATURE  0x5652455320494550ULL
 ///
 /// Specification inconsistency here:
-/// In the PI1.0 specification, there is a typo error in PEI_SERVICES_REVISION. In the specification the defintion is
+/// In the PI1.0 specification, there is a typo error in PEI_SERVICES_REVISION. In the specification the definition is
 /// #define ((PEI_SPECIFICATION_MAJOR_REVISION<<16) |(PEI_SPECIFICATION_MINOR_REVISION))
 /// and it should be as follows:
 ///

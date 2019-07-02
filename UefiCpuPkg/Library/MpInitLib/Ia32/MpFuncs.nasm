@@ -269,7 +269,7 @@ ASM_PFX(AsmGetAddressMap):
 
 ;-------------------------------------------------------------------------------------
 ;AsmExchangeRole procedure follows. This procedure executed by current BSP, that is
-;about to become an AP. It switches it'stack with the current AP.
+;about to become an AP. It switches its stack with the current AP.
 ;AsmExchangeRole (IN   CPU_EXCHANGE_INFO    *MyInfo, IN   CPU_EXCHANGE_INFO    *OthersInfo);
 ;-------------------------------------------------------------------------------------
 global ASM_PFX(AsmExchangeRole)

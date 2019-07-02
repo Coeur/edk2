@@ -216,7 +216,7 @@ PartitionInstallMbrChildHandles (
       if (Mbr->Partition[Index].OSIndicator == PMBR_GPT_PARTITION) {
         //
         // This is the guard MBR for the GPT. If you ever see a GPT disk with zero partitions you can get here.
-        //  We can not produce an MBR BlockIo for this device as the MBR spans the GPT headers. So formating
+        //  We can not produce an MBR BlockIo for this device as the MBR spans the GPT headers. So formatting
         //  this BlockIo would corrupt the GPT structures and require a recovery that would corrupt the format
         //  that corrupted the GPT partition.
         //

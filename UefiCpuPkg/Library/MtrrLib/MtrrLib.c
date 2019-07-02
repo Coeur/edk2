@@ -1139,7 +1139,7 @@ MtrrLibGetNumberOfTypes (
 
   @param VertexCount     The count of vertices in the graph.
   @param Vertices        Array holding all vertices.
-  @param Weight          2-dimention array holding weights between vertices.
+  @param Weight          2-dimension array holding weights between vertices.
   @param Start           Start vertex.
   @param Stop            Stop vertex.
   @param IncludeOptional TRUE to count the optional weight.
@@ -1286,7 +1286,7 @@ MtrrLibIsPowerOfTwo (
   @param RangeCount   The count of memory ranges the array holds.
   @param VertexCount  The count of vertices in the graph.
   @param Vertices     Array holding all vertices.
-  @param Weight       2-dimention array holding weights between vertices.
+  @param Weight       2-dimension array holding weights between vertices.
   @param Start        Start vertex.
   @param Stop         Stop vertex.
   @param Types        Type bit mask of memory range from Start to Stop.
@@ -2022,7 +2022,7 @@ MtrrLibSetMemoryRanges (
     }
 
     //
-    // Find continous ranges [Base0, Base1) which could be combined by MTRR.
+    // Find continuous ranges [Base0, Base1) which could be combined by MTRR.
     // Per SDM, the compatible types between[B0, B1) are:
     //   UC, *
     //   WB, WT
@@ -2198,7 +2198,7 @@ MtrrSetMemoryAttributesInMtrrSettings (
   MtrrLibInitializeMtrrMask (&MtrrValidBitsMask, &MtrrValidAddressMask);
 
   //
-  // TRUE indicating the accordingly Variable setting needs modificaiton in OriginalVariableMtrr.
+  // TRUE indicating the accordingly Variable setting needs modification in OriginalVariableMtrr.
   //
   SetMem (VariableSettingModified, ARRAY_SIZE (VariableSettingModified), FALSE);
 

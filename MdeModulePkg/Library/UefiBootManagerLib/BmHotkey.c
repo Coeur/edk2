@@ -630,7 +630,7 @@ BmGenerateKeyShiftState (
 
 /**
   Add it to hot key database, register it to existing TxtInEx.
-  New TxtInEx will be automatically registered with all the hot key in dababase
+  New TxtInEx will be automatically registered with all the hot key in database
 
   @param    KeyOption  Input key option info.
 **/

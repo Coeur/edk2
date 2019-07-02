@@ -796,7 +796,7 @@ FvHasBeenProcessed (
 }
 
 /**
-  Remember that Fv protocol on FvHandle has had it's drivers placed on the
+  Remember that Fv protocol on FvHandle has had its drivers placed on the
   mDiscoveredList. This fucntion adds entries on the mFvHandleList. Items are
   never removed/freed from the mFvHandleList.
 

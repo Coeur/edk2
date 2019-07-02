@@ -258,13 +258,13 @@ EdbClearSymbol (
   UINTN                       Index;
 
   //
-  // Go throuth each object
+  // Go through each object
   //
   DebuggerSymbolContext = &DebuggerPrivate->DebuggerSymbolContext;
   for (ObjectIndex = 0; ObjectIndex < DebuggerSymbolContext->ObjectCount; ObjectIndex++) {
     Object = &DebuggerSymbolContext->Object[ObjectIndex];
     //
-    // Go throuth each entry
+    // Go through each entry
     //
     for (Index = 0; Index < Object->EntryCount; Index++) {
       ZeroMem (&Object->Entry[Index], sizeof(Object->Entry[Index]));

@@ -134,7 +134,7 @@ typedef struct {
   @param[in]  This                Pointer to the EFI_BLUETOOTH_ATTRIBUTE_PROTOCOL instance.
   @param[in]  Data                Data received. The first byte is the attribute opcode, followed by opcode specific
                                   fields. See Bluetooth specification, Vol 3, Part F, Attribute Protocol. It might be a
-                                  normal RESPONSE message, or ERROR RESPONSE messag
+                                  normal RESPONSE message, or ERROR RESPONSE message
   @param[in]  DataLength          The length of Data in bytes.
   @param[in]  Context             The context passed from the callback registration request.
 

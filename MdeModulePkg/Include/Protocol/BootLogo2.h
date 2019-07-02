@@ -24,7 +24,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
   }
 
 //
-// Forward reference for pure ANSI compatability
+// Forward reference for pure ANSI compatibility
 //
 typedef struct _EDKII_BOOT_LOGO2_PROTOCOL EDKII_BOOT_LOGO2_PROTOCOL;
 
@@ -38,7 +38,7 @@ typedef struct _EDKII_BOOT_LOGO2_PROTOCOL EDKII_BOOT_LOGO2_PROTOCOL;
   @param[in] DestinationX  X coordinate of destination for the BltBuffer.
   @param[in] DestinationY  Y coordinate of destination for the BltBuffer.
   @param[in] Width         Width of rectangle in BltBuffer in pixels.
-  @param[in] Height        Hight of rectangle in BltBuffer in pixels.
+  @param[in] Height        Height of rectangle in BltBuffer in pixels.
 
   @retval EFI_SUCCESS            The boot logo information was updated.
   @retval EFI_INVALID_PARAMETER  One of the parameters has an invalid value.

@@ -700,7 +700,7 @@ ConverToCpuArchAttributes (
                                  setting attribute.
   @retval EFI_SUCCESS            Action successfully done.
   @retval EFI_UNSUPPORTED        Could not find the proper descriptor on this
-                                 segment or  set an upsupported attribute.
+                                 segment or  set an unsupported attribute.
   @retval EFI_ACCESS_DENIED      Operate on an space non-exist or is used for an
                                  image.
   @retval EFI_NOT_FOUND          Free a non-using space or remove a non-exist
@@ -2080,9 +2080,9 @@ CoreConvertResourceDescriptorHobAttributesToCapabilities (
 }
 
 /**
-  Calculate total memory bin size neeeded.
+  Calculate total memory bin size needed.
 
-  @return The total memory bin size neeeded.
+  @return The total memory bin size needed.
 
 **/
 UINT64
@@ -2244,14 +2244,14 @@ CoreInitializeMemoryServices (
     Length      = PageAlignLength  (ResourceHob->PhysicalStart + ResourceHob->ResourceLength - BaseAddress);
     if (Length < MinimalMemorySizeNeeded) {
       //
-      // If that range is not large enough to intialize the DXE Core, then
+      // If that range is not large enough to initialize the DXE Core, then
       // Compute range between PHIT EfiFreeMemoryBottom and PHIT EfiFreeMemoryTop
       //
       BaseAddress = PageAlignAddress (PhitHob->EfiFreeMemoryBottom);
       Length      = PageAlignLength  (PhitHob->EfiFreeMemoryTop - BaseAddress);
       if (Length < MinimalMemorySizeNeeded) {
         //
-        // If that range is not large enough to intialize the DXE Core, then
+        // If that range is not large enough to initialize the DXE Core, then
         // Compute range between the start of the Resource Descriptor HOB and the start of the HOB List
         //
         BaseAddress = PageAlignAddress (ResourceHob->PhysicalStart);
@@ -2315,7 +2315,7 @@ CoreInitializeMemoryServices (
       }
 
       //
-      // Skip Resource Descriptor HOBs that are not large enough to initilize the DXE Core
+      // Skip Resource Descriptor HOBs that are not large enough to initialize the DXE Core
       //
       TestedMemoryBaseAddress = PageAlignAddress (ResourceHob->PhysicalStart);
       TestedMemoryLength      = PageAlignLength  (ResourceHob->PhysicalStart + ResourceHob->ResourceLength - TestedMemoryBaseAddress);
@@ -2324,7 +2324,7 @@ CoreInitializeMemoryServices (
       }
 
       //
-      // Save the range described by the Resource Descriptor that is large enough to initilize the DXE Core
+      // Save the range described by the Resource Descriptor that is large enough to initialize the DXE Core
       //
       BaseAddress = TestedMemoryBaseAddress;
       Length      = TestedMemoryLength;

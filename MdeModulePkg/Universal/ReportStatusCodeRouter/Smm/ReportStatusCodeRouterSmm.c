@@ -1,5 +1,5 @@
 /** @file
-  Report Status Code Router Driver which produces SMM Report Stataus Code Handler Protocol
+  Report Status Code Router Driver which produces SMM Report Status Code Handler Protocol
   and SMM Status Code Protocol.
 
   Copyright (c) 2009 - 2018, Intel Corporation. All rights reserved.<BR>
@@ -152,7 +152,7 @@ ReportDispatcher (
   SMM_RSC_HANDLER_CALLBACK_ENTRY    *CallbackEntry;
 
   //
-  // Use atom operation to avoid the reentant of report.
+  // Use atom operation to avoid the reentrant of report.
   // If current status is not zero, then the function is reentrancy.
   //
   if (InterlockedCompareExchange32 (&mStatusCodeNestStatus, 0, 1) == 1) {
@@ -187,7 +187,7 @@ ReportDispatcher (
   Entry point of Generic Status Code Driver.
 
   This function is the entry point of SMM Status Code Router .
-  It produces SMM Report Stataus Code Handler and Status Code protocol.
+  It produces SMM Report Status Code Handler and Status Code protocol.
 
   @param  ImageHandle       The firmware allocated handle for the EFI image.
   @param  SystemTable       A pointer to the EFI System Table.

@@ -116,7 +116,7 @@ EhcInitSched (
   // 4. Set the frame list register
   //
   //
-  // The Frame List ocupies 4K bytes,
+  // The Frame List occupies 4K bytes,
   // and must be aligned on 4-Kbyte boundaries.
   //
   Status = IoMmuAllocateBuffer (
@@ -169,7 +169,7 @@ EhcInitSched (
 
   //
   // Second initialize the asynchronous schedule:
-  // Only need to set the AsynListAddr register to
+  // Only need to set the AsyncListAddr register to
   // the reclamation header
   //
   PciAddr  = UsbHcGetPciAddressForHostMem (Ehc->MemPool, Ehc->ReclaimHead, sizeof (PEI_EHC_QH));
@@ -239,7 +239,7 @@ EhcLinkQhToAsync (
   //
   // Append the queue head after the reclaim header, then
   // fix the hardware visiable parts (EHCI R1.0 page 72).
-  // ReclaimHead is always linked to the EHCI's AsynListAddr.
+  // ReclaimHead is always linked to the EHCI's AsyncListAddr.
   //
   Head                    = Ehc->ReclaimHead;
 
@@ -295,8 +295,8 @@ EhcUnlinkQhFromAsync (
   @param Ehc   The EHCI device.
   @param Urb   The URB to check result.
 
-  @retval TRUE    URB transfer is finialized.
-  @retval FALSE   URB transfer is not finialized.
+  @retval TRUE    URB transfer is finalized.
+  @retval FALSE   URB transfer is not finalized.
 
 **/
 BOOLEAN
@@ -331,7 +331,7 @@ EhcCheckUrbResult (
     if (EHC_BIT_IS_SET (State, QTD_STAT_HALTED)) {
       //
       // EHCI will halt the queue head when met some error.
-      // If it is halted, the result of URB is finialized.
+      // If it is halted, the result of URB is finalized.
       //
       if ((State & QTD_STAT_ERR_MASK) == 0) {
         Urb->Result |= EFI_USB_ERR_STALL;
@@ -354,7 +354,7 @@ EhcCheckUrbResult (
 
     } else if (EHC_BIT_IS_SET (State, QTD_STAT_ACTIVE)) {
       //
-      // The QTD is still active, no need to check furthur.
+      // The QTD is still active, no need to check further.
       //
       Urb->Result |= EFI_USB_ERR_NOTEXECUTE;
 
@@ -375,7 +375,7 @@ EhcCheckUrbResult (
 
         //
         // Short packet read condition. If it isn't a setup transfer,
-        // no need to check furthur: the queue head will halt at the
+        // no need to check further: the queue head will halt at the
         // ShortReadStop. If it is a setup transfer, need to check the
         // Status Stage of the setup transfer to get the finial result
         //

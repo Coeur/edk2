@@ -113,15 +113,15 @@ Var_DelDriverOption (
 }
 
 /**
-  This function delete and build multi-instance device path for
+  This function deletes and builds multi-instance device path for
   specified type of console device.
 
-  This function clear the EFI variable defined by ConsoleName and
-  gEfiGlobalVariableGuid. It then build the multi-instance device
+  This function clears the EFI variable defined by ConsoleName and
+  gEfiGlobalVariableGuid. It then builds the multi-instance device
   path by appending the device path of the Console (In/Out/Err) instance
-  in ConsoleMenu. Then it scan all corresponding console device by
+  in ConsoleMenu. Then it scans all corresponding console device by
   scanning Terminal (built from device supporting Serial I/O instances)
-  devices in TerminalMenu. At last, it save a EFI variable specifed
+  devices in TerminalMenu. At last, it saves a EFI variable specified
   by ConsoleName and gEfiGlobalVariableGuid.
 
   @param ConsoleName     The name for the console device type. They are
@@ -130,7 +130,7 @@ Var_DelDriverOption (
   @param UpdatePageId    The flag specifying which type of console device
                          to be processed.
 
-  @retval EFI_SUCCESS    The function complete successfully.
+  @retval EFI_SUCCESS    The function completed successfully.
   @return The EFI variable can not be saved. See gRT->SetVariable for detail return information.
 
 **/
@@ -268,7 +268,7 @@ Var_UpdateErrorOutOption (
 /**
   This function create a currently loaded Drive Option from
   the BMM. It then appends this Driver Option to the end of
-  the "DriverOrder" list. It append this Driver Opotion to the end
+  the "DriverOrder" list. It append this Driver Option to the end
   of DriverOptionMenu.
 
   @param CallbackData    The BMM context data.
@@ -277,8 +277,8 @@ Var_UpdateErrorOutOption (
   @param OptionalData    The optional load option.
   @param ForceReconnect  If to force reconnect.
 
-  @retval other                Contain some errors when excuting this function.See function
-                               EfiBootManagerInitializeLoadOption/EfiBootManagerAddLoadOptionVariabl
+  @retval other                Contain some errors when executing this function.See function
+                               EfiBootManagerInitializeLoadOption/EfiBootManagerAddLoadOptionVariable
                                for detail return information.
   @retval EFI_SUCCESS          If function completes successfully.
 
@@ -397,13 +397,13 @@ Var_UpdateDriverOption (
 /**
   This function create a currently loaded Boot Option from
   the BMM. It then appends this Boot Option to the end of
-  the "BootOrder" list. It also append this Boot Opotion to the end
+  the "BootOrder" list. It also append this Boot Option to the end
   of BootOptionMenu.
 
   @param CallbackData    The BMM context data.
 
-  @retval other                Contain some errors when excuting this function. See function
-                               EfiBootManagerInitializeLoadOption/EfiBootManagerAddLoadOptionVariabl
+  @retval other                Contain some errors when executing this function. See function
+                               EfiBootManagerInitializeLoadOption/EfiBootManagerAddLoadOptionVariable
                                for detail return information.
   @retval EFI_SUCCESS          If function completes successfully.
 
@@ -518,7 +518,7 @@ Var_UpdateBootOption (
   This function update the "BootNext" EFI Variable. If there is
   no "BootNext" specified in BMM, this EFI Variable is deleted.
   It also update the BMM context data specified the "BootNext"
-  vaule.
+  value.
 
   @param CallbackData    The BMM context data.
 
@@ -704,7 +704,7 @@ Var_UpdateDriverOrder (
 
   @param CallbackData  The context data for BMM.
 
-  @retval EFI_SUCCSS If the Text Mode of Console is updated.
+  @retval EFI_SUCCESS If the Text Mode of Console is updated.
   @return Other value if the Text Mode of Console is not updated.
 
 **/

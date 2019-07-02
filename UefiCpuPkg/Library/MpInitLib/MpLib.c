@@ -15,7 +15,7 @@ EFI_GUID mCpuInitMpLibHobGuid = CPU_INIT_MP_LIB_HOB_GUID;
 
   DxeIpl may have enabled Execute Disable for BSP, APs need to
   get the status and sync up the settings.
-  If BSP's CR0.Paging is not set, BSP execute Disble feature is
+  If BSP's CR0.Paging is not set, BSP execute Disable feature is
   not working actually.
 
   @retval TRUE      BSP Execute Disable is enabled.
@@ -415,7 +415,7 @@ ApInitializeSync (
   Find the current Processor number by APIC ID.
 
   @param[in]  CpuMpData         Pointer to PEI CPU MP Data
-  @param[out] ProcessorNumber   Return the pocessor number found
+  @param[out] ProcessorNumber   Return the processor number found
 
   @retval EFI_SUCCESS          ProcessorNumber is found and returned.
   @retval EFI_NOT_FOUND        ProcessorNumber is not found.
@@ -1038,7 +1038,7 @@ WakeUpAP (
       // one way is set a value to just let the first AP to start the
       // initialization, then through the later while loop to wait all Aps
       // finsh the initialization.
-      // The other way is set a value to let all APs finished the initialzation.
+      // The other way is set a value to let all APs finished the initialization.
       // In this case, the later while loop is useless.
       //
       TimedWaitForApFinish (

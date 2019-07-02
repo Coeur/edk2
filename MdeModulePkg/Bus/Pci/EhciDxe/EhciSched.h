@@ -1,6 +1,6 @@
 /** @file
 
-  This file contains the definination for host controller schedule routines.
+  This file contains the definition for host controller schedule routines.
 
 Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -146,7 +146,7 @@ EhciDelAsyncIntTransfer (
 
 
 /**
-  Remove all the asynchronous interrutp transfers.
+  Remove all the asynchronous interrupt transfers.
 
   @param  Ehc            The EHCI device.
 

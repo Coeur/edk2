@@ -227,7 +227,7 @@ AmlTypeToAcpiType (
 }
 
 /**
-  This function retuns package length from the buffer.
+  This function returns package length from the buffer.
 
   @param[in]  Buffer    AML buffer
   @param[out] PkgLength The total length of package.

@@ -1,6 +1,6 @@
 #/** @file
 #
-#  Driver provides the IOMMU protcol support for PciHostBridgeIo and others
+#  Driver provides the IOMMU protocol support for PciHostBridgeIo and others
 #  drivers.
 #
 #  Copyright (c) 2017, AMD Inc. All rights reserved.<BR>

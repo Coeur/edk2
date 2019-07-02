@@ -1,5 +1,5 @@
 /** @file
-  ARM specifc functionality for DxeLoad.
+  ARM specific functionality for DxeLoad.
 
 Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
 Portions copyright (c) 2008 - 2009, Apple Inc. All rights reserved.<BR>
@@ -52,7 +52,7 @@ HandOffToDxeCore (
   TopOfStack = ALIGN_POINTER (TopOfStack, CPU_STACK_ALIGNMENT);
 
   //
-  // End of PEI phase singal
+  // End of PEI phase signal
   //
   Status = PeiServicesInstallPpi (&gEndOfPeiSignalPpi);
   ASSERT_EFI_ERROR (Status);

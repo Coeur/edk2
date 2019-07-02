@@ -99,7 +99,7 @@ FvSetVolumeAttributes (
                                      to GetNextFile().
   @param  FileType                   FileType is a pointer to a caller allocated
                                      EFI_FV_FILETYPE. The GetNextFile() API can
-                                     filter it's search for files based on the
+                                     filter its search for files based on the
                                      value of *FileType input. A *FileType input
                                      of 0 causes GetNextFile() to search for
                                      files of all types.  If a file is found, the
@@ -273,7 +273,7 @@ FvWriteFile (
   @param  InformationType  InformationType for requested.
   @param  BufferSize       On input, size of Buffer.On output, the amount of data
                            returned in Buffer.
-  @param  Buffer           A poniter to the data buffer to return.
+  @param  Buffer           A pointer to the data buffer to return.
 
   @retval EFI_SUCCESS      Successfully got volume Information.
 
@@ -297,7 +297,7 @@ FvGetVolumeInfo (
   @param  InformationType  InformationType for requested.
   @param  BufferSize       On input, size of Buffer.On output, the amount of data
                            returned in Buffer.
-  @param  Buffer           A poniter to the data buffer to return.
+  @param  Buffer           A pointer to the data buffer to return.
 
   @retval EFI_SUCCESS      Successfully set volume Information.
 

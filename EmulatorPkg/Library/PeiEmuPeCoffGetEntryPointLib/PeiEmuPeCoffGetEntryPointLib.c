@@ -70,7 +70,7 @@ PeCoffLoaderGetEntryPoint (
 
   @param  Pe32Data   Pointer to a PE/COFF header
 
-  @return            Machine type or zero if not a valid iamge
+  @return            Machine type or zero if not a valid image
 
 **/
 UINT16
@@ -186,7 +186,7 @@ PeCoffLoaderGetPdbPointer (
       break;
     default:
       //
-      // For unknow Machine field, use Magic in optional Header
+      // For unknown Machine field, use Magic in optional Header
       //
       Magic = Hdr.Pe32->OptionalHeader.Magic;
     }

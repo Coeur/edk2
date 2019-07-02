@@ -1,5 +1,5 @@
 /** @file
-  CPU exception handler library implemenation for SEC/PEIM modules.
+  CPU exception handler library implementation for SEC/PEIM modules.
 
 Copyright (c) 2012 - 2018, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -87,7 +87,7 @@ InitializeCpuExceptionHandlers (
   IdtEntryCount = (IdtDescriptor.Limit + 1) / sizeof (IA32_IDT_GATE_DESCRIPTOR);
   if (IdtEntryCount > CPU_EXCEPTION_NUM) {
     //
-    // CPU exeption library only setup CPU_EXCEPTION_NUM exception handler at most
+    // CPU exception library only setup CPU_EXCEPTION_NUM exception handler at most
     //
     IdtEntryCount = CPU_EXCEPTION_NUM;
   }

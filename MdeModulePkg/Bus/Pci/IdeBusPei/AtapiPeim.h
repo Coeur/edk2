@@ -355,7 +355,7 @@ AtapiReadBlocks2 (
 /**
   Enumerate Atapi devices.
 
-  This function is used to enumerate Atatpi device in Ide channel.
+  This function is used to enumerate Atapi device in Ide channel.
 
   @param[in]  AtapiBlkIoDev  A pointer to atapi block IO device
 
@@ -528,7 +528,7 @@ CheckErrorStatus (
   );
 
 /**
-  Idendify Atapi devices.
+  Identify Atapi devices.
 
   @param[in]  AtapiBlkIoDev     A pointer to atapi block IO device.
   @param[in]  DevicePosition    An integer to signify device position.

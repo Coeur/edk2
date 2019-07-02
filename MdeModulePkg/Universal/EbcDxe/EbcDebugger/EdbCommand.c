@@ -218,7 +218,7 @@ EFI_DEBUGGER_COMMAND_SET  mDebuggerCommandSet[] = {
     L"TRACE              - show/clear trace instruction branch\n",
     L"The trace command will show or clear the latest instruction branch.\n\n",
     L"TRACE [c]\n"
-    L"  (No Argument) - Show current instrcution branch\n"
+    L"  (No Argument) - Show current instruction branch\n"
     L"  c             - Clear current instruction branch\n",
     L"",
     {SCAN_NULL, CHAR_NULL},
@@ -419,7 +419,7 @@ EFI_DEBUGGER_COMMAND_SET  mDebuggerCommandSet[] = {
     L"",
     L"The display symbol command will configure the symbol show or not-show when disassembly.\n\n"
     L"DISPLAYSYMBOL [on|off]\n"
-    L"  (No Argument) - swtich symbol output state to another one\n"
+    L"  (No Argument) - switch symbol output state to another one\n"
     L"  on            - enable symbol output\n"
     L"  off           - disable symbol output\n",
     L"",
@@ -432,7 +432,7 @@ EFI_DEBUGGER_COMMAND_SET  mDebuggerCommandSet[] = {
     L"",
     L"The display code command will configure the source code only show or misc source code with assembly.\n\n"
     L"DISPLAYCODE [on|off]\n"
-    L"  (No Argument) - swtich source only output state to another one\n"
+    L"  (No Argument) - switch source only output state to another one\n"
     L"  on            - enable source only output\n"
     L"  off           - disable source only output\n",
     L"",

@@ -339,7 +339,7 @@ EmmcGetExtCsd (
 
   @param[in]  PassThru      A pointer to the EFI_SD_MMC_PASS_THRU_PROTOCOL instance.
   @param[in]  Slot          The slot number of the SD card to send the command to.
-  @param[in]  Access        The access mode of SWTICH command.
+  @param[in]  Access        The access mode of SWITCH command.
   @param[in]  Index         The offset of the field to be access.
   @param[in]  Value         The value to be set to the specified field of EXT_CSD register.
   @param[in]  CmdSet        The value of CmdSet field of EXT_CSD register.
@@ -484,7 +484,7 @@ EmmcSendTuningBlk (
 }
 
 /**
-  Tunning the clock to get HS200 optimal sampling point.
+  Tuning the clock to get HS200 optimal sampling point.
 
   Command SEND_TUNING_BLOCK may be sent up to 40 times until the host finishes the
   tuning procedure.

@@ -136,11 +136,11 @@ typedef struct {
   EFI_PEI_FV_HANDLE                   FvHandle;
   UINTN                               PeimCount;
   //
-  // Ponter to the buffer with the PeimCount number of Entries.
+  // Pointer to the buffer with the PeimCount number of Entries.
   //
   UINT8                               *PeimState;
   //
-  // Ponter to the buffer with the PeimCount number of Entries.
+  // Pointer to the buffer with the PeimCount number of Entries.
   //
   EFI_PEI_FILE_HANDLE                 *FvFileHandles;
   BOOLEAN                             ScanFv;
@@ -282,7 +282,7 @@ struct _PEI_CORE_INSTANCE {
   EFI_PHYSICAL_ADDRESS               LoadModuleAtFixAddressTopAddress;
   //
   // The field is define for Loading modules at fixed address feature to tracker the PEI code
-  // memory range usage. It is a bit mapped array in which every bit indicates the correspoding memory page
+  // memory range usage. It is a bit mapped array in which every bit indicates the corresponding memory page
   // available or not.
   //
   UINT64                            *PeiCodeMemoryRangeUsageBitMap;
@@ -372,7 +372,7 @@ PeiCore (
 
   This is the POSTFIX version of the dependency evaluator.  When a
   PUSH [PPI GUID] is encountered, a pointer to the GUID is stored on
-  the evaluation stack.  When that entry is poped from the evaluation
+  the evaluation stack.  When that entry is popped from the evaluation
   stack, the PPI is checked if it is installed.  This method allows
   some time savings as not all PPIs must be checked for certain
   operation types (AND, OR).
@@ -412,7 +412,7 @@ PeiDispatcher (
 
   @param PrivateData     PeiCore's private data structure
   @param OldCoreData     Old data from SecCore
-                         NULL if being run in non-permament memory mode.
+                         NULL if being run in non-permanent memory mode.
   @param SecCoreData     Points to a data structure containing SEC to PEI handoff data, such as the size
                          and location of temporary RAM, the stack location and the BFV location.
 
@@ -453,7 +453,7 @@ DepexSatisfied (
 
   @param PrivateData     Pointer to the PEI Core data.
   @param OldCoreData     Pointer to old PEI Core data.
-                         NULL if being run in non-permament memory mode.
+                         NULL if being run in non-permanent memory mode.
 
 **/
 VOID
@@ -555,7 +555,7 @@ PeiLocatePpi (
 
   @retval EFI_SUCCESS           if successful
   @retval EFI_OUT_OF_RESOURCES  if no space in the database
-  @retval EFI_INVALID_PARAMETER if not a good decriptor
+  @retval EFI_INVALID_PARAMETER if not a good descriptor
 
 **/
 EFI_STATUS
@@ -659,7 +659,7 @@ PeiSetBootMode (
 
   @param PeiServices     An indirect pointer to the EFI_PEI_SERVICES table published by the PEI Foundation.
   @param OldCoreData     Pointer to the old core data.
-                         NULL if being run in non-permament memory mode.
+                         NULL if being run in non-permanent memory mode.
 
 **/
 VOID
@@ -887,7 +887,7 @@ PeiFfsFindNextVolume (
   @param SecCoreData     Points to a data structure containing SEC to PEI handoff data, such as the size
                          and location of temporary RAM, the stack location and the BFV location.
   @param OldCoreData     Pointer to the PEI Core data.
-                         NULL if being run in non-permament memory mode.
+                         NULL if being run in non-permanent memory mode.
 
 **/
 VOID
@@ -1125,7 +1125,7 @@ PeiInitializeFv (
   );
 
 /**
-  Process Firmware Volum Information once FvInfoPPI install.
+  Process Firmware Volume Information once FvInfoPPI install.
 
   @param PeiServices       An indirect pointer to the EFI_PEI_SERVICES table published by the PEI Foundation.
   @param NotifyDescriptor  Address of the notification descriptor data structure.

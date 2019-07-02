@@ -246,7 +246,7 @@ ErrorCodeAndVectorOnStack:
     push    ebx         ; temporarily save value of ebx on stack
     cpuid               ; use CPUID to determine if FXSAVE/FXRESTOR and DE
                         ; are supported
-    pop     ebx         ; retore value of ebx that was overwritten by CPUID
+    pop     ebx         ; restore value of ebx that was overwritten by CPUID
     mov     eax, cr4
     push    eax         ; push cr4 firstly
     test    edx, BIT24  ; Test for FXSAVE/FXRESTOR support
@@ -325,7 +325,7 @@ ErrorCodeAndVectorOnStack:
     add     esp, 512
 
 ;; UINT32  Dr0, Dr1, Dr2, Dr3, Dr6, Dr7;
-;; Skip restoration of DRx registers to support in-circuit emualators
+;; Skip restoration of DRx registers to support in-circuit emulators
 ;; or debuggers set breakpoint in interrupt/exception context
     add     esp, 4 * 6
 

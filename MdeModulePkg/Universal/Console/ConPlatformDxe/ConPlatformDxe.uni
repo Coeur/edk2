@@ -1,7 +1,7 @@
 // /** @file
 // Platform console driver manages console devices.
 //
-// Console Platfrom DXE Driver that specifies whether device can be used as console
+// Console Platform DXE Driver that specifies whether device can be used as console
 // input/output device or error output device and update global variables accordingly.
 //
 // Copyright (c) 2006 - 2014, Intel Corporation. All rights reserved.<BR>

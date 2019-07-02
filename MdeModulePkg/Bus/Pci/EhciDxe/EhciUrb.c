@@ -1,6 +1,6 @@
 /** @file
 
-    This file contains URB request, each request is warpped in a
+    This file contains URB request, each request is wrapped in a
     URB (Usb Request Block).
 
 Copyright (c) 2007 - 2010, Intel Corporation. All rights reserved.<BR>
@@ -20,7 +20,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
   @param  DataLen               The length of the data.
   @param  PktId                 Packet ID to use in the QTD.
   @param  Toggle                Data toggle to use in the QTD.
-  @param  MaxPacket             Maximu packet length of the endpoint.
+  @param  MaxPacket             Maximum packet length of the endpoint.
 
   @return Created QTD or NULL if failed to create one.
 
@@ -130,7 +130,7 @@ EhcInitIntQh (
   )
 {
   //
-  // Because UEFI interface can't utilitize an endpoint with
+  // Because UEFI interface can't utilize an endpoint with
   // poll rate faster than 1ms, only need to set one bit in
   // the queue head. simple. But it may be changed later. If
   // sub-1ms interrupt is supported, need to update the S-Mask
@@ -147,7 +147,7 @@ EhcInitIntQh (
   // 1. SplitXState in the status
   // 2. Microframe S-Mask
   // 3. Microframe C-Mask
-  // UEFI USB doesn't exercise admission control. It simplely
+  // UEFI USB doesn't exercise admission control. It simply
   // schedule the high speed transactions in microframe 0, and
   // full/low speed transactions at microframe 1. This also
   // avoid the use of FSTN.
@@ -516,7 +516,7 @@ ON_ERROR:
 
   @param  Ehc                   The EHCI device.
   @param  DevAddr               The device address.
-  @param  EpAddr                Endpoint addrress & its direction.
+  @param  EpAddr                Endpoint address & its direction.
   @param  DevSpeed              The device speed.
   @param  Toggle                Initial data toggle to use.
   @param  MaxPacket             The max packet length of the endpoint.

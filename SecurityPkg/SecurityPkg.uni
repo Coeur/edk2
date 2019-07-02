@@ -80,7 +80,7 @@
 
 #string STR_gEfiSecurityPkgTokenSpaceGuid_PcdTpmPhysicalPresence_PROMPT  #language en-US "Physical presence of the platform operator."
 
-#string STR_gEfiSecurityPkgTokenSpaceGuid_PcdTpmPhysicalPresence_HELP  #language en-US "Indicates the presence or absence of the platform operator during firmware booting. If platform operator is not physical presnece during boot. TPM will be locked and the TPM commands that required operator physical presence can not run.<BR><BR>\n"
+#string STR_gEfiSecurityPkgTokenSpaceGuid_PcdTpmPhysicalPresence_HELP  #language en-US "Indicates the presence or absence of the platform operator during firmware booting. If platform operator is not physical presence during boot. TPM will be locked and the TPM commands that required operator physical presence can not run.<BR><BR>\n"
                                                                                        "TRUE  - The platform operator is physically present.<BR>\n"
                                                                                        "FALSE - The platform operator is not physically present.<BR>"
 

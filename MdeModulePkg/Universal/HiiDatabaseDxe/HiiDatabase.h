@@ -1936,7 +1936,7 @@ HiiConfigRoutingExportConfig (
   @param  This                    A pointer to the EFI_HII_CONFIG_ROUTING_PROTOCOL
                                   instance.
   @param  Configuration           A null-terminated Unicode string in
-                                  <MulltiConfigResp> format.
+                                  <MultiConfigResp> format.
   @param  Progress                A pointer to a string filled in with the offset
                                   of the most recent & before the first failing
                                   name / value pair (or the beginning of the string

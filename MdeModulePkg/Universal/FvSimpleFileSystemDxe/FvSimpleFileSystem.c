@@ -1,6 +1,6 @@
 /** @file
   This driver uses the EFI_FIRMWARE_VOLUME2_PROTOCOL to expose files in firmware
-  volumes via the the EFI_SIMPLE_FILESYSTEM_PROTOCOL and EFI_FILE_PROTOCOL.
+  volumes via the EFI_SIMPLE_FILESYSTEM_PROTOCOL and EFI_FILE_PROTOCOL.
 
   It will expose a single directory, containing one file for each file in the firmware
   volume. If a file has a UI section, its contents will be used as a filename.
@@ -362,7 +362,7 @@ RemoveLastItemFromPath (
 
   @param  Path          The pointer to the string containing the path.
 
-  @retval NULL          An error occured.
+  @retval NULL          An error occurred.
   @return Path in all other instances.
 
 **/

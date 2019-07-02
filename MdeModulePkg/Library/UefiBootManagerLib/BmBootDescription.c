@@ -34,7 +34,7 @@ LIST_ENTRY mPlatformBootDescriptionHandlers = INITIALIZE_LIST_HEAD_VARIABLE (mPl
                             and its last device path node's subtype is MSG_SCSI_DP.
   @retval MessageUsbBoot    If given device path contains MESSAGING_DEVICE_PATH type device path node
                             and its last device path node's subtype is MSG_USB_DP.
-  @retval BmMiscBoot        If tiven device path doesn't match the above condition.
+  @retval BmMiscBoot        If given device path doesn't match the above condition.
 
 **/
 BM_BOOT_TYPE
@@ -203,7 +203,7 @@ BmGetDescriptionFromDiskInfo (
       ASSERT (Description != NULL);
 
       //
-      // Per SCSI spec, EFI_SCSI_INQUIRY_DATA.Reserved_5_95[3 - 10] save the Verdor identification
+      // Per SCSI spec, EFI_SCSI_INQUIRY_DATA.Reserved_5_95[3 - 10] save the Vendor identification
       // EFI_SCSI_INQUIRY_DATA.Reserved_5_95[11 - 26] save the product identification,
       // Here combine the vendor identification and product identification to the description.
       //

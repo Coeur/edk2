@@ -12,7 +12,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 #define __SECURITY_MANAGEMENT_LIB_H__
 
 //
-// Authentication Operation defintions for User Identity (UID), Measured and Secure boot.
+// Authentication Operation definitions for User Identity (UID), Measured and Secure boot.
 //
 #define EFI_AUTH_OPERATION_NONE                0x00
 #define EFI_AUTH_OPERATION_VERIFY_IMAGE        0x01
@@ -92,11 +92,11 @@ EFI_STATUS
 
   If SecurityHandler is NULL, then ASSERT().
   If no enough resources available to register new handler, then ASSERT().
-  If AuthenticationOperation is not recongnized, then ASSERT().
+  If AuthenticationOperation is not recognized, then ASSERT().
   If the previous register handler can't be executed before the later register handler, then ASSERT().
 
   @param[in]  SecurityHandler           The security measurement service handler to be registered.
-  @param[in]  AuthenticationOperation   Theoperation type is specified for the registered handler.
+  @param[in]  AuthenticationOperation   The operation type is specified for the registered handler.
 
   @retval EFI_SUCCESS              The handlers were registered successfully.
 **/
@@ -111,8 +111,8 @@ RegisterSecurityHandler (
   Execute registered handlers until one returns an error and that error is returned.
   If none of the handlers return an error, then EFI_SUCCESS is returned.
 
-  Before exectue handler, get the image buffer by file device path if a handler
-  requires the image file. And return the image buffer to each handler when exectue handler.
+  Before execute handler, get the image buffer by file device path if a handler
+  requires the image file. And return the image buffer to each handler when execute handler.
 
   The handlers are executed in same order to their registered order.
 
@@ -198,7 +198,7 @@ EFI_STATUS
 
   If SecurityHandler is NULL, then ASSERT().
   If no enough resources available to register new handler, then ASSERT().
-  If AuthenticationOperation is not recongnized, then ASSERT().
+  If AuthenticationOperation is not recognized, then ASSERT().
   If AuthenticationOperation is EFI_AUTH_OPERATION_NONE, then ASSERT().
   If the previous register handler can't be executed before the later register handler, then ASSERT().
 

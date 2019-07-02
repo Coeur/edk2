@@ -44,7 +44,7 @@ EFI_STATUS
 
 Routine Description:
   Return the FD Size and base address. Since the FD is loaded from a
-  file into host memory only the SEC will know it's address.
+  file into host memory only the SEC will know its address.
 
 Arguments:
   Index  - Which FD, starts at zero.

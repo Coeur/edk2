@@ -20,7 +20,7 @@
   @param[in] TheName    The Guid's name
   @param[in] Lang       RFC4646 language code list or NULL
 
-  @retval EFI_SUCCESS           The operation was sucessful
+  @retval EFI_SUCCESS           The operation was successful
   @retval EFI_ACCESS_DENIED     There was a duplicate
   @retval EFI_OUT_OF_RESOURCES  A memory allocation failed
 **/
@@ -33,7 +33,7 @@ AddNewGuidNameMapping(
   );
 
 /**
-  Function to get the name of a protocol or struct from it's GUID.
+  Function to get the name of a protocol or struct from its GUID.
 
   If Guid is NULL, then ASSERT.
 
@@ -51,7 +51,7 @@ GetStringNameFromGuid(
   );
 
 /**
-  Function to get the Guid for a protocol or struct based on it's string name.
+  Function to get the Guid for a protocol or struct based on its string name.
 
   Do not free or modify the returned GUID.
 

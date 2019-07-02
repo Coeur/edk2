@@ -149,7 +149,7 @@ InitializeLock (
 /**
   Acquires lock only at boot time. Simply returns at runtime.
 
-  This is a temperary function that will be removed when
+  This is a temporary function that will be removed when
   EfiAcquireLock() in UefiLib can handle the call in UEFI
   Runtimer driver in RT phase.
   It calls EfiAcquireLock() at boot time, and simply returns
@@ -170,7 +170,7 @@ AcquireLockOnlyAtBootTime (
 /**
   Releases lock only at boot time. Simply returns at runtime.
 
-  This is a temperary function which will be removed when
+  This is a temporary function which will be removed when
   EfiReleaseLock() in UefiLib can handle the call in UEFI
   Runtimer driver in RT phase.
   It calls EfiReleaseLock() at boot time and simply returns
@@ -188,7 +188,7 @@ ReleaseLockOnlyAtBootTime (
 }
 
 /**
-  Retrieve the SMM Fault Tolerent Write protocol interface.
+  Retrieve the SMM Fault Tolerant Write protocol interface.
 
   @param[out] FtwProtocol       The interface of SMM Ftw protocol
 
@@ -205,7 +205,7 @@ GetFtwProtocol (
   EFI_STATUS                              Status;
 
   //
-  // Locate Smm Fault Tolerent Write protocol
+  // Locate Smm Fault Tolerant Write protocol
   //
   Status = gMmst->MmLocateProtocol (
                     &gEfiSmmFaultTolerantWriteProtocolGuid,
@@ -325,7 +325,7 @@ GetFvbCountAndBuffer (
                                 On output, the returned variable information size.
 
   @retval EFI_SUCCESS           The variable information is found and returned successfully.
-  @retval EFI_UNSUPPORTED       No variable inoformation exists in variable driver. The
+  @retval EFI_UNSUPPORTED       No variable information exists in variable driver. The
                                 PcdVariableCollectStatistics should be set TRUE to support it.
   @retval EFI_BUFFER_TOO_SMALL  The buffer is too small to hold the next variable information.
   @retval EFI_INVALID_PARAMETER Input parameter is invalid.
@@ -859,7 +859,7 @@ VariableWriteServiceInitializeSmm (
   SMM Fault Tolerant Write protocol notification event handler.
 
   Non-Volatile variable write may needs FTW protocol to reclaim when
-  writting variable.
+  writing variable.
 
   @param  Protocol   Points to the protocol's unique identifier
   @param  Interface  Points to the interface instance

@@ -201,7 +201,7 @@ EXIT:
   @param[in]    Attribute            Esrt from Esrt private protocol or FMP instance
 
   @retval EFI_SUCCESS         Insert all entries Successfully
-  @retval EFI_NOT_FOUND       ESRT entry with FwClass doesn't exsit
+  @retval EFI_NOT_FOUND       ESRT entry with FwClass doesn't exist
 
 **/
 EFI_STATUS
@@ -298,7 +298,7 @@ EXIT:
   @param[in]    Attribute            Esrt from Non Esrt or FMP instance
 
   @retval EFI_SUCCESS          Successfully Update a variable.
-  @retval EFI_NOT_FOUND        The Esrt enry doesn't exist
+  @retval EFI_NOT_FOUND        The Esrt entry doesn't exist
 
 **/
 EFI_STATUS

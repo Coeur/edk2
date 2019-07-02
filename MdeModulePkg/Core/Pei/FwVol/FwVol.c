@@ -178,7 +178,7 @@ CalculateHeaderChecksum (
   if (IS_FFS_FILE2 (FileHeader)) {
     CopyMem (&TestFileHeader, FileHeader, sizeof (EFI_FFS_FILE_HEADER2));
     //
-    // Ingore State and File field in FFS header.
+    // Ignore State and File field in FFS header.
     //
     TestFileHeader.State = 0;
     TestFileHeader.IntegrityCheck.Checksum.File = 0;
@@ -187,7 +187,7 @@ CalculateHeaderChecksum (
   } else {
     CopyMem (&TestFileHeader, FileHeader, sizeof (EFI_FFS_FILE_HEADER));
     //
-    // Ingore State and File field in FFS header.
+    // Ignore State and File field in FFS header.
     //
     TestFileHeader.State = 0;
     TestFileHeader.IntegrityCheck.Checksum.File = 0;
@@ -528,7 +528,7 @@ PeiInitializeFv (
 }
 
 /**
-  Process Firmware Volum Information once FvInfoPPI or FvInfo2PPI install.
+  Process Firmware Volume Information once FvInfoPPI or FvInfo2PPI install.
   The FV Info will be registered into PeiCore private data structure.
   And search the inside FV image, if found, the new FV INFO(2) PPI will be installed.
 
@@ -537,7 +537,7 @@ PeiInitializeFv (
   @param Ppi               Address of the PPI that was installed.
 
   @retval EFI_SUCCESS    The FV Info is registered into PeiCore private data structure.
-  @return if not EFI_SUCESS, fail to verify FV.
+  @return if not EFI_SUCCESS, fail to verify FV.
 
 **/
 EFI_STATUS

@@ -506,7 +506,7 @@ Ping6MatchEchoReply (
   The original intention is to send a request.
   Currently, the application retransmits an icmp6 echo request packet
   per second in sendnumber times that is specified by the user.
-  Because nothing can be done here, all things move to the timer rountine.
+  Because nothing can be done here, all things move to the timer routine.
 
   @param[in]    Event      A EFI_EVENT type event.
   @param[in]    Context    The pointer to Context.
@@ -522,7 +522,7 @@ Ping6OnEchoRequestSent (
 }
 
 /**
-  receive reply, match and print reply infomation.
+  receive reply, match and print reply information.
 
   @param[in]    Event      A EFI_EVENT type event.
   @param[in]    Context    The pointer to context.
@@ -633,7 +633,7 @@ ON_EXIT:
     Private->Status = EFI_SUCCESS;
   }
   //
-  // Singal to recycle the each rxdata here, not at the end of process.
+  // Signal to recycle the each rxdata here, not at the end of process.
   //
   gBS->SignalEvent (Private->IpChoice == PING_IP_CHOICE_IP6?((EFI_IP6_RECEIVE_DATA*)Private->RxToken.Packet.RxData)->RecycleSignal:((EFI_IP4_RECEIVE_DATA*)Private->RxToken.Packet.RxData)->RecycleSignal);
 }
@@ -1342,7 +1342,7 @@ Ping6DestroyIp6Instance (
   @param[in]   DstAddress     The destination address.
   @param[in]   IpChoice       The choice between IPv4 and IPv6.
 
-  @retval SHELL_SUCCESS  The ping processed successfullly.
+  @retval SHELL_SUCCESS  The ping processed successfully.
   @retval others         The ping processed unsuccessfully.
 **/
 SHELL_STATUS
@@ -1554,7 +1554,7 @@ ON_EXIT:
   @param[in] ImageHandle  Handle to the Image (NULL if Internal).
   @param[in] SystemTable  Pointer to the System Table (NULL if Internal).
 
-  @retval SHELL_SUCCESS  The ping processed successfullly.
+  @retval SHELL_SUCCESS  The ping processed successfully.
   @retval others         The ping processed unsuccessfully.
 
 **/

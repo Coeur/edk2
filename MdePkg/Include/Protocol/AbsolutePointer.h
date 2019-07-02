@@ -105,16 +105,16 @@ EFI_STATUS
 **/
 typedef struct {
   ///
-  /// The unsigned position of the activation on the x axis. If the AboluteMinX
-  /// and the AboluteMaxX fields of the EFI_ABSOLUTE_POINTER_MODE structure are
+  /// The unsigned position of the activation on the x axis. If the AbsoluteMinX
+  /// and the AbsoluteMaxX fields of the EFI_ABSOLUTE_POINTER_MODE structure are
   /// both 0, then this pointer device does not support an x-axis, and this field
   /// must be ignored.
   ///
   UINT64 CurrentX;
 
   ///
-  /// The unsigned position of the activation on the y axis. If the AboluteMinY
-  /// and the AboluteMaxY fields of the EFI_ABSOLUTE_POINTER_MODE structure are
+  /// The unsigned position of the activation on the y axis. If the AbsoluteMinY
+  /// and the AbsoluteMaxY fields of the EFI_ABSOLUTE_POINTER_MODE structure are
   /// both 0, then this pointer device does not support an y-axis, and this field
   /// must be ignored.
   ///
@@ -122,7 +122,7 @@ typedef struct {
 
   ///
   /// The unsigned position of the activation on the z axis, or the pressure
-  /// measurement. If the AboluteMinZ and the AboluteMaxZ fields of the
+  /// measurement. If the AbsoluteMinZ and the AbsoluteMaxZ fields of the
   /// EFI_ABSOLUTE_POINTER_MODE structure are both 0, then this pointer device
   /// does not support an z-axis, and this field must be ignored.
   ///

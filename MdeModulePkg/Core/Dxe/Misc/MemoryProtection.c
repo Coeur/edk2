@@ -1140,7 +1140,7 @@ CoreInitializeMemoryProtection (
   ASSERT_EFI_ERROR(Status);
 
   //
-  // Register for protocol notifactions on this event
+  // Register for protocol notifications on this event
   //
   Status = CoreRegisterProtocolNotify (
              &gEfiCpuArchProtocolGuid,
@@ -1197,7 +1197,7 @@ IsInSmm (
 
   @return EFI_SUCCESS       If we are executing in SMM mode. No permission attributes
                             are updated in this case
-  @return EFI_SUCCESS       If the the CPU arch protocol is not installed yet
+  @return EFI_SUCCESS       If the CPU arch protocol is not installed yet
   @return EFI_SUCCESS       If no DXE memory protection policy has been configured
   @return EFI_SUCCESS       If OldType and NewType use the same permission attributes
   @return other             Return value of gCpu->SetMemoryAttributes()

@@ -129,7 +129,7 @@ typedef struct {
   UINT32                        DnsCacheCount;
   ///
   /// Pointer to a buffer containing DnsCacheCount DNS Cache
-  /// entry structures. The storage for thislist is allocated by the driver
+  /// entry structures. The storage for this list is allocated by the driver
   /// publishing this protocol and must be freed by caller.
   ///
   EFI_DNS6_CACHE_ENTRY          *DnsCacheList;
@@ -422,9 +422,9 @@ EFI_STATUS
 
   @param[in]  This                Pointer to EFI_DNS6_PROTOCOL instance.
   @param[in]  DeleteFlag          If FALSE, this function is to add one entry to the
-                                  DNS Cahce. If TRUE, this function will delete
+                                  DNS Cache. If TRUE, this function will delete
                                   matching DNS Cache entry.
-  @param[in]  Override            If TRUE, the maching DNS cache entry will be
+  @param[in]  Override            If TRUE, the matching DNS cache entry will be
                                   overwritten with the supplied parameter. If FALSE,
                                   EFI_ACCESS_DENIED will be returned if the entry to
                                   be added is already existed.

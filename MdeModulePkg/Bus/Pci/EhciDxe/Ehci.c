@@ -100,7 +100,7 @@ EhcGetCapability (
 
   @retval EFI_SUCCESS           The reset operation succeeded.
   @retval EFI_INVALID_PARAMETER Attributes is not valid.
-  @retval EFI_UNSUPPOURTED      The type of reset specified by Attributes is
+  @retval EFI_UNSUPPORTED       The type of reset specified by Attributes is
                                 not currently supported by the host controller.
   @retval EFI_DEVICE_ERROR      Host controller isn't halted to reset.
 
@@ -570,7 +570,7 @@ EhcClearRootHubPortFeature (
     // controller. The host controller will unconditionally
     // set this bit to a zero when:
     //   1. software sets the Forct Port Resume bit to a zero from a one.
-    //   2. software sets the Port Reset bit to a one frome a zero.
+    //   2. software sets the Port Reset bit to a one from a zero.
     //
     State &= ~PORSTSC_RESUME;
     EhcWriteOpReg (Ehc, Offset, State);
@@ -814,13 +814,13 @@ ON_EXIT:
   @param  DataBuffersNumber     Number of data buffers prepared for the transfer.
   @param  Data                  Array of pointers to the buffers of data to transmit
                                 from or receive into.
-  @param  DataLength            The lenght of the data buffer.
+  @param  DataLength            The length of the data buffer.
   @param  DataToggle            On input, the initial data toggle for the transfer;
                                 On output, it is updated to to next data toggle to
                                 use of the subsequent bulk transfer.
   @param  TimeOut               Indicates the maximum time, in millisecond, which
                                 the transfer is allowed to complete.
-  @param  Translator            A pointr to the transaction translator data.
+  @param  Translator            A pointer to the transaction translator data.
   @param  TransferResult        A pointer to the detailed result information of the
                                 bulk transfer.
 
@@ -1405,7 +1405,7 @@ EhcGetUsbDebugPortInfo (
   PciIo = Ehc->PciIo;
 
   //
-  // Detect if the EHCI host controller support Capaility Pointer.
+  // Detect if the EHCI host controller support Capability Pointer.
   //
   Status = PciIo->Pci.Read (
                         PciIo,
@@ -2037,7 +2037,7 @@ EhcDriverBindingStop (
 
   //
   // Stop AsyncRequest Polling timer then stop the EHCI driver
-  // and uninstall the EHCI protocl.
+  // and uninstall the EHCI protocol.
   //
   gBS->SetTimer (Ehc->PollTimer, TimerCancel, EHC_ASYNC_POLL_INTERVAL);
   EhcHaltHC (Ehc, EHC_GENERIC_TIMEOUT);

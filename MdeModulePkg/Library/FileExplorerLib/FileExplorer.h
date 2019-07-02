@@ -208,7 +208,7 @@ LibRouteConfig (
   );
 
 /**
-  Update the file explower page with the refershed file system.
+  Update the file explorer page with the refreshed file system.
 
   @param KeyValue        Key value to identify the type of data to expect.
 

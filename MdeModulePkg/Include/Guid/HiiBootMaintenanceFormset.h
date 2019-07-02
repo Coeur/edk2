@@ -1,5 +1,5 @@
 /** @file
-  Guid definition for Boot Maintainence Formset.
+  Guid definition for Boot Maintenance Formset.
 
 Copyright (c) 2015, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -11,7 +11,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 #define __HII_BOOT_MAINTENANCE_FORMSET_H__
 
 ///
-/// Guid define to group the item show on the Boot Menaintenance Manager Menu.
+/// Guid define to group the item show on the Boot Maintenance Manager Menu.
 ///
 #define EFI_IFR_BOOT_MAINTENANCE_GUID \
   { 0xb2dedc91, 0xd59f, 0x48d2, { 0x89, 0x8a, 0x12, 0x49, 0xc, 0x74, 0xa4, 0xe0 } }

@@ -77,7 +77,7 @@ Returns:
       if (Index == 0) {
         //
         // Assume the first FD was produced by the NT32.DSC
-        //  All these strange offests are needed to keep in
+        //  All these strange offsets are needed to keep in
         //  sync with the FlashMap and NT32.dsc file
         //
         BuildResourceDescriptorHob (

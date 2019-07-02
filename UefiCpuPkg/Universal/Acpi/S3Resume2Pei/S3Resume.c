@@ -554,7 +554,7 @@ S3ResumeBootOs (
 
 /**
   Restore S3 page table because we do not trust ACPINvs content.
-  If BootScriptExector driver will not run in 64-bit mode, this function will do nothing.
+  If BootScriptExecutor driver will not run in 64-bit mode, this function will do nothing.
 
   @param S3NvsPageTableAddress   PageTableAddress in ACPINvs
   @param Build4GPageTableOnly    If BIOS just build 4G page table only

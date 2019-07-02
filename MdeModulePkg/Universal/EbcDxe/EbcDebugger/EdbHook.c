@@ -35,7 +35,7 @@ EbcDebuggerCheckHookFlag (
 
 /**
 
-  It will record soruce address for Callstack entry.
+  It will record source address for Callstack entry.
 
   @param  SourceEntry  - Source address
   @param  Type         - Branch type

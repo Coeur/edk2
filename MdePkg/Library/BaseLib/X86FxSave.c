@@ -36,7 +36,7 @@ AsmFxSave (
   InternalX86FxSave (Buffer);
 
   //
-  // Mark one flag at end of Buffer, it will be check by AsmFxRestor()
+  // Mark one flag at end of Buffer, it will be check by AsmFxRestore()
   //
   *(UINT32 *) (&Buffer->Buffer[sizeof (Buffer->Buffer) - 4]) = 0xAA5555AA;
 }

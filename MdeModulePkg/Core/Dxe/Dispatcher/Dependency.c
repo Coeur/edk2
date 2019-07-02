@@ -192,7 +192,7 @@ CorePreProcessDepex (
 /**
   This is the POSTFIX version of the dependency evaluator.  This code does
   not need to handle Before or After, as it is not valid to call this
-  routine in this case. The SOR is just ignored and is a nop in the grammer.
+  routine in this case. The SOR is just ignored and is a nop in the grammar.
   POSTFIX means all the math is done on top of the stack.
 
   @param  DriverEntry           DriverEntry element to update.
@@ -423,7 +423,7 @@ CoreIsSchedulable (
     // The math is done out of order, but it should not matter. That is
     // we may add in the sizeof (EFI_GUID) before we account for the OP Code.
     // This is not an issue, since we just need the correct end result. You
-    // need to be careful using Iterator in the loop as it's intermediate value
+    // need to be careful using Iterator in the loop as its intermediate value
     // may be strange.
     //
     Iterator++;

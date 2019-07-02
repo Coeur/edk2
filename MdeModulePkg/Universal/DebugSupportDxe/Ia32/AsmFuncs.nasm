@@ -1,5 +1,5 @@
 ;/** @file
-;  Low leve IA32 specific debug support functions.
+;  Low level IA32 specific debug support functions.
 ;
 ;  Copyright (c) 2006 - 2011, Intel Corporation. All rights reserved.<BR>
 ;  SPDX-License-Identifier: BSD-2-Clause-Patent
@@ -59,10 +59,10 @@ ASM_PFX(OrigVector): dd 0x66666666 ; ?
 
 ;; The declarations below define the memory region that will be used for the debug stack.
 ;; The context record will be built by pushing register values onto this stack.
-;; It is imparitive that alignment be carefully managed, since the FXSTOR and
+;; It is imperative that alignment be carefully managed, since the FXSTOR and
 ;; FXRSTOR instructions will GP fault if their memory operand is not 16 byte aligned.
 ;;
-;; The stub will switch stacks from the application stack to the debuger stack
+;; The stub will switch stacks from the application stack to the debugger stack
 ;; and pushes the exception number.
 ;;
 ;; Then we building the context record on the stack. Since the stack grows down,
@@ -92,7 +92,7 @@ align           16
 DebugStackEnd: db "DbgStkEnd >>>>>>"    ;; 16 byte long string - must be 16 bytes to preserve alignment
                 times 0x1ffc dd    0x0  ;; 32K should be enough stack
                                         ;;   This allocation is coocked to insure
-                                        ;;   that the the buffer for the FXSTORE instruction
+                                        ;;   that the buffer for the FXSTORE instruction
                                         ;;   will be 16 byte aligned also.
                                         ;;
 ExceptionNumber: dd 0                   ;; first entry will be the vector number pushed by the stub
@@ -180,7 +180,7 @@ ASM_PFX(CommonIdtEntry):
 ;;              eflags from interrupted task
 ;;              CS from interrupted task
 ;;              EIP from interrupted task
-;;              Error code <-------------------- Only present for some exeption types
+;;              Error code <-------------------- Only present for some exception types
 ;;
 ;;
 

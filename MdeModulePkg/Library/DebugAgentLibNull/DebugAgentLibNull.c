@@ -1,5 +1,5 @@
 /** @file
-  Debug Agent library implementition with empty functions.
+  Debug Agent library implementation with empty functions.
 
   Copyright (c) 2010, Intel Corporation. All rights reserved.<BR>
   SPDX-License-Identifier: BSD-2-Clause-Patent

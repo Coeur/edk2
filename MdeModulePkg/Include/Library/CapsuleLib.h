@@ -24,7 +24,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 
   @param  CapsuleHeader    Pointer to the UEFI capsule image to be checked.
 
-  @retval EFI_SUCESS       Input capsule is supported by firmware.
+  @retval EFI_SUCCESS      Input capsule is supported by firmware.
   @retval EFI_UNSUPPORTED  Input capsule is not supported by the firmware.
 **/
 EFI_STATUS
@@ -41,7 +41,7 @@ SupportCapsuleImage (
 
   @param  CapsuleHeader    Pointer to the UEFI capsule image to be processed.
 
-  @retval EFI_SUCESS       Capsule Image processed successfully.
+  @retval EFI_SUCCESS      Capsule Image processed successfully.
   @retval EFI_UNSUPPORTED  Capsule image is not supported by the firmware.
 **/
 EFI_STATUS
@@ -66,7 +66,7 @@ ProcessCapsuleImage (
      Each individual capsule result is recorded in capsule record variable.
      System may reset in this function, if reset is required by capsule and
      all capsules are processed.
-     If not all capsules are processed, reset will be defered to second call.
+     If not all capsules are processed, reset will be deferred to second call.
 
   2) The second call must be after EndOfDxe and after ConnectAll, so that all
      device capsule FMP protocols are exposed.

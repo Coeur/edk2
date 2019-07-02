@@ -1,5 +1,5 @@
 /** @file
-  PCI eunmeration implementation on entire PCI bus system for PCI Bus module.
+  PCI enumeration implementation on entire PCI bus system for PCI Bus module.
 
 Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>
 (C) Copyright 2015 Hewlett Packard Enterprise Development LP<BR>
@@ -231,7 +231,7 @@ PciRootBridgeEnumerator (
   }
 
   //
-  // Find the bus range which contains the higest bus number, then returns the number of buses
+  // Find the bus range which contains the highest bus number, then returns the number of buses
   // that should be decoded.
   //
   while (Configuration->AddrRangeMin + Configuration->AddrLen - 1 < SubBusNumber) {
@@ -405,7 +405,7 @@ PciAssignBusNumber (
                                         SubBusNumber
                                         );
         //
-        // If it is PPB, resursively search down this bridge
+        // If it is PPB, recursively search down this bridge
         //
         if (IS_PCI_BRIDGE (&Pci)) {
 
@@ -600,7 +600,7 @@ PciHostBridgeDeviceAttribute (
   while (PciResAlloc->GetNextRootBridge (PciResAlloc, &RootBridgeHandle) == EFI_SUCCESS) {
 
     //
-    // Get RootBridg Device by handle
+    // Get RootBridge Device by handle
     //
     RootBridgeDev = GetRootBridgeByHandle (RootBridgeHandle);
 
@@ -609,7 +609,7 @@ PciHostBridgeDeviceAttribute (
     }
 
     //
-    // Set the attributes for devcies behind the Root Bridge
+    // Set the attributes for devices behind the Root Bridge
     //
     Status = DetermineDeviceAttribute (RootBridgeDev);
     if (EFI_ERROR (Status)) {
@@ -772,7 +772,7 @@ RejectPciDevice (
 }
 
 /**
-  Determine whethter a PCI device can be rejected.
+  Determine whether a PCI device can be rejected.
 
   @param  PciResNode Pointer to Pci resource node instance.
 
@@ -1165,7 +1165,7 @@ ConstructAcpiResourceRequestor (
       //
       Ptr->ResType  = ACPI_ADDRESS_SPACE_TYPE_MEM;
       //
-      // Nonprefechable
+      // Nonprefetchable
       //
       Ptr->SpecificFlag = 0;
       //
@@ -1189,7 +1189,7 @@ ConstructAcpiResourceRequestor (
       //
       Ptr->ResType  = ACPI_ADDRESS_SPACE_TYPE_MEM;
       //
-      // prefechable
+      // prefetchable
       //
       Ptr->SpecificFlag = 0x6;
       //
@@ -1212,7 +1212,7 @@ ConstructAcpiResourceRequestor (
       //
       Ptr->ResType  = ACPI_ADDRESS_SPACE_TYPE_MEM;
       //
-      // nonprefechable
+      // nonprefetchable
       //
       Ptr->SpecificFlag = 0;
       //
@@ -1235,7 +1235,7 @@ ConstructAcpiResourceRequestor (
       //
       Ptr->ResType  = ACPI_ADDRESS_SPACE_TYPE_MEM;
       //
-      // prefechable
+      // prefetchable
       //
       Ptr->SpecificFlag = 0x06;
       //
@@ -1586,7 +1586,7 @@ PciBridgeResourceAllocator (
   @param Bridge     Given Pci driver instance.
   @param IoBase     Output for base address of I/O type resource.
   @param Mem32Base  Output for base address of 32-bit memory type resource.
-  @param PMem32Base Ooutput for base address of 32-bit Pmemory type resource.
+  @param PMem32Base Output for base address of 32-bit Pmemory type resource.
   @param Mem64Base  Output for base address of 64-bit memory type resource.
   @param PMem64Base Output for base address of 64-bit Pmemory type resource.
 
@@ -1900,7 +1900,7 @@ PreprocessController (
   }
 
   //
-  // Get Root Brige Handle
+  // Get Root Bridge Handle
   //
   while (Bridge->Parent != NULL) {
     Bridge = Bridge->Parent;

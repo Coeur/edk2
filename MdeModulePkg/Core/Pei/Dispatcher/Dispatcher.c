@@ -257,7 +257,7 @@ PeiLoadFixAddressIsMemoryRangeAvailable (
 
   This function should only be invoked when Loading Module at Fixed Address(LMFA) feature is enabled. When feature is
   configured as Load Modules at Fix Absolute Address, this function is to validate the top address assigned by user. When
-  feature is configured as Load Modules at Fixed Offset, the functino is to find the top address which is TOLM-TSEG in general.
+  feature is configured as Load Modules at Fixed Offset, the function is to find the top address which is TOLM-TSEG in general.
   And also the function will re-install PEI memory.
 
   @param PrivateData         Pointer to the private data passed in from caller
@@ -393,12 +393,12 @@ PeiLoadFixAddressHook(
             continue;
           }
           //
-          // If the range describe in memory allocation HOB  belongs to the memroy range described by the resource hob
+          // If the range describe in memory allocation HOB  belongs to the memory range described by the resource hob
           //
           if (MemoryHob->AllocDescriptor.MemoryBaseAddress >= NextResourceHob->PhysicalStart &&
               MemoryHob->AllocDescriptor.MemoryBaseAddress + MemoryHob->AllocDescriptor.MemoryLength <= NextResourceHob->PhysicalStart + NextResourceHob->ResourceLength) {
              //
-             // Build seperate resource hob for this allocated range
+             // Build separate resource hob for this allocated range
              //
              if (MemoryHob->AllocDescriptor.MemoryBaseAddress > NextResourceHob->PhysicalStart) {
                BuildResourceDescriptorHob (
@@ -452,7 +452,7 @@ PeiLoadFixAddressHook(
 
         ResourceHob = Hob.ResourceDescriptor;
         //
-        // See if this resource descrior HOB describes tested system memory below MAX_ADDRESS
+        // See if this resource descriptor HOB describes tested system memory below MAX_ADDRESS
         //
         if (ResourceHob->ResourceType == EFI_RESOURCE_SYSTEM_MEMORY &&
             ResourceHob->PhysicalStart + ResourceHob->ResourceLength <= MAX_ADDRESS) {
@@ -476,7 +476,7 @@ PeiLoadFixAddressHook(
       DEBUG ((EFI_D_INFO, "LOADING MODULE FIXED ERROR:Top Address 0x%lx is invalid \n",  TopLoadingAddress));
       DEBUG ((EFI_D_INFO, "LOADING MODULE FIXED ERROR:The recommended Top Address for the platform is: \n"));
       //
-      // Print the recomended Top address range.
+      // Print the recommended Top address range.
       //
       for (Hob.Raw = PrivateData->HobList.Raw; !END_OF_HOB_LIST(Hob); Hob.Raw = GET_NEXT_HOB(Hob)) {
         //
@@ -486,7 +486,7 @@ PeiLoadFixAddressHook(
 
           ResourceHob = Hob.ResourceDescriptor;
           //
-          // See if this resource descrior HOB describes tested system memory below MAX_ADDRESS
+          // See if this resource descriptor HOB describes tested system memory below MAX_ADDRESS
           //
           if (ResourceHob->ResourceType == EFI_RESOURCE_SYSTEM_MEMORY &&
               ResourceHob->PhysicalStart + ResourceHob->ResourceLength <= MAX_ADDRESS) {
@@ -524,7 +524,7 @@ PeiLoadFixAddressHook(
 
         ResourceHob = Hob.ResourceDescriptor;
         //
-        // See if this resource descrior HOB describes tested system memory below MAX_ADDRESS
+        // See if this resource descriptor HOB describes tested system memory below MAX_ADDRESS
         //
         if (ResourceHob->ResourceType == EFI_RESOURCE_SYSTEM_MEMORY &&
             ResourceHob->PhysicalStart + ResourceHob->ResourceLength <= MAX_ADDRESS &&
@@ -554,7 +554,7 @@ PeiLoadFixAddressHook(
 
   if (CurrentResourceHob != NULL) {
     //
-    // rebuild resource HOB for PEI memmory and reserved memory
+    // rebuild resource HOB for PEI memory and reserved memory
     //
     BuildResourceDescriptorHob (
       EFI_RESOURCE_SYSTEM_MEMORY,
@@ -604,7 +604,7 @@ PeiLoadFixAddressHook(
        );
     }
     //
-    // Delete CurrentHob by marking it as unused since the the memory range described by is rebuilt.
+    // Delete CurrentHob by marking it as unused since the memory range described by is rebuilt.
     //
     GET_HOB_TYPE (CurrentHob) = EFI_HOB_TYPE_UNUSED;
   }
@@ -750,8 +750,8 @@ PeiCheckAndSwitchStack (
     ASSERT (NewStackSize >= SecCoreData->StackSize);
 
     //
-    // Calculate stack offset and heap offset between temporary memory and new permement
-    // memory seperately.
+    // Calculate stack offset and heap offset between temporary memory and new permanent
+    // memory separately.
     //
     TopOfOldStack = (UINTN)SecCoreData->StackBase + SecCoreData->StackSize;
     TopOfNewStack = Private->PhysicalMemoryBegin + NewStackSize;
@@ -1045,7 +1045,7 @@ PeiDispatcher (
   // pass of the dispatcher, it will start over from the Bfv again to see
   // if any new PEIMs dependencies got satisfied.  With a well ordered
   // FV where PEIMs are found in the order their dependencies are also
-  // satisfied, this dipatcher should run only once.
+  // satisfied, this dispatcher should run only once.
   //
   do {
     //
@@ -1229,7 +1229,7 @@ PeiDispatcher (
 
       //
       // Before walking through the next FV, we should set them to NULL/0 to
-      // start at the begining of the next FV.
+      // start at the beginning of the next FV.
       //
       Private->CurrentFileHandle = NULL;
       Private->CurrentPeimCount = 0;
@@ -1259,7 +1259,7 @@ PeiDispatcher (
 
   @param PrivateData     PeiCore's private data structure
   @param OldCoreData     Old data from SecCore
-                         NULL if being run in non-permament memory mode.
+                         NULL if being run in non-permanent memory mode.
   @param SecCoreData     Points to a data structure containing information about the PEI core's operating
                          environment, such as the size and location of temporary RAM, the stack location and
                          the BFV location.

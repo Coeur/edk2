@@ -20,7 +20,7 @@ EFI_PEI_NOTIFY_DESCRIPTOR mNotifyList = {
 
   @param PeiServices     An indirect pointer to the EFI_PEI_SERVICES table published by the PEI Foundation.
   @param OldCoreData     Pointer to the old core data.
-                         NULL if being run in non-permament memory mode.
+                         NULL if being run in non-permanent memory mode.
 
 **/
 VOID

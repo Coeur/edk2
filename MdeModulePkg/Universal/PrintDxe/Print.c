@@ -15,7 +15,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 #include <Library/UefiDriverEntryPoint.h>
 
 /**
-  Implementaion of the UnicodeValueToString service in EFI_PRINT2_PROTOCOL.
+  Implementation of the UnicodeValueToString service in EFI_PRINT2_PROTOCOL.
 
   If the macro DISABLE_NEW_DEPRECATED_INTERFACES is defined, then ASSERT().
 
@@ -59,7 +59,7 @@ PrintDxeUnicodeValueToString (
 }
 
 /**
-  Implementaion of the AsciiValueToString service in EFI_PRINT2_PROTOCOL.
+  Implementation of the AsciiValueToString service in EFI_PRINT2_PROTOCOL.
 
   If the macro DISABLE_NEW_DEPRECATED_INTERFACES is defined, then ASSERT().
 

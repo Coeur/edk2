@@ -39,7 +39,7 @@ BOOLEAN
   @param[in] Action     Execute the request action.
   @param[in] DefaultId  The default Id info when need to load default value.
 
-  @retval EFI_SUCCESS              Execute the request action succss.
+  @retval EFI_SUCCESS              Execute the request action success.
 
 **/
 typedef

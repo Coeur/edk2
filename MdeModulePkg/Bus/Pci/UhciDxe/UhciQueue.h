@@ -126,7 +126,7 @@ UhciUnlinkTdFromQh (
   @param  Uhc                The UHCI device.
   @param  Request            The user request buffer.
   @param  MappedAddr         Mapped address of request.
-  @param  Map                Identificaion of this mapping to return.
+  @param  Map                Identification of this mapping to return.
 
   @return EFI_SUCCESS        Success.
   @return EFI_DEVICE_ERROR   Fail to map the user request.
@@ -148,9 +148,9 @@ UhciMapUserRequest (
   @param  Direction          Direction of the data transfer.
   @param  Data               The user data buffer.
   @param  Len                Length of the user data.
-  @param  PktId              Packet identificaion.
+  @param  PktId              Packet identification.
   @param  MappedAddr         Mapped address to return.
-  @param  Map                Identificaion of this mapping to return.
+  @param  Map                Identification of this mapping to return.
 
   @return EFI_SUCCESS        Success.
   @return EFI_DEVICE_ERROR   Fail to map the user data.

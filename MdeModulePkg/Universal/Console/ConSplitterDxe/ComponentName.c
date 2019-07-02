@@ -242,10 +242,10 @@ ConSplitterComponentNameGetDriverName (
                                opens on its parent controller.
 
   @retval EFI_SUCCESS          ControllerHandle is managed by the driver
-                               specifed by DriverBindingHandle and ChildHandle
+                               specified by DriverBindingHandle and ChildHandle
                                is a child of the ControllerHandle.
   @retval EFI_UNSUPPORTED      ControllerHandle is not managed by the driver
-                               specifed by DriverBindingHandle.
+                               specified by DriverBindingHandle.
   @retval EFI_UNSUPPORTED      ChildHandle is not a child of the
                                ControllerHandle.
 

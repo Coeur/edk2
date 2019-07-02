@@ -17,8 +17,8 @@
   If both Ascii and UCS2 are FALSE attempt to discover the file type.
 
   @param[in] Handle   The handle to the file to display.
-  @param[in] Ascii    TRUE to force ASCII, FALSE othewise.
-  @param[in] UCS2     TRUE to force UCS2, FALSE othewise.
+  @param[in] Ascii    TRUE to force ASCII, FALSE otherwise.
+  @param[in] UCS2     TRUE to force UCS2, FALSE otherwise.
 
   @retval EFI_OUT_OF_RESOURCES  A memory allocation failed.
   @retval EFI_SUCCESS           The operation was successful.
@@ -242,8 +242,8 @@ ShellCommandRunType (
           break;
         }
         //
-        // make sure we completed the param parsing sucessfully...
-        // Also make sure that any previous action was sucessful
+        // make sure we completed the param parsing successfully...
+        // Also make sure that any previous action was successful
         //
         if (ShellStatus == SHELL_SUCCESS) {
           //
